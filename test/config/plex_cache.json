@@ -1,6 +1,9 @@
-{
-  "version": "1.0",
-  "lastUpdated": "2026-07-01T00:00:00Z",
-  "cacheSize": 0,
-  "cache": []
+﻿{
+    "cache":  [
+
+              ],
+    "totalItems":  0,
+    "lastUpdated":  "2026-07-01T15:58:13Z",
+    "version":  "1.0",
+    "description":  "Cache persistente de Plex"
 }
