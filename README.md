@@ -369,6 +369,87 @@ El proyecto funciona en **capas** independientes:
    - → Agregar a `$script:PlexCache` (memoria)
    - → Actualizar `core/config/plex_cache.json` (disco)
 
+4. **Regeneración del Caché:**
+
+   **¿Cómo funciona?**
+   - El caché se regenera automáticamente mientras usas el sistema
+   - Cada vez que procesas un torrent, se ejecuta `TelegramNotifier.ps1`
+   - Si el poster NO está en el caché → se busca en Plex API
+   - Si se encuentra → se agrega automáticamente a `core/config/plex_cache.json`
+   
+   **¿Cuándo se regenera?**
+   - ✅ **Automáticamente**: Cada torrent completado en qBittorrent
+   - ✅ **Primer uso**: Descarga inicial vacía, se rellena con cada búsqueda
+   - ❌ **Nunca manual**: No requiere acciones del usuario
+   
+   **Proceso paso a paso:**
+   ```powershell
+   1. Torrent completado en qBittorrent
+       ↓
+   2. Ejecuta: PowerShell.exe -File TelegramNotifier.ps1 "nombre_torrent" "ruta"
+       ↓
+   3. Initialize-PlexCache() carga core/config/plex_cache.json
+       ↓
+   4. Get-PosterByCache() busca en caché
+       ├─ ✅ Encontrado → Usa URL (0ms)
+       └─ ❌ No encontrado → Llama Plex API
+       ↓
+   5. Get-PlexPoster() consulta http://127.0.0.1:32400/library/search
+       ↓
+   6. Si encontrado en API → Add-ToCache()
+       └─ Agrega entrada a memoria
+       └─ Guarda en core/config/plex_cache.json (JSON persistente)
+       ↓
+   7. Próxima búsqueda del mismo título → ✅ Hit de caché
+   ```
+
+   **Ejemplo de Regeneración:**
+   ```
+   Torrent 1: "La Casa del Dragon S01E01" 
+   ├─ Caché vacío → Busca en API → Encuentra "ratingKey: 8103"
+   └─ Agrega: {"titulo_normalizado": "lacasadeldragon", "ratingKey": "8103", ...}
+   
+   Torrent 2: "La Casa del Dragon S01E02"
+   └─ Encuentra en caché con RatingKey 8103 → ✅ 0ms (sin llamada API)
+   ```
+
+   **Contenido generado automáticamente:**
+   ```json
+   {
+     "version": "1.0",
+     "lastUpdated": "2026-07-01T16:30:45Z",
+     "totalItems": 2,
+     "description": "Caché persistente de Plex",
+     "cache": [
+       {
+         "titulo_normalizado": "lacasadeldragon",
+         "titulo_original": "La casa del dragón",
+         "ratingKey": "8103",
+         "tipo": "SERIE",
+         "poster_url": "http://127.0.0.1:32400/library/metadata/8103/thumb/...",
+         "year": "2022"
+       }
+     ]
+   }
+   ```
+
+   **Forzar Regeneración Manual (Opcional):**
+   ```powershell
+   # Si necesitas vaciar y regenerar desde cero:
+   Remove-Item "C:\ruta\core\config\plex_cache.json"
+   
+   # Luego procesa cualquier torrent:
+   & "C:\ruta\core\TelegramNotifier.ps1" "Nombre Torrent" "C:\ruta\contenido"
+   # El sistema creará un plex_cache.json nuevo automáticamente
+   ```
+
+   **Ventajas del Sistema:**
+   - 🚀 **Rápido**: Hits de caché en 0ms, sin latencia de API
+   - 📊 **Persistente**: Survives to restarts (JSON en disco)
+   - 🔄 **Automático**: Crece solo mientras usas el sistema
+   - 🎯 **Inteligente**: RatingKey prioritized (identificador único de Plex)
+   - 🛡️ **Robusto**: Maneja diacríticos (ó→o, ñ→n, etc.)
+
 ### NIVEL 5: Sistema de Logging
 
 **Rotación Diaria + Tamaño:**
