@@ -1,0 +1,2214 @@
+﻿
+SERIES
+├── __________AGATHA_CHRISTIE_LAS_SIETE_ESFERAS
+│   ├── Agatha Christie Las Siete Esferas S01E01 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── Agatha Christie Las Siete Esferas S01E02 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   └── Agatha Christie Las Siete Esferas S01E03 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+├── __________AMERICAN_GODS
+│   ├── 1
+│   │   ├── American Gods S01E01 La plantación de huesos [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S01E02 El secreto de las cucharas [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S01E03 Cabeza llena de nieve [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S01E04 Ida [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S01E05 Con aroma de limón [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S01E06 Un asesinato de dioses [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S01E07 Una oración para Mad Sweeney [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   └── American Gods S01E08 Ven a Jesús [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   ├── 2
+│   │   ├── American Gods S02E01 La casa en la roca [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S02E02 El cautivador [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S02E03 Muninn [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S02E04 La mejor historia jamás contada [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S02E05 Las costumbres de los muertos [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S02E06 Donar el Grande [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   ├── American Gods S02E07 El tesoro del sol [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   │   └── American Gods S02E08 Sombra Moon [WEB-DL AMZN 1080p EAC3 5.1 esp EAC3 5.1 eng Subs].mkv
+│   └── 3
+│       ├── S03E01 Un cuento de invierno.mkv
+│       ├── S03E02 Un montón de luz de luna.mkv
+│       ├── S03E03 Cenizas y demonios.mkv
+│       ├── S03E04 Lo oculto.mkv
+│       ├── S03E05 El resurgir de la diosa.mkv
+│       ├── S03E06 La conciencia del rey.mkv
+│       ├── S03E07 Fuego y hielo.mkv
+│       ├── S03E08 El éxtasis de las llamas.mkv
+│       ├── S03E09 El efecto del lago.mkv
+│       └── S03E10 Lágrimas del árbol de la ira.mkv
+├── __________ASESINATO_EN_EL_FIN_DEL_MUNDO
+│   ├── Asesinato en el fin del mundo S01E01 [DSNP WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Asesinato en el fin del mundo S01E02 [DSNP WEB-DL 1080p AVC ES AAC 2.0 - EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Asesinato en el fin del mundo S01E03 [DSNP WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Asesinato en el fin del mundo S01E04 [DSNP WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Asesinato en el fin del mundo S01E05 [DSNP WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Asesinato en el fin del mundo S01E06 [DSNP WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   └── Asesinato en el fin del mundo S01E07 [DSNP WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+├── __________EL_DENTISTA
+│   ├── El.Dentista.(2025).S01E01.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+│   ├── El.Dentista.(2025).S01E02.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+│   ├── El.Dentista.(2025).S01E03.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+│   ├── El.Dentista.(2025).S01E04.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+│   ├── El.Dentista.(2025).S01E05.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+│   ├── El.Dentista.(2025).S01E06.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+│   ├── El.Dentista.(2025).S01E07.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+│   └── El.Dentista.(2025).S01E08.AMZN.WEBDL.1080p.ESP-DDP5.1.SUBS.H264-EML.HDTeam.Series.mkv
+├── BERLIN
+│   ├── Berlin.S01E01.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+│   ├── Berlin.S01E02.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+│   ├── Berlin.S01E03.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+│   ├── Berlin.S01E04.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+│   ├── Berlin.S01E05.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+│   ├── Berlin.S01E06.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+│   ├── Berlin.S01E07.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+│   └── Berlin.S01E08.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135.mkv
+├── BERLIN_Y_LA_DAMA_DEL_ARMIÑO
+│   ├── Berlín y la dama del armiño S01E01 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+│   ├── Berlín y la dama del armiño S01E02 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+│   ├── Berlín y la dama del armiño S01E03 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+│   ├── Berlín y la dama del armiño S01E04 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+│   ├── Berlín y la dama del armiño S01E05 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+│   ├── Berlín y la dama del armiño S01E06 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+│   ├── Berlín y la dama del armiño S01E07 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+│   └── Berlín y la dama del armiño S01E08 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ Atmos 5.1][HDO].mkv
+├── BLEACH
+│   ├── 1
+│   │   ├── Bleach S01E01 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E02 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E03 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E04 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E05 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E06 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E07 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E08 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E09 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E10 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E11 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E12 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E13 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E14 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E15 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E16 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E17 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E18 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S01E19 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S01E20 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   ├── 10
+│   │   ├── Bleach S10E01 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E02 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E03 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E04 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E05 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E06 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E07 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E08 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E09 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E10 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E11 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E12 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E13 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E14 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S10E15 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S10E16 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   ├── 11
+│   │   ├── Bleach S11E01 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S11E02 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S11E03 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S11E04 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S11E05 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S11E06 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S11E07 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   ├── 12
+│   │   ├── Bleach S12E01 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E02 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E03 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E04 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E05 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E06 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E07 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E08 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E09 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E10 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E11 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E12 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E13 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E14 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E15 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S12E16 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S12E17 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   ├── 13
+│   │   ├── Bleach S13E01 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E02 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E03 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E04 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E05 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E06 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E07 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E08 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E09 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E10 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E11 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E12 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E13 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E14 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E15 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E16 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E17 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E18 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E19 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E20 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E21 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E22 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E23 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E24 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E25 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E26 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E27 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E28 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E29 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E30 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E31 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E32 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E33 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E34 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S13E35 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S13E36 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   ├── 14
+│   │   ├── Bleach S14E01 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E02 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E03 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E04 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E05 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E06 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E07 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E08 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E09 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E10 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E11 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E12 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E13 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E14 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E15 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E16 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E17 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E18 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E19 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E20 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E21 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E22 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E23 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E24 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E25 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E26 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E27 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E28 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E29 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E30 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E31 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E32 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E33 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E34 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E35 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E36 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E37 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E38 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E39 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E40 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E41 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E42 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E43 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E44 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E45 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E46 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E47 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E48 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E49 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S14E50 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S14E51 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   ├── 15
+│   │   ├── Bleach S15E01 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E02 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E03 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E04 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E05 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E06 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E07 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E08 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E09 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E10 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E11 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E12 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E13 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E14 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E15 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E16 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E17 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E18 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E19 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E20 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E21 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E22 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E23 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E24 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S15E25 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S15E26 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   ├── 16
+│   │   ├── Bleach S16E01 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E02 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E03 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E04 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E05 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E06 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E07 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E08 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E09 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E10 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E11 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E12 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E13 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E14 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E15 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E16 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E17 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E18 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E19 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E20 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E21 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E22 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S16E23 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S16E24 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│   ├── 17
+│   ├── 2
+│   │   ├── Bleach S02E01 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E02 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E03 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E04 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E05 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E06 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E07 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E08 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E09 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E10 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E11 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E12 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E13 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E14 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E15 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E16 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E17 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E18 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E19 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S02E20 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S02E21 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   ├── 3
+│   │   ├── Bleach S03E01 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E02 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E03 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E04 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E05 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E06 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E07 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E08 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E09 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E10 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E11 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E12 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E13 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E14 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E15 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E16 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E17 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E18 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E19 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E20 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S03E21 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S03E22 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   ├── 4
+│   │   ├── Bleach S04E01 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E02 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E03 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E04 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E05 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E06 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E07 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E08 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E09 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E10 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E11 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E12 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E13 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E14 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E15 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E16 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E17 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E18 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E19 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E20 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E21 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E22 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E23 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E24 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E25 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E26 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S04E27 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S04E28 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   ├── 5
+│   │   ├── Bleach S05E01 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E02 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E03 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E04 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E05 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E06 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E07 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E08 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E09 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E10 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E11 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E12 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E13 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E14 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E15 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E16 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S05E17 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S05E18 1080p BluRay LAT-ESP-JAP-ENG AAC 2.0 x264.mkv
+│   ├── 6
+│   │   ├── Bleach S06E01 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E02 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E03 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E04 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E05 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E06 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E07 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E08 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E09 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E10 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E11 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E12 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E13 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E14 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E15 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E16 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E17 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E18 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E19 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E20 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S06E21 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S06E22 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   ├── 7
+│   │   ├── Bleach S07E01 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E02 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E03 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E04 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E05 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E06 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E07 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E08 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E09 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E10 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E11 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E12 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E13 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E14 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E15 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E16 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E17 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E18 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S07E19 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S07E20 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   ├── 8
+│   │   ├── Bleach S08E01 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E02 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E03 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E04 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E05 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E06 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E07 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E08 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E09 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E10 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E11 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E12 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E13 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E14 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   ├── Bleach S08E15 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   │   └── Bleach S08E16 1080p BluRay LAT-JAP-ENG AAC 2.0 x264.mkv
+│   └── 9
+│       ├── Bleach S09E01 1080p BluRay JAP-ENG DD 2.0 x264.mkv
+│       ├── Bleach S09E02 1080p BluRay JAP-ENG DD 2.0 x264.mkv
+│       ├── Bleach S09E03 1080p BluRay JAP-ENG DD 2.0 x264.mkv
+│       ├── Bleach S09E04 1080p BluRay JAP-ENG DD 2.0 x264.mkv
+│       ├── Bleach S09E05 1080p BluRay JAP-ENG DD 2.0 x264.mkv
+│       ├── Bleach S09E06 1080p BluRay JAP-ENG DD 2.0 x264.mkv
+│       ├── Bleach S09E07 1080p BluRay JAP-ENG DD 2.0 x264.mkv
+│       ├── Bleach S09E08 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E09 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E10 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E11 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E12 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E13 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E14 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E15 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E16 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E17 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E18 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E19 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E20 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       ├── Bleach S09E21 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+│       └── Bleach S09E22 1080p BluRay JAP-ENG AAC 2.0 x264.mkv
+├── CAZADORES_DE_SOMBRAS
+│   ├── 1
+│   │   ├── Cazadores De Sombras 1x01 La Copa Mortal.mkv
+│   │   ├── Cazadores De Sombras 1x02 El Descenso Al infierno No Es Facil.mkv
+│   │   ├── Cazadores De Sombras 1x03 Fiesta Del Hombre Muerto.mkv
+│   │   ├── Cazadores De Sombras 1x04 Confusion Infernal.mkv
+│   │   ├── Cazadores De Sombras 1x05 Mu Shu Para Llevar.mkv
+│   │   ├── Cazadores De Sombras 1x06 De Hombres Y Angeles.mkv
+│   │   ├── Cazadores De Sombras 1x07 Arcanos Mayores.mkv
+│   │   ├── Cazadores De Sombras 1x08 Mala Sangre.mkv
+│   │   ├── Cazadores De Sombras 1x09 Sublevacion.mkv
+│   │   ├── Cazadores De Sombras 1x10 El Mundo Al Reves.mkv
+│   │   ├── Cazadores De Sombras 1x11 Lazos De Sangre.mkv
+│   │   ├── Cazadores De Sombras 1x12 Disminucion.mkv
+│   │   └── Cazadores De Sombras 1x13 El Lucero Del Alba.mkv
+│   ├── 2
+│   │   ├── Cazadores De Sombras 2x01 Esta Sangre Culpable.mkv
+│   │   ├── Cazadores De Sombras 2x02 Una Puerta A La Oscuridad.mkv
+│   │   ├── Cazadores De Sombras 2x03 Parabatai Perdido.mkv
+│   │   ├── Cazadores De Sombras 2x04 Dia De Ira.mkv
+│   │   ├── Cazadores De Sombras 2x05 Polvo Y Sombras.mkv
+│   │   ├── Cazadores De Sombras 2x06 Hermanas De Hierro.mkv
+│   │   ├── Cazadores De Sombras 2x07 ¿Como Has Caido.mkv
+│   │   ├── Cazadores De Sombras 2x08 El Amor Es Un Diablo.mkv
+│   │   ├── Cazadores De Sombras 2x09 Atado Por La Sangre.mkv
+│   │   ├── Cazadores De Sombras 2x10 A La Luz Del Amanecer.mkv
+│   │   ├── Cazadores De Sombras 2x11 Mi Maxima Culpa.mkv
+│   │   ├── Cazadores De Sombras 2x12 No Eres Tuyo.mkv
+│   │   ├── Cazadores De Sombras 2x13 Sangre De Demonio.mkv
+│   │   ├── Cazadores De Sombras 2x14 La Gente Es Justa.mkv
+│   │   ├── Cazadores De Sombras 2x15 Un Problema De Memoria.mkv
+│   │   ├── Cazadores De Sombras 2x16 Dia De La Expiacion.mkv
+│   │   ├── Cazadores De Sombras 2x17 Una Reflexion Oscura.mkv
+│   │   ├── Cazadores De Sombras 2x18 Despierta, Levantate O Estate Siempre Caido.mkv
+│   │   ├── Cazadores De Sombras 2x19 Granizo Y Despedida.mkv
+│   │   └── Cazadores De Sombras 2x20 Al Lado Del Agua Quieta.mkv
+│   └── 3
+│       ├── Shadowhunters (2016) S03E01 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E02 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E03 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E04 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E05 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E06 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E07 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E08 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E09 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S03E10 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E11 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E12 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E13 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E14 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E15 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E16 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E17 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E18 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E19 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E20 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Shadowhunters (2016) S04E21 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│       └── Shadowhunters (2016) S04E22 [NF WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+├── CIUDAD_DE_LAS_ESTRELLAS
+│   ├── Ciudad de las Estrellas S01E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│   ├── Ciudad de las Estrellas S01E02 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│   ├── Ciudad de las Estrellas S01E03 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│   ├── Ciudad de las Estrellas S01E04 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│   ├── Ciudad de las Estrellas S01E05 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│   └── Ciudad de las estrellas S01E06 2160p DV HDR APTV+ WEB-DL ESP DD 5.1 ENG DDP Atmos 5.1 HEVC.mkv
+├── DEVIL_MAY_CRY
+│   ├── Devil May Cry S01E01 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── Devil May Cry S01E02 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── Devil May Cry S01E03 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── Devil May Cry S01E04 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── Devil May Cry S01E05 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── Devil May Cry S01E06 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── Devil May Cry S01E07 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   └── Devil May Cry S01E08 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+├── DRAGON_BALL
+│   ├── 1
+│   │   ├── Temporada 1
+│   │   │   ├── Dragon Ball - 01x01 - Bulma y Son Goku.jpg
+│   │   │   ├── Dragon Ball - 01x01 - Bulma y Son Goku.mkv
+│   │   │   ├── Dragon Ball - 01x02 - La primera parte del viaje.jpg
+│   │   │   ├── Dragon Ball - 01x02 - La primera parte del viaje.mkv
+│   │   │   ├── Dragon Ball - 01x03 - Las nubes de Tortuga Duende.jpg
+│   │   │   ├── Dragon Ball - 01x03 - Las nubes de Tortuga Duende.mkv
+│   │   │   ├── Dragon Ball - 01x04 - Oolong, el secuestrador.jpg
+│   │   │   ├── Dragon Ball - 01x04 - Oolong, el secuestrador.mkv
+│   │   │   ├── Dragon Ball - 01x05 - El temible y solitario Yamcha.jpg
+│   │   │   ├── Dragon Ball - 01x05 - El temible y solitario Yamcha.mkv
+│   │   │   ├── Dragon Ball - 01x06 - Vigilad las bolas de dragón!.jpg
+│   │   │   ├── Dragon Ball - 01x06 - Vigilad las bolas de dragón!.mkv
+│   │   │   ├── Dragon Ball - 01x07 - Ogc-Satán en el monte Frypan.jpg
+│   │   │   ├── Dragon Ball - 01x07 - Ogc-Satán en el monte Frypan.mkv
+│   │   │   ├── Dragon Ball - 01x08 - La ola Kame Hame de Tortuga Duende.jpg
+│   │   │   ├── Dragon Ball - 01x08 - La ola Kame Hame de Tortuga Duende.mkv
+│   │   │   ├── Dragon Ball - 01x09 - El truco especial del Jefe Conejo.jpg
+│   │   │   ├── Dragon Ball - 01x09 - El truco especial del Jefe Conejo.mkv
+│   │   │   ├── Dragon Ball - 01x10 - ¡Han robado las Bolas de Dragón!.jpg
+│   │   │   ├── Dragon Ball - 01x10 - ¡Han robado las Bolas de Dragón!.mkv
+│   │   │   ├── Dragon Ball - 01x11 - Invocando al Dios Dragon.jpg
+│   │   │   ├── Dragon Ball - 01x11 - Invocando al Dios Dragon.mkv
+│   │   │   ├── Dragon Ball - 01x12 - Se le pide un deseo al Dios Dragon.jpg
+│   │   │   ├── Dragon Ball - 01x12 - Se le pide un deseo al Dios Dragon.mkv
+│   │   │   ├── Dragon Ball - 01x13 - La metamorfosis de Goku.jpg
+│   │   │   ├── Dragon Ball - 01x13 - La metamorfosis de Goku.mkv
+│   │   │   ├── Dragon Ball - 01x14 - A Goku le sale un rival.jpg
+│   │   │   ├── Dragon Ball - 01x14 - A Goku le sale un rival.mkv
+│   │   │   ├── Dragon Ball - 01x15 - Lunch, una chica misteriosa.jpg
+│   │   │   ├── Dragon Ball - 01x15 - Lunch, una chica misteriosa.mkv
+│   │   │   ├── Dragon Ball - 01x16 - Entrenamiento para la búsqueda de piedras.jpg
+│   │   │   ├── Dragon Ball - 01x16 - Entrenamiento para la búsqueda de piedras.mkv
+│   │   │   ├── Dragon Ball - 01x17 - Repartidores de leche.jpg
+│   │   │   ├── Dragon Ball - 01x17 - Repartidores de leche.mkv
+│   │   │   ├── Dragon Ball - 01x18 - Entrenamiento al estilo de Tortuga Duende.jpg
+│   │   │   ├── Dragon Ball - 01x18 - Entrenamiento al estilo de Tortuga Duende.mkv
+│   │   │   ├── Dragon Ball - 01x19 - Se inicia el Gran Torneo.jpg
+│   │   │   ├── Dragon Ball - 01x19 - Se inicia el Gran Torneo.mkv
+│   │   │   ├── Dragon Ball - 01x20 - ¿Podrá ser eliminada la fuerza lograda.jpg
+│   │   │   ├── Dragon Ball - 01x20 - ¿Podrá ser eliminada la fuerza lograda.mkv
+│   │   │   ├── Dragon Ball - 01x21 - ¡Peligro Krilin!.jpg
+│   │   │   ├── Dragon Ball - 01x21 - ¡Peligro Krilin!.mkv
+│   │   │   ├── Dragon Ball - 01x22 - Yamcha contra Jackie Chun.jpg
+│   │   │   ├── Dragon Ball - 01x22 - Yamcha contra Jackie Chun.mkv
+│   │   │   ├── Dragon Ball - 01x23 - Giran, un rival peligroso.jpg
+│   │   │   ├── Dragon Ball - 01x23 - Giran, un rival peligroso.mkv
+│   │   │   ├── Dragon Ball - 01x24 - Frenético ataque de Krilin.jpg
+│   │   │   ├── Dragon Ball - 01x24 - Frenético ataque de Krilin.mkv
+│   │   │   ├── Dragon Ball - 01x25 - El temible ataque aéreo de Karate.jpg
+│   │   │   ├── Dragon Ball - 01x25 - El temible ataque aéreo de Karate.mkv
+│   │   │   ├── Dragon Ball - 01x26 - La Gran Final.jpg
+│   │   │   ├── Dragon Ball - 01x26 - La Gran Final.mkv
+│   │   │   ├── Dragon Ball - 01x27 - El combate más fuerte de Goku.jpg
+│   │   │   ├── Dragon Ball - 01x27 - El combate más fuerte de Goku.mkv
+│   │   │   ├── Dragon Ball - 01x28 - La Final.jpg
+│   │   │   ├── Dragon Ball - 01x28 - La Final.mkv
+│   │   │   ├── folder.jpg
+│   │   │   ├── poster.jpg
+│   │   │   └── Thumbs.db
+│   │   ├── Temporada 2
+│   │   │   ├── Dragon Ball - 02x01 - El lago mágico.jpg
+│   │   │   ├── Dragon Ball - 02x01 - El lago mágico.mkv
+│   │   │   ├── Dragon Ball - 02x02 - La bola de cuatro estrellas.jpg
+│   │   │   ├── Dragon Ball - 02x02 - La bola de cuatro estrellas.mkv
+│   │   │   ├── Dragon Ball - 02x03 - ¡Viva el novio!.jpg
+│   │   │   ├── Dragon Ball - 02x03 - ¡Viva el novio!.mkv
+│   │   │   ├── Dragon Ball - 02x04 - Veinte mil leguas bajo tierra.jpg
+│   │   │   ├── Dragon Ball - 02x04 - Veinte mil leguas bajo tierra.mkv
+│   │   │   ├── Dragon Ball - 02x05 - La Leyenda del Dragón.jpg
+│   │   │   ├── Dragon Ball - 02x05 - La Leyenda del Dragón.mkv
+│   │   │   ├── Dragon Ball - 02x06 - La derrota del Coronel Silver.jpg
+│   │   │   ├── Dragon Ball - 02x06 - La derrota del Coronel Silver.mkv
+│   │   │   ├── Dragon Ball - 02x07 - Suno, la niña del Polo Norte.jpg
+│   │   │   ├── Dragon Ball - 02x07 - Suno, la niña del Polo Norte.mkv
+│   │   │   ├── Dragon Ball - 02x08 - La torre de acero.jpg
+│   │   │   ├── Dragon Ball - 02x08 - La torre de acero.mkv
+│   │   │   ├── Dragon Ball - 02x09 - Ninja Murasaki entra en acción.jpg
+│   │   │   ├── Dragon Ball - 02x09 - Ninja Murasaki entra en acción.mkv
+│   │   │   ├── Dragon Ball - 02x10 - Cinco Murasakis contra Goku.jpg
+│   │   │   ├── Dragon Ball - 02x10 - Cinco Murasakis contra Goku.mkv
+│   │   │   ├── Dragon Ball - 02x11 - Super 8, el robot de gran corazón.jpg
+│   │   │   ├── Dragon Ball - 02x11 - Super 8, el robot de gran corazón.mkv
+│   │   │   ├── Dragon Ball - 02x12 - Buyon, el monstruo invencible.jpg
+│   │   │   ├── Dragon Ball - 02x12 - Buyon, el monstruo invencible.mkv
+│   │   │   ├── Dragon Ball - 02x13 - El último día en la torre de control.jpg
+│   │   │   ├── Dragon Ball - 02x13 - El último día en la torre de control.mkv
+│   │   │   ├── Dragon Ball - 02x14 - El secreto del Doctor Flappe.jpg
+│   │   │   ├── Dragon Ball - 02x14 - El secreto del Doctor Flappe.mkv
+│   │   │   ├── Dragon Ball - 02x15 - Goku descubre la ciudad.jpg
+│   │   │   ├── Dragon Ball - 02x15 - Goku descubre la ciudad.mkv
+│   │   │   ├── Dragon Ball - 02x16 - La peligrosa ladrona Haski.jpg
+│   │   │   ├── Dragon Ball - 02x16 - La peligrosa ladrona Haski.mkv
+│   │   │   ├── Dragon Ball - 02x17 - Hasky, la gata.jpg
+│   │   │   ├── Dragon Ball - 02x17 - Hasky, la gata.mkv
+│   │   │   ├── Dragon Ball - 02x18 - Una isla no tan desierta.jpg
+│   │   │   ├── Dragon Ball - 02x18 - Una isla no tan desierta.mkv
+│   │   │   ├── Dragon Ball - 02x19 - ¡Kame House es descubierta!.jpg
+│   │   │   ├── Dragon Ball - 02x19 - ¡Kame House es descubierta!.mkv
+│   │   │   ├── Dragon Ball - 02x20 - El General Blue ataca.jpg
+│   │   │   ├── Dragon Ball - 02x20 - El General Blue ataca.mkv
+│   │   │   ├── Dragon Ball - 02x21 - Una gruta misteriosa.jpg
+│   │   │   ├── Dragon Ball - 02x21 - Una gruta misteriosa.mkv
+│   │   │   ├── Dragon Ball - 02x22 - La guarida del pirata.jpg
+│   │   │   ├── Dragon Ball - 02x22 - La guarida del pirata.mkv
+│   │   │   ├── Dragon Ball - 02x23 - El robot pirata.jpg
+│   │   │   ├── Dragon Ball - 02x23 - El robot pirata.mkv
+│   │   │   ├── Dragon Ball - 02x24 - El tesoro existe.jpg
+│   │   │   ├── Dragon Ball - 02x24 - El tesoro existe.mkv
+│   │   │   ├── Dragon Ball - 02x25 - La gruta de los mil peligros.jpg
+│   │   │   ├── Dragon Ball - 02x25 - La gruta de los mil peligros.mkv
+│   │   │   ├── folder.jpg
+│   │   │   └── Thumbs.db
+│   │   ├── Temporada 3
+│   │   │   ├── Dragon Ball - 03x01 - ¡Sálvese quien pueda!.jpg
+│   │   │   ├── Dragon Ball - 03x01 - ¡Sálvese quien pueda!.mkv
+│   │   │   ├── Dragon Ball - 03x02 - La aldea de los juguetes mecánicos.jpg
+│   │   │   ├── Dragon Ball - 03x02 - La aldea de los juguetes mecánicos.mkv
+│   │   │   ├── Dragon Ball - 03x03 - Arale sube en la nube.jpg
+│   │   │   ├── Dragon Ball - 03x03 - Arale sube en la nube.mkv
+│   │   │   ├── Dragon Ball - 03x04 - De nuevo en camino.jpg
+│   │   │   ├── Dragon Ball - 03x04 - De nuevo en camino.mkv
+│   │   │   ├── Dragon Ball - 03x05 - La Tierra Sagrada.jpg
+│   │   │   ├── Dragon Ball - 03x05 - La Tierra Sagrada.mkv
+│   │   │   ├── Dragon Ball - 03x06 - Tao Pai Pai entra en acción.jpg
+│   │   │   ├── Dragon Ball - 03x06 - Tao Pai Pai entra en acción.mkv
+│   │   │   ├── Dragon Ball - 03x07 - La Torre Sagrada.jpg
+│   │   │   ├── Dragon Ball - 03x07 - La Torre Sagrada.mkv
+│   │   │   ├── Dragon Ball - 03x08 - El Maestro de Maestros.jpg
+│   │   │   ├── Dragon Ball - 03x08 - El Maestro de Maestros.mkv
+│   │   │   ├── Dragon Ball - 03x09 - El Agua Sagrada.jpg
+│   │   │   ├── Dragon Ball - 03x09 - El Agua Sagrada.mkv
+│   │   │   ├── Dragon Ball - 03x10 - El regreso de Goku.jpg
+│   │   │   ├── Dragon Ball - 03x10 - El regreso de Goku.mkv
+│   │   │   ├── Dragon Ball - 03x11 - La derrota de Tao Pai Pai.jpg
+│   │   │   ├── Dragon Ball - 03x11 - La derrota de Tao Pai Pai.mkv
+│   │   │   ├── Dragon Ball - 03x12 - Camino del cuartel general.jpg
+│   │   │   ├── Dragon Ball - 03x12 - Camino del cuartel general.mkv
+│   │   │   ├── Dragon Ball - 03x13 - Ataque al ejército del General Red.jpg
+│   │   │   ├── Dragon Ball - 03x13 - Ataque al ejército del General Red.mkv
+│   │   │   ├── Dragon Ball - 03x14 - El final del General Red.jpg
+│   │   │   ├── Dragon Ball - 03x14 - El final del General Red.mkv
+│   │   │   ├── Dragon Ball - 03x15 - La última bola mágica.jpg
+│   │   │   ├── Dragon Ball - 03x15 - La última bola mágica.mkv
+│   │   │   ├── Dragon Ball - 03x16 - Babá, la adivina.jpg
+│   │   │   ├── Dragon Ball - 03x16 - Babá, la adivina.mkv
+│   │   │   ├── Dragon Ball - 03x17 - Los cinco adversarios.jpg
+│   │   │   ├── Dragon Ball - 03x17 - Los cinco adversarios.mkv
+│   │   │   ├── Dragon Ball - 03x18 - La fosa del diablo.jpg
+│   │   │   ├── Dragon Ball - 03x18 - La fosa del diablo.mkv
+│   │   │   ├── Dragon Ball - 03x19 - El combate en la fosa del diablo.jpg
+│   │   │   ├── Dragon Ball - 03x19 - El combate en la fosa del diablo.mkv
+│   │   │   ├── Dragon Ball - 03x20 - El poder mortal del diablo.jpg
+│   │   │   ├── Dragon Ball - 03x20 - El poder mortal del diablo.mkv
+│   │   │   ├── Dragon Ball - 03x21 - El quinto adversario.jpg
+│   │   │   ├── Dragon Ball - 03x21 - El quinto adversario.mkv
+│   │   │   ├── Dragon Ball - 03x22 - Un misterioso adversario.jpg
+│   │   │   ├── Dragon Ball - 03x22 - Un misterioso adversario.mkv
+│   │   │   ├── Dragon Ball - 03x23 - El adversario se quita la máscara.jpg
+│   │   │   ├── Dragon Ball - 03x23 - El adversario se quita la máscara.mkv
+│   │   │   ├── Dragon Ball - 03x24 - El gran plan de Pilaf.jpg
+│   │   │   ├── Dragon Ball - 03x24 - El gran plan de Pilaf.mkv
+│   │   │   ├── Dragon Ball - 03x25 - La vuelta del Dragón Divino.jpg
+│   │   │   ├── Dragon Ball - 03x25 - La vuelta del Dragón Divino.mkv
+│   │   │   ├── Dragon Ball - 03x26 - La calabaza mágica.jpg
+│   │   │   ├── Dragon Ball - 03x26 - La calabaza mágica.mkv
+│   │   │   ├── Dragon Ball - 03x27 - El combate real.jpg
+│   │   │   ├── Dragon Ball - 03x27 - El combate real.mkv
+│   │   │   ├── Dragon Ball - 03x28 - Goku va a la tierra del demonio.jpg
+│   │   │   ├── Dragon Ball - 03x28 - Goku va a la tierra del demonio.mkv
+│   │   │   ├── Dragon Ball - 03x29 - El jabalí volador.jpg
+│   │   │   ├── Dragon Ball - 03x29 - El jabalí volador.mkv
+│   │   │   ├── Dragon Ball - 03x30 - Hacia la isla de las papayas.jpg
+│   │   │   ├── Dragon Ball - 03x30 - Hacia la isla de las papayas.mkv
+│   │   │   ├── Dragon Ball - 03x31 - Las vísperas del Gran Torneo.jpg
+│   │   │   ├── Dragon Ball - 03x31 - Las vísperas del Gran Torneo.mkv
+│   │   │   ├── Dragon Ball - 03x32 - La primera jornada.jpg
+│   │   │   ├── Dragon Ball - 03x32 - La primera jornada.mkv
+│   │   │   ├── Dragon Ball - 03x33 - Carrusel de luchadores.jpg
+│   │   │   ├── Dragon Ball - 03x33 - Carrusel de luchadores.mkv
+│   │   │   ├── Dragon Ball - 03x34 - Los ocho finalistas.jpg
+│   │   │   ├── Dragon Ball - 03x34 - Los ocho finalistas.mkv
+│   │   │   ├── Dragon Ball - 03x35 - Yamcha sufre un traspiés.jpg
+│   │   │   ├── Dragon Ball - 03x35 - Yamcha sufre un traspiés.mkv
+│   │   │   ├── Dragon Ball - 03x36 - El misterio de la Luna Llena.jpg
+│   │   │   ├── Dragon Ball - 03x36 - El misterio de la Luna Llena.mkv
+│   │   │   ├── Dragon Ball - 03x37 - Una revelación muy peligrosa.jpg
+│   │   │   ├── Dragon Ball - 03x37 - Una revelación muy peligrosa.mkv
+│   │   │   ├── Dragon Ball - 03x38 - Una victoria matemática.jpg
+│   │   │   ├── Dragon Ball - 03x38 - Una victoria matemática.mkv
+│   │   │   ├── Dragon Ball - 03x39 - Finalmente el turno de Goku.jpg
+│   │   │   ├── Dragon Ball - 03x39 - Finalmente el turno de Goku.mkv
+│   │   │   ├── Dragon Ball - 03x40 - Dos rivales de mucho talento.jpg
+│   │   │   ├── Dragon Ball - 03x40 - Dos rivales de mucho talento.mkv
+│   │   │   ├── Dragon Ball - 03x41 - Una decisión inesperada.jpg
+│   │   │   ├── Dragon Ball - 03x41 - Una decisión inesperada.mkv
+│   │   │   ├── Dragon Ball - 03x42 - Goku contra Krilin.jpg
+│   │   │   ├── Dragon Ball - 03x42 - Goku contra Krilin.mkv
+│   │   │   ├── Dragon Ball - 03x43 - Un combate fraternal.jpg
+│   │   │   ├── Dragon Ball - 03x43 - Un combate fraternal.mkv
+│   │   │   ├── Dragon Ball - 03x44 - Un duelo excepcional.jpg
+│   │   │   ├── Dragon Ball - 03x44 - Un duelo excepcional.mkv
+│   │   │   ├── Dragon Ball - 03x45 - Al borde de la derrota.jpg
+│   │   │   ├── Dragon Ball - 03x45 - Al borde de la derrota.mkv
+│   │   │   ├── Dragon Ball - 03x46 - Los brazos del diablo.jpg
+│   │   │   ├── Dragon Ball - 03x46 - Los brazos del diablo.mkv
+│   │   │   ├── Dragon Ball - 03x47 - La fuerza absoluta.jpg
+│   │   │   ├── Dragon Ball - 03x47 - La fuerza absoluta.mkv
+│   │   │   ├── Dragon Ball - 03x48 - La lucha final.jpg
+│   │   │   ├── Dragon Ball - 03x48 - La lucha final.mkv
+│   │   │   ├── folder.jpg
+│   │   │   └── Thumbs.db
+│   │   ├── Temporada 4
+│   │   │   ├── Dragon Ball - 04x01 - El regreso de Piccolo.jpg
+│   │   │   ├── Dragon Ball - 04x01 - El regreso de Piccolo.mkv
+│   │   │   ├── Dragon Ball - 04x02 - Tamborino empieza su trabajo.jpg
+│   │   │   ├── Dragon Ball - 04x02 - Tamborino empieza su trabajo.mkv
+│   │   │   ├── Dragon Ball - 04x03 - Un extraño encuentro.jpg
+│   │   │   ├── Dragon Ball - 04x03 - Un extraño encuentro.mkv
+│   │   │   ├── Dragon Ball - 04x04 - La derrota de Cymbal.jpg
+│   │   │   ├── Dragon Ball - 04x04 - La derrota de Cymbal.mkv
+│   │   │   ├── Dragon Ball - 04x05 - Un escondite casi perfecto.jpg
+│   │   │   ├── Dragon Ball - 04x05 - Un escondite casi perfecto.mkv
+│   │   │   ├── Dragon Ball - 04x06 - Goku se enfurece.jpg
+│   │   │   ├── Dragon Ball - 04x06 - Goku se enfurece.mkv
+│   │   │   ├── Dragon Ball - 04x07 - Una difícil decisión.jpg
+│   │   │   ├── Dragon Ball - 04x07 - Una difícil decisión.mkv
+│   │   │   ├── Dragon Ball - 04x08 - Goku contra Piccolo.jpg
+│   │   │   ├── Dragon Ball - 04x08 - Goku contra Piccolo.mkv
+│   │   │   ├── Dragon Ball - 04x09 - La última esperanza.jpg
+│   │   │   ├── Dragon Ball - 04x09 - La última esperanza.mkv
+│   │   │   ├── Dragon Ball - 04x10 - El último combate del Maestro Mutenroshi.jpg
+│   │   │   ├── Dragon Ball - 04x10 - El último combate del Maestro Mutenroshi.mkv
+│   │   │   ├── Dragon Ball - 04x11 - En busca de la eterna juventud.jpg
+│   │   │   ├── Dragon Ball - 04x11 - En busca de la eterna juventud.mkv
+│   │   │   ├── Dragon Ball - 04x12 - Ataque al castillo del Rey.jpg
+│   │   │   ├── Dragon Ball - 04x12 - Ataque al castillo del Rey.mkv
+│   │   │   ├── Dragon Ball - 04x13 - La esperanza de Goku.jpg
+│   │   │   ├── Dragon Ball - 04x13 - La esperanza de Goku.mkv
+│   │   │   ├── Dragon Ball - 04x14 - El laberinto de hielo.jpg
+│   │   │   ├── Dragon Ball - 04x14 - El laberinto de hielo.mkv
+│   │   │   ├── Dragon Ball - 04x15 - El Maestro Mutenroshi reaparece.jpg
+│   │   │   ├── Dragon Ball - 04x15 - El Maestro Mutenroshi reaparece.mkv
+│   │   │   ├── Dragon Ball - 04x16 - Goku se reencarna.jpg
+│   │   │   ├── Dragon Ball - 04x16 - Goku se reencarna.mkv
+│   │   │   ├── Dragon Ball - 04x17 - Ten Shin Han toma una decisión.jpg
+│   │   │   ├── Dragon Ball - 04x17 - Ten Shin Han toma una decisión.mkv
+│   │   │   ├── Dragon Ball - 04x18 - Jugándose la vida.jpg
+│   │   │   ├── Dragon Ball - 04x18 - Jugándose la vida.mkv
+│   │   │   ├── Dragon Ball - 04x19 - La cólera de Goku.jpg
+│   │   │   ├── Dragon Ball - 04x19 - La cólera de Goku.mkv
+│   │   │   ├── Dragon Ball - 04x20 - Un combate difícil.jpg
+│   │   │   ├── Dragon Ball - 04x20 - Un combate difícil.mkv
+│   │   │   ├── Dragon Ball - 04x21 - El fin de PIccolo.jpg
+│   │   │   ├── Dragon Ball - 04x21 - El fin de PIccolo.mkv
+│   │   │   ├── folder.jpg
+│   │   │   └── Thumbs.db
+│   │   ├── Temporada 5
+│   │   │   ├── Dragon Ball - 05x01 - En busca del bastón mágico.jpg
+│   │   │   ├── Dragon Ball - 05x01 - En busca del bastón mágico.mkv
+│   │   │   ├── Dragon Ball - 05x02 - Un templo en el cielo.jpg
+│   │   │   ├── Dragon Ball - 05x02 - Un templo en el cielo.mkv
+│   │   │   ├── Dragon Ball - 05x03 - Dios aparece.jpg
+│   │   │   ├── Dragon Ball - 05x03 - Dios aparece.mkv
+│   │   │   ├── Dragon Ball - 05x04 - La resurrección del Dragón.jpg
+│   │   │   ├── Dragon Ball - 05x04 - La resurrección del Dragón.mkv
+│   │   │   ├── Dragon Ball - 05x05 - Más rápido que la luz.jpg
+│   │   │   ├── Dragon Ball - 05x05 - Más rápido que la luz.mkv
+│   │   │   ├── Dragon Ball - 05x06 - Sereno como el cielo.jpg
+│   │   │   ├── Dragon Ball - 05x06 - Sereno como el cielo.mkv
+│   │   │   ├── Dragon Ball - 05x07 - Más allá de los límites del tiempo.jpg
+│   │   │   ├── Dragon Ball - 05x07 - Más allá de los límites del tiempo.mkv
+│   │   │   ├── Dragon Ball - 05x08 - El aprendizaje.jpg
+│   │   │   ├── Dragon Ball - 05x08 - El aprendizaje.mkv
+│   │   │   ├── Dragon Ball - 05x09 - Cada uno toma un camino.jpg
+│   │   │   ├── Dragon Ball - 05x09 - Cada uno toma un camino.mkv
+│   │   │   ├── Dragon Ball - 05x10 - La cólera del dios de la montaña.jpg
+│   │   │   ├── Dragon Ball - 05x10 - La cólera del dios de la montaña.mkv
+│   │   │   ├── Dragon Ball - 05x11 - El reencuentro.jpg
+│   │   │   ├── Dragon Ball - 05x11 - El reencuentro.mkv
+│   │   │   ├── Dragon Ball - 05x12 - El nuevo campeonato de artes marciales.jpg
+│   │   │   ├── Dragon Ball - 05x12 - El nuevo campeonato de artes marciales.mkv
+│   │   │   ├── Dragon Ball - 05x13 - Los ocho mejores candidatos.jpg
+│   │   │   ├── Dragon Ball - 05x13 - Los ocho mejores candidatos.mkv
+│   │   │   ├── Dragon Ball - 05x14 - El maestro ignorante.jpg
+│   │   │   ├── Dragon Ball - 05x14 - El maestro ignorante.mkv
+│   │   │   ├── Dragon Ball - 05x15 - Goku se casa.jpg
+│   │   │   ├── Dragon Ball - 05x15 - Goku se casa.mkv
+│   │   │   ├── Dragon Ball - 05x16 - Shen, un candidato fuera de lo común.jpg
+│   │   │   ├── Dragon Ball - 05x16 - Shen, un candidato fuera de lo común.mkv
+│   │   │   ├── Dragon Ball - 05x17 - Una derrota sorprendente.jpg
+│   │   │   ├── Dragon Ball - 05x17 - Una derrota sorprendente.mkv
+│   │   │   ├── Dragon Ball - 05x18 - Goku y Ten Shin Han se enfrentan de nuevo.jpg
+│   │   │   ├── Dragon Ball - 05x18 - Goku y Ten Shin Han se enfrentan de nuevo.mkv
+│   │   │   ├── Dragon Ball - 05x19 - Todos para uno y uno para todos.jpg
+│   │   │   ├── Dragon Ball - 05x19 - Todos para uno y uno para todos.mkv
+│   │   │   ├── Dragon Ball - 05x20 - Shen contra Junior.jpg
+│   │   │   ├── Dragon Ball - 05x20 - Shen contra Junior.mkv
+│   │   │   ├── Dragon Ball - 05x21 - En lucha por el futuro del mundo.jpg
+│   │   │   ├── Dragon Ball - 05x21 - En lucha por el futuro del mundo.mkv
+│   │   │   ├── Dragon Ball - 05x22 - El último combate.jpg
+│   │   │   ├── Dragon Ball - 05x22 - El último combate.mkv
+│   │   │   ├── Dragon Ball - 05x23 - El gigante del torneo.jpg
+│   │   │   ├── Dragon Ball - 05x23 - El gigante del torneo.mkv
+│   │   │   ├── Dragon Ball - 05x24 - La lealtad de Goku.jpg
+│   │   │   ├── Dragon Ball - 05x24 - La lealtad de Goku.mkv
+│   │   │   ├── Dragon Ball - 05x25 - Una prueba difícil.jpg
+│   │   │   ├── Dragon Ball - 05x25 - Una prueba difícil.mkv
+│   │   │   ├── Dragon Ball - 05x26 - La victoria final.jpg
+│   │   │   ├── Dragon Ball - 05x26 - La victoria final.mkv
+│   │   │   ├── Dragon Ball - 05x27 - En busca del abanico mágico.jpg
+│   │   │   ├── Dragon Ball - 05x27 - En busca del abanico mágico.mkv
+│   │   │   ├── Dragon Ball - 05x28 - El comedor de fuego.jpg
+│   │   │   ├── Dragon Ball - 05x28 - El comedor de fuego.mkv
+│   │   │   ├── Dragon Ball - 05x29 - En la montaña de hielo.jpg
+│   │   │   ├── Dragon Ball - 05x29 - En la montaña de hielo.mkv
+│   │   │   ├── Dragon Ball - 05x30 - La montaña de los cinco elementos.jpg
+│   │   │   ├── Dragon Ball - 05x30 - La montaña de los cinco elementos.mkv
+│   │   │   ├── Dragon Ball - 05x31 - En las llamas del infierno.jpg
+│   │   │   ├── Dragon Ball - 05x31 - En las llamas del infierno.mkv
+│   │   │   ├── folder.jpg
+│   │   │   └── Thumbs.db
+│   │   ├── backdrop.jpg
+│   │   ├── clearlogo.png
+│   │   ├── poster.jpg
+│   │   ├── theme.mp3
+│   │   └── Thumbs.db
+│   └── 2
+│       ├── Ending Bola de drac.mp4
+│       ├── Opening Bola de Drac.mp4
+│       ├── T1xC1 - Bulma i Son Goku.mp4
+│       ├── T1xC10 - Han robat les Boles de Drac.mp4
+│       ├── T1xC11 - Apareix el drac.mp4
+│       ├── T1xC12 - El desig del gran Pilaf.mp4
+│       ├── T1xC13 - La transformació d'en Goku.mp4
+│       ├── T1xC14 - El rival de Goku.mp4
+│       ├── T1xC15 - Lanx, la noia misteriosa.mp4
+│       ├── T1xC16 - Buscant pedres.mp4
+│       ├── T1xC17 - A repartir llet.mp4
+│       ├── T1xC18 - L'entrenament del Follet Tortuga.mp4
+│       ├── T1xC2 - La primera part del viatge.mp4
+│       ├── T1xC3 - Els núvols del Follet Tortuga.mp4
+│       ├── T1xC4 - Oolong, el segrestador.mp4
+│       ├── T1xC5 - El temible i solitari Iamxa.mp4
+│       ├── T1xC6 - Compte amb les Boles de Drac!.mp4
+│       ├── T1xC7 - Ox Satan, el monstre del mont Frypan.mp4
+│       ├── T1xC8 - L'efecte kamehame.mp4
+│       ├── T1xC9 - La banda del Conill.mp4
+│       ├── T2xC1 - El gran torneig de les arts marcials.mp4
+│       ├── T2xC10 - La final.mp4
+│       ├── T2xC11 - El llac màgic.mp4
+│       ├── T2xC12 - La bola de quatre estrelles.mp4
+│       ├── T2xC13 - Visca l'alcalde.mp4
+│       ├── T2xC14 - Vint mil llegües sota la sorra.mp4
+│       ├── T2xC15 - La llegenda del drac.mp4
+│       ├── T2xC16 - El general no fa broma.mp4
+│       ├── T2xC17 - La Torre d'Acer.mp4
+│       ├── T2xC18 - El combat amb el sergent Metàl·lic.mp4
+│       ├── T2xC19 - Arriba el ninja Murasaki.mp4
+│       ├── T2xC2 - Les eliminatòries.mp4
+│       ├── T2xC20 - Cinc Murasakis contra en Son Goku.mp4
+│       ├── T2xC21 - Súper 8, el robot de bon cor.mp4
+│       ├── T2xC22 - La bèstia immunda.mp4
+│       ├── T2xC23 - L'últim dia de la Torre d'Acer.mp4
+│       ├── T2xC24 - El secret del doctor Flappe.mp4
+│       ├── T2xC25 - En Son Goku descobreix la ciutat.mp4
+│       ├── T2xC26 - En Son Goku troba els seus amics.mp4
+│       ├── T2xC27 - Una trampa pels aires.mp4
+│       ├── T2xC28 - La Bulma torna de lluny.mp4
+│       ├── T2xC29 - A l'illa del Follet Tortuga.mp4
+│       ├── T2xC3 - Atenció, Krilin!.mp4
+│       ├── T2xC30 - El general Blue ataca.mp4
+│       ├── T2xC31 - Una gruta miraculosa.mp4
+│       ├── T2xC32 - Les trampes del pirata.mp4
+│       ├── T2xC33 - El robot pirata.mp4
+│       ├── T2xC34 - El tresor existeix.mp4
+│       ├── T2xC35 - La cova dels mil perills.mp4
+│       ├── T2xC36 - Campi qui pugui.mp4
+│       ├── T2xC37 - Cap al poble de les Joguines Mecàniques.mp4
+│       ├── T2xC38 - Igual que sobre un núvol.mp4
+│       ├── T2xC39 - Adéu al poble de les Joguines Mecàniques.mp4
+│       ├── T2xC4 - El gran Jackie Xun.mp4
+│       ├── T2xC40 - Els habitants de la Terra Sagrada.mp4
+│       ├── T2xC41 - Tao Pai Pai entra en acció.mp4
+│       ├── T2xC42 - La Torre Sagrada.mp4
+│       ├── T2xC43 - El mestre dels mestres.mp4
+│       ├── T2xC44 - L'aigua sagrada.mp4
+│       ├── T2xC45 - En Son Goku contraataca.mp4
+│       ├── T2xC46 - La desfeta d'en Tao Pai Pai.mp4
+│       ├── T2xC47 - Rumb al quarter general de la Cinta Vermella.mp4
+│       ├── T2xC48 - La desviació de l'exèrcit de la Cinta Vermella.mp4
+│       ├── T2xC49 - La fi del general Red.mp4
+│       ├── T2xC5 - Giran, el lladregot.mp4
+│       ├── T2xC50 - L'última Bola de Drac.mp4
+│       ├── T2xC51 - Baba, la vident.mp4
+│       ├── T2xC52 - Els cinc adversaris.mp4
+│       ├── T2xC53 - La Fossa del Diable.mp4
+│       ├── T2xC54 - El combat a la Fossa del Diable.mp4
+│       ├── T2xC55 - El poder mortal del Diable.mp4
+│       ├── T2xC56 - El misteriós cinquè home.mp4
+│       ├── T2xC57 - La lluita amb l'adversari misteriós.mp4
+│       ├── T2xC58 - L'adversari es treu la màscara.mp4
+│       ├── T2xC59 - Les tàctiques d'en Pilaf.mp4
+│       ├── T2xC6 - El gran combat de Krilin.mp4
+│       ├── T2xC60 - La tornada del drac diví.mp4
+│       ├── T2xC61 - La carbassa màgica.mp4
+│       ├── T2xC62 - El combat del rei.mp4
+│       ├── T2xC63 - En Son Goku amb els dimonis.mp4
+│       ├── T2xC64 - El senglar alat.mp4
+│       ├── T2xC65 - Cap al gran Torneig Mundial d'Arts Marcials.mp4
+│       ├── T2xC7 - Karate aeri.mp4
+│       ├── T2xC8 - La gran final.mp4
+│       ├── T2xC9 - Son Goku en plena crisi.mp4
+│       ├── T3xC1 - El campió de totes les categories.mp4
+│       ├── T3xC10 - Dos rivals de molt talent.mp4
+│       ├── T3xC11 - Una decisió inesperada.mp4
+│       ├── T3xC12 - En Son Goku contra en Krilín.mp4
+│       ├── T3xC13 - Els millors cops d'en Krilín.mp4
+│       ├── T3xC14 - El combat final.mp4
+│       ├── T3xC15 - Un atac d'alta volada.mp4
+│       ├── T3xC16 - Una falsa victòria.mp4
+│       ├── T3xC17 - L'última oportunitat.mp4
+│       ├── T3xC18 - La gran final.mp4
+│       ├── T3xC19 - Un pla diabòlic.mp4
+│       ├── T3xC2 - Les eliminatòries.mp4
+│       ├── T3xC20 - El temps del terror.mp4
+│       ├── T3xC21 - En Son Goku recupera la vida.mp4
+│       ├── T3xC22 - L'home dels boscos.mp4
+│       ├── T3xC23 - Una altra missió.mp4
+│       ├── T3xC24 - En memòria d'en Krilín.mp4
+│       ├── T3xC25 - Satanàs es mostra.mp4
+│       ├── T3xC26 - En Son Goku contra Satanàs Cor Petit.mp4
+│       ├── T3xC27 - L'última esperança.mp4
+│       ├── T3xC28 - L'últim combat del Follet Tortuga.mp4
+│       ├── T3xC29 - La demanda de la joventut eterna.mp4
+│       ├── T3xC3 - Els vuit millors.mp4
+│       ├── T3xC30 - La primera etapa.mp4
+│       ├── T3xC31 - El cim de la torre.mp4
+│       ├── T3xC32 - El Laberint de gel.mp4
+│       ├── T3xC33 - El Follet Tortuga reapareix.mp4
+│       ├── T3xC34 - En Son Goku es reencarna.mp4
+│       ├── T3xC35 - La determinació d'en Ten Xin Han.mp4
+│       ├── T3xC36 - En Satanàs i en Ten Xin Han es troben.mp4
+│       ├── T3xC37 - La còlera d'en Son Goku.mp4
+│       ├── T3xC38 - Un combat difícil.mp4
+│       ├── T3xC39 - La fi d'en Satanàs.mp4
+│       ├── T3xC4 - En Iamxa contra el malvat Ten Xin Han.mp4
+│       ├── T3xC40 - A la recerca del bastó màgic.mp4
+│       ├── T3xC41 - El temple als núvols.mp4
+│       ├── T3xC42 - Déu apareix.mp4
+│       ├── T3xC43 - La resurrecció del Drac.mp4
+│       ├── T3xC44 - Més ràpid que el llamp.mp4
+│       ├── T3xC45 - En Son Goku aprèn a pescar.mp4
+│       ├── T3xC46 - Més enllà del temps.mp4
+│       ├── T3xC47 - L'aprenentatge.mp4
+│       ├── T3xC48 - Cadascú busca el seu objectiu.mp4
+│       ├── T3xC49 - La còlera del Déu de la Muntanya.mp4
+│       ├── T3xC5 - El gran Torneig Mundial d'Arts Marcials.mp4
+│       ├── T3xC6 - La lluna plena.mp4
+│       ├── T3xC7 - La revenja d'en Tao-Pai-Pai.mp4
+│       ├── T3xC8 - Una idea genial.mp4
+│       ├── T3xC9 - En Son Goku contra en Pampuc.mp4
+│       ├── T4xC1 - El retrobament.mp4
+│       ├── T4xC10 - En Xen contra el fill d'en Satanàs Cor Petit.mp4
+│       ├── T4xC11 - Pel futur del món.mp4
+│       ├── T4xC12 - L'últim combat.mp4
+│       ├── T4xC13 - El gegant del torneig.mp4
+│       ├── T4xC14 - La lleialtat d'en Son Goku.mp4
+│       ├── T4xC15 - Una prova difícil.mp4
+│       ├── T4xC16 - La victòria final.mp4
+│       ├── T4xC17 - El vestit de núvia.mp4
+│       ├── T4xC18 - El Menjafoc.mp4
+│       ├── T4xC19 - La Xixi treballa fort per ser una bona esposa.mp4
+│       ├── T4xC2 - El Gran Torneig de les Arts Marcials.mp4
+│       ├── T4xC20 - La muntanya dels cinc elements.mp4
+│       ├── T4xC21 - A les flames de l'infern.mp4
+│       ├── T4xC3 - Els vuit millors candidats.mp4
+│       ├── T4xC4 - El contraatac del temible Tao-Pai-Pai.mp4
+│       ├── T4xC5 - En Son Goku es casa.mp4
+│       ├── T4xC6 - En Xen, un candidat gens corrent.mp4
+│       ├── T4xC7 - En Son Goku contra en Ten Xin Han.mp4
+│       ├── T4xC8 - En Son Goku i en Ten Xin Han continuen lluitant.mp4
+│       └── T4xC9 - Tots per un i un per tots.mp4
+├── ESTACION_ONCE
+│   ├── Estación once S01E01 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E02 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E03 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E04 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E05 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E06 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E07 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E08 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── Estación once S01E09 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+│   └── Estación once S01E10 [HMAX WEB-DL 1080p AVC ES-EN DD+ 5.1 Subs][HDO].mkv
+├── FALLING_SKIES
+│   ├── 1
+│   │   ├── Falling Skies (2011) S01E01 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E02 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E03 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E04 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E05 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E06 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E07 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E08 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S01E09 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   └── Falling Skies (2011) S01E10 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   ├── 2
+│   │   ├── Falling Skies (2011) S02E01 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E02 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E03 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E04 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E05 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E06 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E07 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E08 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   ├── Falling Skies (2011) S02E09 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   │   └── Falling Skies (2011) S02E10 [BDRip 1080p AVC ES DD 2.0][HDO].mkv
+│   ├── 3
+│   │   ├── Falling Skies - 3x01 - En terreno pantanoso.mkv
+│   │   ├── Falling Skies - 3x02 - Daños colaterales.mkv
+│   │   ├── Falling Skies - 3x03 - Tierras baldías.mkv
+│   │   ├── Falling Skies - 3x04 - A cualquier precio.mkv
+│   │   ├── Falling Skies - 3x05 - Búsqueda y recuperación.mkv
+│   │   ├── Falling Skies - 3x06 - Enmudece y sal de él.mkv
+│   │   ├── Falling Skies - 3x07 - El piquete.mkv
+│   │   ├── Falling Skies - 3x08 - Extraño brebaje.mkv
+│   │   ├── Falling Skies - 3x09 - Descenso a Xibalba.mkv
+│   │   └── Falling Skies - 3x10 - Brazil.mkv
+│   ├── 4
+│   │   ├── Falling Skies - 4x01 - -Fantasma en la máquina.mkv
+│   │   ├── Falling Skies - 4x02 - El ojo.mkv
+│   │   ├── Falling Skies - 4x03 - Éxodo.mkv
+│   │   ├── Falling Skies - 4x04 - Evoluciona o muere.mkv
+│   │   ├── Falling Skies - 4x05 - Guerra mental.mkv
+│   │   ├── Falling Skies - 4x06 - La incógnita.mkv
+│   │   ├── Falling Skies - 4x07 - Masacre del sábado noche.mkv
+│   │   ├── Falling Skies - 4x08 - Lo último que se pierde.mkv
+│   │   ├── Falling Skies - 4x09 - Hasta que la muerte nos separe.mkv
+│   │   ├── Falling Skies - 4x10 - Echar a suertes.mkv
+│   │   ├── Falling Skies - 4x11 - Odisea espacial.mkv
+│   │   └── Falling Skies - 4x12 - Alcanzar la Luna.mkv
+│   └── 5
+│       ├── Falling Skies - 5x01 - Encuentra tu guerrero.mkv
+│       ├── Falling Skies - 5x02 - Hambre y sufrimiento.mkv
+│       ├── Falling Skies - 5x03 - Crías.mkv
+│       ├── Falling Skies - 5x04 - La rebelión de Pope.mkv
+│       ├── Falling Skies - 5x05 - Personal no indispensable.mkv
+│       ├── Falling Skies - 5x06 - Tregua.mkv
+│       ├── Falling Skies - 5x07 - Todo el mundo tiene sus razones.mkv
+│       ├── Falling Skies - 5x08 - Stalag 14ª Virginia.mkv
+│       ├── Falling Skies - 5x09 - Reunión.mkv
+│       └── Falling Skies - 5x10 - Renacer.mkv
+├── FROM
+│   ├── From S04E01 [AMZN WEB-DL 2160p HEVC SDR ES DD+ 5.1][HDO].mkv
+│   ├── From S04E02 [AMZN WEB-DL 2160p HEVC SDR ES DD+ 5.1][HDO].mkv
+│   ├── From S04E03 [AMZN WEB-DL 2160p HEVC SDR ES DD+ 5.1][HDO].mkv
+│   ├── From S04E04 [AMZN WEB-DL 2160p HEVC SDR ES DD+ 5.1][HDO].mkv
+│   ├── From S04E05 [AMZN WEB-DL 2160p HEVC SDR ES DD+ 5.1][HDO].mkv
+│   ├── FROM S04E06 2160p AMZN WEB-DL ESP-ENG DDP 5.1 HEVC.mkv
+│   ├── From S04E07 [AMZN WEB-DL 2160p HEVC SDR ES DD+ 5.1][HDO].mkv
+│   ├── From S04E08 [AMZN WEB-DL 2160p HEVC SDR ES DD+ 5.1][HDO].mkv
+│   └── FROM S04E09 2160p AMZN WEB-DL ESP-ENG DDP 5.1 HEVC.mkv
+├── GOOD_OMENS
+│   └── Good Omens S03E01 [AMZN WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+├── GRISELDA
+│   ├── Griselda S01E01 HDTV-1080p AC3 5.1 x265.mkv
+│   ├── Griselda S01E02 HDTV-1080p AC3 5.1 x265.mkv
+│   ├── Griselda S01E03 HDTV-1080p AC3 5.1 x265.mkv
+│   ├── Griselda S01E04 HDTV-1080p AC3 5.1 x265.mkv
+│   ├── Griselda S01E05 HDTV-1080p AC3 5.1 x265.mkv
+│   └── Griselda S01E06 HDTV-1080p AC3 5.1 x265.mkv
+├── HUNTERXHUNTER
+│   ├── _1_esp
+│   │   ├── Hunter × Hunter S01E01 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E02 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E03 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E04 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E05 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E06 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E07 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E08 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E09 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E10 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E11 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E12 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E13 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E14 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E15 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E16 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E17 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E18 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E19 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E20 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E21 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E22 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E23 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E24 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E25 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E26 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E27 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E28 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E29 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E30 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E31 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E32 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E33 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E34 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E35 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E36 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E37 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E38 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E39 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E40 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E41 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E42 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E43 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E44 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E45 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E46 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E47 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E48 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E49 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E50 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E51 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E52 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E53 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E54 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E55 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E56 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E57 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E58 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E59 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E60 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S01E61 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   └── Hunter × Hunter S01E62 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── _2_esp
+│   │   ├── Hunter × Hunter S02E01 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E02 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E03 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E04 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E05 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E06 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E07 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E08 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E09 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E10 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E11 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E12 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E13 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E14 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E15 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E16 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E17 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E18 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E19 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E20 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E21 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E22 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E23 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E24 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E25 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E26 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E27 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E28 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E29 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E30 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E31 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E32 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E33 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E34 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E35 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E36 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E37 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E38 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E39 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E40 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E41 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E42 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E43 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E44 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E45 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E46 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E47 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E48 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E49 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E50 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E51 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E52 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E53 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E54 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E55 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E56 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E57 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E58 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E59 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E60 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E61 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E62 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E63 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E64 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E65 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E66 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E67 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E68 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E69 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E70 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E71 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E72 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S02E73 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   └── Hunter × Hunter S02E74 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── _3_esp
+│   │   ├── Hunter × Hunter S03E01 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E02 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E03 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E04 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E05 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E06 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E07 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E08 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E09 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E10 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   ├── Hunter × Hunter S03E11 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   │   └── Hunter × Hunter S03E12 [AMZN WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── 1
+│   │   ├── Hunter.X.Hunter.2011.S01E01.Departure x and x Friends.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E02.Test x of x Tests.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E03.Rivals x for x Survival.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E04.Hope x and x Ambition.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E05.Hisoka x Is x Sneaky.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E06.A x Surprising x Challenge.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E07.Showdown x on x the Airship.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E08.Solution x Is x Majority Rules.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E09.Beware x of x Prisoners.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E10.Trick x to x the Trick.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E11.Trouble x with x the Gamble.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E12.Last Test x of x Resolve.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E13.Letter x from x Gon.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E14.Hit x the x Target.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E15.Scramble x of x Deception.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E16.Defeat x and x Disgrace.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E17.Trap x in x the Hole.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E18.Big x Time x Interview.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E19.Cant Win x But x Cant Lose.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E20.Baffling Turn x of x Events.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E21.Some x Brother x Trouble.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E22.A x Dangerous x Watchdog.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E23.The x Guards x Duty.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E24.The x Zoldyck x Family.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S01E25.Cant See x if x Youre Blind.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   └── Hunter.X.Hunter.2011.S01E26.Then x and x After.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   ├── 2
+│   │   ├── Hunter.X.Hunter.2011.S02E27.Arrival x at x the Arena.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E28.Nen x and x Nen.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E29.Awakening x and x Potential.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E30.Fierce x and x Ferocious.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E31.Destiny x and x Tenacity.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E32.A x Surprising x Win.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E33.An x Empty x Threat.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E34.Power x to x Avenge.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E35.The x True x Pass.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E36.A Big Debt x and x a Small Kick.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S02E37.Ging x and x Gon.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   └── Hunter.X.Hunter.2011.S02E38.Reply x from x Dad.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   ├── 3
+│   │   ├── Hunter.X.Hunter.2011.S03E39.Wish x and x Promise.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E40.Nen x Users x Unite.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E41.Gathering x of x Heroes.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E42.Defend x and x Attack.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E43.A x Shocking x Tragedy.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E44.Buildup x to a x Fierce Battle.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E45.Restraint x and x Vow.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E46.Chasing x and x Waiting.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E47.Condition x and x Condition.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E48.Very x Sharp x Eye.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E49.Pursuit x and x Analysis.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E50.Ally x and x Sword.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E51.A x Brutal x Battlefield.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E52.Assault x and x Impact.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E53.Fake x and x Psyche.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E54.Fortunes x Arent x Right.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E55.Alies x and x Lies.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E56.Beloved x and x Beleaguered.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S03E57.Initiative x and x Law.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   └── Hunter.X.Hunter.2011.S03E58.Signal x to x Retreat.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   ├── 4
+│   │   ├── Hunter.X.Hunter.2011.S04E59.Bid.x.and.x.Haste.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E60.End.x.and.x.Beginning.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E61.Invitation.x.and.x.Friend.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E62.Reality.x.and.x.Raw.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E63.A.x.Hard.x.Master.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E64.Strengthen.x.and.x.Threaten.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E65.Evil.Fist.x.and.x.Rock-Paper-Scissors.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E66.Strategy.x.and.x.Scheme.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E67.15.x.15.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E68.Pirates.x.and.x.Guesses.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E69.A.x.Heated.x.Showdown.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E70.Guts.x.and.x.Courage.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E71.Bargain.x.and.x.Deal.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E72.Chase.x.and.x.Chance.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E73.Insanity.x.and.x.Sanity.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S04E74.Victor.x.and.x.Loser.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   └── Hunter.X.Hunter.2011.S04E75.Gings.Friends.x.and.x.True.Friends.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   ├── 5
+│   │   ├── Hunter.X.Hunter.2011.S05E100.Tracking.x.and.x.Pursuit.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E101.Ikalgo.x.and.x.Lightning.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E102.Power.x.and.x.Games.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E103.Check.x.And.x.Mate.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E104.Doubt.x.And.x.Hesitation.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E105.Resolve.x.And.x.Awakening.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E106.Knov.x.And.x.Morel.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E107.Return.x.And.x.Retire.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E108.Komugi.x.And.x.Gungi.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E109.Taking.Stock.x.And.x.Taking.Action.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E110.Confusion.x.And.x.Expectation.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E111.Charge.x.And.x.Invade.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E112.Monster.x.And.x.Monster.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E113.An.x.Indebted.x.Insect.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E114.Divide.x.And.x.Conquer.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E115.Duty.x.And.x.Question.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E116.Revenge.x.And.x.Recovery.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E117.Insult.x.And.x.Payback.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E118.A.x.False.x.Revenge.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E119.Strong.x.Or.x.Weak.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E120.Fake.x.And.x.Real.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E121.Defeat.x.And.x.Dignity.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E122.Pose.x.And.x.Name.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E123.Centipede.x.And.x.Memory.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E124.Breakdown.x.And.x.Awakening.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E125.Great.Power.x.And.x.Ultimate.Power.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E126.Zero.x.And.x.Rose.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E127.Hostility.x.And.x.Determination.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E128.Unparalleled.Joy.x.And.x.Unconditional.Love.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E129.Formidable.Enemy.x.And.x.Clear.Objective.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E130.Magic.x.To.x.Destroy.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E131.Anger.x.And.x.Light.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E132.Flash.x.And.x.Start.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E133.Deadline.x.To.x.Live.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E134.The.Word.x.Is.x.You.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E135.This.Person.x.And.x.This.Moment.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E136.Homecoming.x.And.x.Real.Name.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E76.Reunion.x.and.x.Understanding.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E77.Unease.x.and.x.Sighting.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E78.Very.x.Rapid.x.Reproduction.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E79.No.x.Good.x.NGL.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E80.Evil.x.and.x.Terrible.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E81.The.x.Fight.x.Begins.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E82.Kite.x.and.x.Slots.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E83.Inspiration.x.to.x.Evolve.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E84.A.x.Fated.x.Awakening.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E85.Light.x.and.x.Darkness.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E86.Promise.x.and.x.Reunion.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E87.Duel.x.and.x.Escape.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E88.Rock-Paper-Scissors.x.and.x.Weakness.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E89.Compassion.x.and.x.Strength.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E90.Interest.x.and.x.Curse.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E91.The.Strong.x.and.x.the.Weak.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E92.One.Wish.x.and.x.Two.Promises.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E93.Date.x.with.x.Palm.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E94.Friend.x.and.x.Journey.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E95.Grudge.x.and.x.Dread.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E96.A.x.Lawless.x.Home.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E97.Carnage.x.and.x.Devastation.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   ├── Hunter.X.Hunter.2011.S05E98.Infiltration.x.and.x.Selection.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   │   └── Hunter.X.Hunter.2011.S05E99.Combination.x.and.x.Evolution.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│   └── 6
+│       ├── Hunter.X.Hunter.2011.S06E137.Debate.x.Among.x.Zodiacs.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E138.Request.x.And.x.Wish.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E139.Alluka.x.And.x.Something.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E140.Join.Battle.x.And.x.Open.Battle.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E141.Magician.x.And.x.Butler.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E142.Needles.x.And.x.Debt.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E143.Sin.x.and.x.Claw.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E144.Approval.x.And.x.Coalition.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E145.Defeat.x.And.x.Reunion.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E146.Chairman.x.And.x.Release.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       ├── Hunter.X.Hunter.2011.S06E147.Salvation.x.And.x.Future.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+│       └── Hunter.X.Hunter.2011.S06E148.Past.x.And.x.Future.1080p.NF.WEB-DL.LAT-ENG-JAP.AAC2.0.AVC.mkv
+├── LA_CASA_DE_PAPEL
+│   ├── 1
+│   │   ├── La casa de papel S01E01 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E02 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E03 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E04 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E05 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E06 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E07 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E08 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E09 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E10 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E11 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E12 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E13 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   ├── La casa de papel S01E14 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   │   └── La casa de papel S01E15 [BDRemux 1080p AVC ES PCM 2.0 Subs][HDO].mkv
+│   ├── 2
+│   │   ├── La casa de Papel S0201 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0202 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0203 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0204 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0205 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0206 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0207 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0208 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0209 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0210 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0211 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0212 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0213 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0214 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── La casa de Papel S0215 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── La casa de Papel S0216 [NF WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   └── 3
+│       ├── La casa de Papel S0301 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0302 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0303 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0304 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0305 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0306 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0307 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0308 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La casa de Papel S0309 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+│       └── La casa de Papel S0310 [NF WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos - EN DD+ 5.1 Subs][HDO].mkv
+├── LA_CASA_DEL_DRAGON
+│   ├── La Casa del Dragon (2026) S03E01 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+│   └── La Casa Del Dragon S03E01 2160p HMAX WEB-DL H.265 ESP-ENG DDP 5.1 SUBS.mkv
+├── LA_MATERIA_OSCURA
+│   ├── 1
+│   │   ├── La Materia Oscura 1x01 Lyras Jordan.mkv
+│   │   ├── La Materia Oscura 1x02 La Idea Del Norte.mkv
+│   │   ├── La Materia Oscura 1x03 Los Espias.mkv
+│   │   ├── La Materia Oscura 1x04 Armadura.mkv
+│   │   ├── La Materia Oscura 1x05 El Niño Perdido.mkv
+│   │   ├── La Materia Oscura 1x06 La Jaula Para Demonios.mkv
+│   │   ├── La Materia Oscura 1x07 Lucha A Muerte.mkv
+│   │   └── La Materia Oscura 1x08 Traicion.mkv
+│   ├── 2
+│   │   ├── La Materia Oscura - S02E01 - La ciudad de las urracas [WEBDL AMZN HDR 2160p x265 EAC3 Dual DD Plus 5.1 Subs].mkv
+│   │   ├── La Materia Oscura - S02E02 - La cueva [WEBDL AMZN HDR 2160p x265 EAC3 Dual DD Plus 5.1 Subs].mkv
+│   │   ├── La Materia Oscura - S02E03 - Theft [WEBDL AMZN HDR 2160p x265 AC3 Dual DD 5.1 Subs].mkv
+│   │   ├── La Materia Oscura - S02E04 - Torre de los angeles [WEBDL AMZN HDR 2160p x265 AC3 Dual DD 5.1 Subs].mkv
+│   │   ├── La Materia Oscura - S02E05 - El erudito [WEBDL AMZN HDR 2160p x265 AC3 Dual DD 5.1 Subs].mkv
+│   │   ├── La Materia Oscura - S02E06 - Malice [WEBDL AMZN HDR 2160p x265 AC3 Dual DD 5.1 Subs].mkv
+│   │   └── La Materia Oscura - S02E07 - Æsahættr [WEBDL AMZN HDR 2160p x265 AC3 Dual DD 5.1 Subs].mkv
+│   └── 3
+│       ├── La materia oscura S03E01 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La materia oscura S03E02 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La materia oscura S03E03 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La materia oscura S03E04 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La materia oscura S03E05 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La materia oscura S03E06 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── La materia oscura S03E07 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+│       └── La materia oscura S03E08 [iP WEB-DL 2160p HEVC SDR ES-EN DD+ 5.1 Subs][HDO].mkv
+├── LAZARUS
+│   ├── Lazarus S01E01 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E02 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E03 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E04 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E05 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E06 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E07 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E08 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E09 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E10 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E11 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   ├── Lazarus S01E12 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+│   └── Lazarus S01E13 [MAX WEB-DL 1080p AVC ES DD+ 2.0][HDO].mkv
+├── ORPHAN_BLACK
+│   ├── 1
+│   │   ├── Orphan Black S01E01 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E02 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E03 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E04 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E05 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E06 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E07 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E08 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S01E09 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   └── Orphan Black S01E10 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── 2
+│   │   ├── Orphan Black S02E01 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E02 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E03 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E04 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E05 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E06 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E07 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E08 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S02E09 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   └── Orphan Black S02E10 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── 3
+│   │   ├── Orphan Black S03E01 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E02 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E03 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E04 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E05 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E06 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E07 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E08 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S03E09 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   └── Orphan Black S03E10 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── 4
+│   │   ├── Orphan Black S04E01 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E02 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E03 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E04 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E05 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E06 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E07 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E08 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── Orphan Black S04E09 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   └── Orphan Black S04E10 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│   └── 5
+│       ├── Orphan Black S05E01 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E02 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E03 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E04 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E05 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E06 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E07 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E08 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       ├── Orphan Black S05E09 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+│       └── Orphan Black S05E10 [NF WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv
+├── PARA_TODA_HUMANIDAD
+│   ├── 1
+│   │   ├── Para toda la humanidad S01E01 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E02 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E03 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E04 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E05 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E06 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E07 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E08 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S01E09 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   │   └── Para toda la humanidad S01E10 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+Atmos 5.1 Subs][HDO].mkv
+│   ├── 2
+│   │   ├── Para toda la humanidad S02E01 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E02 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E03 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E04 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E05 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E06 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E07 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E08 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S02E09 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   └── Para toda la humanidad S02E10 [APTV WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── 3
+│   │   ├── Para toda la humanidad S03E01 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E02 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E03 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E04 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E05 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E06 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E07 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E08 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S03E09 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   └── Para toda la humanidad S03E10 [APTV WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── 4
+│   │   ├── Para toda la humanidad S04E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E02 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E03 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E04 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E05 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E06 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E07 [REPACK][APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E08 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   ├── Para toda la humanidad S04E09 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   │   └── Para toda la humanidad S04E10 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   └── 5
+│       ├── Para toda la humanidad S05E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E02 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E03 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E04 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E05 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E06 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E07 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E08 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       ├── Para toda la humanidad S05E09 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+│       └── Para toda la humanidad S05E10 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+├── STAR_WARS_AHSOKA
+│   ├── 4K_REMUX
+│   │   ├── Ahsoka S01E01 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   │   ├── Ahsoka S01E02 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   │   ├── Ahsoka S01E03 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   │   ├── Ahsoka S01E04 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   │   ├── Ahsoka S01E05 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   │   ├── Ahsoka S01E06 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   │   ├── Ahsoka S01E07 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   │   └── Ahsoka S01E08 [UHDRemux 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Ahsoka S01E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Ahsoka S01E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Ahsoka S01E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Ahsoka S01E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Ahsoka S01E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Ahsoka S01E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Ahsoka S01E07 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   └── Ahsoka S01E08 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+├── STAR_WARS_ANDOR
+│   ├── Andor S01E01 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E02 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E03 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E04 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E05 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E06 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E07 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E08 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E09 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E10 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Andor S01E11 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   └── Andor S01E12 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+├── STAR_WARS_BAD_BATCH
+│   ├── 1
+│   │   ├── Star Wars La Remesa Mala S01E01 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E02 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E03 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E04 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E05 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E06 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E07 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E08 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E09 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E10 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E11 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E12 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E13 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E14 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S01E15 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── Star Wars La Remesa Mala S01E16 [DSN+ WEB-DL 2160p HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── 2
+│   │   ├── Star Wars La Remesa Mala S02E01 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E02 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E03 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E04 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E05 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E06 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E07 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E08 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E09 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E10 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E11 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E12 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E13 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E14 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars La Remesa Mala S02E15 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── Star Wars La Remesa Mala S02E16 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   └── 3
+│       ├── Star Wars La remesa mala S03E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E07 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E08 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E09 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E10 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E11 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E12 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E13 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars La remesa mala S03E14 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       └── Star Wars La remesa mala S03E15 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+├── STAR_WARS_CLONE_WARS
+│   ├── Las Guerras Clon T1
+│   │   ├── STAR_WARS_CLONE_WARS_S1_D1.iso
+│   │   ├── STAR_WARS_CLONE_WARS_S1_D2.iso
+│   │   └── STAR_WARS_CLONE_WARS_S1_D3.iso
+│   ├── Las Guerras Clon T2
+│   │   ├── STAR_WARS_CLONE_WARS_S2_D1.iso
+│   │   ├── STAR_WARS_CLONE_WARS_S2_D2.iso
+│   │   └── STAR_WARS_CLONE_WARS_S2_D3.iso
+│   ├── Las Guerras Clon T3
+│   │   ├── STAR_WARS_CLONE_WARS_S3_D1.iso
+│   │   ├── STAR_WARS_CLONE_WARS_S3_D2.iso
+│   │   └── STAR_WARS_CLONE_WARS_S3_D3.iso
+│   ├── Las Guerras Clon T4
+│   │   ├── STAR_WARS_CLONE_WARS_S4_D1.iso
+│   │   ├── STAR_WARS_CLONE_WARS_S4_D2.iso
+│   │   └── STAR_WARS_CLONE_WARS_S4_D3.iso
+│   ├── Las Guerras Clon T5
+│   │   ├── STAR_WARS_CLONE_WARS_S5_D1.iso
+│   │   └── STAR_WARS_CLONE_WARS_S5_D2.iso
+│   ├── Las Guerras Clon T6
+│   │   ├── STAR_WARS_CLONE_WARS_S6_D1.iso
+│   │   └── STAR_WARS_CLONE_WARS_S6_D2.iso
+│   ├── Las Guerras Clon T7
+│   │   ├── S07E01 La Remesa Mala.mkv
+│   │   ├── S07E02 Un eco distante.mkv
+│   │   ├── S07E03 Sobre las alas de Keeradarks.mkv
+│   │   ├── S07E04 Un asunto pendiente.mkv
+│   │   ├── S07E05 Dejando rastro.mkv
+│   │   ├── S07E06 Trato, no hay trato.mkv
+│   │   ├── S07E07 Una deuda peligrosa.mkv
+│   │   ├── S07E08 Otra vez juntas.mkv
+│   │   ├── S07E09 Los viejos amigos no se olvidan.mkv
+│   │   ├── S07E10 El aprendiz fantasma.mkv
+│   │   ├── S07E11 Destrozados.mkv
+│   │   └── S07E12 Victoria y muerte.mkv
+│   └── Star Wars - The Clone Wars (2008) [BDRemux 1080p AVC ES-CA-EN DD 5.1 Subs][HDO].mkv
+├── STAR_WARS_LIBRO_BOBA_FETT
+│   ├── El libro de Boba Fett S01E01 [DSN+ WEB-DL 2160p HEVC DV-HDR10  ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── El libro de Boba Fett S01E02 [DSN+ WEB-DL 2160p HEVC DV-HDR10  ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── El libro de Boba Fett S01E03 [DSN+ WEB-DL 2160p HEVC DV-HDR10  ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── El libro de Boba Fett S01E04 [DSN+ WEB-DL 2160p HEVC DV-HDR10  ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── El libro de Boba Fett S01E05 [DSN+ WEB-DL 2160p HEVC DV-HDR10  ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── El libro de Boba Fett S01E06 [DSN+ WEB-DL 2160p HEVC DV-HDR10  ES-EN DD+ 5.1 Subs][HDO].mkv
+│   └── El libro de Boba Fett S01E07 [DSN+ WEB-DL 2160p HEVC DV-HDR10  ES-EN DD+ 5.1 Subs][HDO].mkv
+├── STAR_WARS_OBI_WAN_KENOBI
+│   ├── Obi-Wan Kenobi S01E01 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Obi-Wan Kenobi S01E02 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Obi-Wan Kenobi S01E03 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Obi-Wan Kenobi S01E04 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Obi-Wan Kenobi S01E05 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+│   └── Obi-Wan Kenobi S01E06 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1][HDO].mkv
+├── STAR_WARS_REBELS
+│   ├── 1
+│   │   ├── Star Wars Rebels (2014) S1 D1 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   │   └── Star Wars Rebels (2014) S1 D2 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   ├── 2
+│   │   ├── Star Wars Rebels (2014) S2 D1 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   │   ├── Star Wars Rebels (2014) S2 D2 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   │   └── Star Wars Rebels (2014) S2 D3 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   ├── 3
+│   │   ├── Star Wars Rebels (2014) S3 D1 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   │   ├── Star Wars Rebels (2014) S3 D2 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   │   └── Star Wars Rebels (2014) S3 D3 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│   └── 4
+│       ├── Star Wars Rebels (2014) S4 D1 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+│       └── Star Wars Rebels (2014) S4 D2 [Custom Blu ray 1080p AVC ES DD 2.0 - EN DD 5.1 Subs][HDO].iso
+├── STAR_WARS_RESISTANCE
+│   ├── 1
+│   │   ├── Star Wars La Resistencia S01E01 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E02 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E03 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E04 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E05 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E06 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E07 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E08 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E09 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E10 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E11 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E12 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E13 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E14 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E15 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E16 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E17 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E18 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E19 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   ├── Star Wars La Resistencia S01E20 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   │   └── Star Wars La Resistencia S01E21 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│   └── 2
+│       ├── Star Wars La Resistencia S02E01 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E02 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E03 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E04 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E05 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E06 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E07 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E08 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E09 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E10 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E11 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E12 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E13 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E14 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E15 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E16 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E17 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       ├── Star Wars La Resistencia S02E18 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+│       └── Star Wars La Resistencia S02E19 [WEB-DL DSNP 720p AAC 2.0 esp EAC3 5.1 eng Subs eng][HDOlimpo].mkv
+├── STAR_WARS_SKELETON_CREW
+│   ├── Star Wars - Tripulación perdida S01E01 [DSPN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Tripulación perdida S01E02 [DSPN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Tripulación perdida S01E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Tripulación perdida S01E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Tripulación perdida S01E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Tripulación perdida S01E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Tripulación perdida S01E07 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   └── Star Wars - Tripulación perdida S01E08 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+├── STAR_WARS_TALES_EMPIRE
+│   ├── Star Wars Crónicas del Imperio S01E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars Crónicas del Imperio S01E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars Crónicas del Imperio S01E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars Crónicas del Imperio S01E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars Crónicas del Imperio S01E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   └── Star Wars Crónicas del Imperio S01E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+├── STAR_WARS_TALES_JEDI
+│   ├── Las cronicas Jedi S01E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Las cronicas Jedi S01E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Las cronicas Jedi S01E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Las cronicas Jedi S01E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   ├── Las cronicas Jedi S01E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│   └── Las cronicas Jedi S01E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+├── STAR_WARS_TALES_UNDERWORLD
+│   ├── Star Wars - Crónicas del submundo S01E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Crónicas del submundo S01E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Crónicas del submundo S01E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Crónicas del submundo S01E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── Star Wars - Crónicas del submundo S01E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   └── Star Wars - Crónicas del submundo S01E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+├── STAR_WARS_THE_ACOLYTE
+│   ├── The Acolyte S01E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── The Acolyte S01E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── The Acolyte S01E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── The Acolyte S01E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── The Acolyte S01E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── The Acolyte S01E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   ├── The Acolyte S01E07 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│   └── The Acolyte S01E08 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+├── STAR_WARS_THE_MANDALORIAN
+│   ├── 1
+│   │   ├── The Mandalorian S01E01 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S01E02 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S01E03 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S01E04 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S01E05 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S01E06 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S01E07 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   └── The Mandalorian S01E08 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   ├── 2
+│   │   ├── The Mandalorian S02E01 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S02E02 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S02E03 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S02E04 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S02E05 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S02E06 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   ├── The Mandalorian S02E07 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   │   └── The Mandalorian S02E08 [UHDREMUX 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO].mkv
+│   └── 3
+│       ├── The Mandalorian S03E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│       ├── The Mandalorian S03E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│       ├── The Mandalorian S03E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│       ├── The Mandalorian S03E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│       ├── The Mandalorian S03E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│       ├── The Mandalorian S03E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│       ├── The Mandalorian S03E07 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+│       └── The Mandalorian S03E08 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 - EN DD+ 5.1 Atmos Subs][HDO].mkv
+├── STAR_WARS_VISIONS
+│   ├── 1
+│   │   ├── Star Wars Visions S01E01 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S01E02 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S01E03 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S01E04 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S01E05 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S01E06 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S01E07 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S01E08 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── Star Wars Visions S01E09 [DSNP WEB-DL 2160p HEVC HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── 2
+│   │   ├── Star Wars Visions S02E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S02E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S02E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S02E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S02E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S02E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S02E07 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Star Wars Visions S02E08 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── Star Wars Visions S02E09 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   └── 3
+│       ├── Star Wars Visions S03E01 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars Visions S03E02 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars Visions S03E03 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars Visions S03E04 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars Visions S03E05 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars Visions S03E06 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars Visions S03E07 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       ├── Star Wars Visions S03E08 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+│       └── Star Wars Visions S03E09 [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+├── SUCCESSION
+│   ├── 1
+│   │   ├── Succession S01E01 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E02 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E03 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E04 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E05 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E06 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E07 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E08 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S01E09 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── Succession S01E10 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── 2
+│   │   ├── Succession S02E01 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E02 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E03 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E04 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E05 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E06 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E07 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E08 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S02E09 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── Succession S02E10 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   ├── 3
+│   │   ├── Succession S03E01 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S03E02 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S03E03 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S03E04 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S03E05 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S03E06 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S03E07 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   ├── Succession S03E08 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   │   └── Succession S03E09 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│   └── 4
+│       ├── Succession S04E01 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E02 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E03 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E04 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E05 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E06 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E07 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E08 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── Succession S04E09 [MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+│       └── Succession S04E10 [REPACK][MAX WEB-DL 2160p HEVC DV-HDR10 ES-EN DD+ 5.1 Subs][HDO].mkv
+├── THE_BEAR
+│   ├── The Bear S05E01 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Bear S05E02 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Bear S05E03 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Bear S05E04 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Bear S05E05 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Bear S05E06 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Bear S05E07 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   └── The Bear S05E08 [DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+├── THE_BOYS
+│   ├── The Boys S05E01 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Boys S05E02 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Boys S05E03 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Boys S05E06 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   ├── The Boys S05E07 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+│   └── The Boys S05E08 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv
+├── THE_EXPANSE
+│   ├── 1
+│   │   ├── The Expanse - 1x01 - Dulcinea.mkv
+│   │   ├── The Expanse - 1x02 - El gran vacío.mkv
+│   │   ├── The Expanse - 1x03 - Recordad el Cant.mkv
+│   │   ├── The Expanse - 1x04 - CQB.mkv
+│   │   ├── The Expanse - 1x05 - De vuelta al Carnicero.mkv
+│   │   ├── The Expanse - 1x06 - En las profundidades.mkv
+│   │   ├── The Expanse - 1x07 - Molinos.mkv
+│   │   ├── The Expanse - 1x08 - Rescate.mkv
+│   │   ├── The Expanse - 1x09 - Masa crítica.mkv
+│   │   ├── The Expanse - 1x10 - El despertar del Leviatán.mkv
+│   │   ├── The Expanse 1x01 Dulcinea.mkv
+│   │   ├── The Expanse 1x02 El Gran Vacio.mkv
+│   │   ├── The Expanse 1x03 Recuerda El Cant.mkv
+│   │   ├── The Expanse 1x04 CQB.mkv
+│   │   ├── The Expanse 1x05 De Vuelta Al Carnicero.mkv
+│   │   ├── The Expanse 1x06 En Las Profundidades.mkv
+│   │   ├── The Expanse 1x07 Molinos De Viento.mkv
+│   │   ├── The Expanse 1x08 Rescate.mkv
+│   │   └── The Expanse 1x09-10 Masa Critica -  El Despertar Del Leviatan.mkv
+│   ├── 2
+│   │   ├── The Expanse - 2x01 - A salvo.mkv
+│   │   ├── The Expanse - 2x02 - Puertas y rincones.mkv
+│   │   ├── The Expanse - 2x03 - Estática.mkv
+│   │   ├── The Expanse - 2x04 - Si Dios quiere.mkv
+│   │   ├── The Expanse - 2x05 - Hogar.mkv
+│   │   ├── The Expanse - 2x06 - Cambio de paradigma.mkv
+│   │   ├── The Expanse - 2x07 - El séptimo hombre.mkv
+│   │   ├── The Expanse - 2x08 - Pira.mkv
+│   │   ├── The Expanse - 2x09 - Sonámbula Llorona.mkv
+│   │   ├── The Expanse - 2x10 - Cascada.mkv
+│   │   ├── The Expanse - 2x11 - Aquí hay dragones.mkv
+│   │   ├── The Expanse - 2x12 - El monstruo y el cohete.mkv
+│   │   ├── The Expanse - 2x13 - La guerra de Calibán.mkv
+│   │   ├── The Expanse 2x01 Seguro.mkv
+│   │   ├── The Expanse 2x02 Puertas Y Esquinas.mkv
+│   │   ├── The Expanse 2x03 Estatico.mkv
+│   │   ├── The Expanse 2x04 Buena Suerte.mkv
+│   │   ├── The Expanse 2x05 Casa.mkv
+│   │   ├── The Expanse 2x06 Cambio De Paradigma.mkv
+│   │   ├── The Expanse 2x07 El Septimo Hombre.mkv
+│   │   ├── The Expanse 2x08 Pira.mkv
+│   │   ├── The Expanse 2x09 El Sonambulo Lloron.mkv
+│   │   ├── The Expanse 2x10 Cascada.mkv
+│   │   ├── The Expanse 2x11 Aqui Hay Dragones.mkv
+│   │   ├── The Expanse 2x12 El Monstruo Y El Cohete.mkv
+│   │   └── The Expanse 2x13 Guerra De Caliban.mkv
+│   ├── 3
+│   │   ├── The Expanse - 3x01 - Lucha o vuela.mkv
+│   │   ├── The Expanse - 3x02 - IFF.mkv
+│   │   ├── The Expanse - 3x03 - Destrucción asegurada.mkv
+│   │   ├── The Expanse - 3x04 - Recargar.mkv
+│   │   ├── The Expanse - 3x05 - Punto triple.mkv
+│   │   ├── The Expanse - 3x06 - Inmolación.mkv
+│   │   ├── The Expanse - 3x07 - Delta-V.mkv
+│   │   ├── The Expanse - 3x08 - Se extiende.mkv
+│   │   ├── The Expanse - 3x09 - Intransigencia.mkv
+│   │   ├── The Expanse - 3x10 - Diente de león.mkv
+│   │   ├── The Expanse - 3x11 - Mundo caído.mkv
+│   │   ├── The Expanse - 3x12 - Congregación.mkv
+│   │   ├── The Expanse - 3x13 - La puerta de Abaddon.mkv
+│   │   ├── The Expanse 3x01 Lucha O Vuela.mkv
+│   │   ├── The Expanse 3x02 IFF.mkv
+│   │   ├── The Expanse 3x03 Destruccion Asegurada.mkv
+│   │   ├── The Expanse 3x04 Recargar.mkv
+│   │   ├── The Expanse 3x05 Punto Triple.mkv
+│   │   ├── The Expanse 3x06 Inmolacion.mkv
+│   │   ├── The Expanse 3x07 Delta-V.mkv
+│   │   ├── The Expanse 3x08 Se Extiende.mkv
+│   │   ├── The Expanse 3x09 Intransigencia.mkv
+│   │   ├── The Expanse 3x10 Cielo De Diente De Leon.mkv
+│   │   ├── The Expanse 3x11 Mundo Caido.mkv
+│   │   ├── The Expanse 3x12 Congregacion.mkv
+│   │   └── The Expanse 3x13 La Puerta De Adaddon.mkv
+│   ├── 4
+│   │   ├── The Expanse - 4x01 - Nueva Terra.mkv
+│   │   ├── The Expanse - 4x02 - Desechos.mkv
+│   │   ├── The Expanse - 4x03 - Subducción.mkv
+│   │   ├── The Expanse - 4x04 - Retrógrado.mkv
+│   │   ├── The Expanse - 4x05 - Opresor.mkv
+│   │   ├── The Expanse - 4x06 - Desplazamiento.mkv
+│   │   ├── The Expanse - 4x07 - Un disparo en la oscuridad.mkv
+│   │   ├── The Expanse - 4x08 - El tuerto.mkv
+│   │   ├── The Expanse - 4x09 - Saeculum.mkv
+│   │   ├── The Expanse - 4x10 - La quema de Cíbola.mkv
+│   │   ├── The Expanse S04E01 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E02 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E03 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E04 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E05 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E06 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E07 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E08 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   ├── The Expanse S04E09 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   │   └── The Expanse S04E10 [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+│   ├── 5
+│   │   ├── The Expanse - S05E01 - Éxodo [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E02 - Turbulencias [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E03 - Madre [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E04 - Gaugamela [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E05 - Desamparados [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E06 - Tribus [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E07 - Oyedeng [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E08 - Alto vacío [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   ├── The Expanse - S05E09 - Winnipesaukee [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   │   └── The Expanse - S05E10 - Nemesis Games [WEBDL AMZN HDR 2160p x265 EAC3 MULTI [spa, eng, fra, deu, ita] DD Plus 5.1 Subs].mkv
+│   └── 6
+│       ├── The Expanse S06E01 [AMZN WEB-DL 2160p HEVC HDR10+ ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── The Expanse S06E02 [AMZN WEB-DL 2160p HEVC HDR10+ ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── The Expanse S06E03 [AMZN WEB-DL 2160p HEVC HDR10+ ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── The Expanse S06E04 [AMZN WEB-DL 2160p HEVC HDR10+ ES-EN DD+ 5.1 Subs][HDO].mkv
+│       ├── The Expanse S06E05 [AMZN WEB-DL 2160p HEVC HDR10+ ES-EN DD+ 5.1 Subs][HDO].mkv
+│       └── The Expanse S06E06 [AMZN WEB-DL 2160p HEVC HDR10+ ES-EN DD+ 5.1 Subs][HDO].mkv
+├── THE_OUTPOST
+│   ├── 1
+│   │   ├── The Outpost S01E01 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E02 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E03 [REPACK][AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E04 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E05 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E06 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E07 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E08 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   ├── The Outpost S01E09 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   │   └── The Outpost S01E10 [AMZN WEB-DL 1080p AVC ES-EN DD+ 2.0][HDO].mkv
+│   ├── 2
+│   │   ├── The Outpost S02E01 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E02 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E03 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E04 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E05 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E06 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E07 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E08 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E09 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E10 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E11 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S02E12 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   └── The Outpost S02E13 [AMZN WEB-DL 1080p AVC ES DD 2.0 - EN DD+ 5.1][HDO].mkv
+│   ├── 3
+│   │   ├── The Outpost S03E01 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E02 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E03 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E04 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E05 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E06 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E07 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E08 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E09 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E10 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E11 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   ├── The Outpost S03E12 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   │   └── The Outpost S03E13 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│   └── 4
+│       ├── The Outpost S04E01 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E02 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E03 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E04 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E05 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E06 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E07 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E08 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E09 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E10 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E11 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       ├── The Outpost S04E12 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+│       └── The Outpost S04E13 [AMZN WEB-DL 1080p AVC ES DD+ 2.0 - EN DD+ 5.1][HDO].mkv
+├── THE_WIRE
+│   ├── 1
+│   │   ├── The Wire S01E01 - El objetivo [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E02 - El caso [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E03 - Las compras [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E04 - Casos antiguos [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E05 - El busca [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E06 - Bajo escucha [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E07 - Un arresto [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E08 - Lecciones [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E09 - Días de partido [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E10 - El coste [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E11 - La caza [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S01E12 - Limpieza [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   └── The Wire S01E13 - Sentencia [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   ├── 2
+│   │   ├── The Wire S02E01 - Marea baja [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E02 - Daño colateral [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mk.mkv
+│   │   ├── The Wire S02E03 - Disparos calientes [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E04 - Casos dificiles [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E05 - Resaca [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E06 - Todo prólogo [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E07 - Repercusiones [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E08 - A cubierto [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E09 - Balas perdidas [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E10 - Avisos de tormenta [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S02E11 - Malos sueños [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   └── The Wire S02E12 - Puerto en la tormenta [BDRemux 1080P AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   ├── 3
+│   │   ├── The Wire S03E01 - Una y otra vez [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E02 - Con el debido respeto [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E03 - Soldados muertos [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E04 - Hasmterdam [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E05 - Directo y auténtico [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E06 - Regreso a casa [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E07 - Quemadores traseros [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E08 - Nimiedad moral [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E09 - Payasada [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E10 - Reforma [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S03E11 - Medio terreno [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   └── The Wire S03E12 Misión cumplida [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   ├── 4
+│   │   ├── The Wire S04E01 - Chicos de verano [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E02 - Dulces ojos [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E03 - Salas de clase [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E04 - Refugiados [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E05 - Alianzas [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E06 - Margen de error [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E07 - Para otros [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E08 - Chicos de las esquinas [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E09 - Conoce tu sitio [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E10 - Recelo [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E11 - Un nuevo día [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   ├── The Wire S04E12 - Tiene lo suyo [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   │   └── The Wire S04E13 - Exámenes finales [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│   └── 5
+│       ├── The Wire S05E01 - Mas con menos [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E02 - Informes sin confirmar [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E03 - No por atribucion [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E04 - Transiciones [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E05 - Reacciones [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E06 - El aspecto dickensiano [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E07 - Codigo [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E08 - Aclaraciones [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       ├── The Wire S05E09 - Ultimas ediciones [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+│       └── The Wire S05E10 - '30' [BDRemux 1080p AVC ES DD 5.1 - EN DTS-HD MA 5.1 Subs][HDO].mkv
+├── Z_NATION
+│   ├── Z Nation S03E01 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E02 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E03 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E04 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E05 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E06 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E07 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E08 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E09 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E10 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E11 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E12 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   ├── Z Nation S03E13 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+│   └── Z Nation S03E14 (2016) [NF WEB-DL 1080p AVC ES-EN DD 5.1 Subs][HDO].mkv
+├── desktop.ini
+├── EstructuraSeries.txt
+├── Gary (2026) 2160p DV HDR DSNP WEB-DL ESP-ENG DDP 5.1 HEVC.mkv
+├── GenerarEstructura.ps1
+└── The Punisher One Last Kill (2026) [DSNP WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Subs][HDO].mkv

@@ -1,0 +1,872 @@
+﻿{
+    "cache":  [
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4470",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4470/thumb/1778375358?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "28aosdespus",
+                      "titulo_original":  "28 años después",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7179",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7179/thumb/1778375366?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "28aosdespuseltemplodeloshuesos",
+                      "titulo_original":  "28 años después: El templo de los huesos",
+                      "year":  "2026"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "2960",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/2960/thumb/1779322899?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "28dasdespus",
+                      "titulo_original":  "28 días después",
+                      "year":  "2002"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "2961",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/2961/thumb/1778375339?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "28semanasdespus",
+                      "titulo_original":  "28 semanas después",
+                      "year":  "2007"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7053",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7053/thumb/1779323300?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "ahorameves3",
+                      "titulo_original":  "Ahora me ves 3",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "2967",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/2967/thumb/1778375352?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "akira",
+                      "titulo_original":  "Akira",
+                      "year":  "1988"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8025",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8025/thumb/1779451795?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "ava",
+                      "titulo_original":  "Ava",
+                      "year":  "2020"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7214",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7214/thumb/1779322621?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "avatarfuegoyceniza",
+                      "titulo_original":  "Avatar: Fuego y ceniza",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4424",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4424/thumb/1778375354?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "blade",
+                      "titulo_original":  "Blade",
+                      "year":  "1998"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4428",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4428/thumb/1778375354?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "bladeii",
+                      "titulo_original":  "Blade II",
+                      "year":  "2002"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4431",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4431/thumb/1778375355?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "bladetrinity",
+                      "titulo_original":  "Blade Trinity",
+                      "year":  "2004"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5469",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5469/thumb/1778375360?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "devulvemela",
+                      "titulo_original":  "Devuélvemela",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7197",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7197/thumb/1778375367?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "gattaca",
+                      "titulo_original":  "Gattaca",
+                      "year":  "1997"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7170",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7170/thumb/1778375365?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "hardboiled",
+                      "titulo_original":  "Hard Boiled",
+                      "year":  "1992"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5480",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5480/thumb/1778375361?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "jurassicworldelrenacer",
+                      "titulo_original":  "Jurassic World: El renacer",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7195",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7195/thumb/1779323506?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "thekiller",
+                      "titulo_original":  "The Killer",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7175",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7175/thumb/1779323232?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lalargamarcha",
+                      "titulo_original":  "La larga marcha",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4451",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4451/thumb/1778375355?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "m3gan20",
+                      "titulo_original":  "M3GAN 2.0",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "2977",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/2977/thumb/1778375352?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "madameweb",
+                      "titulo_original":  "Madame Web",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "3076",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3076/thumb/1778375354?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "themarvels",
+                      "titulo_original":  "The Marvels",
+                      "year":  "2023"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "2981",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/2981/thumb/1778375353?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "megalpolis",
+                      "titulo_original":  "Megalópolis",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7218",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7218/thumb/1779322636?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "minorityreport",
+                      "titulo_original":  "Minority Report",
+                      "year":  "2002"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4501",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4501/thumb/1779323353?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "misinimposiblesentenciafinal",
+                      "titulo_original":  "Misión: Imposible - Sentencia final",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7056",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7056/thumb/1778375365?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "mortalengines",
+                      "titulo_original":  "Mortal Engines",
+                      "year":  "2018"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "6910",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/6910/thumb/1779323115?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "elorigendelplanetadelossimios",
+                      "titulo_original":  "El origen del planeta de los simios",
+                      "year":  "2011"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7173",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7173/thumb/1778375365?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "prospect",
+                      "titulo_original":  "Prospect",
+                      "year":  "2018"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8108",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8108/thumb/1782668114?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "proyectosalvacin",
+                      "titulo_original":  "Proyecto Salvación",
+                      "year":  "2026"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5459",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5459/thumb/1779323070?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "rescatelunar",
+                      "titulo_original":  "Rescate lunar",
+                      "year":  "2023"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "7211",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7211/thumb/1779323046?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "sinpiedad",
+                      "titulo_original":  "Sin piedad",
+                      "year":  "2026"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5484",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5484/thumb/1778375362?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "superman",
+                      "titulo_original":  "Superman",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4462",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4462/thumb/1778375357?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "thunderbolts",
+                      "titulo_original":  "Thunderbolts*",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4549",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4549/thumb/1778375359?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "unaballena",
+                      "titulo_original":  "Una ballena",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "4459",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4459/thumb/1778375356?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "untildawn",
+                      "titulo_original":  "Until Dawn",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8028",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8028/thumb/1779833560?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "vidaenpausa",
+                      "titulo_original":  "Vida en pausa",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1318",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1318/thumb/1782007413?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "theacolyte",
+                      "titulo_original":  "The Acolyte",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "6899",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/6899/thumb/1781488752?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "agathachristielassieteesferas",
+                      "titulo_original":  "Agatha Christie: Las siete esferas",
+                      "year":  "2026"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4685",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4685/thumb/1782007421?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "elagentenocturno",
+                      "titulo_original":  "El agente nocturno",
+                      "year":  "2023"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1307",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1307/thumb/1782007413?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "ahsoka",
+                      "titulo_original":  "Ahsoka",
+                      "year":  "2023"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4182",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4182/thumb/1782007419?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "americangods",
+                      "titulo_original":  "American Gods",
+                      "year":  "2017"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1300",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1300/thumb/1782007413?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "andor",
+                      "titulo_original":  "Andor",
+                      "year":  "2022"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3991",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3991/thumb/1782007418?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "asesinatoenelfindelmundo",
+                      "titulo_original":  "Asesinato en el fin del mundo",
+                      "year":  "2023"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3664",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3664/thumb/1782007415?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "bajoescucha",
+                      "titulo_original":  "Bajo escucha",
+                      "year":  "2002"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8120",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8120/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "thebear",
+                      "titulo_original":  "The Bear",
+                      "year":  "2022"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8090",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8090/thumb/1782408198?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "berln",
+                      "titulo_original":  "Berlín",
+                      "year":  "2023"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7268",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7268/thumb/1780538299?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "bleach",
+                      "titulo_original":  "Bleach",
+                      "year":  "2004"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3449",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3449/thumb/1782007415?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "boardwalkempire",
+                      "titulo_original":  "Boardwalk Empire",
+                      "year":  "2010"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7223",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7223/thumb/1782441161?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "theboys",
+                      "titulo_original":  "The Boys",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4233",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4233/thumb/1782007420?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lacasadepapel",
+                      "titulo_original":  "La casa de papel",
+                      "year":  "2017"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8103",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lacasadeldragn",
+                      "titulo_original":  "La casa del dragón",
+                      "year":  "2022"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4268",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4268/thumb/1782007420?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "cazadoresdesombras",
+                      "titulo_original":  "Cazadores de sombras",
+                      "year":  "2016"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8030",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8030/thumb/1782873896?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "ciudaddelasestrellas",
+                      "titulo_original":  "Ciudad de las estrellas",
+                      "year":  "2026"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "6869",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/6869/thumb/1781141814?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "eldentista",
+                      "titulo_original":  "El dentista",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3223",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3223/thumb/1782007415?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "devilmaycry",
+                      "titulo_original":  "Devil May Cry",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7782",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7782/thumb/1781141815?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "dragonball",
+                      "titulo_original":  "Dragon Ball",
+                      "year":  "1986"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7058",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7058/thumb/1782182939?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "estacinonce",
+                      "titulo_original":  "Estación Once",
+                      "year":  "2021"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4104",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4104/thumb/1782007419?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "theexpanse",
+                      "titulo_original":  "The Expanse",
+                      "year":  "2015"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1449",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1449/thumb/1782007414?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "fallingskies",
+                      "titulo_original":  "Falling Skies",
+                      "year":  "2011"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7981",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7981/thumb/1781830002?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "thefive",
+                      "titulo_original":  "The Five",
+                      "year":  "2016"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7253",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7253/thumb/1782873896?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "from",
+                      "titulo_original":  "From",
+                      "year":  "2022"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4773",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4773/thumb/1779409342?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "frontera",
+                      "titulo_original":  "Frontera",
+                      "year":  "2016"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7946",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7946/thumb/1781747916?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "goodomens",
+                      "titulo_original":  "Good Omens",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7963",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7963/thumb/1781747917?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "griselda",
+                      "titulo_original":  "Griselda",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4796",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4796/thumb/1782007422?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "hannibal",
+                      "titulo_original":  "Hannibal",
+                      "year":  "2013"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "6672",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/6672/thumb/1782007428?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "hunterhunter",
+                      "titulo_original":  "Hunter × Hunter",
+                      "year":  "2011"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5490",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5490/thumb/1782007428?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lazaro",
+                      "titulo_original":  "Lazaro",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4977",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4977/thumb/1782007422?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "leanne",
+                      "titulo_original":  "Leanne",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5192",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5192/thumb/1782007426?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "theleftovers",
+                      "titulo_original":  "The Leftovers",
+                      "year":  "2014"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4996",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4996/thumb/1782007423?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "legado",
+                      "titulo_original":  "Legado",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5006",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5006/thumb/1782007423?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "legin",
+                      "titulo_original":  "Legión",
+                      "year":  "2017"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1276",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1276/thumb/1782007411?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "ellibrodebobafett",
+                      "titulo_original":  "El libro de Boba Fett",
+                      "year":  "2021"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5039",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5039/thumb/1782007423?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "losaosnuevos",
+                      "titulo_original":  "Los años nuevos",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5224",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5224/thumb/1782007426?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "themagicians",
+                      "titulo_original":  "The Magicians",
+                      "year":  "2015"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1250",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1250/thumb/1782007411?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "themandalorian",
+                      "titulo_original":  "The Mandalorian",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5060",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5060/thumb/1782007424?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "maniac",
+                      "titulo_original":  "Maniac",
+                      "year":  "2018"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4222",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4222/thumb/1782007420?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lamateriaoscura",
+                      "titulo_original":  "La materia oscura",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7973",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7973/thumb/1781830002?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "narcos",
+                      "titulo_original":  "Narcos",
+                      "year":  "2015"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5298",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5298/thumb/1779409349?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "theoa",
+                      "titulo_original":  "The OA",
+                      "year":  "2016"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1285",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1285/thumb/1782007412?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "obiwankenobi",
+                      "titulo_original":  "Obi-Wan Kenobi",
+                      "year":  "2022"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5082",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5082/thumb/1782007424?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "olympo",
+                      "titulo_original":  "Olympo",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4328",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4328/thumb/1782007421?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "orphanblack",
+                      "titulo_original":  "Orphan Black",
+                      "year":  "2013"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8048",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8048/thumb/1781365048?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "outlander",
+                      "titulo_original":  "Outlander",
+                      "year":  "2014"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1200",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1200/thumb/1782007411?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "theoutpost",
+                      "titulo_original":  "The Outpost",
+                      "year":  "2018"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "1486",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/1486/thumb/1780449334?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "paratodalahumanidad",
+                      "titulo_original":  "Para toda la humanidad",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5095",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5095/thumb/1782007425?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "pecadosinconfesables",
+                      "titulo_original":  "Pecados inconfesables",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5126",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5126/thumb/1779409347?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "squineres",
+                      "titulo_original":  "Sé quién eres",
+                      "year":  "2017"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5144",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5144/thumb/1782007425?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "sense8",
+                      "titulo_original":  "Sense8",
+                      "year":  "2015"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5074",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5074/thumb/1779409346?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "skittensn",
+                      "titulo_original":  "Skitten Snø",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5172",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5172/thumb/1782007426?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "smiley",
+                      "titulo_original":  "Smiley",
+                      "year":  "2022"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3811",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3811/thumb/1782007416?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarscrnicasdelimperio",
+                      "titulo_original":  "Star Wars: Crónicas del Imperio",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3825",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3825/thumb/1782007417?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarscrnicasdelsubmundo",
+                      "titulo_original":  "Star Wars: Crónicas del submundo",
+                      "year":  "2025"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3796",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3796/thumb/1782007416?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarslaremesamala",
+                      "titulo_original":  "Star Wars: La remesa mala",
+                      "year":  "2021"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3832",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3832/thumb/1782007417?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarslaresistencia",
+                      "titulo_original":  "Star Wars: La Resistencia",
+                      "year":  "2018"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3938",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3938/thumb/1782007418?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarslascrnicasjedi",
+                      "titulo_original":  "Star Wars: Las crónicas jedi",
+                      "year":  "2022"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "6759",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/6759/thumb/1782007428?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarstheclonewars",
+                      "titulo_original":  "Star Wars: The Clone Wars",
+                      "year":  "2008"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3820",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3820/thumb/1782007417?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarstripulacinperdida",
+                      "titulo_original":  "Star Wars: Tripulación perdida",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "3883",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/3883/thumb/1782007418?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "starwarsvisions",
+                      "titulo_original":  "Star Wars: Visions",
+                      "year":  "2021"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "2649",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/2649/thumb/1782007414?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "succession",
+                      "titulo_original":  "Succession",
+                      "year":  "2018"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5330",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5330/thumb/1782007427?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "truedetective",
+                      "titulo_original":  "True Detective",
+                      "year":  "2014"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5366",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5366/thumb/1782007427?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "unlugarparasoar",
+                      "titulo_original":  "Un lugar para soñar",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "4968",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/4968/thumb/1779409343?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lavidabreve",
+                      "titulo_original":  "La vida breve",
+                      "year":  "2024"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "5438",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5438/thumb/1782007427?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "watchmen",
+                      "titulo_original":  "Watchmen",
+                      "year":  "2019"
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "7117",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/7117/thumb/1780713252?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "znation",
+                      "titulo_original":  "Z Nation",
+                      "year":  "2014"
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8092",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8092/thumb/1782046250?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "laenergadelamor",
+                      "titulo_original":  "La energía del amor",
+                      "year":  2023
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5035",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5035/thumb/1779323000?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "captulo22",
+                      "titulo_original":  "Capítulo 22",
+                      "year":  2019
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "6686",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/6686/thumb/1779322656?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "cartaxdexgon",
+                      "titulo_original":  "Carta x De x Gon",
+                      "year":  2011
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5492",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5492/thumb/1779323109?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "adismundocruel",
+                      "titulo_original":  "Adiós, mundo cruel",
+                      "year":  2025
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5020",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5020/thumb/1779322843?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "captulo10",
+                      "titulo_original":  "Capítulo 10",
+                      "year":  2018
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "5008",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/5008/thumb/1779322953?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "captulo1",
+                      "titulo_original":  "Capítulo 1",
+                      "year":  2017
+                  }
+              ],
+    "totalItems":  108,
+    "description":  "Caché persistente de Plex - Actualizado automáticamente",
+    "lastUpdated":  "2026-07-01T13:23:08Z",
+    "version":  "1.0"
+}

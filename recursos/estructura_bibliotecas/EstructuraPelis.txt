@@ -1,0 +1,42 @@
+﻿
+PELIS
+├── 28 años después (2025) [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Subs]HDO.mkv
+├── 28 años después. El templo de los huesos (2026)[Remastered 4K HDR][Remastered 2160p HEVC DV-HDR10+ ES TrueHD 7.1.4 Atmos]HDO.mkv
+├── 28 días después (2002) [BDRemux 1080p AVC DTS 5.1 - DTS-HD MA 5.1 Subs] [HDOlimpo].mkv
+├── 28 semanas después (2007) [BDRemux 1080p AVC Dual DTS 5.1 - DTS-HD MA 5.1 Subs][HD-Olimpo].mkv
+├── Ahora me ves 3 (2025) [ UHD Remux 2160p HEVC DV-HDR10 ES Truer-HD Atmos 7.1 Subs]HDO.mkv
+├── Akira (1988) [PROPER][UHDRemux 2160p HEVC HDR10 ES DTS-HD 5.1][HDO].mkv
+├── Ava (2020) [AudioEditado][Remastered 4K][Remastered 2160p HEVC SDR ES DTS-HD MA 5.1][HDO].mkv
+├── Avatar. Fuego y ceniza (2025)[Remastered 4K HDR][Audio DCP 9.1.6][Remastered 2160p HEVC DV-HDR10+ ES True-HD Atmos 7.1 Subs][HDO].mkv
+├── BLADE (1998) BluRay 2160p [Dolby Vision] ESP DTS 5.1 ENG DD+ 5.1 Subs DV HDR HEVC.mkv
+├── Blade II (2002) 2160p DUAL AC3 5.1 Subs h265 UHD HDR.mkv
+├── Blade Trinity (2004) 2160p DUAL AC3 5.1 Subs h265 UHD HDR.mkv
+├── desktop.ini
+├── Devuélvemela (2024) [Audio DCP 7.1.4] [UHD Remux 2160p HEVC DV-HDR10 ES True-HD Atmos 7.1 Subs]HDO.mkv
+├── El origen del planeta de los simios (2011) [BDRip 1080p AVC ES DTS 5.1][HDO].mkv
+├── EstructuraPelis.txt
+├── Gattaca (1997) [AudioEditado] [UHDRemux 2160p HEVC Dual DTS-HD MA 7.1 - TrueHD Atmos 7.1 Subs] [HDOlimpo].mkv
+├── GenerarEstructura.ps1
+├── Hard Boiled (Hervidero) (1992) [UHDRemux 2160p HEVC DV-HDR10 ES DD 2.0][HDO].mkv
+├── Jurassic World El renacer (2025) [Audio DCP 9.1.6] [UHD Remasted 2160p HEVC DV-HDR10+ ES True-HD Atmos 7.1 Subs][HDO].mkv
+├── La larga marcha (2025) [Audio DCP 7.1.4] [UHD Remux 2160p HEVC DV-HDR10 ES True-HD Atmos 7.1][HDO].mkv
+├── M3GAN 2.0 (2025) [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1 Subs][HDO].mkv
+├── Madame Web (2024) [Audio Editado] [UHD Remux 2160p HEVC DV-HDR10 ES True-HD Atmos Subs]HDO.mkv
+├── Megalopolis (2024) [Audio DCP 7.1.4] [UHD Remux 2160p HEVC SDR  ES True-HD Atmos 7.1 Subs]HDO.mkv
+├── Minority Report (2002) [Audio Editado][UHDRemux 2160p HEVC DV-HDR10 ES DTS-HD MA 5.1][HDO].mkv
+├── Misión imposible. Sentencia final (2025)[Remastered 4K HDR][Audio DCP 9.1.6][Remastered 2160p HEVC DV-HDR10+ ES TrueHD 7.1 Atmos Subs]HDO.mkv
+├── Misión. Imposible - Sentencia final (2025) [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1 Subs]HDO .mkv
+├── Mortal Engines (2018) [Remastered 4K][Remastered 2160p HEVC SDR-RAW ES DTS-HD 7.1 EN TrueHD 7.1.4 Atmos]HDO.mkv
+├── Nadie 2 (2025) [Audio DCP 7.1.4] [Custom UHD FullBluRay 2160p HEVC DV-HDR10+ ES True-HD Atmos 7.1 Subs][HDO].ISO
+├── Prospect (2018) [PROPER][UHDRemux 2160p HEVC HDR10 ES DTS-HD MA 5.1][HDO].mkv
+├── Proyecto Salvación (2026) [MA WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos][HDO].mkv
+├── Rescate lunar (2023) [REPACK] [UHD Remux 2160p HEVC DV-HDR10 ES True-HD Atmos 7.1.4 Subs]HDO.mkv
+├── Sin piedad (2026)[Remastered 4K HDR][Audio DCP 7.1.4][Remastered 2160p HEVC DV-HDR10+ ES TrueHD 7.1.4 Atmos Subs]HDO.mkv
+├── Superman (2025) [Audio DCP 9.1.6] [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES True-HD Atmos 7.1 Subs]HDO.mkv
+├── The Killer (2024) [BDRemux 1080p AVC ES DD+ 5.1][HDO].mkv
+├── The Killer (2024) [PCOK WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1][HDO].mkv
+├── The Marvels (2023) Audio Editado [UHD Remux 2160p HEVC HDR10   ES True-HD Atmos 7.1 Subs][HDO].mkv
+├── Thunderbolts (2025) [Audio DCP 9.1.6] [UHD Remux  2160p HEVC DV-HDR10 ES True-HD 7.1 Atmos Subs]HDO.mkv
+├── Una ballena (2024) [FILMN WEB-DL 1080p AVC ES DD 2.0][HDO].mkv
+├── Until Dawn (2025) [Audio DCP 7.1.4][UHDRemux 2160p HEVC DV-HDR10 ES TrueHD Atmos 7.1]HDO].mkv
+└── Vida en pausa (2025) 1080p FLMN WEB-DL ESP-RUS AAC 2.0 AVC.mkv

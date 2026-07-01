@@ -1,0 +1,182 @@
+﻿# ==================================================
+# CACHE-MANAGER.PS1 - Gestión de Caché Plex
+# ==================================================
+
+$script:PlexCacheLoaded = $false
+$script:PlexCache = @()
+
+function Initialize-PlexCache {
+    param([bool]$SkipDelay = $false, [string]$BasePath = ".")
+    
+    if ($script:PlexCacheLoaded) {
+        return
+    }
+    
+    Write-Log "Inicializando caché..."
+    
+    # PASO 1: Intentar cargar desde config/plex_cache.json
+    $cacheFilePath = Join-Path $BasePath "config\plex_cache.json"
+    $allItems = @()
+    $cacheLoaded = $false
+    
+    if (Test-Path $cacheFilePath) {
+        try {
+            Write-Log "Leyendo caché persistente desde: $cacheFilePath"
+            $cacheData = Get-Content $cacheFilePath -Encoding UTF8 | ConvertFrom-Json
+            
+            if ($cacheData.cache -and $cacheData.cache.Count -gt 0) {
+                foreach ($item in $cacheData.cache) {
+                    $allItems += @{
+                        titulo_normalizado = $item.titulo_normalizado
+                        titulo_original    = $item.titulo_original
+                        ratingKey          = $item.ratingKey
+                        tipo               = $item.tipo
+                        poster_url         = $item.poster_url
+                        year               = $item.year
+                    }
+                }
+                $cacheLoaded = $true
+                Write-Log "Caché cargado desde archivo: $($cacheData.cache.Count) títulos"
+            }
+        }
+        catch {
+            Write-Log "Advertencia: Error leyendo caché: $($_.Exception.Message)" -Level "WARNING"
+        }
+    }
+    
+    # Asignar caché global
+    $script:PlexCache = $allItems
+    $script:PlexCacheLoaded = $true
+}
+
+function Add-ToCache {
+    param(
+        [string]$Title,
+        [string]$RatingKey,
+        [string]$Type,
+        [string]$PosterUrl,
+        [int]$Year,
+        [string]$BasePath = "."
+    )
+    
+    $normalizedTitle = $Title.ToLower() -replace '[^a-z0-9]', ''
+    
+    $exists = $script:PlexCache | Where-Object { 
+        $_.titulo_normalizado -eq $normalizedTitle -and $_.ratingKey -eq $RatingKey 
+    }
+    
+    if ($exists) {
+        return
+    }
+    
+    $newItem = @{
+        titulo_normalizado = $normalizedTitle
+        titulo_original    = $Title
+        ratingKey          = $RatingKey
+        tipo               = $Type
+        poster_url         = $PosterUrl
+        year               = $Year
+    }
+    
+    $script:PlexCache += $newItem
+    
+    try {
+        $cacheFilePath = Join-Path $BasePath "config\plex_cache.json"
+        
+        if (Test-Path $cacheFilePath) {
+            $cacheData = Get-Content $cacheFilePath -Encoding UTF8 | ConvertFrom-Json
+            $cacheData.cache += $newItem
+            $cacheData.totalItems = $cacheData.cache.Count
+            $cacheData.lastUpdated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
+            
+            $cacheJson = $cacheData | ConvertTo-Json -Depth 5
+            $cacheJson | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
+            
+            Write-Log "Caché actualizado: Nuevo título '$Title' agregado"
+        }
+    }
+    catch {
+        Write-Log "No se pudo actualizar caché: $($_.Exception.Message)" -Level "WARNING"
+    }
+}
+
+function Get-FuzzyMatchScore {
+    param([string]$String1, [string]$String2)
+    
+    $String1 = $String1.ToLower().Trim()
+    $String2 = $String2.ToLower().Trim()
+    
+    if ([string]::IsNullOrEmpty($String1) -or [string]::IsNullOrEmpty($String2)) { return 0 }
+    if ($String1 -eq $String2) { return 100 }
+    if ($String1.Contains($String2) -or $String2.Contains($String1)) { return 90 }
+    
+    $commonChars = 0
+    $maxLen = [Math]::Max($String1.Length, $String2.Length)
+    
+    $chars1 = @{}
+    $chars2 = @{}
+    
+    foreach ($char in $String1.ToCharArray()) { 
+        if ($chars1[$char]) { $chars1[$char]++ } else { $chars1[$char] = 1 } 
+    }
+    foreach ($char in $String2.ToCharArray()) { 
+        if ($chars2[$char]) { $chars2[$char]++ } else { $chars2[$char] = 1 } 
+    }
+    
+    foreach ($char in $chars1.Keys) {
+        if ($chars2[$char]) {
+            $commonChars += [Math]::Min($chars1[$char], $chars2[$char])
+        }
+    }
+    
+    $similarity = ($commonChars / $maxLen) * 100
+    return [Math]::Round($similarity, 0)
+}
+
+function Get-PosterByCache {
+    param([string]$Title)
+    
+    if ($script:PlexCache.Count -eq 0) { 
+        return @{ found = $false; method = "cache_empty"; score = 0 }
+    }
+    
+    $searchKey = $Title.ToLower().Trim() -replace '[^a-z0-9]', ''
+    
+    # PASO 1: Búsqueda exacta
+    $exactMatch = $script:PlexCache | Where-Object { $_.titulo_normalizado -eq $searchKey } | Select-Object -First 1
+    if ($exactMatch -and $exactMatch.poster_url) {
+        return @{ 
+            found = $true
+            method = "cache_exact"
+            url = $exactMatch.poster_url
+            title = $exactMatch.titulo_original
+            score = 100
+            ratingKey = $exactMatch.ratingKey
+        }
+    }
+    
+    # PASO 2: Búsqueda fuzzy
+    $bestMatch = $null
+    $bestScore = 0
+    
+    foreach ($item in $script:PlexCache) {
+        $score = Get-FuzzyMatchScore $searchKey $item.titulo_normalizado
+        if ($score -gt $bestScore) {
+            $bestScore = $score
+            $bestMatch = $item
+        }
+    }
+    
+    if ($bestScore -ge 85 -and $bestMatch -and $bestMatch.poster_url) {
+        return @{
+            found = $true
+            method = "cache_fuzzy"
+            url = $bestMatch.poster_url
+            title = $bestMatch.titulo_original
+            score = $bestScore
+            ratingKey = $bestMatch.ratingKey
+        }
+    }
+    
+    return @{ found = $false; method = "cache_no_match"; score = $bestScore }
+}

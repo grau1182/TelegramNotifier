@@ -1,0 +1,36 @@
+# 🔐 SECRETOS - NUNCA COMMITEAR
+secrets.ps1
+test/secrets.ps1
+*.token
+*.apikey
+
+# 📁 Archivos excluidos
+test/fixtures/
+core/logs/
+test/logs/
+test/results/
+
+# 💾 Cache y datos generados
+core/config/plex_cache.json
+test/generated_*.csv
+test_run_*.log
+
+# 📋 Resultados de tests
+test/results/*.csv
+test/results/*.html
+
+# 🖥️ Sistema y editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+
+# 📦 Archivos comprimidos
+*.zip
+*.rar
+*.7z
+
+# 📝 Logs generados
+*.log
+backups/*.log
