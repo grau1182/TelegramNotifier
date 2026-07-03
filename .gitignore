@@ -4,19 +4,19 @@ test/secrets.ps1
 *.token
 *.apikey
 
-# 📁 Archivos excluidos
-test/fixtures/
-core/logs/
-test/logs/
-test/results/
+# # 📁 Archivos excluidos
+# test/fixtures/
+# core/logs/
+# test/logs/
+# test/results/
 
-# 💾 Cache y datos generados
-test/generated_*.csv
+# # 💾 Cache y datos generados
+# test/generated_*.csv
 test_run_*.log
 
-# 📋 Resultados de tests
-test/results/*.csv
-test/results/*.html
+# # 📋 Resultados de tests
+# test/results/*.csv
+# test/results/*.html
 
 # 🖥️ Sistema y editor
 .DS_Store
@@ -30,6 +30,6 @@ Thumbs.db
 *.rar
 *.7z
 
-# 📝 Logs generados
-*.log
-backups/*.log
+# # 📝 Logs generados
+# *.log
+# backups/*.log
