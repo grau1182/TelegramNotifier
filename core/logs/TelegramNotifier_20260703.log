@@ -1,0 +1,251 @@
+﻿[2026-07-03 09:17:01] [INFO] ========================================
+[2026-07-03 09:17:01] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 09:17:01] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 09:17:01] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 09:17:01] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 09:17:01] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 09:17:01] [INFO] Inicializando caché...
+[2026-07-03 09:17:01] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\core\config\plex_cache.json
+[2026-07-03 09:17:01] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 09:17:01] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 09:17:01] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 09:17:01] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 09:17:01] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 09:17:01] [INFO] Plex devolvio 0 items para la busqueda serie
+[2026-07-03 09:17:01] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 09:17:01] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-03 09:17:01] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-03 09:17:01] [WARNING] No se encontró poster en Plex
+[2026-07-03 09:17:02] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-03 09:17:02] [INFO] ========================================
+[2026-07-03 09:22:29] [INFO] ========================================
+[2026-07-03 09:22:29] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 09:22:29] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 09:22:29] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 09:22:29] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 09:22:29] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 09:22:29] [INFO] Inicializando caché...
+[2026-07-03 09:22:29] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\core\config\plex_cache.json
+[2026-07-03 09:22:29] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 09:22:29] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 09:22:29] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 09:22:29] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 09:22:29] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 09:22:29] [INFO] Plex devolvio 0 items para la busqueda serie
+[2026-07-03 09:22:29] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 09:22:29] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-03 09:22:29] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-03 09:22:29] [WARNING] No se encontró poster en Plex
+[2026-07-03 09:22:30] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-03 09:22:30] [INFO] ========================================
+[2026-07-03 09:24:19] [INFO] ========================================
+[2026-07-03 09:24:19] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 09:24:19] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 09:24:19] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 09:24:20] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 09:24:20] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 09:24:20] [INFO] Inicializando caché...
+[2026-07-03 09:24:20] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\core\config\plex_cache.json
+[2026-07-03 09:24:20] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 09:24:20] [INFO] ENTRANDO EN GET-POSTERBYCACHE: Title='La Casa Del Dragon (2026)', RatingKey=''
+[2026-07-03 09:24:20] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 09:24:20] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 09:24:20] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 09:24:20] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 09:24:20] [INFO] Plex devolvio 0 items para la busqueda serie
+[2026-07-03 09:24:20] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 09:24:20] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-03 09:24:20] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-03 09:24:20] [WARNING] No se encontró poster en Plex
+[2026-07-03 09:24:20] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-03 09:24:20] [INFO] ========================================
+[2026-07-03 09:29:04] [INFO] ========================================
+[2026-07-03 09:29:04] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 09:29:04] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 09:29:04] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 09:29:04] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 09:29:04] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 09:29:04] [INFO] Inicializando caché...
+[2026-07-03 09:29:04] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\core\config\plex_cache.json
+[2026-07-03 09:29:04] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 09:29:04] [INFO] ENTRANDO EN GET-POSTERBYCACHE: Title='La Casa Del Dragon (2026)', RatingKey=''
+[2026-07-03 09:29:04] [INFO] No se proporcionó RatingKey para búsqueda
+[2026-07-03 09:29:04] [INFO] No se encontró un poster exacto en caché para el título: La Casa Del Dragon (2026)
+[2026-07-03 09:29:04] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 09:29:04] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 09:29:04] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 09:29:04] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 09:29:04] [INFO] Plex devolvio 0 items para la busqueda serie
+[2026-07-03 09:29:04] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 09:29:04] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-03 09:29:04] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-03 09:29:04] [WARNING] No se encontró poster en Plex
+[2026-07-03 09:29:25] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-03 09:29:25] [INFO] ========================================
+[2026-07-03 09:30:27] [INFO] ========================================
+[2026-07-03 09:30:27] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 09:30:27] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 09:30:27] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 09:30:27] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 09:30:27] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 09:30:27] [INFO] Inicializando caché...
+[2026-07-03 09:30:27] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\core\config\plex_cache.json
+[2026-07-03 09:30:27] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 09:30:27] [INFO] Buscando poster en caché para 'La Casa Del Dragon (2026)' con RatingKey=''
+[2026-07-03 09:30:27] [INFO] System.Collections.Hashtable
+[2026-07-03 09:30:27] [INFO] ENTRANDO EN GET-POSTERBYCACHE: Title='La Casa Del Dragon (2026)', RatingKey=''
+[2026-07-03 09:30:27] [INFO] No se proporcionó RatingKey para búsqueda
+[2026-07-03 09:30:27] [INFO] No se encontró un poster exacto en caché para el título: La Casa Del Dragon (2026)
+[2026-07-03 09:30:27] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 09:30:27] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 09:30:27] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 09:30:27] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 09:30:27] [INFO] Plex devolvio 0 items para la busqueda serie
+[2026-07-03 09:30:27] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=La%20Casa%20Del%20Dragon%20(2026)&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 09:30:27] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-03 09:30:27] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-03 09:30:27] [WARNING] No se encontró poster en Plex
+[2026-07-03 09:30:27] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-03 09:30:27] [INFO] ========================================
+[2026-07-03 10:24:44] [INFO] ========================================
+[2026-07-03 10:24:44] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 10:24:44] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 10:24:44] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 10:24:44] [INFO] Título detectado: La casa del dragón
+[2026-07-03 10:24:44] [INFO] Iniciando busqueda de poster para 'La casa del dragón' (Tipo: EPISODIO)
+[2026-07-03 10:24:44] [INFO] Inicializando caché...
+[2026-07-03 10:24:44] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\core\config\plex_cache.json
+[2026-07-03 10:24:44] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 10:24:44] [INFO] Búsqueda poster: título='La casa del dragón', RatingKey='8103'
+[2026-07-03 10:24:44] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 10:24:44] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 10:24:44] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 10:24:46] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 10:24:46] [INFO] ========================================
+[2026-07-03 10:29:55] [INFO] ========================================
+[2026-07-03 10:29:55] [INFO] Procesando torrent: Silo S03E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-03 10:29:55] [INFO] Ruta: G:\SERIES\SILO\Silo S03E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-03 10:29:55] [INFO] Tipo: EPISODIO (S03E01)
+[2026-07-03 10:29:55] [INFO] Título detectado: Silo
+[2026-07-03 10:29:55] [INFO] Iniciando busqueda de poster para 'Silo' (Tipo: EPISODIO)
+[2026-07-03 10:29:55] [INFO] Inicializando caché...
+[2026-07-03 10:29:55] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\core\config\plex_cache.json
+[2026-07-03 10:29:55] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 10:29:55] [INFO] Búsqueda poster: título='Silo', RatingKey=''
+[2026-07-03 10:29:55] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 10:29:55] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 10:29:55] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 10:29:55] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 10:29:55] [INFO] Plex devolvio 1 items para la busqueda serie
+[2026-07-03 10:29:55] [INFO]   Nuevo mejor poster encontrado con score 50: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 10:29:55] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 10:29:55] [INFO] Plex devolvio 1 items para la busqueda generica
+[2026-07-03 10:29:55] [INFO] Poster final seleccionado (Score: 50, Metodo: serie): http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 10:29:56] [INFO] Caché actualizado: Nuevo título 'Silo' agregado
+[2026-07-03 10:29:56] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 10:29:59] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 10:29:59] [INFO] ========================================
+[2026-07-03 10:50:37] [INFO] ========================================
+[2026-07-03 10:50:37] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 10:50:37] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 10:50:37] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 10:50:37] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 10:50:37] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 10:50:37] [INFO] Inicializando caché...
+[2026-07-03 10:50:37] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-03 10:50:37] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 10:50:37] [INFO] Búsqueda poster: título='La Casa Del Dragon', RatingKey='8103'
+[2026-07-03 10:50:37] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 10:50:37] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 10:50:37] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 10:50:39] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 10:50:39] [INFO] ========================================
+[2026-07-03 10:51:01] [INFO] ========================================
+[2026-07-03 10:51:01] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 10:51:01] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 10:51:01] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 10:51:01] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 10:51:01] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 10:51:01] [INFO] Inicializando caché...
+[2026-07-03 10:51:01] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-03 10:51:01] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 10:51:01] [INFO] Búsqueda poster: título='La Casa Del Dragon', RatingKey='8103'
+[2026-07-03 10:51:01] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 10:51:01] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 10:51:01] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 10:51:03] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 10:51:03] [INFO] ========================================
+[2026-07-03 11:11:00] [INFO] ========================================
+[2026-07-03 11:11:00] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 11:11:00] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 11:11:00] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 11:11:00] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 11:11:00] [INFO] Inicializando caché...
+[2026-07-03 11:11:00] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-03 11:11:00] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 11:11:00] [INFO] Búsqueda poster: título='La Casa Del Dragon', RatingKey='8103'
+[2026-07-03 11:11:00] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 11:11:00] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 11:11:00] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:11:02] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 11:11:02] [INFO] ========================================
+[2026-07-03 11:18:06] [INFO] ========================================
+[2026-07-03 11:18:06] [INFO] Procesando torrent: La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-03 11:18:06] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON
+[2026-07-03 11:18:06] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-03 11:18:06] [INFO] Título detectado: La Casa Del Dragon (2026)
+[2026-07-03 11:18:06] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2026)' (Tipo: EPISODIO)
+[2026-07-03 11:18:06] [INFO] Inicializando caché...
+[2026-07-03 11:18:06] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-03 11:18:06] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 11:18:06] [INFO] Búsqueda poster: título='La Casa Del Dragon', RatingKey='8103'
+[2026-07-03 11:18:06] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 11:18:06] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:18:08] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 11:18:08] [INFO] ========================================
+[2026-07-03 11:19:53] [INFO] ========================================
+[2026-07-03 11:19:53] [INFO] Procesando torrent: Silo S03E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-03 11:19:53] [INFO] Ruta: G:\SERIES\SILO\Silo S03E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-03 11:19:53] [INFO] Tipo: EPISODIO (S03E01)
+[2026-07-03 11:19:53] [INFO] Título detectado: Silo
+[2026-07-03 11:19:53] [INFO] Iniciando busqueda de poster para 'Silo' (Tipo: EPISODIO)
+[2026-07-03 11:19:53] [INFO] Inicializando caché...
+[2026-07-03 11:19:53] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-03 11:19:53] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 11:19:53] [INFO] Búsqueda poster: título='Silo', RatingKey=''
+[2026-07-03 11:19:53] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 11:19:53] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 11:19:53] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 11:19:53] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 11:19:53] [INFO] Plex devolvio 1 items para la busqueda serie
+[2026-07-03 11:19:53] [INFO]   Nuevo mejor poster encontrado con score 50: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:19:53] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:19:53] [INFO] Plex devolvio 1 items para la busqueda generica
+[2026-07-03 11:19:53] [INFO] Poster final seleccionado (Score: 50, Metodo: serie): http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:19:53] [INFO] Caché actualizado: Nuevo título 'Silo' agregado
+[2026-07-03 11:19:53] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:19:56] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 11:19:56] [INFO] ========================================
+[2026-07-03 11:30:26] [INFO] ========================================
+[2026-07-03 11:30:26] [INFO] Procesando torrent: Silo S03E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-03 11:30:26] [INFO] Ruta: G:\SERIES\SILO\Silo S03E01 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-03 11:30:26] [INFO] Tipo: EPISODIO (S03E01)
+[2026-07-03 11:30:26] [INFO] Título detectado: Silo
+[2026-07-03 11:30:26] [INFO] Iniciando busqueda de poster para 'Silo' (Tipo: EPISODIO)
+[2026-07-03 11:30:26] [INFO] Inicializando caché...
+[2026-07-03 11:30:26] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-03 11:30:26] [INFO] Caché cargado desde archivo: 108 títulos
+[2026-07-03 11:30:27] [INFO] Búsqueda poster: título='Silo', RatingKey=''
+[2026-07-03 11:30:27] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-03 11:30:27] [INFO] Intentando busqueda Plex (episodio): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=8
+[2026-07-03 11:30:27] [INFO] Plex devolvio 0 items para la busqueda episodio
+[2026-07-03 11:30:27] [INFO] Intentando busqueda Plex (serie): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-03 11:30:27] [INFO] Plex devolvio 1 items para la busqueda serie
+[2026-07-03 11:30:27] [INFO]   Nuevo mejor poster encontrado con score 50: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:30:27] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=Silo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:30:27] [INFO] Plex devolvio 1 items para la busqueda generica
+[2026-07-03 11:30:27] [INFO] Poster final seleccionado (Score: 50, Metodo: serie): http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:30:27] [INFO] Caché actualizado: Nuevo título 'Silo' agregado
+[2026-07-03 11:30:27] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:30:29] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 11:30:29] [INFO] ========================================
