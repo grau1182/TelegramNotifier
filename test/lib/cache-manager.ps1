@@ -255,7 +255,6 @@ function Get-PosterByCache {
     if (-not [string]::IsNullOrEmpty($RatingKey)) {
         $ratingKeyMatch = $script:PlexCache | Where-Object { [string]$_.ratingKey -eq [string]$RatingKey } | Select-Object -First 1
         if ($ratingKeyMatch -and $ratingKeyMatch.poster_url) {
-            Write-Log "Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)"
             return @{
                 found     = $true
                 method    = "cache_ratingkey_exact"
