@@ -39,6 +39,13 @@
       "ratingKey": 5144,
       "note": "Serie cancelada - ENCONTRADA EN PLEX",
       "fallback_action": "USE_RATING_KEY"
+    },
+    {
+      "title": "La casa del dragón",
+      "localTitle": "La Casa Del Dragon",
+      "ratingKey": 8103,
+      "note": "House of the Dragon - título con año en torrent",
+      "fallback_action": "USE_RATING_KEY"
     }
   ]
 }

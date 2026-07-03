@@ -197,6 +197,22 @@ function Get-TechnicalTags {
     return $tags
 }
 
+function Get-SearchTitle {
+    param(
+        [string]$Title,
+        [string]$Type
+    )
+
+    if ($Type -in @("EPISODIO", "TEMPORADA")) {
+        $Title = $Title -replace '\(\d{4}\)', ''
+        $Title = $Title -replace '\[\d{4}\]', ''
+        $Title = $Title -replace '\s+S\d{1,2}E\d{1,2}.*$', ''
+        $Title = $Title.Trim()
+    }
+
+    return $Title
+}
+
 function Get-ParseConfidence {
     param(
         [string]$DetectedType,

@@ -7,8 +7,8 @@ param(
     [int]$MaxTorrents = 0
 )
 
-$BasePath = "C:\Users\grau_\Downloads\TelegramNotifier"
-$TestFolder = Join-Path $BasePath "test"
+$ProjectRoot = Split-Path $PSScriptRoot -Parent
+$TestFolder = $PSScriptRoot
 $WrapperScript = Join-Path $TestFolder "test_v4_wrapper.ps1"
 $AnalysisScript = Join-Path $TestFolder "validation\AnalyzeResults.ps1"
 

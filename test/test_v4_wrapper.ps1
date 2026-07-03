@@ -7,10 +7,11 @@ param(
     [switch]$QuickTest = $false
 )
 
-$BasePath = "C:\Users\grau_\Downloads\TelegramNotifier"
-$ScriptPath = Join-Path $BasePath "test\TelegramTorrent_Test.ps1"
-$TorrentListPath = Join-Path $BasePath "recursos\torrents.csv"
-$ResultsPath = Join-Path $BasePath "test\results"
+$ProjectRoot = Split-Path $PSScriptRoot -Parent
+$TestBasePath = $PSScriptRoot
+$ScriptPath = Join-Path $TestBasePath "TelegramTorrent_Test.ps1"
+$TorrentListPath = Join-Path $ProjectRoot "recursos\torrents.csv"
+$ResultsPath = Join-Path $TestBasePath "results"
 
 # Verificar que existen archivos
 if (-not (Test-Path $TorrentListPath)) {
@@ -44,7 +45,7 @@ $allTorrentResults = @()
 
 # Inicializar cache UNA SOLA VEZ
 Write-Host "Pre-cargando cache..." -ForegroundColor Cyan
-Initialize-PlexCache -SkipDelay $true
+Initialize-PlexCache -SkipDelay $true -BasePath $TestBasePath
 Write-Host "Cache cargado: $($script:PlexCache.Count) títulos" -ForegroundColor Green
 
 # Procesar cada torrent
@@ -62,6 +63,8 @@ foreach ($idx in 0..($torrents.Count - 1)) {
     
     Write-Host -NoNewline "[$num/$($torrents.Count)] $name ... "
     
+    $script:PlexSearchLog = @()
+
     # Re-inicializar variables para este torrent
     $global:OriginalName = [System.IO.Path]::GetFileNameWithoutExtension($name)
     $global:NormalizedName = Normalize-Name $global:OriginalName
@@ -96,32 +99,41 @@ foreach ($idx in 0..($torrents.Count - 1)) {
     }
     
     $global:DetectedMetadata.Title = $searchTitle
+    $searchTitleClean = Get-SearchTitle -Title $searchTitle -Type $global:DetectedMetadata.Type
     
     # Buscar poster
-    $poster = Get-PlexPoster -Title $searchTitle -ContentPath $path -DetectedMetadata $global:DetectedMetadata
+    $poster = Get-PlexPoster -Title $searchTitle -ContentPath $path `
+                             -DetectedMetadata $global:DetectedMetadata `
+                             -BasePath $TestBasePath
+
+    $cacheMethod = if ($script:PlexSearchLog.Count -gt 0) { $script:PlexSearchLog[0].method } else { $null }
+    $resolvedRatingKey = if ($script:PlexSearchLog.Count -gt 0) { $script:PlexSearchLog[0].ratingKey } else { "" }
     
     # Capturar resultado para este torrent - Estructura compatible con AnalyzeResults
-    $cleanTitle = [string]$global:CleanName  # Asegurar que es string
-    $parseConfidence = if ($poster) { 85 } else { 45 }  # Confianza basada en match
+    $cleanTitle = [string]$global:CleanName
+    $parseConfidence = if ($poster) { 85 } else { 45 }
     
     $torrentResult = @{
         numero = $num
         torrent_name = $name
-        nombre_limpio = $cleanTitle  # Para mostrar en tabla de análisis
+        nombre_limpio = $cleanTitle
         content_path = $path
         titulo_detectado = $searchTitle
+        search_title = $searchTitleClean
+        rating_key = $resolvedRatingKey
+        cache_method = $cacheMethod
         tipo_detectado = $global:DetectedMetadata.Type
         patron = $global:PatternDetected
-        patron_detectado = $global:PatternDetected  # Alternativa para compatibilidad
+        patron_detectado = $global:PatternDetected
         resolucion = $global:Resolution
         tamanio_gb = $global:SizeGB
         contenido_existe = $global:ContentExists
         poster_encontrado = if ($poster) { $true } else { $false }
         poster_url = $poster
-        parse_confidence = $parseConfidence  # Para gráfico de confianza
+        parse_confidence = $parseConfidence
         tags_tecnicos = $global:TechnicalTags -join ","
-        plex_responses = @()  # Array vacío para compatibilidad
-        error_general = $null  # Sin error si llegó aquí
+        plex_responses = @()
+        error_general = $null
         timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss.fff"
     }
     
@@ -152,17 +164,14 @@ Write-Host "=======================================" -ForegroundColor Cyan
 # EXPORTAR RESULTADOS A JSON - COMPLETO
 # ==================================================
 
-# Crear directorio json si no existe
 $JsonFolder = Join-Path $ResultsPath "json"
 if (-not (Test-Path $JsonFolder)) {
     New-Item -ItemType Directory -Path $JsonFolder -Force | Out-Null
 }
 
-# Generar nombre de archivo con timestamp
 $Timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
 $JsonFile = Join-Path $JsonFolder "TelegramNotifier_Test_$Timestamp.json"
 
-# Crear estructura JSON completa con todos los datos
 $jsonOutput = @{
     resumen = @{
         total_torrents = $torrents.Count
@@ -178,7 +187,6 @@ $jsonOutput = @{
     torrents = $allTorrentResults
 }
 
-# Exportar a JSON
 $jsonOutput | ConvertTo-Json -Depth 10 | Set-Content -Path $JsonFile -Encoding UTF8
 
 Write-Host "`nJSON exportado: $JsonFile" -ForegroundColor Green

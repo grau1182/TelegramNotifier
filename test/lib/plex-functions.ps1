@@ -102,12 +102,25 @@ function Get-PlexPoster {
     if (-not $script:PlexCacheLoaded) {
         Initialize-PlexCache -SkipDelay $true -BasePath $BasePath
     }
-    
-    # Si tenemos ratingKey en metadata, pasarlo para búsqueda rápida
-    $ratingKeyToSearch = if ($DetectedMetadata -and $DetectedMetadata.ratingKey) { $DetectedMetadata.ratingKey } else { "" }
-    $cacheResult = Get-PosterByCache $Title -RatingKey $ratingKeyToSearch
+
+    $searchTitle = Get-SearchTitle -Title $Title -Type $DetectedMetadata.Type
+    $ratingKeyToSearch = Resolve-RatingKey -Title $searchTitle `
+                                           -DetectedMetadata $DetectedMetadata `
+                                           -BasePath $BasePath
+
+    Write-Log "Búsqueda poster: título='$searchTitle', RatingKey='$ratingKeyToSearch'"
+
+    $cacheResult = Get-PosterByCache -Title $searchTitle -RatingKey $ratingKeyToSearch
     if ($cacheResult.found) {
         Write-Log "Poster encontrado en caché (método: $($cacheResult.method), score: $($cacheResult.score)%)"
+        if (Get-Variable -Name PlexSearchLog -Scope Script -ErrorAction SilentlyContinue) {
+            $script:PlexSearchLog += @{
+                method    = $cacheResult.method
+                title     = $cacheResult.title
+                score     = $cacheResult.score
+                ratingKey = $cacheResult.ratingKey
+            }
+        }
         return $cacheResult.url
     }
 
@@ -123,7 +136,7 @@ function Get-PlexPoster {
     $SearchTypes += @{ Type = $null; Description = "generica" }
 
     foreach ($SearchType in $SearchTypes) {
-        $Query = $Title
+        $Query = $searchTitle
         $PlexSearchUrl = "$PlexUrl/search?query=$([System.Uri]::EscapeDataString($Query))&X-Plex-Token=$PlexToken"
         if ($SearchType.Type) {
             $PlexSearchUrl += "&type=$($SearchType.Type)"

@@ -133,6 +133,68 @@ function Get-FuzzyMatchScore {
     return [Math]::Round($similarity, 0)
 }
 
+function Resolve-RatingKey {
+    param(
+        [string]$Title,
+        [hashtable]$DetectedMetadata,
+        [string]$BasePath = "."
+    )
+
+    if ($DetectedMetadata -and $DetectedMetadata.ratingKey) {
+        return [string]$DetectedMetadata.ratingKey
+    }
+
+    $searchTitle = Get-SearchTitle -Title $Title -Type $DetectedMetadata.Type
+    $searchKey = $searchTitle.ToLower().Trim() -replace '[^a-z0-9]', ''
+
+    $fallbackFile = Join-Path $BasePath "config\legacy_series_fallback.json"
+    if (Test-Path $fallbackFile) {
+        try {
+            $fallback = Get-Content $fallbackFile -Encoding UTF8 | ConvertFrom-Json
+            foreach ($serie in $fallback.series) {
+                $fbClean = $serie.title.ToLower() -replace '[^a-z0-9]', ''
+                if ($searchKey -eq $fbClean -or $searchKey.Contains($fbClean) -or $fbClean.Contains($searchKey)) {
+                    return [string]$serie.ratingKey
+                }
+                if ($serie.localTitle) {
+                    $localClean = $serie.localTitle.ToLower() -replace '[^a-z0-9]', ''
+                    if ($searchKey -eq $localClean -or $searchKey.Contains($localClean)) {
+                        return [string]$serie.ratingKey
+                    }
+                }
+            }
+        }
+        catch {
+            Write-Log "Advertencia: Error leyendo legacy fallback: $($_.Exception.Message)" -Level "WARNING"
+        }
+    }
+
+    if ($script:PlexCache.Count -eq 0) {
+        return ""
+    }
+
+    $exactMatch = $script:PlexCache | Where-Object { $_.titulo_normalizado -eq $searchKey } | Select-Object -First 1
+    if ($exactMatch) {
+        return [string]$exactMatch.ratingKey
+    }
+
+    $bestMatch = $null
+    $bestScore = 0
+    foreach ($item in $script:PlexCache) {
+        $score = Get-FuzzyMatchScore $searchKey $item.titulo_normalizado
+        if ($score -gt $bestScore) {
+            $bestScore = $score
+            $bestMatch = $item
+        }
+    }
+
+    if ($bestScore -ge 85 -and $bestMatch) {
+        return [string]$bestMatch.ratingKey
+    }
+
+    return ""
+}
+
 function Get-PosterByCache {
     param(
         [string]$Title,
@@ -140,12 +202,12 @@ function Get-PosterByCache {
     )
     
     if ($script:PlexCache.Count -eq 0) { 
-        return @{ found = $false; method = "cache_empty"; score = 0 }
+        return @{ found = $false; method = "cache_empty"; score = 0; ratingKey = "" }
     }
     
     # ESTRATEGIA 1: Búsqueda por RatingKey (0ms, identificador único)
     if (-not [string]::IsNullOrEmpty($RatingKey)) {
-        $ratingKeyMatch = $script:PlexCache | Where-Object { $_.ratingKey -eq $RatingKey } | Select-Object -First 1
+        $ratingKeyMatch = $script:PlexCache | Where-Object { [string]$_.ratingKey -eq [string]$RatingKey } | Select-Object -First 1
         if ($ratingKeyMatch -and $ratingKeyMatch.poster_url) {
             Write-Log "Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)"
             return @{
@@ -197,5 +259,5 @@ function Get-PosterByCache {
         }
     }
     
-    return @{ found = $false; method = "cache_no_match"; score = $bestScore }
+    return @{ found = $false; method = "cache_no_match"; score = $bestScore; ratingKey = "" }
 }
