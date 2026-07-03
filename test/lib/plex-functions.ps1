@@ -100,19 +100,23 @@ function Get-PlexPoster {
 
     # FASE 0: Búsqueda en caché
     if (-not $script:PlexCacheLoaded) {
-        Initialize-PlexCache -SkipDelay $true -BasePath $BasePath
+        Initialize-PlexCache -SkipDelay $true -BasePath $BasePath -ProjectRoot $script:ProjectRoot
     }
 
     $searchTitle = Get-SearchTitle -Title $Title -Type $DetectedMetadata.Type
     $ratingKeyToSearch = Resolve-RatingKey -Title $searchTitle `
                                            -DetectedMetadata $DetectedMetadata `
-                                           -BasePath $BasePath
+                                           -BasePath $BasePath `
+                                           -ProjectRoot $script:ProjectRoot
 
     Write-Log "Búsqueda poster: título='$searchTitle', RatingKey='$ratingKeyToSearch'"
 
     $cacheResult = Get-PosterByCache -Title $searchTitle -RatingKey $ratingKeyToSearch
     if ($cacheResult.found) {
         Write-Log "Poster encontrado en caché (método: $($cacheResult.method), score: $($cacheResult.score)%)"
+        if ($cacheResult.title) {
+            $script:LastPosterDisplayTitle = $cacheResult.title
+        }
         if (Get-Variable -Name PlexSearchLog -Scope Script -ErrorAction SilentlyContinue) {
             $script:PlexSearchLog += @{
                 method    = $cacheResult.method
@@ -194,7 +198,8 @@ function Get-PlexPoster {
                         -Type $itemType `
                         -PosterUrl $BestPosterUrl `
                         -Year $BestItem.year `
-                        -BasePath $BasePath
+                        -BasePath $BasePath `
+                        -ProjectRoot $script:ProjectRoot
         }
         
         return $BestPosterUrl

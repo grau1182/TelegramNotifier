@@ -15,9 +15,7 @@ $ChatID   = "-1004350117652"
 
 $ProjectRoot = Split-Path $PSScriptRoot -Parent
 $TestBasePath = $PSScriptRoot
-
-$OverrideFile = Join-Path $TestBasePath "config\title_overrides.json"
-$script:OverrideFile = $OverrideFile
+$script:ProjectRoot = $ProjectRoot
 
 $LogFolder = Join-Path $TestBasePath "logs"
 $LogFile   = Join-Path $LogFolder "TelegramNotifier_Test.log"
@@ -267,12 +265,18 @@ $ParseConfidence = Get-ParseConfidence -DetectedType $DetectedMetadata.Type -Cle
 
 $searchTitleClean = Get-SearchTitle -Title $Title -Type $DetectedMetadata.Type
 
+$script:LastPosterDisplayTitle = $null
 $PosterUrl =
     Get-PlexPoster `
         -Title $Title `
         -ContentPath $ContentPath `
         -DetectedMetadata $DetectedMetadata `
         -BasePath $TestBasePath
+
+if ($script:LastPosterDisplayTitle) {
+    $Title = $script:LastPosterDisplayTitle
+    $DetectedMetadata.Title = $Title
+}
 
 if($PosterUrl){
     Write-Log "Poster URL: $PosterUrl"

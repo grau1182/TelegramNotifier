@@ -2,21 +2,6 @@
 # UTILITIES.PS1 - Funciones Generales de Utilidad
 # ==================================================
 
-function Load-Overrides {
-    param([string]$OverrideFile = "")
-    
-    # Si no se pasa parámetro, usar variable global si existe
-    if ([string]::IsNullOrEmpty($OverrideFile) -and $script:OverrideFile) {
-        $OverrideFile = $script:OverrideFile
-    }
-    
-    if (-not [string]::IsNullOrEmpty($OverrideFile) -and (Test-Path $OverrideFile)) {
-        return (Get-Content $OverrideFile -Raw -Encoding UTF8) | ConvertFrom-Json
-    }
-    
-    return $null
-}
-
 function Remove-Accents {
     param([string]$Text)
     
@@ -136,19 +121,7 @@ function Convert-Title {
         )
     }
 
-    $Title = $Output -join ' '
-
-    $Overrides = Load-Overrides
-
-    if ($Overrides) {
-        foreach ($Property in $Overrides.PSObject.Properties) {
-            if ($Title.ToLower() -eq $Property.Name) {
-                return $Property.Value
-            }
-        }
-    }
-
-    return $Title
+    return ($Output -join ' ')
 }
 
 function Get-CleanName {

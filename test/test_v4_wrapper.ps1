@@ -43,9 +43,11 @@ $allTorrentResults = @()
 # Dot-source: Carga TODAS las funciones del script en memoria (comparte scope)
 . $ScriptPath -TestMode $true -ResultsFolder $ResultsPath
 
+$script:ProjectRoot = $ProjectRoot
+
 # Inicializar cache UNA SOLA VEZ
 Write-Host "Pre-cargando cache..." -ForegroundColor Cyan
-Initialize-PlexCache -SkipDelay $true -BasePath $TestBasePath
+Initialize-PlexCache -SkipDelay $true -ProjectRoot $ProjectRoot
 Write-Host "Cache cargado: $($script:PlexCache.Count) títulos" -ForegroundColor Green
 
 # Procesar cada torrent
@@ -105,6 +107,11 @@ foreach ($idx in 0..($torrents.Count - 1)) {
     $poster = Get-PlexPoster -Title $searchTitle -ContentPath $path `
                              -DetectedMetadata $global:DetectedMetadata `
                              -BasePath $TestBasePath
+
+    if ($script:LastPosterDisplayTitle) {
+        $global:DetectedMetadata.Title = $script:LastPosterDisplayTitle
+        $searchTitle = $script:LastPosterDisplayTitle
+    }
 
     $cacheMethod = if ($script:PlexSearchLog.Count -gt 0) { $script:PlexSearchLog[0].method } else { $null }
     $resolvedRatingKey = if ($script:PlexSearchLog.Count -gt 0) { $script:PlexSearchLog[0].ratingKey } else { "" }

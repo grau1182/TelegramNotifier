@@ -32,10 +32,7 @@ $BasePath = if ([string]::IsNullOrEmpty($ConfigPath) -or $ConfigPath -eq ".") {
 } else {
     $ConfigPath
 }
-$OverrideFile = Join-Path $BasePath "config\title_overrides.json"
-
-# Hacer $OverrideFile disponible globalmente para Load-Overrides
-$script:OverrideFile = $OverrideFile
+$script:ProjectRoot = Split-Path $BasePath -Parent
 
 # ==================================================
 # CARGAR LIBRERIAS
@@ -86,7 +83,7 @@ function Process-Torrent {
     # ==================================================
 
     if ($CleanName -match '^(.*?)-s(\d{1,2})e(\d{1,2})(?:-|$)') {
-        $Title   = Convert-Title $Matches[1] -Overrides (Load-Overrides $OverrideFile)
+        $Title   = Convert-Title $Matches[1]
         $Season  = [int]$Matches[2]
         $Episode = [int]$Matches[3]
 
@@ -100,7 +97,7 @@ function Process-Torrent {
     }
 
     elseif ($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
-        $Title  = Convert-Title $Matches[1] -Overrides (Load-Overrides $OverrideFile)
+        $Title  = Convert-Title $Matches[1]
         $Season = [int]$Matches[2]
         $EpisodeCount = Count-Episodes $ContentPath
 
@@ -116,7 +113,7 @@ function Process-Torrent {
         $Title = $Matches[1]
         $Title = $Title -replace '\[.*\]', ''
         $Title = $Title.Trim()
-        $Title = Convert-Title $Title -Overrides (Load-Overrides $OverrideFile)
+        $Title = Convert-Title $Title
         $Year  = $Matches[2]
 
         $DetectedMetadata.Title = $Title
@@ -128,7 +125,7 @@ function Process-Torrent {
     }
 
     else {
-        $Title = Convert-Title $CleanName -Overrides (Load-Overrides $OverrideFile)
+        $Title = Convert-Title $CleanName
         $DetectedMetadata.Title = $Title
         $DetectedMetadata.Type = "DESCONOCIDO"
 
@@ -142,10 +139,30 @@ function Process-Torrent {
     # BUSCAR POSTER
     # ==================================================
 
+    $script:LastPosterDisplayTitle = $null
     $PosterUrl = Get-PlexPoster -Title $DetectedMetadata.Title `
                                  -ContentPath $ContentPath `
                                  -DetectedMetadata $DetectedMetadata `
                                  -BasePath $BasePath
+
+    if ($script:LastPosterDisplayTitle) {
+        $DisplayTitle = $script:LastPosterDisplayTitle
+        switch ($DetectedMetadata.Type) {
+            "EPISODIO" {
+                $Message = "EPISODIO DESCARGADO`n`n$DisplayTitle`nT$($DetectedMetadata.Season.ToString('D2')) - E$($DetectedMetadata.Episode.ToString('D2'))`n`n$Resolution`n$SizeGB GB"
+            }
+            "TEMPORADA" {
+                $EpisodeCount = Count-Episodes $ContentPath
+                $Message = "TEMPORADA DESCARGADA`n`n$DisplayTitle`nTemporada $($DetectedMetadata.Season)`n`n$EpisodeCount episodios`n$Resolution`n$SizeGB GB"
+            }
+            "PELICULA" {
+                $Message = "PELICULA DESCARGADA`n`n$DisplayTitle ($($DetectedMetadata.Year))`n`n$Resolution`n$SizeGB GB"
+            }
+            default {
+                $Message = "Torrent no clasificado`n`n$DisplayTitle`n`n$Resolution`n$SizeGB GB"
+            }
+        }
+    }
 
     if ($PosterUrl) {
         Write-Log "Poster encontrado: $PosterUrl" -Level "SUCCESS"
