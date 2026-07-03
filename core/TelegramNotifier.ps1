@@ -76,7 +76,7 @@ function Process-Torrent {
 
     # Metadata detectada
     $DetectedMetadata = @{ Title = ""; Year = $null; Season = $null; Episode = $null; Type = "Desconocido" }
-    $Message = ""
+    $EpisodeCount = 0
 
     # ==================================================
     # DETECCION DE TIPO
@@ -93,7 +93,6 @@ function Process-Torrent {
         $DetectedMetadata.Type = "EPISODIO"
 
         Write-Log "Tipo: EPISODIO (S$($Season.ToString('D2'))E$($Episode.ToString('D2')))" -Level "INFO"
-        $Message = "EPISODIO DESCARGADO`n`n$Title`nT$($Season.ToString('D2')) - E$($Episode.ToString('D2'))`n`n$Resolution`n$SizeGB GB"
     }
 
     elseif ($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
@@ -106,7 +105,6 @@ function Process-Torrent {
         $DetectedMetadata.Type = "TEMPORADA"
 
         Write-Log "Tipo: TEMPORADA (S$Season con $EpisodeCount episodios)" -Level "INFO"
-        $Message = "TEMPORADA DESCARGADA`n`n$Title`nTemporada $Season`n`n$EpisodeCount episodios`n$Resolution`n$SizeGB GB"
     }
 
     elseif ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
@@ -121,7 +119,6 @@ function Process-Torrent {
         $DetectedMetadata.Type = "PELICULA"
 
         Write-Log "Tipo: PELICULA ($Year)" -Level "INFO"
-        $Message = "PELICULA DESCARGADA`n`n$Title ($Year)`n`n$Resolution`n$SizeGB GB"
     }
 
     else {
@@ -130,7 +127,6 @@ function Process-Torrent {
         $DetectedMetadata.Type = "DESCONOCIDO"
 
         Write-Log "Tipo: DESCONOCIDO" -Level "WARNING"
-        $Message = "Torrent no clasificado`n`n$Title`n`n$Resolution`n$SizeGB GB"
     }
 
     Write-Log "Título detectado: $($DetectedMetadata.Title)" -Level "INFO"
@@ -145,24 +141,17 @@ function Process-Torrent {
                                  -DetectedMetadata $DetectedMetadata `
                                  -BasePath $BasePath
 
-    if ($script:LastPosterDisplayTitle) {
-        $DisplayTitle = $script:LastPosterDisplayTitle
-        switch ($DetectedMetadata.Type) {
-            "EPISODIO" {
-                $Message = "EPISODIO DESCARGADO`n`n$DisplayTitle`nT$($DetectedMetadata.Season.ToString('D2')) - E$($DetectedMetadata.Episode.ToString('D2'))`n`n$Resolution`n$SizeGB GB"
-            }
-            "TEMPORADA" {
-                $EpisodeCount = Count-Episodes $ContentPath
-                $Message = "TEMPORADA DESCARGADA`n`n$DisplayTitle`nTemporada $($DetectedMetadata.Season)`n`n$EpisodeCount episodios`n$Resolution`n$SizeGB GB"
-            }
-            "PELICULA" {
-                $Message = "PELICULA DESCARGADA`n`n$DisplayTitle ($($DetectedMetadata.Year))`n`n$Resolution`n$SizeGB GB"
-            }
-            default {
-                $Message = "Torrent no clasificado`n`n$DisplayTitle`n`n$Resolution`n$SizeGB GB"
-            }
-        }
-    }
+    $DisplayTitle = if ($script:LastPosterDisplayTitle) { $script:LastPosterDisplayTitle } else { $DetectedMetadata.Title }
+
+    $Message = Format-TelegramMessage `
+        -Type $DetectedMetadata.Type `
+        -Title $DisplayTitle `
+        -Resolution $Resolution `
+        -SizeGB $SizeGB `
+        -Season $(if ($DetectedMetadata.Season) { [int]$DetectedMetadata.Season } else { 0 }) `
+        -Episode $(if ($DetectedMetadata.Episode) { [int]$DetectedMetadata.Episode } else { 0 }) `
+        -Year $(if ($DetectedMetadata.Year) { [string]$DetectedMetadata.Year } else { "" }) `
+        -EpisodeCount $EpisodeCount
 
     if ($PosterUrl) {
         Write-Log "Poster encontrado: $PosterUrl" -Level "SUCCESS"

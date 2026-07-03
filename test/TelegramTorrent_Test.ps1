@@ -149,8 +149,8 @@ $ContentExists = Test-Path $ContentPath
 Write-Log "Patron detectado: $PatternDetected"
 Write-Log "Tags tecnicos: $($TechnicalTags -join ', ')"
 
-$Message = ""
 $DetectedMetadata = @{ Title = ""; Year = $null; Season = $null; Episode = $null; Type = "Desconocido" }
+$EpisodeCount = 0
 
 # ==================================================
 # EPISODIO
@@ -168,8 +168,6 @@ if($CleanName -match '^(.*?)-s(\d{1,2})e(\d{1,2})(?:-|$)'){
     $DetectedMetadata.Type = "EPISODIO"
 
     Write-Log "Tipo detectado: EPISODIO"
-
-$Message = "EPISODIO DESCARGADO`n`n$Title`nT$($Season.ToString('D2')) - E$($Episode.ToString('D2'))`n`n$Resolution`n$SizeGB GB"
 }
 
 # ==================================================
@@ -189,17 +187,6 @@ elseif($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)'){
 
     Write-Log "Tipo detectado: TEMPORADA"
     Write-Log "Episodios detectados: $EpisodeCount"
-
-$Message = @"
-TEMPORADA DESCARGADA
-
-$Title
-Temporada $Season
-
-$EpisodeCount episodios
-$Resolution
-$SizeGB GB
-"@
 }
 
 # ==================================================
@@ -224,15 +211,6 @@ elseif(
     $DetectedMetadata.Type = "PELICULA"
 
     Write-Log "Tipo detectado: PELICULA"
-
-$Message = @"
-PELICULA DESCARGADA
-
-$Title ($Year)
-
-$Resolution
-$SizeGB GB
-"@
 }
 
 # ==================================================
@@ -247,19 +225,7 @@ else {
     $DetectedMetadata.Type = "DESCONOCIDO"
 
     Write-Log "Tipo detectado: DESCONOCIDO"
-
-    $Message = @"
-Torrent no clasificado
-
-$Title
-
-$Resolution
-$SizeGB GB
-"@
 }
-
-Write-Log "Mensaje generado:"
-Write-Log $Message
 
 $ParseConfidence = Get-ParseConfidence -DetectedType $DetectedMetadata.Type -CleanName $CleanName -Pattern $PatternDetected
 
@@ -277,6 +243,19 @@ if ($script:LastPosterDisplayTitle) {
     $Title = $script:LastPosterDisplayTitle
     $DetectedMetadata.Title = $Title
 }
+
+$Message = Format-TelegramMessage `
+    -Type $DetectedMetadata.Type `
+    -Title $DetectedMetadata.Title `
+    -Resolution $Resolution `
+    -SizeGB $SizeGB `
+    -Season $(if ($DetectedMetadata.Season) { [int]$DetectedMetadata.Season } else { 0 }) `
+    -Episode $(if ($DetectedMetadata.Episode) { [int]$DetectedMetadata.Episode } else { 0 }) `
+    -Year $(if ($DetectedMetadata.Year) { [string]$DetectedMetadata.Year } else { "" }) `
+    -EpisodeCount $EpisodeCount
+
+Write-Log "Mensaje generado:"
+Write-Log $Message
 
 if($PosterUrl){
     Write-Log "Poster URL: $PosterUrl"

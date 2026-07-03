@@ -215,3 +215,62 @@ function Get-ParseConfidence {
         return 0
     }
 }
+
+function Format-TelegramMessage {
+    param(
+        [string]$Type,
+        [string]$Title,
+        [string]$Resolution,
+        [double]$SizeGB,
+        [int]$Season = 0,
+        [int]$Episode = 0,
+        [string]$Year = "",
+        [int]$EpisodeCount = 0
+    )
+
+    switch ($Type) {
+        "EPISODIO" {
+            return @"
+📺 EPISODIO DESCARGADO
+
+$Title
+T$($Season.ToString('D2')) · E$($Episode.ToString('D2'))
+
+🎞️ $Resolution
+💾 $SizeGB GB
+"@
+        }
+        "TEMPORADA" {
+            return @"
+📦 TEMPORADA DESCARGADA
+
+$Title
+Temporada $Season
+
+📺 $EpisodeCount episodios
+🎞️ $Resolution
+💾 $SizeGB GB
+"@
+        }
+        "PELICULA" {
+            return @"
+🎬 PELÍCULA DESCARGADA
+
+$Title ($Year)
+
+🎞️ $Resolution
+💾 $SizeGB GB
+"@
+        }
+        default {
+            return @"
+Torrent no clasificado
+
+$Title
+
+🎞️ $Resolution
+💾 $SizeGB GB
+"@
+        }
+    }
+}
