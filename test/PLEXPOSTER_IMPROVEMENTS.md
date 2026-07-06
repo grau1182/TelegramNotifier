@@ -1,12 +1,29 @@
 # Mejoras Get-PlexPoster v3.0-IMPROVED
 
+## Estado de implementación (2026-07-06)
+
+Las siguientes mejoras están **integradas en `core/lib/` y `test/lib/`** (no requieren script separado):
+
+| Mejora | Estado | Funciones |
+|--------|--------|-----------|
+| Partial scan Plex | ✅ Implementado | `Invoke-PlexPartialScan`, `Wait-ForPlexItem` |
+| Lookup por ruta | ✅ Implementado | `Find-PlexItemByPath`, `Resolve-PlexSectionForPath` |
+| Búsqueda progresiva | ✅ Implementado | `Get-PlexSearchQueries`, `Search-PlexWithQueries`, `Split-TitleVariants` |
+| Scoring mejorado | ✅ Implementado | `Test-PlexItemAcceptable`, raíz título pre-coma |
+| Aliases automáticos | ✅ Implementado | `Add-CacheAlias`, `Save-PlexPosterResult` |
+| title_overrides.json | ❌ No usado | Sustituido por búsqueda progresiva + aliases |
+
+Documentación operativa: [`README_TEST.md`](README_TEST.md)
+
+---
+
 ## 📋 Resumen
 
-Implementación de 4 fases de mejoras para Get-PlexPoster, basadas en análisis de 237 torrents y 121 falsos negativos.
+Implementación de mejoras para Get-PlexPoster, basadas en análisis de 237 torrents y falsos negativos (ej. Kingsman ES/EN, descargas recientes sin indexar).
 
-**Objetivo**: Aumentar cobertura de 49% → 75%+ (máxima) con caché integrado
+**Objetivo**: Aumentar cobertura sin mapeos manuales de títulos
 
-**Status**: ✅ FASE 1-4 COMPLETADAS EN TelegramTorrent_Test_Improved.ps1
+**Status histórico**: Diseño original en TelegramTorrent_Test_Improved.ps1 → **ahora en core/lib/plex-functions.ps1**
 
 ---
 

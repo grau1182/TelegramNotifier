@@ -1,156 +1,112 @@
 # Sistema de Caché Persistente - Plex
 
-## 📍 Ubicación del Archivo
+## Ubicación del archivo
+
 ```
 recursos/plex_cache.json
 ```
 
-## 🎯 ¿Qué es?
+Compartida entre **producción** (`core/`) y **test** (`test/`).
 
-Es una base de datos **persistente** que almacena todos los títulos disponibles en tu Plex con sus IDs (`ratingKey`). Se usa para realizar búsquedas **atómicas** (instantáneas) sin necesidad de consultar la API REST de Plex en cada ejecución.
+## Qué es
 
-## 🔄 Cómo Funciona
+Base de datos persistente con títulos Plex, `ratingKey`, URLs de poster y **aliases automáticos**. Permite búsquedas instantáneas sin consultar la API en cada ejecución.
 
-### Flujo de Carga (Initialize-PlexCache):
+## Flujo completo (con mejoras v2)
 
 ```
-┌─────────────────────────────────────┐
-│  Inicia test_v4_wrapper.ps1         │
-└────────────┬────────────────────────┘
-             │
-             ▼
-┌─────────────────────────────────────┐
-│  ¿Existe recursos/plex_cache.json?  │
-└────┬────────────────────────┬───────┘
-     │ SÍ                     │ NO
-     │                        │
-     ▼                        ▼
-┌──────────────────┐    ┌────────────────┐
-│ Leer desde       │    │ Consultar API  │
-│ archivo (0ms)    │    │ Plex (500ms+)  │
-└────────┬─────────┘    └────────┬───────┘
-         │                       │
-         └───────────┬───────────┘
-                     │
-                     ▼
-          ┌──────────────────────┐
-          │ Guardar en archivo   │
-          │ para próxima vez     │
-          └──────────────────────┘
+Torrent completado
+    ↓
+Initialize-PlexCache() → lee recursos/plex_cache.json
+    ↓
+Get-PosterByCache() → exact / alias / fuzzy
+    ↓ (miss)
+Partial scan Plex + Wait-ForPlexItem (path lookup)
+    ↓ (miss)
+Search-PlexWithQueries (búsqueda progresiva)
+    ↓ (found)
+Add-ToCache + alias del título torrent si difiere del título Plex
 ```
 
-## 📋 Estructura del Archivo
+## Estructura del archivo
 
 ```json
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-01T13:08:39Z",
-  "description": "Caché persistente de Plex",
-  "totalItems": 102,
+  "lastUpdated": "2026-07-06T09:00:00Z",
+  "totalItems": 109,
   "cache": [
     {
-      "titulo_original": "The Mandalorian",
-      "titulo_normalizado": "themandalorian",
-      "ratingKey": "1250",
-      "tipo": "SERIE",
-      "poster_url": "http://127.0.0.1:32400/library/metadata/1250/thumb?...",
-      "year": null
-    },
-    ...
+      "titulo_original": "Kingsman: The Secret Service",
+      "titulo_normalizado": "kingsmanthesecretservice",
+      "ratingKey": "1234",
+      "tipo": "PELICULA",
+      "poster_url": "http://127.0.0.1:32400/library/metadata/1234/thumb/...",
+      "year": 2014,
+      "aliases": ["Kingsman, El Servicio Secreto"]
+    }
   ]
 }
 ```
 
-## 🚀 Casos de Uso
+### Aliases automáticos
 
-### 1. **Descarga de Nuevo Torrent**
-Si descargas un torrent nuevo, el sistema:
-- Busca el título en la caché primero (instantáneo)
-- Si no encuentra coincidencia exacta, usa búsqueda fuzzy (85%+)
-- Si tampoco hay coincidencia, consulta Plex API (fallback)
+Cuando el poster se encuentra con un título Plex distinto al del torrent (ej. inglés vs español), el sistema guarda el título del torrent en `aliases`. La próxima descarga del mismo contenido será **cache hit** sin llamadas API.
 
-### 2. **Búsqueda Rápida por ratingKey**
-Ejemplo: Necesitas el poster del título con ratingKey `1250`:
+Funciones: `Add-ToCache -Aliases`, `Add-CacheAlias` en `cache-manager.ps1`.
+
+## Casos de uso
+
+### 1. Descarga de torrent nuevo
+
+1. Busca en caché (exacto, alias, fuzzy ≥85%)
+2. Si miss: partial scan + lookup por ruta
+3. Si miss: búsqueda progresiva (`Kingsman, El...` → `Kingsman`)
+4. Al encontrar: guarda entrada + alias
+
+### 2. Búsqueda por ratingKey
 
 ```powershell
 $cache = Get-Content "recursos/plex_cache.json" | ConvertFrom-Json
-$titulo = $cache.cache | Where-Object { $_.ratingKey -eq "1250" }
+$titulo = $cache.cache | Where-Object { $_.ratingKey -eq "1234" }
 $url = $titulo.poster_url
 ```
 
-### 3. **Buscar por Título Normalizado**
-Para encontrar "the mandalorian":
+## Actualizar la caché
 
-```powershell
-$cache = Get-Content "recursos/plex_cache.json" | ConvertFrom-Json
-$resultado = $cache.cache | Where-Object { $_.titulo_normalizado -like "*mandalorian*" }
-```
+### Automáticamente
 
-## 🔄 Actualizar la Caché
+Cada torrent procesado que encuentra poster nuevo actualiza el archivo.
 
-### Opción A: Automáticamente (Por Script)
-Simplemente ejecuta `test_v4_wrapper.ps1`. Si Plex tiene nuevos títulos, se agregarán a la caché automáticamente:
+### Suite de test
 
 ```powershell
 cd test
+
+# Suite completa (paridad producción, con scan Plex)
 .\test_v4_wrapper.ps1
+
+# Suite rápida (10 torrents, sin scan)
+.\test_v4_wrapper.ps1 -QuickTest
 ```
 
-### Opción B: Manualmente (Forzar Recarga)
-```powershell
-cd test
+## Ventajas
 
-# 1. Elimina la caché actual
-Remove-Item "..\recursos\plex_cache.json" -Force
+| Aspecto | Con caché + alias | Sin caché |
+|---------|-------------------|-----------|
+| Velocidad (hit) | 1-5 ms | 500 ms – 60 s |
+| Títulos ES/EN | Alias automático | Re-búsqueda API |
+| Llamadas API | Mínimas | Una por torrent |
 
-# 2. Carga nuevamente desde Plex
-.\test_v4_wrapper.ps1 -QuickTest  # O sin -QuickTest para todos
-```
+## Referencia en código
 
-## 📊 Datos Actuales en la Caché
+- Ruta: `Get-PlexCacheFilePath` en `cache-manager.ps1` → `recursos/plex_cache.json`
+- Escritura: `Add-ToCache`, `Add-CacheAlias`
+- Lectura: `Initialize-PlexCache`, `Get-PosterByCache`
 
-```
-Total de títulos: 102
-├── Películas: 34
-└── Series: 68
+## Documentación relacionada
 
-Última actualización: 2026-07-01 13:08:39Z
-```
+- [`test/README_TEST.md`](../test/README_TEST.md) — modos test vs producción
+- [`core/README.md`](../core/README.md) — flujo producción
 
-## 💾 Ventajas
-
-| Aspecto | Con Caché | Sin Caché |
-|---------|-----------|----------|
-| Velocidad de búsqueda | 1-5ms | 500ms+ |
-| Llamadas API Plex | ~1 (actualización) | 237 (uno por torrent) |
-| Carga inicial | 0s | 5s+ |
-| Uso de red | Mínimo | Intenso |
-
-## ⚡ Ejemplo: Buscar un Torrent
-
-```powershell
-# Usuario descarga: "The.Mandalorian.S02E01.1080p"
-# Sistema normaliza: "the-mandalorian-s02e01"
-# Busca en caché:
-
-$cache = Get-Content "recursos/plex_cache.json" | ConvertFrom-Json
-$resultado = $cache.cache | 
-    Where-Object { $_.titulo_normalizado -contains "themandalorian" }
-
-# Resultado: ratingKey = "1250", poster_url = "http://..."
-```
-
-## 🔐 Notas Importantes
-
-- El archivo se actualiza automáticamente al ejecutar `test_v4_wrapper.ps1`
-- No necesitas modificar el archivo manualmente
-- Si eliminas el archivo, se regenerará la próxima ejecución (consultando Plex)
-- La caché está en formato JSON limpio y legible
-
-## 📍 Referencia en Script
-
-En `TelegramTorrent_Test.ps1`:
-- Ruta de caché: `Join-Path (Split-Path $PSScriptRoot -Parent) "recursos\plex_cache.json"`
-- Lectura: `Get-Content $cacheFilePath | ConvertFrom-Json`
-- Escritura: `$cacheObject | ConvertTo-Json -Depth 5 | Set-Content $cacheFilePath`
-
+**Última actualización:** 2026-07-06

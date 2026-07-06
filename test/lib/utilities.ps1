@@ -186,6 +186,40 @@ function Get-SearchTitle {
     return $Title
 }
 
+function Split-TitleVariants {
+    param([string]$Title)
+
+    $variants = [System.Collections.Generic.List[string]]::new()
+    $seen = @{}
+
+    function Add-Variant {
+        param([string]$Value)
+        $Value = $Value.Trim()
+        if ([string]::IsNullOrWhiteSpace($Value)) { return }
+        $key = $Value.ToLower()
+        if (-not $seen[$key]) {
+            $seen[$key] = $true
+            $variants.Add($Value) | Out-Null
+        }
+    }
+
+    Add-Variant $Title
+
+    if ($Title -match '^([^,]+),') {
+        Add-Variant $Matches[1].Trim()
+    }
+
+    $stopWords = @('el', 'la', 'los', 'las', 'de', 'del', 'the', 'a', 'an')
+    $words = $Title -split '\s+' | Where-Object {
+        -not [string]::IsNullOrWhiteSpace($_) -and ($stopWords -notcontains $_.ToLower())
+    }
+    if ($words.Count -gt 0) {
+        Add-Variant $words[0]
+    }
+
+    return @($variants)
+}
+
 function Get-ParseConfidence {
     param(
         [string]$DetectedType,

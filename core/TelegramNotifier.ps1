@@ -11,7 +11,10 @@ param (
     [string]$TorrentName,
     [string]$ContentPath = "",
     [switch]$SendTelegram = $true,
-    [string]$ConfigPath = "."
+    [string]$ConfigPath = ".",
+    [int]$PlexScanPollSeconds = 5,
+    [int]$PlexScanPollMaxAttempts = 12,
+    [switch]$SkipPlexScan = $false
 )
 
 # ==================================================
@@ -24,6 +27,11 @@ $ChatID   = "-1004350117652"
 # Plex
 $PlexUrl   = "http://127.0.0.1:32400"
 $PlexToken = "Yt-aqViZD-ydpysRvGyP"
+$script:PlexScanPollSeconds = $PlexScanPollSeconds
+$script:PlexScanPollMaxAttempts = $PlexScanPollMaxAttempts
+$script:SkipPlexScan = $SkipPlexScan.IsPresent
+$script:PlexMoviePathPrefix = "G:\PELIS"
+$script:PlexSeriesPathPrefix = "G:\SERIES"
 
 # Rutas
 # Usar $PSScriptRoot por defecto para garantizar logs en core/ sin importar directorio de ejecución
@@ -139,7 +147,10 @@ function Process-Torrent {
     $PosterUrl = Get-PlexPoster -Title $DetectedMetadata.Title `
                                  -ContentPath $ContentPath `
                                  -DetectedMetadata $DetectedMetadata `
-                                 -BasePath $BasePath
+                                 -BasePath $BasePath `
+                                 -PlexScanPollSeconds $script:PlexScanPollSeconds `
+                                 -PlexScanPollMaxAttempts $script:PlexScanPollMaxAttempts `
+                                 -SkipPlexScan:$script:SkipPlexScan
 
     $DisplayTitle = if ($script:LastPosterDisplayTitle) { $script:LastPosterDisplayTitle } else { $DetectedMetadata.Title }
 

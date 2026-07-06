@@ -116,24 +116,111 @@ function Initialize-PlexCache {
     $script:PlexCacheLoaded = $true
 }
 
+function Add-CacheAlias {
+    param(
+        [string]$RatingKey,
+        [string]$Alias,
+        [string]$ProjectRoot = ""
+    )
+
+    if ([string]::IsNullOrWhiteSpace($RatingKey) -or [string]::IsNullOrWhiteSpace($Alias)) {
+        return $false
+    }
+
+    $cacheItem = $script:PlexCache | Where-Object { [string]$_.ratingKey -eq [string]$RatingKey } | Select-Object -First 1
+    if (-not $cacheItem) {
+        return $false
+    }
+
+    $aliasKey = Normalize-CacheKey $Alias
+    if ($cacheItem.titulo_normalizado -eq $aliasKey) {
+        return $false
+    }
+
+    if (-not $cacheItem.aliases) {
+        $cacheItem.aliases = @()
+    }
+
+    foreach ($existingAlias in @($cacheItem.aliases)) {
+        if ((Normalize-CacheKey $existingAlias) -eq $aliasKey) {
+            return $false
+        }
+    }
+
+    $cacheItem.aliases += $Alias
+
+    try {
+        $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $ProjectRoot
+        if (-not (Test-Path $cacheFilePath)) {
+            return $true
+        }
+
+        $cacheData = Get-Content $cacheFilePath -Encoding UTF8 | ConvertFrom-Json
+        $fileItem = $cacheData.cache | Where-Object { [string]$_.ratingKey -eq [string]$RatingKey } | Select-Object -First 1
+        if (-not $fileItem) {
+            return $true
+        }
+
+        if (-not $fileItem.aliases) {
+            $fileItem | Add-Member -NotePropertyName aliases -NotePropertyValue @() -Force
+        }
+
+        $fileAliases = @($fileItem.aliases)
+        $alreadyExists = $false
+        foreach ($existingAlias in $fileAliases) {
+            if ((Normalize-CacheKey $existingAlias) -eq $aliasKey) {
+                $alreadyExists = $true
+                break
+            }
+        }
+
+        if (-not $alreadyExists) {
+            $fileItem.aliases = @($fileAliases + $Alias)
+            $cacheData.lastUpdated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
+            $cacheData | ConvertTo-Json -Depth 5 | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
+            Write-Log "Caché actualizado: alias '$Alias' agregado a ratingKey $RatingKey"
+        }
+    }
+    catch {
+        Write-Log "No se pudo actualizar alias en caché: $($_.Exception.Message)" -Level "WARNING"
+    }
+
+    return $true
+}
+
 function Add-ToCache {
     param(
         [string]$Title,
         [string]$RatingKey,
         [string]$Type,
         [string]$PosterUrl,
-        [int]$Year,
+        [int]$Year = 0,
+        [string[]]$Aliases = @(),
         [string]$BasePath = ".",
         [string]$ProjectRoot = ""
     )
 
     $normalizedTitle = Normalize-CacheKey $Title
 
+    $existingByKey = $script:PlexCache | Where-Object {
+        [string]$_.ratingKey -eq [string]$RatingKey
+    } | Select-Object -First 1
+
+    if ($existingByKey) {
+        foreach ($alias in @($Aliases)) {
+            Add-CacheAlias -RatingKey $RatingKey -Alias $alias -ProjectRoot $ProjectRoot
+        }
+        return
+    }
+
     $exists = $script:PlexCache | Where-Object {
         $_.titulo_normalizado -eq $normalizedTitle -and [string]$_.ratingKey -eq [string]$RatingKey
     }
 
     if ($exists) {
+        foreach ($alias in @($Aliases)) {
+            Add-CacheAlias -RatingKey $RatingKey -Alias $alias -ProjectRoot $ProjectRoot
+        }
         return
     }
 
@@ -144,6 +231,10 @@ function Add-ToCache {
         tipo               = $Type
         poster_url         = $PosterUrl
         year               = $Year
+    }
+
+    if ($Aliases -and $Aliases.Count -gt 0) {
+        $newItem.aliases = @($Aliases)
     }
 
     $script:PlexCache += $newItem

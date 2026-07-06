@@ -24,7 +24,7 @@ $torrents = @(Import-Csv -Path $TorrentListPath)
 
 if ($QuickTest) {
     $torrents = @($torrents | Select-Object -First 10)
-    Write-Host "QUICK TEST: Procesando 10 torrents" -ForegroundColor Yellow
+    Write-Host "QUICK TEST: Procesando 10 torrents (SkipPlexScan activo)" -ForegroundColor Yellow
 }
 elseif ($MaxTorrents -gt 0) {
     $torrents = @($torrents | Select-Object -First $MaxTorrents)
@@ -41,7 +41,7 @@ $notfound = 0
 $allTorrentResults = @()
 
 # Dot-source: Carga TODAS las funciones del script en memoria (comparte scope)
-. $ScriptPath -TestMode $true -ResultsFolder $ResultsPath
+. $ScriptPath -TestMode $true -ResultsFolder $ResultsPath -SkipPlexScan:$QuickTest
 
 $script:ProjectRoot = $ProjectRoot
 
@@ -103,10 +103,13 @@ foreach ($idx in 0..($torrents.Count - 1)) {
     $global:DetectedMetadata.Title = $searchTitle
     $searchTitleClean = Get-SearchTitle -Title $searchTitle -Type $global:DetectedMetadata.Type
     
-    # Buscar poster
+    # Buscar poster (paridad con producción; SkipPlexScan solo en QuickTest)
     $poster = Get-PlexPoster -Title $searchTitle -ContentPath $path `
                              -DetectedMetadata $global:DetectedMetadata `
-                             -BasePath $TestBasePath
+                             -BasePath $TestBasePath `
+                             -PlexScanPollSeconds $script:PlexScanPollSeconds `
+                             -PlexScanPollMaxAttempts $script:PlexScanPollMaxAttempts `
+                             -SkipPlexScan:$script:SkipPlexScan
 
     if ($script:LastPosterDisplayTitle) {
         $global:DetectedMetadata.Title = $script:LastPosterDisplayTitle

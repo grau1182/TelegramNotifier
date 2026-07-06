@@ -1,5 +1,7 @@
 # RESUMEN: REORGANIZACIÓN DE ARCHIVOS COMPLETADA ✅
 
+> **Documentación actualizada (2026-07-06):** Ver [`../README_TEST.md`](../README_TEST.md) para modos test vs producción, partial scan Plex y comandos de ejecución.
+
 ## ESTRUCTURA FINAL
 
 ```

@@ -1,0 +1,554 @@
+================================================================================
+CONTEXTO COMPLETO — Sesión TelegramNotifier / Posters Plex / Kingsman
+Proyecto: TelegramNotifier
+Ruta workspace: /Users/agrauliana/Downloads/TelegramNotifier
+Fecha sesión: 2026-07-06
+================================================================================
+
+Este archivo recoge la conversación de la sesión (mensajes usuario + respuestas
+del asistente), las acciones realizadas en código y documentación, y un anexo
+técnico con commits, funciones, rutas y comandos.
+
+================================================================================
+PARTE 1 — TRANSCRIPCIÓN DE LA CONVERSACIÓN
+================================================================================
+
+--------------------------------------------------------------------------------
+MENSAJE 1 — USUARIO
+--------------------------------------------------------------------------------
+
+Quiero que revistes el fichero de log @core/logs/TelegramNotifier_20260706.log 
+con los ultimos torrents que se han intentado usar y no se ha podido encontrar 
+el poster. Revisa por el codigo cual puede ser el problema ya que segun el log 
+no se encuentra el RatingKey. Son peliculas nuevas que no estan en la caché y 
+por la api de plex no las ha encontrado. Antes habia un Start-Sleep -Seconds -5 
+en el inicio de los scripts principales (core/TelegramNotifier.ps1 en produccion, 
+en test fue eliminado para realizar pruebas mas rapido en test/TelegramTorrent_Test.ps1)
+
+--------------------------------------------------------------------------------
+RESPUESTA 1 — ASISTENTE (análisis log + código, modo Ask)
+--------------------------------------------------------------------------------
+
+Archivo log analizado: core/logs/TelegramNotifier_20260706.log
+
+Tres torrents fallidos (misma trilogía Kingsman):
+
+| Torrent                          | Título detectado              | RatingKey | Plex API |
+|----------------------------------|-------------------------------|-----------|----------|
+| Kingsman, El Servicio Secreto (2014)... | Kingsman, El Servicio Secreto | ''        | 0 items  |
+| Kingsman, El Círculo de Oro (2017)...   | Kingsman, El Circulo De Oro   | ''        | 0 items  |
+| The King's Man, La primera misión (2021)... | The King's Man, La Primera Mision | ''   | 0 items  |
+
+Conclusión sobre RatingKey='':
+- NO es el bug principal; es comportamiento esperado para contenido nuevo fuera
+  de plex_cache.json.
+- Resolve-RatingKey (core/lib/cache-manager.ps1) solo devuelve valor si:
+  1) DetectedMetadata.ratingKey (nunca se rellena en Process-Torrent), o
+  2) Hay match en caché (exacto, alias o fuzzy >=85%).
+- Kingsman no estaba en la caché (109 títulos en el log).
+
+Causa directa del fallo: Plex devolvió 0 items en /search.
+
+Causas probables (orden):
+1. TIMING: qBittorrent ejecuta el script al completar la descarga; Plex puede no
+   haber indexado G:\PELIS\ todavía. Todo en el log ocurre en el mismo segundo.
+2. TÍTULO ES vs EN: búsqueda "Kingsman, El Servicio Secreto" vs Plex
+   "Kingsman: The Secret Service". Minority Report sí funcionaba (título EN).
+3. UNA SOLA QUERY: sin fallbacks progresivos (Kingsman solo, pre-coma, etc.).
+4. AÑO no usado en la query (solo en scoring posterior, que no corre si 0 items).
+
+Start-Sleep:
+- En git (commit d81f0e0) existía en test/TelegramTorrent_Test.ps1 monolítico
+  dentro de Initialize-PlexCache cuando no había fichero de caché.
+- Eliminado en refactorización a core/lib/ (commit 33ef461).
+- Parámetro SkipDelay en cache-manager.ps1 quedó huérfano (sin Start-Sleep).
+- core/TelegramNotifier.ps1 nunca tuvo Start-Sleep al inicio en el repositorio.
+- Get-PlexPoster pasaba -SkipDelay $true siempre.
+
+--------------------------------------------------------------------------------
+MENSAJE 2 — USUARIO
+--------------------------------------------------------------------------------
+
+Quiero que hagas el plan y me digas los cambios que serian necesarios para 
+realizar esos cambios que indicas pero no el de reintroducir title_overrides.json. 
+Es imprescindible? Se puede realizar de otra forma que no tener un documento con 
+equivalencias de titulos español -> ingles ?
+
+--------------------------------------------------------------------------------
+RESPUESTA 2 — ASISTENTE (plan, modo Plan)
+--------------------------------------------------------------------------------
+
+title_overrides.json NO es imprescindible. Sustitutos automáticos:
+- Escaneo parcial Plex (GET /library/sections/{id}/refresh?path=...)
+- Lookup por ContentPath en items recientes
+- Búsqueda progresiva + scoring por año (query "Kingsman" + year 2014)
+- Aliases automáticos en recursos/plex_cache.json
+
+Plan creado: fix_poster_plex_search_ea2525fc.plan.md
+(Permiso explícito: NO editar el fichero del plan)
+
+Pregunta al usuario sobre estrategia retry — sin respuesta registrada en sesión.
+
+--------------------------------------------------------------------------------
+MENSAJE 3 — USUARIO
+--------------------------------------------------------------------------------
+
+Puede hacerse un refresco de las bibliotecas de manera forzada desde aqui?
+
+--------------------------------------------------------------------------------
+RESPUESTA 3 — ASISTENTE
+--------------------------------------------------------------------------------
+
+Sí. Endpoints Plex documentados:
+- GET http://127.0.0.1:32400/library/sections/{sectionId}/refresh?path={encoded}&X-Plex-Token=...
+- GET http://127.0.0.1:32400/library/sections/{sectionId}/refresh
+- GET http://127.0.0.1:32400/library/sections/all/refresh
+- path debe ir URL-encoded
+- API responde al instante; scan en background → polling necesario
+
+Estrategia recomendada en plan: partial scan + poll cada 5s, máx 60s.
+
+--------------------------------------------------------------------------------
+MENSAJE 4 — USUARIO
+--------------------------------------------------------------------------------
+
+Implement the plan as specified, it is attached for your reference. 
+Do NOT edit the plan file itself.
+To-do's from the plan have already been created. Do not create them again. 
+Mark them as in_progress as you work, starting with the first one. 
+Don't stop until you have completed all the to-dos.
+
+--------------------------------------------------------------------------------
+RESPUESTA 4 — ASISTENTE (implementación, modo Agent)
+--------------------------------------------------------------------------------
+
+Implementación completada según plan. Ver PARTE 2 (cambios técnicos) de este archivo.
+
+Todos los todos del plan marcados completed:
+- plex-scan-api
+- path-lookup
+- progressive-search
+- cache-aliases
+- wire-get-plex-poster
+- production-config
+- validate-kingsman
+
+Nota: Tras implementación inicial, test tenía SkipPlexScan=$true hardcodeado
+(corregido en mensaje 7).
+
+--------------------------------------------------------------------------------
+MENSAJE 5 — USUARIO (repetido en Ask mode)
+--------------------------------------------------------------------------------
+
+[Mismo texto: Implement the plan...]
+
+--------------------------------------------------------------------------------
+MENSAJE 6 — USUARIO
+--------------------------------------------------------------------------------
+
+que hace ese cambio que has hecho de SkipPlexScan en test. La idea de test es un 
+escenario completa de la seccion de producction core/TelegramNotifier.ps1
+
+--------------------------------------------------------------------------------
+RESPUESTA 6 — ASISTENTE (modo Ask)
+--------------------------------------------------------------------------------
+
+SkipPlexScan=$true SALTA FASE 1 de Get-PlexPoster:
+- Resolve-PlexSectionForPath
+- Invoke-PlexPartialScan
+- Wait-ForPlexItem / Find-PlexItemByPath
+
+Flujo con SkipPlexScan: caché miss → búsqueda progresiva directamente.
+
+Producción: SkipPlexScan=$false (default)
+Test (como quedó tras implementación): SkipPlexScan=$true — NO paridad producción
+
+Recomendación: default $false en test; -SkipPlexScan solo en QuickTest.
+
+--------------------------------------------------------------------------------
+MENSAJE 7 — USUARIO
+--------------------------------------------------------------------------------
+
+Realiza ese cambio planteado
+
+--------------------------------------------------------------------------------
+RESPUESTA 7 — ASISTENTE (modo Agent)
+--------------------------------------------------------------------------------
+
+Cambios SkipPlexScan alineados con producción:
+- test/TelegramTorrent_Test.ps1: SkipPlexScan default $false, parámetro explícito
+- test/test_v4_wrapper.ps1: -SkipPlexScan:$QuickTest en dot-source
+- Get-PlexPoster en wrapper usa $script:SkipPlexScan
+
+--------------------------------------------------------------------------------
+MENSAJE 8 — USUARIO
+--------------------------------------------------------------------------------
+
+Quiero que actualices los ficheros "*.md" con todo esto nuevo...
+Quiero tambien que realices un README_TEST.md en /test...
+
+--------------------------------------------------------------------------------
+RESPUESTA 8 — ASISTENTE (modo Agent)
+--------------------------------------------------------------------------------
+
+Documentación actualizada. Ver PARTE 3 (documentación) de este archivo.
+
+--------------------------------------------------------------------------------
+MENSAJE 9 — USUARIO
+--------------------------------------------------------------------------------
+
+construye esos comandos con el ejemplo del torrent de kingsman
+
+--------------------------------------------------------------------------------
+RESPUESTA 9 — ASISTENTE (modo Ask)
+--------------------------------------------------------------------------------
+
+Comandos concretos con torrent del log. Ver PARTE 4 (comandos Kingsman).
+
+--------------------------------------------------------------------------------
+MENSAJE 10 — USUARIO
+--------------------------------------------------------------------------------
+
+puedes transcribir toda nuestra conversacion... en recursos/contexto_completo.txt
+
+--------------------------------------------------------------------------------
+RESPUESTA 10 — ASISTENTE (modo Ask)
+--------------------------------------------------------------------------------
+
+No podía escribir fichero en Ask mode. Transcripción en chat + pedir Agent mode.
+
+--------------------------------------------------------------------------------
+MENSAJE 11 — USUARIO
+--------------------------------------------------------------------------------
+
+hazlo / crea recursos/contexto_completo.txt con la transcripción y ampliar con 
+detalle técnico de commits, funciones y rutas de ficheros
+
+--------------------------------------------------------------------------------
+RESPUESTA 11 — ASISTENTE (modo Agent)
+--------------------------------------------------------------------------------
+
+Creación de este archivo.
+
+
+================================================================================
+PARTE 2 — DETALLE TÉCNICO DE IMPLEMENTACIÓN
+================================================================================
+
+2.1 LOG DE REFERENCIA (fallo original)
+------------------------------------
+Archivo: core/logs/TelegramNotifier_20260706.log
+
+Rutas de contenido (producción Windows):
+  G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv
+  G:\PELIS\Kingsman, El Círculo de Oro (2017) [Ultimate Remastered 2160p HEVC SDR-RAW ES DTS 5.1 EN DTS-HD 7.1 Subs]HDO.mkv
+  G:\PELIS\The King's Man, La primera misión (2021) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv
+
+Caché en log:
+  C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json (109 títulos)
+
+URLs Plex fallidas (ejemplo):
+  http://127.0.0.1:32400/search?query=Kingsman%2C%20El%20Servicio%20Secreto&X-Plex-Token=...&type=1
+  → Plex devolvio 0 items
+
+
+2.2 FLUJO Get-PlexPoster (v2 — post-implementación)
+---------------------------------------------------
+Archivo: core/lib/plex-functions.ps1 (espejo: test/lib/plex-functions.ps1)
+
+  FASE 0: Initialize-PlexCache + Get-PosterByCache + Resolve-RatingKey
+  FASE 1: (si SkipPlexScan=$false y ContentPath no vacío)
+          Resolve-PlexSectionForPath
+          → Invoke-PlexPartialScan
+          → Wait-ForPlexItem (poll Find-PlexItemByPath)
+  FASE 2: Get-PlexSearchQueries → Search-PlexWithQueries
+  FASE 3: Save-PlexPosterResult → Add-ToCache + aliases
+
+
+2.3 FUNCIONES NUEVAS O MODIFICADAS
+----------------------------------
+
+core/lib/plex-functions.ps1 (+ test/lib/plex-functions.ps1):
+  Variables script:
+    $script:PlexScanPollSeconds = 5
+    $script:PlexScanPollMaxAttempts = 12
+    $script:SkipPlexScan = $false
+    $script:PlexMoviePathPrefix = "G:\PELIS"
+    $script:PlexSeriesPathPrefix = "G:\SERIES"
+
+  Funciones nuevas:
+    Test-PlexItemAcceptable          — umbrales score (100/90/70/60+fuzzy)
+    Get-PlexSearchQueries            — wrapper Split-TitleVariants
+    Get-PlexLibrarySections          — GET /library/sections
+    Resolve-PlexSectionForPath       — sectionId desde ContentPath
+    Invoke-PlexPartialScan           — GET .../refresh?path=...
+    Get-PlexSectionMediaType         — type 1/2/4 según PELICULA/EPISODIO/etc.
+    Get-PlexItemsFromContainer       — parse XML MediaContainer
+    Find-PlexItemByPath              — /all?sort=addedAt:desc&size=50
+    Wait-ForPlexItem                 — polling post-scan
+    Get-PlexSearchTypes              — tipos búsqueda por content type
+    Search-PlexWithQueries           — bucle queries × search types
+    Save-PlexPosterResult            — Add-ToCache + alias torrent title
+
+  Funciones modificadas:
+    Get-PlexMatchScore               — +match raíz pre-coma/colon (+35), fuzzy
+    Get-PlexPoster                   — orquestación fases 0-2, nuevos params
+
+core/lib/cache-manager.ps1 (+ test/lib/):
+  Add-CacheAlias                     — alias en entrada existente por ratingKey
+  Add-ToCache                        — parámetro -Aliases @(...)
+
+core/lib/utilities.ps1 (+ test/lib/):
+  Split-TitleVariants                — completo | pre-coma | primera palabra
+
+core/TelegramNotifier.ps1:
+  Nuevos params:
+    [int]$PlexScanPollSeconds = 5
+    [int]$PlexScanPollMaxAttempts = 12
+    [switch]$SkipPlexScan = $false
+  Config script:
+    $script:PlexMoviePathPrefix = "G:\PELIS"
+    $script:PlexSeriesPathPrefix = "G:\SERIES"
+  Get-PlexPoster recibe polling + SkipPlexScan
+
+test/TelegramTorrent_Test.ps1:
+  Params alineados: PlexScanPollSeconds, PlexScanPollMaxAttempts, SkipPlexScan=$false
+  Get-PlexPoster con mismos args que producción
+
+test/test_v4_wrapper.ps1:
+  Dot-source: . $ScriptPath ... -SkipPlexScan:$QuickTest
+  Get-PlexPoster: -SkipPlexScan:$script:SkipPlexScan
+
+test/validation/ValidateKingsmanSearch.ps1 (NUEVO):
+  Valida Split-TitleVariants + Get-PlexMatchScore + Test-PlexItemAcceptable
+  para 3 casos Kingsman sin llamar a Plex
+
+
+2.4 UMBRALES DE SCORING (Test-PlexItemAcceptable)
+-------------------------------------------------
+  Score >= 100  → aceptar (match ruta exacta)
+  Score >= 90   → aceptar
+  Score >= 70   → aceptar (ej. Kingsman raíz +35 + año +40)
+  Score >= 40 + año coincide + fuzzy combinado >= 60 → aceptar
+
+Ejemplo Kingsman:
+  Torrent: "Kingsman, El Servicio Secreto" (2014)
+  Plex:    "Kingsman: The Secret Service" (2014)
+  Raíz "Kingsman" == "Kingsman" → +35, año → +40 → 75 >= 70 ✓
+
+
+2.5 CACHÉ Y ALIASES
+-------------------
+Ubicación única: recursos/plex_cache.json
+  (Get-PlexCacheFilePath en cache-manager.ps1 → Join-Path $ProjectRoot "recursos\plex_cache.json")
+
+Tras match exitoso, Save-PlexPosterResult guarda alias si título torrent ≠ título Plex:
+  "aliases": ["Kingsman, El Servicio Secreto"]
+
+Resolve-RatingKey / Get-PosterByCache / Find-CacheItemByKey ya soportaban aliases.
+
+
+2.6 SKIPDELAY vs SKIPLEXSCAN (historial)
+--------------------------------------
+  SkipDelay (cache-manager.ps1):
+    - Parámetro legacy de Initialize-PlexCache
+    - En commit d81f0e0: Start-Sleep 5s si no había caché y SkipDelay=$false
+    - Tras refactor: Start-Sleep eliminado; SkipDelay no hace nada
+    - Get-PlexPoster llama Initialize-PlexCache -SkipDelay $true siempre
+
+  SkipPlexScan (plex-functions.ps1, v2):
+    - Reemplazo conceptual del sleep ciego por partial scan + polling inteligente
+    - Producción: $false
+    - Test default: $false (paridad)
+    - QuickTest / -SkipPlexScan manual: $true (rápido)
+
+
+2.7 COMMITS GIT RELEVANTES (historial repo)
+-------------------------------------------
+  d81f0e0  Commit inicial: TelegramNotifier
+  33ef461  Resolve RatingKey before cache lookup; Get-SearchTitle; Resolve-RatingKey
+  49bb114  Centralize Plex cache in recursos/plex_cache.json
+  e78c51a  Remove duplicate cache hit log from Get-PosterByCache
+  03dd8fd  Restore emoji-rich Telegram captions via Format-TelegramMessage
+
+  Cambios sesión 2026-07-06 (sin commit al momento de este archivo):
+  HEAD local: 02ad395 "Pruebas pelis"
+  Modificados sin commit:
+    README.md, core/README.md, core/TelegramNotifier.ps1
+    core/lib/cache-manager.ps1, plex-functions.ps1, utilities.ps1
+    test/TelegramTorrent_Test.ps1, test_v4_wrapper.ps1, test/lib/*
+    recursos/README_CACHE.md, test/PLEXPOSTER_IMPROVEMENTS.md
+    memories/*.md, backups/RESTORE.md
+  Nuevos sin commit:
+    test/README_TEST.md
+    test/validation/ValidateKingsmanSearch.ps1
+    recursos/contexto_completo.txt (este archivo)
+
+
+2.8 title_overrides.json — DECISIÓN DE SESIÓN
+---------------------------------------------
+  NO reintroducir.
+  Documentación antigua lo mencionaba en core/config/title_overrides.json (obsoleto).
+  Sustituido por: búsqueda progresiva + scoring + aliases automáticos.
+
+
+================================================================================
+PARTE 3 — DOCUMENTACIÓN ACTUALIZADA EN SESIÓN
+================================================================================
+
+  test/README_TEST.md                    NUEVO — guía test vs producción
+  README.md                                flujo v2, comandos, sin title_overrides
+  core/README.md                           reescrito arquitectura v2
+  memories/README_core.md                  sync con core/README.md
+  recursos/README_CACHE.md                 aliases, flujo v2
+  test/PLEXPOSTER_IMPROVEMENTS.md          tabla estado implementación en core/lib
+  test/results/ORGANIZACION_README.md      enlace README_TEST
+  memories/README.md                       aviso archivo archivado
+  memories/OPCION_C_RESUMEN.md             comandos testing ampliados
+  backups/RESTORE.md, memories/RESTORE.md  enlaces docs actuales
+
+
+================================================================================
+PARTE 4 — COMANDOS KINGSMAN (copiar/pegar en Windows PowerShell)
+================================================================================
+
+Variables (opcional):
+  $TorrentName = 'Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv'
+  $ContentPath  = 'G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv'
+
+--- PRODUCCIÓN (sin Telegram) ---
+  cd C:\Users\grau_\Downloads\TelegramNotifier\core
+  .\TelegramNotifier.ps1 `
+    -TorrentName 'Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -ContentPath 'G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -SendTelegram:$false
+
+--- PRODUCCIÓN (con Telegram) ---
+  .\TelegramNotifier.ps1 `
+    -TorrentName 'Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -ContentPath 'G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -SendTelegram
+
+--- TEST paridad producción (partial scan activo) ---
+  cd C:\Users\grau_\Downloads\TelegramNotifier\test
+  .\TelegramTorrent_Test.ps1 `
+    -TorrentName 'Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -ContentPath 'G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -TestMode
+
+--- TEST modo rápido (SkipPlexScan) ---
+  .\TelegramTorrent_Test.ps1 `
+    -TorrentName 'Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -ContentPath 'G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -TestMode `
+    -SkipPlexScan
+
+--- SUITE completa (lento) / rápida (QuickTest) ---
+  .\test_v4_wrapper.ps1
+  .\test_v4_wrapper.ps1 -QuickTest
+
+--- PIPELINE + HTML ---
+  .\run_test_pipeline.ps1
+  .\run_test_pipeline.ps1 -QuickTest
+
+--- VALIDACIÓN scoring (sin Plex) ---
+  cd validation
+  .\ValidateKingsmanSearch.ps1
+
+--- VER LOG producción ---
+  Get-Content "C:\Users\grau_\Downloads\TelegramNotifier\core\logs\TelegramNotifier_$(Get-Date -Format 'yyyyMMdd').log" -Tail 30
+
+--- DIAGNÓSTICO PLEX ---
+  $PlexToken = "Yt-aqViZD-ydpysRvGyP"
+  Invoke-RestMethod "http://127.0.0.1:32400/library/sections?X-Plex-Token=$PlexToken"
+  Invoke-RestMethod "http://127.0.0.1:32400/search?query=Kingsman&X-Plex-Token=$PlexToken&type=1"
+  $path = [uri]::EscapeDataString('G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv')
+  Invoke-RestMethod "http://127.0.0.1:32400/library/sections/SECTION_ID/refresh?path=$path&X-Plex-Token=$PlexToken"
+
+--- KINGSMAN 2 (2017) ---
+  cd ..\core
+  .\TelegramNotifier.ps1 `
+    -TorrentName 'Kingsman, El Círculo de Oro (2017) [Ultimate Remastered 2160p HEVC SDR-RAW ES DTS 5.1 EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -ContentPath 'G:\PELIS\Kingsman, El Círculo de Oro (2017) [Ultimate Remastered 2160p HEVC SDR-RAW ES DTS 5.1 EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -SendTelegram:$false
+
+--- THE KING'S MAN (2021) — apóstrofo escapado King''s ---
+  .\TelegramNotifier.ps1 `
+    -TorrentName 'The King''s Man, La primera misión (2021) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -ContentPath 'G:\PELIS\The King''s Man, La primera misión (2021) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv' `
+    -SendTelegram:$false
+
+
+================================================================================
+PARTE 5 — QUÉ BUSCAR EN LOG TRAS FIX (éxito esperado)
+================================================================================
+
+  [INFO] Partial scan triggered: section=... path=G:\PELIS\...
+  [INFO] Path lookup attempt 1/12 sin resultado, esperando 5s...
+  [INFO] Item found by path (attempt 2, score 100): Kingsman: The Secret Service
+
+  O si path lookup falla pero búsqueda progresiva funciona:
+
+  [INFO] Queries progresivas: Kingsman, El Servicio Secreto | Kingsman
+  [INFO] Plex devolvio 1 items para query 'Kingsman' (pelicula)
+  [INFO]   Match aceptable (score 75): Kingsman: The Secret Service
+  [INFO] Caché actualizado: Nuevo título 'Kingsman: The Secret Service' agregado
+
+  Con SkipPlexScan activo:
+
+  [INFO] SkipPlexScan activo, omitiendo partial scan
+
+
+================================================================================
+PARTE 6 — MAPA DE FICHEROS DEL PROYECTO (post-sesión)
+================================================================================
+
+TelegramNotifier/
+├── README.md
+├── core/
+│   ├── TelegramNotifier.ps1       ← producción, entry qBittorrent
+│   ├── run.ps1
+│   ├── README.md
+│   ├── logs/
+│   │   └── TelegramNotifier_20260706.log
+│   └── lib/
+│       ├── logger.ps1
+│       ├── utilities.ps1          ← Split-TitleVariants
+│       ├── cache-manager.ps1      ← Add-CacheAlias, recursos/plex_cache.json
+│       └── plex-functions.ps1     ← scan, path, búsqueda progresiva
+├── test/
+│   ├── README_TEST.md             ← guía test vs prod
+│   ├── TelegramTorrent_Test.ps1
+│   ├── test_v4_wrapper.ps1
+│   ├── run_test_pipeline.ps1
+│   ├── PLEXPOSTER_IMPROVEMENTS.md
+│   ├── lib/                       ← espejo de core/lib/
+│   └── validation/
+│       └── ValidateKingsmanSearch.ps1
+└── recursos/
+    ├── plex_cache.json            ← caché compartida
+    ├── README_CACHE.md
+    ├── contexto_completo.txt      ← este archivo
+    └── torrents.csv
+
+
+================================================================================
+PARTE 7 — DIFERENCIA PRODUCCIÓN vs TEST (resumen)
+================================================================================
+
+                    PRODUCCIÓN              TEST (default)         TEST (QuickTest)
+                    ----------              --------------         ----------------
+Script              TelegramNotifier.ps1    TelegramTorrent_Test   test_v4_wrapper -QuickTest
+SkipPlexScan        $false                  $false                 $true
+Partial scan        Sí                      Sí                     No
+Polling 60s max     Sí                      Sí                     No
+Telegram            Sí (default)            No (TestMode)          No
+Logs                core/logs/              test/logs/
+Resultados JSON     No                      test/results/
+Caché               recursos/plex_cache.json (compartida)
+
+
+================================================================================
+FIN DEL CONTEXTO COMPLETO
+Generado: 2026-07-06
+================================================================================

@@ -1,8 +1,10 @@
-# 🚀 TelegramNotifier - Versión Producción
+# TelegramNotifier - Versión Producción
 
-Versión de producción limpia y optimizada del sistema de notificación de torrents con integración Plex.
+Versión de producción del sistema de notificación de torrents con integración Plex.
 
-## 📋 Contenido
+Documentación del entorno de test: [`../test/README_TEST.md`](../test/README_TEST.md)
+
+## Contenido
 
 ```
 core/
@@ -10,275 +12,173 @@ core/
 ├── TelegramNotifier.ps1             # Script principal (importa librerías)
 ├── lib/
 │   ├── logger.ps1                   # Sistema de logging con rotación
-│   ├── utilities.ps1                # Funciones generales (parseo, normalización)
-│   ├── cache-manager.ps1            # Gestión de caché Plex persistente
-│   └── plex-functions.ps1           # Búsqueda y obtención de posters Plex
-├── config/
-│   ├── plex_cache.json              # Caché persistente (auto-generado)
-│   ├── title_overrides.json         # Sobrescrituras de títulos
-│   └── legacy_series_fallback.json  # Fallback para series
+│   ├── utilities.ps1                # Parseo, normalización, Split-TitleVariants
+│   ├── cache-manager.ps1            # Caché Plex + aliases automáticos
+│   └── plex-functions.ps1           # Scan Plex, path lookup, búsqueda progresiva
 ├── logs/                            # Logs de ejecución
 └── README.md                        # Este archivo
+
+recursos/plex_cache.json             # Caché compartida (producción + test)
 ```
 
-## 🎯 Características
+## Características
 
-✅ **Sistema de Caché Persistente**
-- Carga inicial desde archivo: 0 segundos
-- 100+ títulos Plex almacenados
-- Auto-actualización cuando encuentra nuevos títulos
+- **Caché persistente** en `recursos/plex_cache.json` (109+ títulos, aliases automáticos)
+- **Partial scan Plex** al completar descarga (indexa el archivo antes de buscar)
+- **Lookup por ruta** (`ContentPath`) en items recientes de Plex
+- **Búsqueda progresiva** por variantes de título (completo → pre-coma → primera palabra)
+- **Scoring inteligente** con año y raíz de título (resuelve ES/EN sin `title_overrides.json`)
+- **Logging** con rotación automática
 
-✅ **Búsqueda Inteligente de Posters**
-- Búsqueda exacta en caché
-- Búsqueda fuzzy (85%+ similitud)
-- Fallback a API Plex si no está en caché
+## Uso
 
-✅ **Logging Automático**
-- Rotación de logs en 5MB
-- Timestamps para cada operación
-- Niveles: INFO, WARNING, ERROR, SUCCESS
-
-✅ **Modular y Limpio**
-- Separación de responsabilidades en librerías
-- Fácil de mantener y extender
-- Sin código de testing
-
-## 🚀 Uso
-
-### Búsqueda de Poster Básica
+### Torrent de prueba (sin Telegram)
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\core
 
-# Buscar poster para un torrent
-.\run.ps1 -TorrentName "the-boys-s05e01-amzn-web-dl.mkv" -ContentPath "D:\Series\The Boys"
+.\TelegramNotifier.ps1 `
+  -TorrentName "Kingsman, El Servicio Secreto (2014) [2160p HEVC].mkv" `
+  -ContentPath "G:\PELIS\Kingsman, El Servicio Secreto (2014) [2160p HEVC].mkv" `
+  -SendTelegram:$false
 ```
 
-### Envío a Telegram
+### Con Telegram
 
 ```powershell
-# Buscar poster y enviar a Telegram
-.\run.ps1 -TorrentName "minority-report-2002.mkv" -ContentPath "D:\Películas" -SendTelegram
+.\TelegramNotifier.ps1 `
+  -TorrentName "minority-report-(2002).mkv" `
+  -ContentPath "G:\PELIS\Minority Report (2002).mkv" `
+  -SendTelegram
 ```
 
-### Uso Programático
+### Vía run.ps1
 
 ```powershell
-# Desde otro script
-$params = @{
-    TorrentName = "the-expanse-s01.mkv"
-    ContentPath = "D:\Series\The Expanse"
-    SendTelegram = $true
-    ConfigPath = ".\core"
-}
-
-& "C:\...\core\run.ps1" @params
+.\run.ps1 -TorrentName "the-boys-s05e01.mkv" -ContentPath "G:\SERIES\The Boys"
 ```
 
-## 📦 Configuración
+## Parámetros Plex
 
-### Credenciales Plex
+| Parámetro | Default | Descripción |
+|-----------|---------|-------------|
+| `-PlexScanPollSeconds` | `5` | Intervalo entre reintentos tras partial scan |
+| `-PlexScanPollMaxAttempts` | `12` | Máximo de intentos (≈60 s) |
+| `-SkipPlexScan` | `$false` | Omitir scan y lookup por ruta |
 
-Editar `TelegramNotifier.ps1` líneas 12-14:
+```powershell
+# Más tiempo de espera para bibliotecas lentas
+.\TelegramNotifier.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." `
+  -PlexScanPollSeconds 10 -PlexScanPollMaxAttempts 18 -SendTelegram:$false
+```
+
+## Configuración
+
+### Credenciales (TelegramNotifier.ps1)
 
 ```powershell
 $PlexUrl   = "http://127.0.0.1:32400"
-$PlexToken = "Tu-Token-Plex-Aqui"
+$PlexToken = "Tu-Token-Plex"
+$BotToken  = "Tu-Bot-Token"
+$ChatID    = "Tu-Chat-ID"
+
+# Prefijos de rutas Plex (fallback si auto-detect falla)
+$script:PlexMoviePathPrefix  = "G:\PELIS"
+$script:PlexSeriesPathPrefix = "G:\SERIES"
 ```
 
-### Credenciales Telegram
+## Arquitectura — flujo de búsqueda de poster
 
-Editar `TelegramNotifier.ps1` líneas 10-11:
-
-```powershell
-$BotToken = "Tu-Bot-Token"
-$ChatID   = "Tu-Chat-ID"
+```
+Process-Torrent()
+  └─ Get-PlexPoster()
+       │
+       ├─ FASE 0: Caché (recursos/plex_cache.json)
+       │    └─ Hit → return poster URL
+       │
+       ├─ FASE 1: Partial scan + path lookup (si SkipPlexScan=$false)
+       │    ├─ Resolve-PlexSectionForPath(ContentPath)
+       │    ├─ Invoke-PlexPartialScan → GET /library/sections/{id}/refresh?path=...
+       │    └─ Wait-ForPlexItem → polling Find-PlexItemByPath
+       │
+       ├─ FASE 2: Búsqueda progresiva (Search-PlexWithQueries)
+       │    ├─ Queries: título completo | pre-coma | primera palabra
+       │    └─ Scoring: ruta, título, raíz, año, fuzzy
+       │
+       └─ Save-PlexPosterResult → Add-ToCache + alias automático
 ```
 
-### Sobrescrituras de Títulos
+### Funciones clave (plex-functions.ps1)
 
-`config/title_overrides.json`:
+| Función | Responsabilidad |
+|---------|-----------------|
+| `Get-PlexLibrarySections` | Lista secciones Plex y rutas |
+| `Resolve-PlexSectionForPath` | Resuelve sectionId desde ContentPath |
+| `Invoke-PlexPartialScan` | Fuerza scan parcial del archivo |
+| `Find-PlexItemByPath` | Busca en items recientes por ruta |
+| `Wait-ForPlexItem` | Polling post-scan |
+| `Get-PlexSearchQueries` / `Split-TitleVariants` | Variantes de búsqueda |
+| `Search-PlexWithQueries` | Búsqueda API progresiva |
+| `Test-PlexItemAcceptable` | Umbrales de score |
+| `Save-PlexPosterResult` | Persiste en caché con aliases |
+
+## Caché persistente
+
+**Ubicación:** `recursos/plex_cache.json` (compartida con test)
 
 ```json
 {
-  "the-boys": "The Boys",
-  "from-2022": "From",
-  "breaking-bad": "Breaking Bad"
+  "titulo_original": "Kingsman: The Secret Service",
+  "titulo_normalizado": "kingsmanthesecretservice",
+  "ratingKey": "1234",
+  "tipo": "PELICULA",
+  "poster_url": "http://127.0.0.1:32400/library/metadata/1234/thumb/...",
+  "year": 2014,
+  "aliases": ["Kingsman, El Servicio Secreto"]
 }
 ```
 
-## 🔧 Arquitectura
+Los aliases se crean automáticamente cuando el título del torrent difiere del título Plex.
 
-### Flujo de Búsqueda
-
-```
-1. Process-Torrent()
-   └─ Normaliza nombre y extrae metadata
-   
-2. Get-PlexPoster()
-   ├─ Intenta caché (Initialize-PlexCache + Get-PosterByCache)
-   │  └─ Búsqueda exacta + fuzzy (85%+)
-   │
-   └─ Si no está: busca en Plex API
-      ├─ Por tipo (película/serie/episodio)
-      ├─ Calcula scores de coincidencia
-      └─ Auto-actualiza caché (Add-ToCache)
-
-3. Send-TelegramNotification() [opcional]
-   └─ Envía foto/mensaje a Telegram
-```
-
-### Librerías Modulares
-
-| Librería | Responsabilidad | Funciones Clave |
-|----------|-----------------|-----------------|
-| **logger.ps1** | Sistema de logging | Initialize-Logger, Write-Log, Rotate-Log |
-| **utilities.ps1** | Parsing y normalización | Normalize-Name, Get-CleanName, Get-PatternDetected, Convert-Title |
-| **cache-manager.ps1** | Gestión caché Plex | Initialize-PlexCache, Add-ToCache, Get-PosterByCache, Get-FuzzyMatchScore |
-| **plex-functions.ps1** | Búsqueda Plex | Get-PlexPoster, Get-PlexMatchScore, Get-PlexPosterFromItem |
-
-## 📊 Caché Persistente
-
-### Ubicación
-`config/plex_cache.json`
-
-### Estructura
-
-```json
-{
-  "version": "1.0",
-  "lastUpdated": "2026-07-01T13:23:08Z",
-  "totalItems": 108,
-  "cache": [
-    {
-      "titulo_normalizado": "themandalorian",
-      "titulo_original": "The Mandalorian",
-      "ratingKey": "1250",
-      "tipo": "SERIE",
-      "poster_url": "http://127.0.0.1:32400/library/metadata/1250/thumb?...",
-      "year": null
-    }
-  ]
-}
-```
-
-### Auto-Actualización
-
-- Se actualiza automáticamente cuando encuentra un nuevo título en Plex
-- Solo agrega si no existe (verifica por titulo_normalizado + ratingKey)
-- Se guarda cada vez que se encuentra un nuevo título
-- Timestamp siempre actualizado
-
-## 📝 Logging
-
-### Ubicación
-`logs/TelegramNotifier_YYYYMMDD.log`
-
-### Ejemplo
+## Logging
 
 ```
-[2026-07-01 13:15:32] [INFO] ========================================
-[2026-07-01 13:15:32] [INFO] Procesando torrent: the-boys-s05e01.mkv
-[2026-07-01 13:15:32] [INFO] Ruta: D:\Series\The Boys
-[2026-07-01 13:15:32] [INFO] Tipo: EPISODIO (S05E01)
-[2026-07-01 13:15:32] [INFO] Título detectado: The Boys
-[2026-07-01 13:15:32] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/...
+[INFO] Partial scan triggered: section=1 path=G:\PELIS\...
+[INFO] Item found by path (attempt 2, score 100): Kingsman: The Secret Service
+[INFO] Queries progresivas: Kingsman, El Servicio Secreto | Kingsman
+[INFO]   Match aceptable (score 75): Kingsman: The Secret Service
+[SUCCESS] Poster encontrado: http://127.0.0.1:32400/...
 ```
 
-### Rotación Automática
-- Archivo actual: `TelegramNotifier_YYYYMMDD.log`
-- Archivos: máximo 5MB
-- Cuando se alcanza: se renombra con timestamp (ej: `TelegramNotifier_20260701_131532.log`)
-
-## 🔄 Detección de Patrones
-
-| Patrón | Regex | Ejemplo |
-|--------|-------|---------|
-| EPISODIO_SIMPLE | `^(.*?)-s(\d{1,2})e(\d{1,2})` | `the-boys-s05e01` |
-| TEMPORADA | `^(.*?)-s(\d{1,2})(?:-\|$)` | `the-expanse-s01-[pack]` |
-| PELICULA_CON_AÑO | `^(.*?)[-\s\(](19\d{2}\|20\d{2})` | `minority-report-(2002)` |
-| SIN_PATRON | (No coincide) | `random-content` |
-
-## ⚙️ Algoritmo Fuzzy Matching
-
-Para caché local (sin API):
-
-1. **Exacto (100%)**: titulo_normalizado coincide exactamente
-2. **Fuzzy (85%+)**: Similitud de caracteres ≥ 85%
-3. **No encontrado**: Score < 85% → búsqueda en API
-
-Ejemplo:
-- "the mandalorian" vs "themandalorian" → 100% (exacto)
-- "themandalorian" vs "themndalorian" → 91% (fuzzy, 1 char falta)
-
-## 🛡️ Mantenimiento
-
-### Limpiar Logs Antiguos
+## Diagnóstico Plex
 
 ```powershell
-Remove-Item "core\logs\TelegramNotifier_*.log" -OlderThan (Get-Date).AddDays(-30)
+# Ver secciones
+Invoke-RestMethod "http://127.0.0.1:32400/library/sections?X-Plex-Token=$PlexToken"
+
+# Scan parcial manual
+$path = [uri]::EscapeDataString("G:\PELIS\archivo.mkv")
+Invoke-RestMethod "http://127.0.0.1:32400/library/sections/SECTION_ID/refresh?path=$path&X-Plex-Token=$PlexToken"
 ```
 
-### Resetear Caché (recarga desde Plex)
+## Troubleshooting
 
-```powershell
-Remove-Item "core\config\plex_cache.json"
-# Próxima ejecución recargará desde Plex API
-```
+| Problema | Solución |
+|----------|----------|
+| Poster no encontrado en descarga reciente | Plex aún no indexó; el partial scan + polling debería resolverlo. Revisar log `Partial scan triggered` |
+| Título español vs inglés en Plex | Búsqueda progresiva prueba `"Kingsman"` + score por año |
+| `ContentPath` vacío | qBittorrent no pasó ruta; solo funciona búsqueda por título |
+| Timeout 60s | Aumentar `-PlexScanPollMaxAttempts` |
+| Error conexión Plex | Verificar `$PlexUrl` y `$PlexToken` |
 
-### Ver Caché Actual
+## Entornos
 
-```powershell
-$cache = Get-Content "core\config\plex_cache.json" | ConvertFrom-Json
-$cache.cache | Format-Table titulo_original, tipo, year
-```
-
-## 📈 Performance
-
-| Operación | Tiempo |
-|-----------|--------|
-| Búsqueda exacta en caché | 1-5ms |
-| Búsqueda fuzzy en caché | 5-20ms |
-| Carga caché desde archivo | 0 segundos |
-| Búsqueda en Plex API | 500ms - 2s |
-| Proceso completo (con caché) | ~50ms |
-| Proceso completo (sin caché) | ~1s |
-
-## 🐛 Troubleshooting
-
-### "Caché no disponible. Cargando desde Plex API..."
-- ✅ Normal en primer uso
-- ✅ Se creará `config/plex_cache.json` automáticamente
-
-### "Error connecting to Plex"
-- Verificar IP/puerto Plex: `http://127.0.0.1:32400`
-- Verificar token en `TelegramNotifier.ps1`
-
-### "No se encontró poster"
-- Título no existe en Plex
-- Verificar en Plex manualmente
-- Considerar usar `config/title_overrides.json`
-
-## 📚 Referencia Rápida
-
-```powershell
-# Ver caché
-$cache = Get-Content "config\plex_cache.json" | ConvertFrom-Json; $cache.cache.Count
-
-# Ver logs recientes
-Get-Content "logs\TelegramNotifier_*.log" -Tail 20
-
-# Ejecutar con debug
-Set-PSDebug -Trace 1
-.\run.ps1 -TorrentName "test.mkv"
-Set-PSDebug -Trace 0
-```
-
-## 📞 Soporte
-
-Para issues o mejoras, ver documentación de test en `/test`
+| Entorno | Documentación |
+|---------|---------------|
+| Producción | Este archivo |
+| Test | [`../test/README_TEST.md`](../test/README_TEST.md) |
 
 ---
 
-**Última actualización**: 2026-07-01  
-**Versión**: 1.0 (Producción)
+**Última actualización:** 2026-07-06  
+**Versión búsqueda poster:** 2.0

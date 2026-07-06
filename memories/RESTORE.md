@@ -1,5 +1,7 @@
 # 💾 Sistema de Backups - TelegramNotifier
 
+> Documentación operativa actualizada: [`../README.md`](../README.md), [`../test/README_TEST.md`](../test/README_TEST.md)
+
 Gestión automática de backups para producción y desarrollo.
 
 ## 📁 Estructura de Backups

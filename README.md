@@ -16,7 +16,7 @@ Un sistema PowerShell completo que monitorea torrents completados en qBittorrent
 **Características clave:**
 - ⚡ **Instantáneo**: 0ms cache local, 500ms-2s búsqueda en Plex API
 - 🎨 **Con posters**: Obtiene imágenes de portadas automáticamente
-- 🧠 **Inteligente**: Fuzzy matching para títulos mal formateados
+- 🧠 **Inteligente**: Partial scan Plex, lookup por ruta, búsqueda progresiva y aliases automáticos en caché
 - 📊 **Confiable**: 88.61% cobertura en 237 torrents de prueba
 - 🔄 **Modular**: 4 librerías PowerShell independientes
 - 📝 **Logueable**: Rotación diaria, niveles de severidad, timestamps
@@ -56,8 +56,9 @@ Un sistema PowerShell completo que monitorea torrents completados en qBittorrent
         ╔═════════════════════════════╗
         ║ BUSCAR POSTER               ║
         ║ 1. Caché en memoria (0ms)   ║
-        ║ 2. Plex API (500-2000ms)    ║
-        ║ 3. Auto-agregar a caché     ║
+        ║ 2. Partial scan + path (60s)║
+        ║ 3. Búsqueda progresiva API  ║
+        ║ 4. Auto-agregar a caché     ║
         ╚═════════────┬───────────════╝
                       │
         ┌─────────────┴──────────────┐
@@ -93,11 +94,11 @@ Un sistema PowerShell completo que monitorea torrents completados en qBittorrent
 | `core/lib/logger.ps1` | Logging centralizado con rotación automática | Texto, nivel (INFO/ERROR/SUCCESS) | Archivo log, consola coloreada | ⭐⭐ |
 | `core/lib/utilities.ps1` | Parsing de nombres, detección de tipo, normalización | Nombre torrent | Metadata detectada, confianza % | ⭐⭐⭐ |
 | `core/lib/cache-manager.ps1` | Gestión de caché persistente (JSON) y en memoria | Título a buscar o nuevo título a agregar | URL poster o {found: false} | ⭐⭐⭐ |
-| `core/lib/plex-functions.ps1` | Búsqueda en Plex API + scoring inteligente | Metadata torrent, Plex API token | URL poster encontrada o null | ⭐⭐⭐ |
-| `core/config/plex_cache.json` | Datos persistentes (108+ títulos, URLs posters) | N/A | Cargado en memoria al iniciar | ⭐⭐ |
-| `core/config/title_overrides.json` | Mappeos manuales para títulos mal formateados | N/A | Correcciones de título aplicadas | ⭐ |
-| `core/logs/` | Directorio para archivos log | TelegramNotifier_YYYYMMDD.log | Logs con timestamps, rotación | ⭐⭐ |
-| `test/TelegramTorrent_Test.ps1` | Suite de 237 torrents de prueba | CSV con torrents | Análisis de cobertura (88.61%) | ⭐⭐ |
+| `core/lib/plex-functions.ps1` | Scan Plex, path lookup, búsqueda progresiva + scoring | Metadata torrent, ContentPath | URL poster o null | ⭐⭐⭐ |
+| `recursos/plex_cache.json` | Caché persistente compartida (109+ títulos, aliases) | N/A | Cargado al iniciar | ⭐⭐⭐ |
+| `core/logs/` | Logs diarios de producción | Operaciones del script | TelegramNotifier_YYYYMMDD.log | ⭐⭐ |
+| `test/README_TEST.md` | Guía detallada test vs producción, comandos y modos | N/A | Documentación | ⭐⭐ |
+| `test/TelegramTorrent_Test.ps1` | Suite de 237 torrents (paridad con producción) | CSV con torrents | Análisis de cobertura | ⭐⭐ |
 | `backups/backup-production.ps1` | Script de respaldo con 3 modos (FULL/PROD/TEST) | Parámetro: PRODUCTION/FULL/TEST | ZIP comprimido con timestamp | ⭐ |
 | `.gitignore` | Configuración para excluir archivos sensibles | N/A | Secretos, logs, cache excluidos | ⭐⭐ |
 
@@ -116,52 +117,39 @@ TelegramNotifier/
 │   ├── 📄 README.md                      ← Documentación técnica detallada
 │   │
 │   ├── 📂 lib/                           ← Librerías (dot-sourced)
-│   │   ├── 📄 logger.ps1                 ← Logging con rotación
-│   │   ├── 📄 utilities.ps1              ← Parsing y normalización
-│   │   ├── 📄 cache-manager.ps1          ← Gestión de caché
-│   │   └── 📄 plex-functions.ps1         ← Integración Plex API
+│   │   ├── 📄 logger.ps1
+│   │   ├── 📄 utilities.ps1              ← Split-TitleVariants
+│   │   ├── 📄 cache-manager.ps1          ← Aliases automáticos
+│   │   └── 📄 plex-functions.ps1         ← Scan, path lookup, búsqueda progresiva
 │   │
-│   ├── 📂 config/                        ← Configuración
-│   │   ├── 📄 plex_cache.json            ← 108 títulos en caché
-│   │   ├── 📄 title_overrides.json       ← Mappeos manuales
-│   │   └── 📄 legacy_series_fallback.json ← Fallback series
-│   │
-│   └── 📂 logs/                          ← Generado automáticamente
-│       └── 📄 TelegramNotifier_*.log     ← Logs diarios + rotación
+│   └── 📂 logs/
+│       └── 📄 TelegramNotifier_*.log
 │
-├── 📂 test/                              ← 🧪 SUITE DE TESTS (237 TORRENTS)
-│   ├── 📄 TelegramTorrent_Test.ps1       ← Suite principal de tests
-│   ├── 📄 PLEXPOSTER_IMPROVEMENTS.md     ← Análisis de mejoras
+├── 📂 test/                              ← 🧪 SUITE DE TESTS
+│   ├── 📄 README_TEST.md                 ← Guía test vs producción ⭐
+│   ├── 📄 TelegramTorrent_Test.ps1
+│   ├── 📄 test_v4_wrapper.ps1
+│   ├── 📄 run_test_pipeline.ps1
+│   ├── 📄 PLEXPOSTER_IMPROVEMENTS.md
 │   │
-│   ├── 📂 config/                        ← Caché de test
-│   │   └── 📄 plex_cache.json            ← 108 títulos (sincronizado)
+│   ├── 📂 lib/                           ← Espejo de core/lib/
+│   ├── 📂 validation/
+│   │   ├── 📄 ValidateKingsmanSearch.ps1
+│   │   └── 📄 AnalyzeResults.ps1
 │   │
-│   ├── 📂 fixtures/plex/                 ← Respuestas XML de Plex
-│   │   └── 📄 *.xml                      ← 20+ fixtures de prueba
-│   │
-│   ├── 📂 validation/                    ← Scripts de análisis
-│   │   ├── 📄 AnalyzeResults.ps1
-│   │   ├── 📄 ValidateTest.ps1
-│   │   └── 📄 OrganizeResults.ps1
-│   │
-│   └── 📂 results/                       ← Generado en tests
-│       ├── 📄 Resultado.csv              ← Resultados detallados
-│       └── 📄 Resultado_quick.csv        ← Resumen rápido
+│   └── 📂 results/
 │
-├── 📂 backups/                           ← 📦 RESPALDOS
-│   ├── 📄 RESTORE.md                     ← Guía de restauración
-│   ├── 📄 backup-production.ps1          ← Script de backup
-│   └── 📄 *.ps1                          ← Scripts históricos
+├── 📂 recursos/
+│   ├── 📄 plex_cache.json                ← Caché compartida producción + test
+│   ├── 📄 README_CACHE.md
+│   └── 📄 torrents.csv
 │
-├── 📂 memories/                          ← 📚 DOCUMENTACIÓN RESPALDADA
-│   ├── 📄 README.md                      ← Copia de documentación
-│   └── 📄 *.md                           ← Archivos markdown históricos
+├── 📂 backups/                           ← Respaldos
+│   ├── 📄 backup-production.ps1
+│   └── 📄 RESTORE.md
 │
-└── 📂 recursos/                          ← 🛠️ UTILIDADES
-    ├── 📄 modelos_principales.txt
-    ├── 📄 plex_cache.json
-    ├── 📄 torrents.csv
-    └── 📂 estructura_bibliotecas/        ← Analizadores de estructura
+└── 📂 memories/                          ← Documentación archivada
+    └── 📄 *.md
 ```
 
 ---
@@ -268,29 +256,27 @@ El proyecto funciona en **capas** independientes:
 [4] Extract metadata: Resolución, codec, audio, etc.
 ```
 
-#### Fase 3: BÚSQUEDA DE POSTER (0-2000ms)
+#### Fase 3: BÚSQUEDA DE POSTER (0-60000ms)
 ```powershell
 # cache-manager.ps1 + plex-functions.ps1
-[1] Initialize-PlexCache() 
-    └─ Carga core/config/plex_cache.json (0ms si ya está en memoria)
-    └─ Rellena $script:PlexCache con 108 títulos
+[1] Initialize-PlexCache()
+    └─ Carga recursos/plex_cache.json (compartida producción + test)
 
-[2] Get-PosterByCache($Title)
-    ├─ Try: Exact match (100% - muy raro)
-    ├─ Try: Fuzzy match ≥85% (común)
-    └─ Return: {found, method, url, score} o {found=$false}
+[2] Get-PosterByCache($Title) + Resolve-RatingKey
+    ├─ Exact match, alias, fuzzy ≥85%
+    └─ Return poster URL o miss
 
-[3] Si NO encontrado en caché → Get-PlexPoster($Title)
-    ├─ Llama Plex API v1 (http://127.0.0.1:32400/library/search)
-    ├─ Búsquedas según tipo:
-    │   ├─ EPISODIO: type=8 (episodios) + type=2 (series)
-    │   ├─ TEMPORADA: type=2 (series)
-    │   ├─ PELICULA: type=1 (películas)
-    │   └─ DESCONOCIDO: type=1,2,8 (todos)
-    ├─ Scoring de resultados (archivo path + título + año)
-    └─ Auto-agregar a caché si nuevo (Add-ToCache)
+[3] Si miss y SkipPlexScan=$false:
+    ├─ Resolve-PlexSectionForPath(ContentPath)
+    ├─ Invoke-PlexPartialScan → GET /library/sections/{id}/refresh?path=...
+    └─ Wait-ForPlexItem → polling Find-PlexItemByPath (5s × 12)
 
-[4] Return: URL poster o $null
+[4] Si sigue sin poster → Search-PlexWithQueries
+    ├─ Variantes: título completo | pre-coma | primera palabra
+    ├─ GET /search?query=...&type=1|2|8
+    └─ Test-PlexItemAcceptable (score + año + raíz título)
+
+[5] Save-PlexPosterResult → Add-ToCache + alias automático del título torrent
 ```
 
 #### Fase 4: TELEGRAM (100-500ms)
@@ -367,7 +353,7 @@ El proyecto funciona en **capas** independientes:
 3. **Auto-Agregación:**
    - Si nuevo título encontrado en API
    - → Agregar a `$script:PlexCache` (memoria)
-   - → Actualizar `core/config/plex_cache.json` (disco)
+   - → Actualizar `recursos/plex_cache.json` (disco)
 
 4. **Regeneración del Caché:**
 
@@ -375,7 +361,7 @@ El proyecto funciona en **capas** independientes:
    - El caché se regenera automáticamente mientras usas el sistema
    - Cada vez que procesas un torrent, se ejecuta `TelegramNotifier.ps1`
    - Si el poster NO está en el caché → se busca en Plex API
-   - Si se encuentra → se agrega automáticamente a `core/config/plex_cache.json`
+   - Si se encuentra → se agrega automáticamente a `recursos/plex_cache.json`
    
    **¿Cuándo se regenera?**
    - ✅ **Automáticamente**: Cada torrent completado en qBittorrent
@@ -388,17 +374,16 @@ El proyecto funciona en **capas** independientes:
        ↓
    2. Ejecuta: PowerShell.exe -File TelegramNotifier.ps1 "nombre_torrent" "ruta"
        ↓
-   3. Initialize-PlexCache() carga core/config/plex_cache.json
+   3. Initialize-PlexCache() carga recursos/plex_cache.json
        ↓
    4. Get-PosterByCache() busca en caché
        ├─ ✅ Encontrado → Usa URL (0ms)
        └─ ❌ No encontrado → Llama Plex API
        ↓
-   5. Get-PlexPoster() consulta http://127.0.0.1:32400/library/search
+   5. Get-PlexPoster() → partial scan, path lookup, búsqueda progresiva
        ↓
-   6. Si encontrado en API → Add-ToCache()
-       └─ Agrega entrada a memoria
-       └─ Guarda en core/config/plex_cache.json (JSON persistente)
+   6. Si encontrado → Add-ToCache() + alias automático
+       └─ Guarda en recursos/plex_cache.json (JSON persistente)
        ↓
    7. Próxima búsqueda del mismo título → ✅ Hit de caché
    ```
@@ -549,32 +534,45 @@ Headers: X-Plex-Token: {TOKEN}
 ### Para Producción
 
 ```powershell
-# 1. Configurar qBittorrent (ver sección CONFIGURACIÓN qBITTORRENT)
+cd C:\Users\grau_\Downloads\TelegramNotifier\core
 
-# 2. Hacer push a GitHub
-cd C:\Users\grau_\Downloads\TelegramNotifier
-git add .
-git commit -m "Configuración inicial"
-git push
+# Torrent de prueba manual (sin Telegram)
+.\TelegramNotifier.ps1 `
+  -TorrentName "Kingsman, El Servicio Secreto (2014) [2160p HEVC].mkv" `
+  -ContentPath "G:\PELIS\Kingsman, El Servicio Secreto (2014) [2160p HEVC].mkv" `
+  -SendTelegram:$false
 
-# 3. Ver logs en tiempo real
-tail -f core/logs/TelegramNotifier_$(Get-Date -Format 'yyyyMMdd').log
-
-# 4. Backup manual
-cd backups
-.\backup-production.ps1
+# Ver logs
+Get-Content "logs\TelegramNotifier_$(Get-Date -Format 'yyyyMMdd').log" -Tail 30
 ```
+
+Ver documentación completa: [`core/README.md`](core/README.md)
 
 ### Para Testing
 
-```powershell
-# Ejecutar suite de 237 torrents
-cd test
-.\TelegramTorrent_Test.ps1
+Documentación detallada: [`test/README_TEST.md`](test/README_TEST.md)
 
-# Analizar resultados
-cd test/validation
-.\AnalyzeResults.ps1
+```powershell
+cd C:\Users\grau_\Downloads\TelegramNotifier\test
+
+# Un torrent (paridad con producción — incluye partial scan)
+.\TelegramTorrent_Test.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -TestMode
+
+# Un torrent (modo rápido — sin scan Plex)
+.\TelegramTorrent_Test.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -TestMode -SkipPlexScan
+
+# Suite completa (lento, como producción)
+.\test_v4_wrapper.ps1
+
+# Suite rápida (10 torrents, sin scan)
+.\test_v4_wrapper.ps1 -QuickTest
+
+# Pipeline completo + informe HTML
+.\run_test_pipeline.ps1              # largo
+.\run_test_pipeline.ps1 -QuickTest  # rápido
+
+# Validación scoring Kingsman
+.\validation\ValidateKingsmanSearch.ps1
 ```
 
 ---
@@ -614,12 +612,14 @@ curl https://api.telegram.org/bot8755898341:AAFSxCy9zjYS_rLl-kFpVPCmJ3V2XLjKjYg/
 # Debe devolver: {"ok":true,"result":{"id":...}}
 ```
 
-### 3. Actualizar title_overrides.json
-```json
-{
-  "custom_title_1": "Título Personalizado 1",
-  "custom_title_2": "Título Personalizado 2"
-}
+### 3. Probar búsqueda Plex manualmente
+```powershell
+# Ver secciones Plex
+Invoke-RestMethod "http://127.0.0.1:32400/library/sections?X-Plex-Token=TU_TOKEN"
+
+# Probar torrent en producción
+cd core
+.\TelegramNotifier.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -SendTelegram:$false
 ```
 
 ---
@@ -631,9 +631,9 @@ curl https://api.telegram.org/bot8755898341:AAFSxCy9zjYS_rLl-kFpVPCmJ3V2XLjKjYg/
 | "Repository not found" en Git | Crear repo en https://github.com/new |
 | Caracteres rotos en logs (Ã±, Ã¡) | Verificar UTF-8 BOM: `[System.IO.File]::ReadAllBytes()` |
 | Notificación no llega a Telegram | Verificar token bot y chat ID en TelegramNotifier.ps1 |
-| Poster no encontrado (texto-only) | Revisar título en Plex, agregar a title_overrides.json |
+| Poster no encontrado (texto-only) | Revisar log: `Partial scan triggered`, `Queries progresivas`. Ver [`test/README_TEST.md`](test/README_TEST.md) |
 | Log file muy grande | Automático: rotación a los 5MB con timestamp |
-| Caché desincronizado | Eliminar core/config/plex_cache.json, recargará desde Plex API |
+| Caché desincronizado | Caché en `recursos/plex_cache.json`; se auto-actualiza con aliases |
 
 ---
 
@@ -651,7 +651,7 @@ cd core
 Remove-Item core/logs/TelegramNotifier_*.log -Older (30 días)
 
 # Ver config Plex
-Get-Content core/config/plex_cache.json | ConvertFrom-Json | Select -ExpandProperty cache | Select -First 5
+Get-Content recursos/plex_cache.json | ConvertFrom-Json | Select -ExpandProperty cache | Select -First 5
 ```
 
 ---

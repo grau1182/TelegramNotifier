@@ -3,7 +3,10 @@
     [string]$ContentPath,
     [switch]$TestMode = $true,
     [string]$TorrentType = "Desconocido",
-    [string]$ResultsFolder = ""
+    [string]$ResultsFolder = "",
+    [int]$PlexScanPollSeconds = 5,
+    [int]$PlexScanPollMaxAttempts = 12,
+    [switch]$SkipPlexScan = $false
 )
 
 # ==================================================
@@ -26,6 +29,11 @@ $LogFile   = Join-Path $LogFolder "TelegramNotifier_Test.log"
 
 $PlexUrl   = "http://127.0.0.1:32400"
 $PlexToken = "Yt-aqViZD-ydpysRvGyP"
+$script:SkipPlexScan = $SkipPlexScan.IsPresent
+$script:PlexScanPollSeconds = $PlexScanPollSeconds
+$script:PlexScanPollMaxAttempts = $PlexScanPollMaxAttempts
+$script:PlexMoviePathPrefix = "G:\PELIS"
+$script:PlexSeriesPathPrefix = "G:\SERIES"
 
 # ========================================
 # TEST CAPTURE (GLOBAL VARIABLES)
@@ -237,7 +245,10 @@ $PosterUrl =
         -Title $Title `
         -ContentPath $ContentPath `
         -DetectedMetadata $DetectedMetadata `
-        -BasePath $TestBasePath
+        -BasePath $TestBasePath `
+        -PlexScanPollSeconds $script:PlexScanPollSeconds `
+        -PlexScanPollMaxAttempts $script:PlexScanPollMaxAttempts `
+        -SkipPlexScan:$script:SkipPlexScan
 
 if ($script:LastPosterDisplayTitle) {
     $Title = $script:LastPosterDisplayTitle

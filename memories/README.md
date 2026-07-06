@@ -1,6 +1,8 @@
-﻿# ðŸš€ TelegramNotifier - Sistema Completo
+﻿# 🚀 TelegramNotifier - Sistema Completo
 
-Suite completa para notificaciÃ³n de torrents con integraciÃ³n Plex y cachÃ© persistente.
+> **Nota (2026-07-06):** Documentación canónica actualizada en [`../README.md`](../README.md), [`../core/README.md`](../core/README.md) y [`../test/README_TEST.md`](../test/README_TEST.md). Este archivo es copia archivada; puede contener referencias obsoletas (`title_overrides.json`, `core/config/plex_cache.json`).
+
+Suite completa para notificación de torrents con integración Plex y caché persistente.
 
 ---
 

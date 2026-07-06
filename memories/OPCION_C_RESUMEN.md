@@ -157,17 +157,34 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\core
 
 ### TESTING
 
+Documentación completa: [`test/README_TEST.md`](../test/README_TEST.md)
+
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test
 
-# Test rápido
-.\test_v4_wrapper.ps1 -QuickTest
+# Producción manual — un torrent de prueba
+cd ..\core
+.\TelegramNotifier.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -SendTelegram:$false
 
-# Test completo
+# Test — un torrent (paridad producción, con partial scan)
+cd ..\test
+.\TelegramTorrent_Test.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -TestMode
+
+# Test — un torrent (rápido, sin scan Plex)
+.\TelegramTorrent_Test.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -TestMode -SkipPlexScan
+
+# Suite completa (lento, como producción)
 .\test_v4_wrapper.ps1
 
-# Análisis + reportes HTML
-.\run_test_pipeline.ps1
+# Suite rápida (10 torrents, sin scan)
+.\test_v4_wrapper.ps1 -QuickTest
+
+# Pipeline + informe HTML
+.\run_test_pipeline.ps1              # largo
+.\run_test_pipeline.ps1 -QuickTest   # rápido
+
+# Validación scoring Kingsman
+.\validation\ValidateKingsmanSearch.ps1
 ```
 
 ### BACKUP
@@ -231,7 +248,7 @@ $PlexUrl  = "http://127.0.0.1:32400"
 $PlexToken = "Tu-Token-Plex"
 ```
 
-**core/config/plex_cache.json**
+**recursos/plex_cache.json** (compartida producción + test)
 - Auto-generado en primera ejecución
 - 108+ títulos Plex almacenados
 - Auto-actualizado con nuevos títulos
