@@ -1,0 +1,57 @@
+﻿[2026-07-06 02:50:25] [INFO] ========================================
+[2026-07-06 02:50:25] [INFO] Procesando torrent: Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv
+[2026-07-06 02:50:25] [INFO] Ruta: G:\PELIS\Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv
+[2026-07-06 02:50:25] [INFO] Tipo: PELICULA (2014)
+[2026-07-06 02:50:25] [INFO] Título detectado: Kingsman, El Servicio Secreto
+[2026-07-06 02:50:25] [INFO] Iniciando busqueda de poster para 'Kingsman, El Servicio Secreto' (Tipo: PELICULA)
+[2026-07-06 02:50:25] [INFO] Inicializando caché...
+[2026-07-06 02:50:25] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-06 02:50:25] [INFO] Caché cargado desde archivo: 109 títulos
+[2026-07-06 02:50:25] [INFO] Búsqueda poster: título='Kingsman, El Servicio Secreto', RatingKey=''
+[2026-07-06 02:50:25] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-06 02:50:25] [INFO] Intentando busqueda Plex (pelicula): http://127.0.0.1:32400/search?query=Kingsman%2C%20El%20Servicio%20Secreto&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=1
+[2026-07-06 02:50:25] [INFO] Plex devolvio 0 items para la busqueda pelicula
+[2026-07-06 02:50:25] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=Kingsman%2C%20El%20Servicio%20Secreto&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-06 02:50:26] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-06 02:50:26] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-06 02:50:26] [WARNING] No se encontró poster en Plex
+[2026-07-06 02:50:26] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-06 02:50:26] [INFO] ========================================
+[2026-07-06 04:33:43] [INFO] ========================================
+[2026-07-06 04:33:43] [INFO] Procesando torrent: Kingsman, El Círculo de Oro (2017) [Ultimate Remastered 2160p HEVC SDR-RAW ES DTS 5.1 EN DTS-HD 7.1 Subs]HDO.mkv
+[2026-07-06 04:33:43] [INFO] Ruta: G:\PELIS\Kingsman, El Círculo de Oro (2017) [Ultimate Remastered 2160p HEVC SDR-RAW ES DTS 5.1 EN DTS-HD 7.1 Subs]HDO.mkv
+[2026-07-06 04:33:43] [INFO] Tipo: PELICULA (2017)
+[2026-07-06 04:33:43] [INFO] Título detectado: Kingsman, El Circulo De Oro
+[2026-07-06 04:33:43] [INFO] Iniciando busqueda de poster para 'Kingsman, El Circulo De Oro' (Tipo: PELICULA)
+[2026-07-06 04:33:43] [INFO] Inicializando caché...
+[2026-07-06 04:33:43] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-06 04:33:43] [INFO] Caché cargado desde archivo: 109 títulos
+[2026-07-06 04:33:43] [INFO] Búsqueda poster: título='Kingsman, El Circulo De Oro', RatingKey=''
+[2026-07-06 04:33:43] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-06 04:33:43] [INFO] Intentando busqueda Plex (pelicula): http://127.0.0.1:32400/search?query=Kingsman%2C%20El%20Circulo%20De%20Oro&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=1
+[2026-07-06 04:33:44] [INFO] Plex devolvio 0 items para la busqueda pelicula
+[2026-07-06 04:33:44] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=Kingsman%2C%20El%20Circulo%20De%20Oro&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-06 04:33:44] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-06 04:33:44] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-06 04:33:44] [WARNING] No se encontró poster en Plex
+[2026-07-06 04:33:44] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-06 04:33:44] [INFO] ========================================
+[2026-07-06 06:33:11] [INFO] ========================================
+[2026-07-06 06:33:11] [INFO] Procesando torrent: The King's Man, La primera misión (2021) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv
+[2026-07-06 06:33:11] [INFO] Ruta: G:\PELIS\The King's Man, La primera misión (2021) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv
+[2026-07-06 06:33:11] [INFO] Tipo: PELICULA (2021)
+[2026-07-06 06:33:11] [INFO] Título detectado: The King's Man, La Primera Mision
+[2026-07-06 06:33:11] [INFO] Iniciando busqueda de poster para 'The King's Man, La Primera Mision' (Tipo: PELICULA)
+[2026-07-06 06:33:11] [INFO] Inicializando caché...
+[2026-07-06 06:33:11] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-06 06:33:11] [INFO] Caché cargado desde archivo: 109 títulos
+[2026-07-06 06:33:11] [INFO] Búsqueda poster: título='The King's Man, La Primera Mision', RatingKey=''
+[2026-07-06 06:33:11] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-06 06:33:11] [INFO] Intentando busqueda Plex (pelicula): http://127.0.0.1:32400/search?query=The%20King's%20Man%2C%20La%20Primera%20Mision&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=1
+[2026-07-06 06:33:12] [INFO] Plex devolvio 0 items para la busqueda pelicula
+[2026-07-06 06:33:12] [INFO] Intentando busqueda Plex (generica): http://127.0.0.1:32400/search?query=The%20King's%20Man%2C%20La%20Primera%20Mision&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-06 06:33:12] [INFO] Plex devolvio 0 items para la busqueda generica
+[2026-07-06 06:33:12] [INFO] No se encontro ningun poster adecuado en Plex.
+[2026-07-06 06:33:12] [WARNING] No se encontró poster en Plex
+[2026-07-06 06:33:12] [SUCCESS] Notificación Telegram enviada (texto)
+[2026-07-06 06:33:12] [INFO] ========================================

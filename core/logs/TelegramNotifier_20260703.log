@@ -249,3 +249,17 @@
 [2026-07-03 11:30:27] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
 [2026-07-03 11:30:29] [SUCCESS] Notificación Telegram enviada (con poster)
 [2026-07-03 11:30:29] [INFO] ========================================
+[2026-07-03 11:41:53] [INFO] ========================================
+[2026-07-03 11:41:53] [INFO] Procesando torrent: Ciudad de las Estrellas S01E07 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+[2026-07-03 11:41:53] [INFO] Ruta: G:\SERIES\CIUDAD_DE_LAS_ESTRELLAS\Ciudad de las Estrellas S01E07 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv
+[2026-07-03 11:41:53] [INFO] Tipo: EPISODIO (S01E07)
+[2026-07-03 11:41:53] [INFO] Título detectado: Ciudad De Las Estrellas
+[2026-07-03 11:41:53] [INFO] Iniciando busqueda de poster para 'Ciudad De Las Estrellas' (Tipo: EPISODIO)
+[2026-07-03 11:41:53] [INFO] Inicializando caché...
+[2026-07-03 11:41:53] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-03 11:41:53] [INFO] Caché cargado desde archivo: 109 títulos
+[2026-07-03 11:41:53] [INFO] Búsqueda poster: título='Ciudad De Las Estrellas', RatingKey='8030'
+[2026-07-03 11:41:53] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-03 11:41:53] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8030/thumb/1782873896?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-03 11:41:56] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-03 11:41:56] [INFO] ========================================
