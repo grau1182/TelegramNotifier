@@ -901,10 +901,43 @@
                       "titulo_normalizado":  "silo",
                       "titulo_original":  "Silo",
                       "year":  2023
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8150",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8150/thumb/1783292621?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "aliases":  [
+                                      "Kingsman, El Servicio Secreto"
+                                  ],
+                      "titulo_normalizado":  "kingsmanserviciosecreto",
+                      "titulo_original":  "Kingsman: Servicio secreto",
+                      "year":  2015
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8149",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8149/thumb/1783292620?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "aliases":  [
+                                      "Kingsman, El Circulo De Oro"
+                                  ],
+                      "titulo_normalizado":  "kingsmanelcrculodeoro",
+                      "titulo_original":  "Kingsman: El círculo de oro",
+                      "year":  2017
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8155",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8155/thumb/1783305285?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "aliases":  [
+                                      "The King\u0027s Man, La Primera Mision"
+                                  ],
+                      "titulo_normalizado":  "thekingsmanlaprimeramisin",
+                      "titulo_original":  "The King\u0027s Man: La primera misión",
+                      "year":  2021
                   }
               ],
-    "totalItems":  109,
+    "totalItems":  112,
     "description":  "Caché persistente de Plex - Actualizado automáticamente",
-    "lastUpdated":  "2026-07-03T11:30:27Z",
+    "lastUpdated":  "2026-07-06T19:00:15Z",
     "version":  "1.0"
 }

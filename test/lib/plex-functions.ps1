@@ -230,7 +230,7 @@ function Invoke-PlexPartialScan {
     try {
         $encodedPath = [System.Uri]::EscapeDataString($ContentPath)
         $url = "$PlexUrl/library/sections/$SectionId/refresh?path=$encodedPath&X-Plex-Token=$PlexToken"
-        Write-Log "Partial scan triggered: section=$SectionId path=$ContentPath"
+        Write-Log "Escaneo parcial activado: section=$SectionId path=$ContentPath"
         Invoke-RestMethod -Uri $url -Method Get -ErrorAction Stop | Out-Null
         return $true
     }

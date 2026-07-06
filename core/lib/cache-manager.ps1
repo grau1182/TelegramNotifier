@@ -178,7 +178,7 @@ function Add-CacheAlias {
             $fileItem.aliases = @($fileAliases + $Alias)
             $cacheData.lastUpdated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
             $cacheData | ConvertTo-Json -Depth 5 | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
-            Write-Log "Caché actualizado: alias '$Alias' agregado a ratingKey $RatingKey"
+            Write-Log "Caché actualizado: alias '$Alias' agregado a RatingKey $RatingKey, $($cacheData.cache.Count) títulos en total"
         }
     }
     catch {
@@ -251,7 +251,7 @@ function Add-ToCache {
             $cacheJson = $cacheData | ConvertTo-Json -Depth 5
             $cacheJson | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
 
-            Write-Log "Caché actualizado: Nuevo título '$Title' agregado"
+            Write-Log "Caché actualizado: Nuevo título '$Title' agregado con RatingKey $RatingKey, $($cacheData.cache.Count) títulos en total"
         }
     }
     catch {

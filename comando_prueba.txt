@@ -1,0 +1,7 @@
+# Ejemplo real que qBittorrent ejecutará SERIES:
+powershell.exe -ExecutionPolicy Bypass -File "C:\Users\grau_\Downloads\TelegramNotifier\core\TelegramNotifier.ps1" "La Casa del Dragon (2026) S03E02 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv" "G:\SERIES\LA_CASA_DEL_DRAGON"
+
+PELIS
+powershell.exe -ExecutionPolicy Bypass -File "C:\Users\grau_\Downloads\TelegramNotifier\core\TelegramNotifier.ps1" "Kingsman, El Servicio Secreto (2014) [Ultimate Remastered 2160p HEVC SDR-RAW ES-EN DTS-HD 7.1 Subs]HDO.mkv" "G:\PELIS"
+
+

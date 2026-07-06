@@ -230,12 +230,12 @@ function Invoke-PlexPartialScan {
     try {
         $encodedPath = [System.Uri]::EscapeDataString($ContentPath)
         $url = "$PlexUrl/library/sections/$SectionId/refresh?path=$encodedPath&X-Plex-Token=$PlexToken"
-        Write-Log "Partial scan triggered: section=$SectionId path=$ContentPath"
+        Write-Log "Escaneo parcial activado: section=$SectionId path=$ContentPath"
         Invoke-RestMethod -Uri $url -Method Get -ErrorAction Stop | Out-Null
         return $true
     }
     catch {
-        Write-Log "Error en partial scan Plex: $($_.Exception.Message)" -Level "WARNING"
+        Write-Log "Error en escaneo parcial de Plex: $($_.Exception.Message)" -Level "WARNING"
         return $false
     }
 }
@@ -317,12 +317,12 @@ function Wait-ForPlexItem {
     for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
         $match = Find-PlexItemByPath -SectionId $SectionId -ContentPath $ContentPath -DetectedMetadata $DetectedMetadata
         if ($match) {
-            Write-Log "Item found by path (attempt $attempt, score $($match.score)): $($match.item.title)"
+            Write-Log "Item encontrado por ruta (intento $attempt, puntuación $($match.score)): $($match.item.title)"
             return $match
         }
 
         if ($attempt -lt $MaxAttempts) {
-            Write-Log "Path lookup attempt $attempt/$MaxAttempts sin resultado, esperando ${PollSeconds}s..."
+            Write-Log "Intento de búsqueda por ruta $attempt/$MaxAttempts sin resultado, esperando ${PollSeconds}s..."
             Start-Sleep -Seconds $PollSeconds
         }
     }
