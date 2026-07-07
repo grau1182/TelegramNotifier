@@ -1,6 +1,9 @@
 # Mejoras Get-PlexPoster v3.0-IMPROVED
 
-## Estado de implementación (2026-07-06)
+> **Documento histórico de diseño (2026-07-01).** La implementación real está en `core/lib/` y `test/lib/` con partial scan, path lookup, búsqueda progresiva y aliases automáticos.  
+> **Documentación operativa vigente:** [`README_TEST.md`](README_TEST.md) · [`../core/README.md`](../core/README.md)
+
+## Estado de implementación (2026-07-07)
 
 Las siguientes mejoras están **integradas en `core/lib/` y `test/lib/`** (no requieren script separado):
 
@@ -10,10 +13,18 @@ Las siguientes mejoras están **integradas en `core/lib/` y `test/lib/`** (no re
 | Lookup por ruta | ✅ Implementado | `Find-PlexItemByPath`, `Resolve-PlexSectionForPath` |
 | Búsqueda progresiva | ✅ Implementado | `Get-PlexSearchQueries`, `Search-PlexWithQueries`, `Split-TitleVariants` |
 | Scoring mejorado | ✅ Implementado | `Test-PlexItemAcceptable`, raíz título pre-coma |
-| Aliases automáticos | ✅ Implementado | `Add-CacheAlias`, `Save-PlexPosterResult` |
+| Aliases automáticos | ✅ Implementado | `Add-CacheAlias`, `Add-CacheAliases`, `Save-PlexPosterResult` |
+| Normalización acentos/ñ | ✅ Implementado | `Normalize-CacheKey` + `Remove-Accents` |
+| Persistencia JSON | ✅ Implementado | `Get-CacheFileData`, `Save-CacheToFile` |
 | title_overrides.json | ❌ No usado | Sustituido por búsqueda progresiva + aliases |
 
 Documentación operativa: [`README_TEST.md`](README_TEST.md)
+
+---
+
+## Propuestas no implementadas (referencia histórica)
+
+Las secciones siguientes (FASE 0 Library Lookup, `titles_mapping.json`, `generate_test_data_improved.ps1`, etc.) forman parte del diseño original v3.0 y **no están en el código actual**. Se conservan como referencia de ideas evaluadas.
 
 ---
 
@@ -272,7 +283,26 @@ test/
 
 ---
 
-## 🚀 Cómo Ejecutar
+## 🚀 Cómo ejecutar (vigente — jul 2026)
+
+```powershell
+cd test
+
+# Suite completa (paridad producción)
+.\test_v4_wrapper.ps1
+
+# Suite rápida (10 torrents, sin scan)
+.\test_v4_wrapper.ps1 -QuickTest
+
+# Validación scoring Kingsman
+.\validation\ValidateKingsmanSearch.ps1
+```
+
+Ver [`README_TEST.md`](README_TEST.md) para todos los modos.
+
+---
+
+## 🚀 Cómo Ejecutar (histórico — scripts ya no existen)
 
 ### Opción 1: Versión Mejorada (Recomendado)
 ```powershell
@@ -440,6 +470,6 @@ PS> .\generate_test_data_improved.ps1
 
 ---
 
-**Documentación Actualizada**: 2026-07-01
-**Versión Script**: 3.0-IMPROVED
-**Estado**: ✅ LISTO PARA TESTING
+**Documentación Actualizada**: 2026-07-07  
+**Versión Script**: 2.1 (implementación en core/lib)  
+**Estado**: ✅ Histórico de diseño — ver README_TEST.md para uso operativo

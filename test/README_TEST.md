@@ -16,7 +16,9 @@ Documentación del entorno `test/` y su relación con producción (`core/`). El 
 | Partial scan Plex | Activado (`SkipPlexScan=$false`) | **Igual por defecto** |
 | Modo rápido | No disponible | `-SkipPlexScan` o `-QuickTest` |
 | Captura JSON resultados | No | Sí (`test/results/`) |
-| Logs | `core/logs/` | `test/logs/` |
+| Logs en disco | `core/logs/TelegramNotifier_YYYYMMDD.log` | Solo si `-TestMode:$false` → `test/logs/TelegramNotifier_Test.log` |
+
+> **Nota:** Con `-TestMode $true` (default), `Write-Log` no escribe a fichero; la salida va a consola y a `test/results/`.
 
 ---
 
@@ -42,7 +44,7 @@ Ambos entornos comparten la misma lógica en `plex-functions.ps1`:
    └─ Primera palabra significativa
    └─ Scoring por año + raíz de título (ES vs EN sin mapeos manuales)
 
-5. Add-ToCache + alias automático
+5. Add-ToCache + Add-CacheAliases (alias automático)
    └─ Guarda título del torrent como alias si difiere del título Plex
 ```
 
@@ -175,20 +177,22 @@ test/
 ├── TelegramTorrent_Test.ps1        ← Script principal de test
 ├── test_v4_wrapper.ps1             ← Procesa recursos/torrents.csv
 ├── run_test_pipeline.ps1           ← Wrapper + AnalyzeResults.ps1
-├── PLEXPOSTER_IMPROVEMENTS.md      ← Historial de mejoras (referencia)
+├── PLEXPOSTER_IMPROVEMENTS.md      ← Historial de diseño (referencia)
 │
-├── lib/                            ← Espejo de core/lib/
-│   ├── logger.ps1
+├── lib/                            ← Espejo de core/lib/ (sin logger.ps1)
 │   ├── utilities.ps1               ← Split-TitleVariants
-│   ├── cache-manager.ps1           ← Add-CacheAlias, aliases
+│   ├── cache-manager.ps1           ← Add-CacheAliases, Save-CacheToFile
 │   └── plex-functions.ps1          ← Scan, path lookup, búsqueda progresiva
 │
 ├── validation/
 │   ├── ValidateKingsmanSearch.ps1  ← Test unitario Kingsman
+│   ├── ValidatePlexImprovements.ps1
+│   ├── ValidateTest.ps1
 │   ├── AnalyzeResults.ps1          ← Informe HTML
-│   └── ValidateTest.ps1
+│   ├── ConsolidateResults.ps1
+│   └── OrganizeResults.ps1
 │
-├── logs/
+├── logs/                           ← Solo si TestMode=$false
 │   └── TelegramNotifier_Test.log
 │
 └── results/                        ← JSON generados en TestMode
@@ -202,9 +206,9 @@ test/
 ### Producción (`core/logs/TelegramNotifier_YYYYMMDD.log`)
 
 ```
-[INFO] Partial scan triggered: section=1 path=G:\PELIS\...
-[INFO] Path lookup attempt 1/12 sin resultado, esperando 5s...
-[INFO] Item found by path (attempt 2, score 100): Kingsman: The Secret Service
+[INFO] Escaneo parcial activado: section=1 path=G:\PELIS\...
+[INFO] Intento de búsqueda por ruta 1/12 sin resultado, esperando 5s...
+[INFO] Item encontrado por ruta (intento 2, puntuación 100): Kingsman: Servicio secreto
 ```
 
 O, si falla path lookup:
@@ -212,8 +216,8 @@ O, si falla path lookup:
 ```
 [INFO] Queries progresivas: Kingsman, El Servicio Secreto | Kingsman
 [INFO] Plex devolvio 1 items para query 'Kingsman' (pelicula)
-[INFO]   Match aceptable (score 75): Kingsman: The Secret Service
-[INFO] Caché actualizado: Nuevo título 'Kingsman: The Secret Service' agregado
+[INFO]   Match aceptable (score 75): Kingsman: Servicio secreto
+[INFO] Caché actualizado: Nuevo título 'Kingsman: Servicio secreto' agregado
 ```
 
 ### Test con SkipPlexScan
@@ -251,15 +255,17 @@ Tras encontrar un poster con título distinto al del torrent, se guarda automát
 
 ```json
 {
-  "titulo_original": "Kingsman: The Secret Service",
-  "titulo_normalizado": "kingsmanthesecretservice",
-  "ratingKey": "1234",
+  "titulo_original": "Kingsman: El círculo de oro",
+  "titulo_normalizado": "kingsmanelcirculodeoro",
+  "ratingKey": "8149",
   "tipo": "PELICULA",
-  "poster_url": "http://127.0.0.1:32400/library/metadata/1234/thumb/...",
-  "year": 2014,
-  "aliases": ["Kingsman, El Servicio Secreto"]
+  "poster_url": "http://127.0.0.1:32400/library/metadata/8149/thumb/...",
+  "year": 2017,
+  "aliases": ["Kingsman, El Circulo De Oro"]
 }
 ```
+
+La clave `titulo_normalizado` se genera con `Normalize-CacheKey` (transliteración de acentos/ñ + minúsculas + solo `[a-z0-9]`).
 
 La segunda descarga del mismo contenido con nombre en español será **cache hit** vía alias.
 
@@ -271,7 +277,7 @@ La segunda descarga del mismo contenido con nombre en español será **cache hit
 |---------|----------------|--------|
 | Poster en prod, no en test | `-SkipPlexScan` activo | Ejecutar sin `-SkipPlexScan` ni `-QuickTest` |
 | Test muy lento | Modo largo con scan activo | Normal; usar `-QuickTest` para iterar |
-| `Partial scan triggered` no aparece | `SkipPlexScan` o `ContentPath` vacío | Verificar ruta y flag |
+| `Escaneo parcial activado` no aparece | `SkipPlexScan` o `ContentPath` vacío | Verificar ruta y flag |
 | Plex devuelve 0 items | Título ES vs EN | Debería resolverse con query `Kingsman` + año |
 | Timeout 60s | Plex tarda en indexar | Aumentar `-PlexScanPollMaxAttempts` |
 
@@ -307,5 +313,5 @@ cd test
 
 ---
 
-**Última actualización:** 2026-07-06  
-**Versión búsqueda poster:** 2.0 (partial scan + path lookup + búsqueda progresiva)
+**Última actualización:** 2026-07-07  
+**Versión búsqueda poster:** 2.1 (partial scan + path lookup + búsqueda progresiva)

@@ -136,7 +136,7 @@ El backup incluye:
 - ❌ **NO** incluye: Tokens/Passwords
 
 **Antes de compartir backup:**
-1. Revisar `core/config/` → No contiene secrets
+1. Revisar `recursos/` y `core/TelegramNotifier.ps1` → No contiene secrets en git
 2. Tokens están en scripts (editar antes)
 3. Considerar excluir `core/logs/` (datos personales)
 

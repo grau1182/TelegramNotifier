@@ -25,25 +25,39 @@ Partial scan Plex + Wait-ForPlexItem (path lookup)
     ↓ (miss)
 Search-PlexWithQueries (búsqueda progresiva)
     ↓ (found)
-Add-ToCache + alias del título torrent si difiere del título Plex
+Add-ToCache + Add-CacheAliases (alias del título torrent si difiere)
+    ↓
+Save-CacheToFile() → persiste en recursos/plex_cache.json
 ```
+
+## Normalización de claves
+
+`titulo_normalizado` se genera con `Normalize-CacheKey`:
+
+1. Minúsculas y trim
+2. `Remove-Accents` (transliteración: `á→a`, `ñ→n`, etc.)
+3. Eliminar todo lo que no sea `[a-z0-9]`
+
+Ejemplo: `"28 años después"` → `"28anosdespues"`
+
+Si dos entradas distintas generan la misma clave, `Add-ToCache` registra un warning en el log.
 
 ## Estructura del archivo
 
 ```json
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-06T09:00:00Z",
-  "totalItems": 109,
+  "lastUpdated": "2026-07-07T09:00:00Z",
+  "totalItems": 112,
   "cache": [
     {
-      "titulo_original": "Kingsman: The Secret Service",
-      "titulo_normalizado": "kingsmanthesecretservice",
-      "ratingKey": "1234",
+      "titulo_original": "Kingsman: El círculo de oro",
+      "titulo_normalizado": "kingsmanelcirculodeoro",
+      "ratingKey": "8149",
       "tipo": "PELICULA",
-      "poster_url": "http://127.0.0.1:32400/library/metadata/1234/thumb/...",
-      "year": 2014,
-      "aliases": ["Kingsman, El Servicio Secreto"]
+      "poster_url": "http://127.0.0.1:32400/library/metadata/8149/thumb/...",
+      "year": 2017,
+      "aliases": ["Kingsman, El Circulo De Oro"]
     }
   ]
 }
@@ -53,7 +67,14 @@ Add-ToCache + alias del título torrent si difiere del título Plex
 
 Cuando el poster se encuentra con un título Plex distinto al del torrent (ej. inglés vs español), el sistema guarda el título del torrent en `aliases`. La próxima descarga del mismo contenido será **cache hit** sin llamadas API.
 
-Funciones: `Add-ToCache -Aliases`, `Add-CacheAlias` en `cache-manager.ps1`.
+Funciones en `cache-manager.ps1`:
+
+| Función | Uso |
+|---------|-----|
+| `Add-ToCache` | Crea entrada completa o delega aliases si ya existe |
+| `Add-CacheAlias` | Añade un alias (wrapper) |
+| `Add-CacheAliases` | Añade varios aliases en una sola escritura |
+| `Get-CacheFileData` / `Save-CacheToFile` | Lectura/escritura centralizada del JSON |
 
 ## Casos de uso
 
@@ -67,8 +88,8 @@ Funciones: `Add-ToCache -Aliases`, `Add-CacheAlias` en `cache-manager.ps1`.
 ### 2. Búsqueda por ratingKey
 
 ```powershell
-$cache = Get-Content "recursos/plex_cache.json" | ConvertFrom-Json
-$titulo = $cache.cache | Where-Object { $_.ratingKey -eq "1234" }
+$cache = Get-Content "recursos/plex_cache.json" -Encoding UTF8 | ConvertFrom-Json
+$titulo = $cache.cache | Where-Object { $_.ratingKey -eq "8149" }
 $url = $titulo.poster_url
 ```
 
@@ -101,7 +122,7 @@ cd test
 ## Referencia en código
 
 - Ruta: `Get-PlexCacheFilePath` en `cache-manager.ps1` → `recursos/plex_cache.json`
-- Escritura: `Add-ToCache`, `Add-CacheAlias`
+- Escritura: `Add-ToCache`, `Add-CacheAliases`, `Save-CacheToFile`
 - Lectura: `Initialize-PlexCache`, `Get-PosterByCache`
 
 ## Documentación relacionada
@@ -109,4 +130,4 @@ cd test
 - [`test/README_TEST.md`](../test/README_TEST.md) — modos test vs producción
 - [`core/README.md`](../core/README.md) — flujo producción
 
-**Última actualización:** 2026-07-06
+**Última actualización:** 2026-07-07

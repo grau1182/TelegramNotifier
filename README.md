@@ -23,8 +23,8 @@ Un sistema PowerShell completo que monitorea torrents completados en qBittorrent
 
 **Estadísticas:**
 - ✅ 210/237 torrents encontrados (88.61%)
-- 📦 108 títulos en caché persistente
-- ⚙️ 30+ funciones en 625+ líneas
+- 📦 112 títulos en caché persistente
+- ⚙️ 30+ funciones en 3300+ líneas (libs + scripts principales)
 - 🧪 Suite de tests con 237 casos
 
 ---
@@ -95,7 +95,7 @@ Un sistema PowerShell completo que monitorea torrents completados en qBittorrent
 | `core/lib/utilities.ps1` | Parsing de nombres, detección de tipo, normalización | Nombre torrent | Metadata detectada, confianza % | ⭐⭐⭐ |
 | `core/lib/cache-manager.ps1` | Gestión de caché persistente (JSON) y en memoria | Título a buscar o nuevo título a agregar | URL poster o {found: false} | ⭐⭐⭐ |
 | `core/lib/plex-functions.ps1` | Scan Plex, path lookup, búsqueda progresiva + scoring | Metadata torrent, ContentPath | URL poster o null | ⭐⭐⭐ |
-| `recursos/plex_cache.json` | Caché persistente compartida (109+ títulos, aliases) | N/A | Cargado al iniciar | ⭐⭐⭐ |
+| `recursos/plex_cache.json` | Caché persistente compartida (112 títulos, aliases) | N/A | Cargado al iniciar | ⭐⭐⭐ |
 | `core/logs/` | Logs diarios de producción | Operaciones del script | TelegramNotifier_YYYYMMDD.log | ⭐⭐ |
 | `test/README_TEST.md` | Guía detallada test vs producción, comandos y modos | N/A | Documentación | ⭐⭐ |
 | `test/TelegramTorrent_Test.ps1` | Suite de 237 torrents (paridad con producción) | CSV con torrents | Análisis de cobertura | ⭐⭐ |
@@ -135,7 +135,9 @@ TelegramNotifier/
 │   ├── 📂 lib/                           ← Espejo de core/lib/
 │   ├── 📂 validation/
 │   │   ├── 📄 ValidateKingsmanSearch.ps1
-│   │   └── 📄 AnalyzeResults.ps1
+│   │   ├── 📄 AnalyzeResults.ps1
+│   │   ├── 📄 ConsolidateResults.ps1
+│   │   └── 📄 OrganizeResults.ps1
 │   │
 │   └── 📂 results/
 │
@@ -208,7 +210,7 @@ El proyecto funciona en **capas** independientes:
 │  CAPA 3: CACHÉ (DOS NIVELES)           │
 │  cache-manager.ps1                     │
 │  • Memoria: Array $script:PlexCache    │
-│  • Disco: config/plex_cache.json       │
+│  • Disco: recursos/plex_cache.json       │
 └──────────────┬─────────────────────────┘
                │
 ┌──────────────┴──────────────────────────┐
@@ -236,8 +238,8 @@ El proyecto funciona en **capas** independientes:
 [3] Dot-sourcing: Cargar 4 librerías desde core/lib/
     └─ logger.ps1 (55 líneas)
     └─ utilities.ps1 (201 líneas)
-    └─ cache-manager.ps1 (190 líneas)
-    └─ plex-functions.ps1 (179 líneas)
+    └─ cache-manager.ps1 (~454 líneas)
+    └─ plex-functions.ps1 (~556 líneas)
 [4] Llamar Initialize-Logger → Crear core/logs/TelegramNotifier_YYYYMMDD.log
 ```
 
@@ -330,7 +332,7 @@ El proyecto funciona en **capas** independientes:
    {
      "version": "1.0",
      "lastUpdated": "2026-07-01T14:15:25Z",
-     "totalItems": 108,
+     "totalItems": 112,
      "cache": [
        {
          "titulo_normalizado": "themandalorian",
@@ -382,7 +384,8 @@ El proyecto funciona en **capas** independientes:
        ↓
    5. Get-PlexPoster() → partial scan, path lookup, búsqueda progresiva
        ↓
-   6. Si encontrado → Add-ToCache() + alias automático
+   6. Si encontrado → Add-ToCache() + Add-CacheAliases (alias automático)
+       └─ Persistencia vía Get-CacheFileData / Save-CacheToFile
        └─ Guarda en recursos/plex_cache.json (JSON persistente)
        ↓
    7. Próxima búsqueda del mismo título → ✅ Hit de caché
@@ -421,7 +424,7 @@ El proyecto funciona en **capas** independientes:
    **Forzar Regeneración Manual (Opcional):**
    ```powershell
    # Si necesitas vaciar y regenerar desde cero:
-   Remove-Item "C:\ruta\core\config\plex_cache.json"
+   Remove-Item "C:\ruta\recursos\plex_cache.json"
    
    # Luego procesa cualquier torrent:
    & "C:\ruta\core\TelegramNotifier.ps1" "Nombre Torrent" "C:\ruta\contenido"
@@ -433,7 +436,7 @@ El proyecto funciona en **capas** independientes:
    - 📊 **Persistente**: Survives to restarts (JSON en disco)
    - 🔄 **Automático**: Crece solo mientras usas el sistema
    - 🎯 **Inteligente**: RatingKey prioritized (identificador único de Plex)
-   - 🛡️ **Robusto**: Maneja diacríticos (ó→o, ñ→n, etc.)
+   - 🛡️ **Robusto**: Transliteración de acentos y ñ (`Remove-Accents` → `28anosdespues`)
 
 ### NIVEL 5: Sistema de Logging
 
@@ -514,7 +517,7 @@ Headers: X-Plex-Token: {TOKEN}
 
 ✅ **Cobertura Comprobada**
 - 88.61% en 237 torrents de test
-- 108 títulos en caché persistente
+- 112 títulos en caché persistente
 - Análisis HTML de resultados
 
 ✅ **Logging Automático**
@@ -581,13 +584,13 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 
 | Métrica | Valor |
 |---------|-------|
-| Archivos PowerShell (.ps1) | 19 |
-| Líneas de código total | 625+ |
+| Archivos PowerShell (.ps1) | 23 |
+| Líneas de código (libs + scripts principales) | 3300+ |
 | Funciones definidas | 30+ |
 | Librerías principales | 4 |
 | Torrents en test suite | 237 |
 | Cobertura de test | 88.61% |
-| Títulos en caché | 108 |
+| Títulos en caché | 112 |
 | Tiempo caché local | 0ms |
 | Tiempo API fallback | 500ms-2s |
 | Uptime (producción) | 24/7 |
@@ -631,7 +634,7 @@ cd core
 | "Repository not found" en Git | Crear repo en https://github.com/new |
 | Caracteres rotos en logs (Ã±, Ã¡) | Verificar UTF-8 BOM: `[System.IO.File]::ReadAllBytes()` |
 | Notificación no llega a Telegram | Verificar token bot y chat ID en TelegramNotifier.ps1 |
-| Poster no encontrado (texto-only) | Revisar log: `Partial scan triggered`, `Queries progresivas`. Ver [`test/README_TEST.md`](test/README_TEST.md) |
+| Poster no encontrado (texto-only) | Revisar log: `Escaneo parcial activado`, `Queries progresivas`. Ver [`test/README_TEST.md`](test/README_TEST.md) |
 | Log file muy grande | Automático: rotación a los 5MB con timestamp |
 | Caché desincronizado | Caché en `recursos/plex_cache.json`; se auto-actualiza con aliases |
 
@@ -647,8 +650,10 @@ Get-Content core/logs/TelegramNotifier_$(Get-Date -Format 'yyyyMMdd').log -Tail 
 cd core
 .\TelegramNotifier.ps1 "Test Torrent S01E01 2160p" "C:\Test\Content" $true
 
-# Limpiar logs antiguos
-Remove-Item core/logs/TelegramNotifier_*.log -Older (30 días)
+# Limpiar logs antiguos (>30 días)
+Get-ChildItem core/logs/TelegramNotifier_*.log |
+  Where-Object { $_.LastWriteTime -lt (Get-Date).AddDays(-30) } |
+  Remove-Item
 
 # Ver config Plex
 Get-Content recursos/plex_cache.json | ConvertFrom-Json | Select -ExpandProperty cache | Select -First 5
@@ -686,7 +691,7 @@ Get-Content recursos/plex_cache.json | ConvertFrom-Json | Select -ExpandProperty
 
 ---
 
-**Versión:** v1.1 (2026-07-01)
-**Última actualización:** 2026-07-01 14:15:25
+**Versión:** v1.2 (2026-07-07)
+**Última actualización:** 2026-07-07
 **Autor:** Sistema TelegramNotifier
 **Repositorio:** https://github.com/grau1182/TelegramNotifier

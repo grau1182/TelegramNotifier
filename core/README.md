@@ -23,7 +23,8 @@ recursos/plex_cache.json             # Caché compartida (producción + test)
 
 ## Características
 
-- **Caché persistente** en `recursos/plex_cache.json` (109+ títulos, aliases automáticos)
+- **Caché persistente** en `recursos/plex_cache.json` (112 títulos, aliases automáticos)
+- **Normalización de claves** con transliteración (`Remove-Accents`: `28 años después` → `28anosdespues`)
 - **Partial scan Plex** al completar descarga (indexa el archivo antes de buscar)
 - **Lookup por ruta** (`ContentPath`) en items recientes de Plex
 - **Búsqueda progresiva** por variantes de título (completo → pre-coma → primera palabra)
@@ -105,7 +106,7 @@ Process-Torrent()
        │    ├─ Queries: título completo | pre-coma | primera palabra
        │    └─ Scoring: ruta, título, raíz, año, fuzzy
        │
-       └─ Save-PlexPosterResult → Add-ToCache + alias automático
+       └─ Save-PlexPosterResult → Add-ToCache + Add-CacheAliases
 ```
 
 ### Funciones clave (plex-functions.ps1)
@@ -122,19 +123,29 @@ Process-Torrent()
 | `Test-PlexItemAcceptable` | Umbrales de score |
 | `Save-PlexPosterResult` | Persiste en caché con aliases |
 
+### Funciones clave (cache-manager.ps1)
+
+| Función | Responsabilidad |
+|---------|-----------------|
+| `Normalize-CacheKey` | Translitera acentos/ñ y genera clave de búsqueda |
+| `Add-ToCache` | Crea entrada completa o delega aliases si ya existe |
+| `Add-CacheAlias` / `Add-CacheAliases` | Añade sinónimos de título (batch) |
+| `Get-CacheFileData` / `Save-CacheToFile` | Lectura/escritura centralizada de JSON |
+| `Get-PosterByCache` | Búsqueda exacta, alias o fuzzy en caché |
+
 ## Caché persistente
 
 **Ubicación:** `recursos/plex_cache.json` (compartida con test)
 
 ```json
 {
-  "titulo_original": "Kingsman: The Secret Service",
-  "titulo_normalizado": "kingsmanthesecretservice",
-  "ratingKey": "1234",
+  "titulo_original": "Kingsman: El círculo de oro",
+  "titulo_normalizado": "kingsmanelcirculodeoro",
+  "ratingKey": "8149",
   "tipo": "PELICULA",
-  "poster_url": "http://127.0.0.1:32400/library/metadata/1234/thumb/...",
-  "year": 2014,
-  "aliases": ["Kingsman, El Servicio Secreto"]
+  "poster_url": "http://127.0.0.1:32400/library/metadata/8149/thumb/...",
+  "year": 2017,
+  "aliases": ["Kingsman, El Circulo De Oro"]
 }
 ```
 
@@ -143,10 +154,11 @@ Los aliases se crean automáticamente cuando el título del torrent difiere del 
 ## Logging
 
 ```
-[INFO] Partial scan triggered: section=1 path=G:\PELIS\...
-[INFO] Item found by path (attempt 2, score 100): Kingsman: The Secret Service
+[INFO] Escaneo parcial activado: section=1 path=G:\PELIS\...
+[INFO] Intento de búsqueda por ruta 1/12 sin resultado, esperando 5s...
+[INFO] Item encontrado por ruta (intento 2, puntuación 100): Kingsman: Servicio secreto
 [INFO] Queries progresivas: Kingsman, El Servicio Secreto | Kingsman
-[INFO]   Match aceptable (score 75): Kingsman: The Secret Service
+[INFO]   Match aceptable (score 75): Kingsman: Servicio secreto
 [SUCCESS] Poster encontrado: http://127.0.0.1:32400/...
 ```
 
@@ -165,7 +177,7 @@ Invoke-RestMethod "http://127.0.0.1:32400/library/sections/SECTION_ID/refresh?pa
 
 | Problema | Solución |
 |----------|----------|
-| Poster no encontrado en descarga reciente | Plex aún no indexó; el partial scan + polling debería resolverlo. Revisar log `Partial scan triggered` |
+| Poster no encontrado en descarga reciente | Plex aún no indexó; el partial scan + polling debería resolverlo. Revisar log `Escaneo parcial activado` |
 | Título español vs inglés en Plex | Búsqueda progresiva prueba `"Kingsman"` + score por año |
 | `ContentPath` vacío | qBittorrent no pasó ruta; solo funciona búsqueda por título |
 | Timeout 60s | Aumentar `-PlexScanPollMaxAttempts` |
@@ -180,5 +192,5 @@ Invoke-RestMethod "http://127.0.0.1:32400/library/sections/SECTION_ID/refresh?pa
 
 ---
 
-**Última actualización:** 2026-07-06  
-**Versión búsqueda poster:** 2.0
+**Última actualización:** 2026-07-07  
+**Versión búsqueda poster:** 2.1

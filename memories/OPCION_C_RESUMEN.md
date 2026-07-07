@@ -1,7 +1,12 @@
 # 📋 OPCIÓN C - IMPLEMENTACIÓN COMPLETA
 
+> **Documento histórico (2026-07-01).** Describe el refactor inicial a `core/` + `test/`.  
+> **Estado actual del proyecto:** [`../README.md`](../README.md) · [`../core/README.md`](../core/README.md)
+
+**Nota:** Referencias a `core/config/`, `title_overrides.json` y 108 títulos en caché corresponden al estado en esa fecha. La caché actual está en `recursos/plex_cache.json` (112 títulos).
+
 **Fecha**: 2026-07-01  
-**Estado**: ✅ COMPLETADA  
+**Estado**: ✅ COMPLETADA (refactor inicial)  
 **Estructura**: Separación core (PRODUCCIÓN) + test (DESARROLLO)
 
 ---

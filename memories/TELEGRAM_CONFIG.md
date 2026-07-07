@@ -62,8 +62,8 @@ Busca estas líneas:
 ### Método 2: Test rápido
 
 ```powershell
-cd C:\Users\grau_\Downloads\TelegramNotifier
-.\test_telegram_notification.ps1
+cd C:\Users\grau_\Downloads\TelegramNotifier\core
+.\TelegramNotifier.ps1 -TorrentName "Test S01E01 2160p" -ContentPath "G:\SERIES\Test" -SendTelegram
 ```
 
 ## 📞 Credenciales Telegram
