@@ -1,10 +1,10 @@
-﻿{
+{
     "cache":  [
                   {
                       "tipo":  "PELICULA",
                       "ratingKey":  "4470",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/4470/thumb/1778375358?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "28aosdespus",
+                      "titulo_normalizado":  "28anosdespues",
                       "titulo_original":  "28 años después",
                       "year":  "2025"
                   },
@@ -12,7 +12,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "7179",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/7179/thumb/1778375366?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "28aosdespuseltemplodeloshuesos",
+                      "titulo_normalizado":  "28anosdespueseltemplodeloshuesos",
                       "titulo_original":  "28 años después: El templo de los huesos",
                       "year":  "2026"
                   },
@@ -20,7 +20,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "2960",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/2960/thumb/1779322899?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "28dasdespus",
+                      "titulo_normalizado":  "28diasdespues",
                       "titulo_original":  "28 días después",
                       "year":  "2002"
                   },
@@ -28,7 +28,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "2961",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/2961/thumb/1778375339?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "28semanasdespus",
+                      "titulo_normalizado":  "28semanasdespues",
                       "titulo_original":  "28 semanas después",
                       "year":  "2007"
                   },
@@ -92,7 +92,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "5469",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5469/thumb/1778375360?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "devulvemela",
+                      "titulo_normalizado":  "devuelvemela",
                       "titulo_original":  "Devuélvemela",
                       "year":  "2025"
                   },
@@ -164,7 +164,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "2981",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/2981/thumb/1778375353?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "megalpolis",
+                      "titulo_normalizado":  "megalopolis",
                       "titulo_original":  "Megalópolis",
                       "year":  "2024"
                   },
@@ -180,7 +180,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "4501",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/4501/thumb/1779323353?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "misinimposiblesentenciafinal",
+                      "titulo_normalizado":  "misionimposiblesentenciafinal",
                       "titulo_original":  "Misión: Imposible - Sentencia final",
                       "year":  "2025"
                   },
@@ -212,7 +212,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "8108",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/8108/thumb/1782668114?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "proyectosalvacin",
+                      "titulo_normalizado":  "proyectosalvacion",
                       "titulo_original":  "Proyecto Salvación",
                       "year":  "2026"
                   },
@@ -352,7 +352,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "8090",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/8090/thumb/1782408198?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "berln",
+                      "titulo_normalizado":  "berlin",
                       "titulo_original":  "Berlín",
                       "year":  "2023"
                   },
@@ -444,7 +444,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "7058",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/7058/thumb/1782182939?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "estacinonce",
+                      "titulo_normalizado":  "estaciononce",
                       "titulo_original":  "Estación Once",
                       "year":  "2021"
                   },
@@ -561,7 +561,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "5006",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5006/thumb/1782007423?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "legin",
+                      "titulo_normalizado":  "legion",
                       "titulo_original":  "Legión",
                       "year":  "2017"
                   },
@@ -577,7 +577,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "5039",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5039/thumb/1782007423?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "losaosnuevos",
+                      "titulo_normalizado":  "losanosnuevos",
                       "titulo_original":  "Los años nuevos",
                       "year":  "2024"
                   },
@@ -693,7 +693,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "5126",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5126/thumb/1779409347?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "squineres",
+                      "titulo_normalizado":  "sequieneres",
                       "titulo_original":  "Sé quién eres",
                       "year":  "2017"
                   },
@@ -728,7 +728,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "3811",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/3811/thumb/1782007416?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "starwarscrnicasdelimperio",
+                      "titulo_normalizado":  "starwarscronicasdelimperio",
                       "titulo_original":  "Star Wars: Crónicas del Imperio",
                       "year":  "2024"
                   },
@@ -736,7 +736,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "3825",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/3825/thumb/1782007417?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "starwarscrnicasdelsubmundo",
+                      "titulo_normalizado":  "starwarscronicasdelsubmundo",
                       "titulo_original":  "Star Wars: Crónicas del submundo",
                       "year":  "2025"
                   },
@@ -760,7 +760,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "3938",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/3938/thumb/1782007418?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "starwarslascrnicasjedi",
+                      "titulo_normalizado":  "starwarslascronicasjedi",
                       "titulo_original":  "Star Wars: Las crónicas jedi",
                       "year":  "2022"
                   },
@@ -781,7 +781,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "3820",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/3820/thumb/1782007417?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "starwarstripulacinperdida",
+                      "titulo_normalizado":  "starwarstripulacionperdida",
                       "titulo_original":  "Star Wars: Tripulación perdida",
                       "year":  "2024",
                       "aliases":  [
@@ -818,7 +818,7 @@
                       "tipo":  "SERIE",
                       "ratingKey":  "5366",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5366/thumb/1782007427?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "unlugarparasoar",
+                      "titulo_normalizado":  "unlugarparasonar",
                       "titulo_original":  "Un lugar para soñar",
                       "year":  "2019"
                   },
@@ -850,7 +850,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "8092",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/8092/thumb/1782046250?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "laenergadelamor",
+                      "titulo_normalizado":  "laenergiadelamor",
                       "titulo_original":  "La energía del amor",
                       "year":  2023
                   },
@@ -858,7 +858,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "5035",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5035/thumb/1779323000?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "captulo22",
+                      "titulo_normalizado":  "capitulo22",
                       "titulo_original":  "Capítulo 22",
                       "year":  2019
                   },
@@ -874,7 +874,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "5492",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5492/thumb/1779323109?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "adismundocruel",
+                      "titulo_normalizado":  "adiosmundocruel",
                       "titulo_original":  "Adiós, mundo cruel",
                       "year":  2025
                   },
@@ -882,7 +882,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "5020",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5020/thumb/1779322843?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "captulo10",
+                      "titulo_normalizado":  "capitulo10",
                       "titulo_original":  "Capítulo 10",
                       "year":  2018
                   },
@@ -890,7 +890,7 @@
                       "tipo":  "PELICULA",
                       "ratingKey":  "5008",
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5008/thumb/1779322953?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "captulo1",
+                      "titulo_normalizado":  "capitulo1",
                       "titulo_original":  "Capítulo 1",
                       "year":  2017
                   },
@@ -920,7 +920,7 @@
                       "aliases":  [
                                       "Kingsman, El Circulo De Oro"
                                   ],
-                      "titulo_normalizado":  "kingsmanelcrculodeoro",
+                      "titulo_normalizado":  "kingsmanelcirculodeoro",
                       "titulo_original":  "Kingsman: El círculo de oro",
                       "year":  2017
                   },
@@ -931,7 +931,7 @@
                       "aliases":  [
                                       "The King\u0027s Man, La Primera Mision"
                                   ],
-                      "titulo_normalizado":  "thekingsmanlaprimeramisin",
+                      "titulo_normalizado":  "thekingsmanlaprimeramision",
                       "titulo_original":  "The King\u0027s Man: La primera misión",
                       "year":  2021
                   }

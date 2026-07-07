@@ -22,7 +22,14 @@ function Get-PlexCacheFilePath {
 
 function Normalize-CacheKey {
     param([string]$Text)
-    return $Text.ToLower().Trim() -replace '[^a-z0-9]', ''
+
+    if ([string]::IsNullOrWhiteSpace($Text)) {
+        return ""
+    }
+
+    $Text = $Text.ToLower().Trim()
+    $Text = Remove-Accents $Text
+    return $Text -replace '[^a-z0-9]', ''
 }
 
 function Test-CacheItemKeyMatch {
@@ -222,6 +229,15 @@ function Add-ToCache {
             Add-CacheAlias -RatingKey $RatingKey -Alias $alias -ProjectRoot $ProjectRoot
         }
         return
+    }
+
+    $duplicate = $script:PlexCache | Where-Object {
+        $_.titulo_normalizado -eq $normalizedTitle -and
+        [string]$_.ratingKey -ne [string]$RatingKey
+    } | Select-Object -First 1
+
+    if ($duplicate) {
+        Write-Log "Caché: colisión de clave '$normalizedTitle' entre '$Title' y '$($duplicate.titulo_original)'" -Level "WARNING"
     }
 
     $newItem = @{
