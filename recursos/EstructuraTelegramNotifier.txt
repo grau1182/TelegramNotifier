@@ -1,25 +1,29 @@
 ﻿
 TelegramNotifier
-├── backups
+├── backups/
+│   ├── backup-production.ps1
 │   ├── qbittorrent-notify.ps1
-│   ├── TelegramTorrent_funcional.ps1
-│   ├── TelegramTorrent_V2.1.ps1
-│   ├── TelegramTorrent_V3.ps1
-│   └── TelegramTorrent_V4_con_poster_inacabado.ps1
-├── logs
-│   ├── TelegramNotifier.log
-│   └── telegramtorrent.log
-├── test
-│   ├── logs
-│   ├── results
-│   ├── AnalyzeTests.ps1
-│   ├── GenerateTests.ps1
-│   ├── RunTests.ps1
+│   └── RESTORE.md
+├── core/
+│   ├── lib/
+│   │   ├── cache-manager.ps1
+│   │   ├── logger.ps1
+│   │   ├── plex-functions.ps1
+│   │   └── utilities.ps1
+│   ├── logs/                        # Logs producción (TelegramNotifier_YYYYMMDD.log)
+│   ├── run.ps1
+│   ├── README.md
+│   └── TelegramNotifier.ps1
+├── recursos/
+│   ├── plex_cache.json
+│   ├── torrents.csv
+│   └── ...
+├── test/
+│   ├── lib/
+│   ├── logs/                        # Logs test manual (TelegramNotifier_Test.log)
+│   ├── results/
+│   ├── validation/
 │   ├── TelegramTorrent_Test.ps1
-│   └── tests.csv
-├── AnalyzeTests.ps1
-├── EstructuraTelegramNotifier.txt
-├── GenerarEstructura.ps1
-├── listado_nombres_ficheros.bat
-├── TelegramTorrent.ps1
-└── title_overrides.json
+│   ├── test_v4_wrapper.ps1
+│   └── README_TEST.md
+└── README.md
