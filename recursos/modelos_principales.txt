@@ -2,75 +2,88 @@
 │ MODELOS OLLAMA INSTALADOS                                                   │
 └─────────────────────────────────────────────────────────────────────────────┘
 
-qwen2.5-coder:7b   → ⚡ Muy rápido; ideal para cambios pequeños, scripts, autocompletado y tareas de programación sencillas.
-llama3.1:8b        → 💬 Muy rápido; excelente para chat, documentación, explicaciones y consultas técnicas generales.
-qwen2.5-coder:14b  → ⭐ Equilibrio perfecto; modelo principal para Cline, desarrollo diario, refactorizaciones y proyectos grandes.
-deepseek-r1:14b    → 🧠 Especialista en razonamiento; ideal para depurar errores difíciles, analizar código y resolver problemas complejos.
-gemma3:27b         → 🚀 El más potente; pensado para auditorías completas, arquitectura, grandes refactorizaciones y análisis de proyectos enteros.
+llama3.1:8b         → ⚡ El más rápido; ideal para chat, documentación, consultas técnicas y explicaciones.
+deepseek-r1:14b     → 🧠 Especialista en razonamiento; depuración, algoritmos y problemas complejos.
+devstral:24b        → 🤖 Especialista en agentes; Cline, edición multiarchivo y uso de herramientas.
+qwen3-coder:30b     → ⭐ Modelo principal; desarrollo diario, Cline, refactorizaciones y proyectos grandes.
+gemma3:27b          → 🚀 El más potente; auditorías completas, arquitectura y análisis de proyectos enteros.
 
 
-① qwen2.5-coder:7b
-───────────────────────────────────────────────────────────────────────────────
-Tamaño        : 4.7 GB
-Velocidad     : ★★★★★
-Calidad       : ★★★☆☆
-RAM/VRAM      : Muy baja
-Uso GPU       : Muy ligero
+═══════════════════════════════════════════════════════════════════════════════
+RECOMENDACIÓN DE USO
+═══════════════════════════════════════════════════════════════════════════════
 
-Ideal para:
-✔ Autocompletar código
-✔ Scripts PowerShell
-✔ Python
-✔ Bash
-✔ Cambios pequeños
-✔ Revisiones rápidas
+⚡ llama3.1:8b
+    → Chat, documentación, consultas rápidas y explicaciones técnicas.
 
-No recomendable para:
-✘ Refactorizaciones enormes
-✘ Proyectos de miles de líneas
+🧠 deepseek-r1:14b
+    → Bugs difíciles, razonamiento profundo y análisis complejos.
+
+🤖 devstral:24b
+    → Grandes cambios automáticos, edición de múltiples archivos y tareas agentic con Cline.
+
+⭐ qwen3-coder:30b
+    → Modelo por defecto para Cline, VS Code y desarrollo diario.
+
+🚀 gemma3:27b
+    → Auditorías completas, arquitectura y revisión global del proyecto.
 
 
-② llama3.1:8b
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ MODELOS FUTUROS / MEJORAS                                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+🚀 deepseek-v4
+    → Sucesor de DeepSeek-R1.
+       Orientado a razonamiento avanzado y programación de alto nivel.
+       Principalmente disponible en Cloud.
+
+🏆 kimi-k2.7-code
+    → Uno de los modelos de programación más prometedores.
+       Excelente para agentes, contexto largo y generación de código.
+       Principalmente disponible en Cloud.
+
+⚡ glm-5.x
+    → Muy potente para programación y razonamiento.
+       Interesante cuando exista versión local optimizada para Ollama.
+
+💎 MiniMax M3
+    → Modelo de última generación con gran rendimiento como agente.
+       Especialmente interesante para proyectos grandes.
+       Actualmente orientado a Cloud.
+
+🌟 Gemma 4
+    → Futuro sucesor de Gemma3.
+       Conviene seguir su evolución para auditorías y arquitectura.
+
+🌟 Futuras versiones de Qwen3-Coder
+    → Posibles versiones superiores (60B/100B+).
+       Candidatas a convertirse en el modelo principal para desarrollo local.
+	   
+
+
+① llama3.1:8b
 ───────────────────────────────────────────────────────────────────────────────
 Tamaño        : 4.9 GB
 Velocidad     : ★★★★★
 Calidad       : ★★★★☆
 RAM/VRAM      : Baja
-Uso GPU       : Ligero
+Uso GPU       : Muy ligero
 
 Ideal para:
 ✔ Chat general
 ✔ Explicar código
 ✔ Documentación
-✔ Ayuda técnica
+✔ Consultas rápidas
 ✔ Brainstorming
+✔ Ayuda técnica
 
 No recomendable para:
 ✘ Grandes tareas de programación automática
+✘ Refactorizaciones extensas
 
 
-③ qwen2.5-coder:14b   ⭐ MODELO PRINCIPAL
-───────────────────────────────────────────────────────────────────────────────
-Tamaño        : 9 GB
-Velocidad     : ★★★★☆
-Calidad       : ★★★★★
-RAM/VRAM      : Media
-Uso GPU       : Medio
-
-Ideal para:
-✔ Cline
-✔ VS Code
-✔ Refactorizaciones
-✔ PowerShell complejo
-✔ Python
-✔ Proyectos grandes
-✔ Debug
-✔ Arquitectura
-
-Es el modelo que deberías usar el 90% del tiempo.
-
-
-④ deepseek-r1:14b
+② deepseek-r1:14b
 ───────────────────────────────────────────────────────────────────────────────
 Tamaño        : 9 GB
 Velocidad     : ★★★☆☆
@@ -80,15 +93,61 @@ Uso GPU       : Medio
 
 Especialidad:
 ✔ Razonamiento profundo
-✔ Algoritmos
 ✔ Resolver bugs difíciles
+✔ Algoritmos
 ✔ Analizar código complejo
 ✔ Buscar causas de errores
 
 Menos recomendable para:
-✘ Escribir mucho código nuevo rápidamente
+✘ Generar grandes cantidades de código rápidamente
 
 Úsalo cuando un problema "se resiste".
+
+
+③ devstral:24b   ⭐ ESPECIALISTA EN AGENTES
+───────────────────────────────────────────────────────────────────────────────
+Tamaño        : 14 GB
+Velocidad     : ★★★☆☆
+Calidad       : ★★★★★
+RAM/VRAM      : Media-Alta
+Uso GPU       : Alto
+
+Ideal para:
+✔ Cline
+✔ Agentes IA
+✔ Edición multiarchivo
+✔ Tool Calling
+✔ Grandes modificaciones automáticas
+✔ Automatización de proyectos
+
+No recomendable para:
+✘ Consultas rápidas
+✘ Chat general
+
+Es el modelo específico para trabajar como agente.
+
+
+④ qwen3-coder:30b   ⭐ MODELO PRINCIPAL
+───────────────────────────────────────────────────────────────────────────────
+Tamaño        : 18 GB
+Velocidad     : ★★★★☆
+Calidad       : ★★★★★+
+RAM/VRAM      : Alta
+Uso GPU       : Alto
+
+Ideal para:
+✔ Desarrollo diario
+✔ Cline
+✔ VS Code
+✔ Refactorizaciones
+✔ Python
+✔ PowerShell
+✔ Arquitectura
+✔ Proyectos grandes
+✔ Debug
+✔ Contextos largos
+
+Es el modelo recomendado para utilizar el 90% del tiempo.
 
 
 ⑤ gemma3:27b   ⭐ MODELO MÁS POTENTE
@@ -105,65 +164,11 @@ Ideal para:
 ✔ Revisar proyectos enteros
 ✔ Refactorizaciones enormes
 ✔ Diseñar sistemas
-✔ Contextos largos
+✔ Contextos muy largos
+✔ Revisión global de código
 
 No usar para:
 ✘ Cambios pequeños
 ✘ Consultas rápidas
 
-Es el "modo experto".
-
-
-═══════════════════════════════════════════════════════════════════════════════
-RECOMENDACIÓN DE USO
-═══════════════════════════════════════════════════════════════════════════════
-
-⚡ qwen2.5-coder:7b
-    → Cambios pequeños y rápidos.
-
-⚡ llama3.1:8b
-    → Chat, documentación y consultas generales.
-
-⭐ qwen2.5-coder:14b
-    → Modelo por defecto para Cline.
-
-🧠 deepseek-r1:14b
-    → Cuando hay que pensar mucho antes de programar.
-
-🚀 gemma3:27b
-    → Auditorías y tareas enormes.
-
-
-═══════════════════════════════════════════════════════════════════════════════
-ORDEN DE POTENCIA
-═══════════════════════════════════════════════════════════════════════════════
-
-qwen2.5-coder:7b
-        ↓
-llama3.1:8b
-        ↓
-qwen2.5-coder:14b
-        ↓
-deepseek-r1:14b
-        ↓
-gemma3:27b
-
-
-═══════════════════════════════════════════════════════════════════════════════
-PARA TU PROYECTO TelegramTorrent.ps1
-═══════════════════════════════════════════════════════════════════════════════
-
-✔ Pequeñas modificaciones
-    → qwen2.5-coder:7b
-
-✔ Desarrollo habitual
-    → qwen2.5-coder:14b ⭐
-
-✔ Bugs complicados (Plex, Regex, PowerShell)
-    → deepseek-r1:14b
-
-✔ Auditoría completa del proyecto
-    → gemma3:27b
-
-✔ Explicaciones o documentación
-    → llama3.1:8b
+Es el "modo experto" para las tareas más exigentes.
