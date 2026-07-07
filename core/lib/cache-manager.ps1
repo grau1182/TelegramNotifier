@@ -123,14 +123,42 @@ function Initialize-PlexCache {
     $script:PlexCacheLoaded = $true
 }
 
-function Add-CacheAlias {
+function Get-CacheFileData {
+    param([string]$ProjectRoot = "")
+
+    $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $ProjectRoot
+    if (-not (Test-Path $cacheFilePath)) {
+        return $null
+    }
+
+    return @{
+        Path = $cacheFilePath
+        Data = Get-Content $cacheFilePath -Encoding UTF8 | ConvertFrom-Json
+    }
+}
+
+function Save-CacheToFile {
     param(
-        [string]$RatingKey,
-        [string]$Alias,
+        $CacheData,
         [string]$ProjectRoot = ""
     )
 
-    if ([string]::IsNullOrWhiteSpace($RatingKey) -or [string]::IsNullOrWhiteSpace($Alias)) {
+    $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $ProjectRoot
+    $CacheData.totalItems = @($CacheData.cache).Count
+    $CacheData.lastUpdated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
+    $CacheData | ConvertTo-Json -Depth 5 | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
+
+    return $CacheData.totalItems
+}
+
+function Add-CacheAliases {
+    param(
+        [string]$RatingKey,
+        [string[]]$Aliases,
+        [string]$ProjectRoot = ""
+    )
+
+    if ([string]::IsNullOrWhiteSpace($RatingKey) -or -not $Aliases -or $Aliases.Count -eq 0) {
         return $false
     }
 
@@ -139,53 +167,60 @@ function Add-CacheAlias {
         return $false
     }
 
-    $aliasKey = Normalize-CacheKey $Alias
-    if ($cacheItem.titulo_normalizado -eq $aliasKey) {
-        return $false
-    }
-
     if (-not $cacheItem.aliases) {
         $cacheItem.aliases = @()
     }
 
-    foreach ($existingAlias in @($cacheItem.aliases)) {
-        if ((Normalize-CacheKey $existingAlias) -eq $aliasKey) {
-            return $false
-        }
-    }
-
-    $cacheItem.aliases += $Alias
-
-    try {
-        $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $ProjectRoot
-        if (-not (Test-Path $cacheFilePath)) {
-            return $true
+    $added = @()
+    foreach ($Alias in @($Aliases)) {
+        if ([string]::IsNullOrWhiteSpace($Alias)) {
+            continue
         }
 
-        $cacheData = Get-Content $cacheFilePath -Encoding UTF8 | ConvertFrom-Json
-        $fileItem = $cacheData.cache | Where-Object { [string]$_.ratingKey -eq [string]$RatingKey } | Select-Object -First 1
-        if (-not $fileItem) {
-            return $true
+        $aliasKey = Normalize-CacheKey $Alias
+        if ($cacheItem.titulo_normalizado -eq $aliasKey) {
+            continue
         }
 
-        if (-not $fileItem.aliases) {
-            $fileItem | Add-Member -NotePropertyName aliases -NotePropertyValue @() -Force
-        }
-
-        $fileAliases = @($fileItem.aliases)
         $alreadyExists = $false
-        foreach ($existingAlias in $fileAliases) {
+        foreach ($existingAlias in @($cacheItem.aliases)) {
             if ((Normalize-CacheKey $existingAlias) -eq $aliasKey) {
                 $alreadyExists = $true
                 break
             }
         }
 
-        if (-not $alreadyExists) {
-            $fileItem.aliases = @($fileAliases + $Alias)
-            $cacheData.lastUpdated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
-            $cacheData | ConvertTo-Json -Depth 5 | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
-            Write-Log "Caché actualizado: alias '$Alias' agregado a RatingKey $RatingKey, $($cacheData.cache.Count) títulos en total"
+        if ($alreadyExists) {
+            continue
+        }
+
+        $cacheItem.aliases += $Alias
+        $added += $Alias
+    }
+
+    if ($added.Count -eq 0) {
+        return $false
+    }
+
+    try {
+        $cacheFile = Get-CacheFileData -ProjectRoot $ProjectRoot
+        if (-not $cacheFile) {
+            return $true
+        }
+
+        $fileItem = $cacheFile.Data.cache | Where-Object { [string]$_.ratingKey -eq [string]$RatingKey } | Select-Object -First 1
+        if (-not $fileItem) {
+            return $true
+        }
+
+        $fileItem.aliases = @($cacheItem.aliases)
+        $totalItems = Save-CacheToFile -CacheData $cacheFile.Data -ProjectRoot $ProjectRoot
+
+        if ($added.Count -eq 1) {
+            Write-Log "Caché actualizado: alias '$($added[0])' agregado a RatingKey $RatingKey, $totalItems títulos en total"
+        }
+        else {
+            Write-Log "Caché actualizado: $($added.Count) aliases agregados a RatingKey $RatingKey, $totalItems títulos en total"
         }
     }
     catch {
@@ -193,6 +228,16 @@ function Add-CacheAlias {
     }
 
     return $true
+}
+
+function Add-CacheAlias {
+    param(
+        [string]$RatingKey,
+        [string]$Alias,
+        [string]$ProjectRoot = ""
+    )
+
+    return Add-CacheAliases -RatingKey $RatingKey -Aliases @($Alias) -ProjectRoot $ProjectRoot
 }
 
 function Add-ToCache {
@@ -214,8 +259,8 @@ function Add-ToCache {
     } | Select-Object -First 1
 
     if ($existingByKey) {
-        foreach ($alias in @($Aliases)) {
-            Add-CacheAlias -RatingKey $RatingKey -Alias $alias -ProjectRoot $ProjectRoot
+        if ($Aliases -and $Aliases.Count -gt 0) {
+            Add-CacheAliases -RatingKey $RatingKey -Aliases $Aliases -ProjectRoot $ProjectRoot
         }
         return
     }
@@ -225,8 +270,8 @@ function Add-ToCache {
     }
 
     if ($exists) {
-        foreach ($alias in @($Aliases)) {
-            Add-CacheAlias -RatingKey $RatingKey -Alias $alias -ProjectRoot $ProjectRoot
+        if ($Aliases -and $Aliases.Count -gt 0) {
+            Add-CacheAliases -RatingKey $RatingKey -Aliases $Aliases -ProjectRoot $ProjectRoot
         }
         return
     }
@@ -256,19 +301,14 @@ function Add-ToCache {
     $script:PlexCache += $newItem
 
     try {
-        $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $ProjectRoot
-
-        if (Test-Path $cacheFilePath) {
-            $cacheData = Get-Content $cacheFilePath -Encoding UTF8 | ConvertFrom-Json
-            $cacheData.cache += $newItem
-            $cacheData.totalItems = $cacheData.cache.Count
-            $cacheData.lastUpdated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
-
-            $cacheJson = $cacheData | ConvertTo-Json -Depth 5
-            $cacheJson | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
-
-            Write-Log "Caché actualizado: Nuevo título '$Title' agregado con RatingKey $RatingKey, $($cacheData.cache.Count) títulos en total"
+        $cacheFile = Get-CacheFileData -ProjectRoot $ProjectRoot
+        if (-not $cacheFile) {
+            return
         }
+
+        $cacheFile.Data.cache += $newItem
+        $totalItems = Save-CacheToFile -CacheData $cacheFile.Data -ProjectRoot $ProjectRoot
+        Write-Log "Caché actualizado: Nuevo título '$Title' agregado con RatingKey $RatingKey, $totalItems títulos en total"
     }
     catch {
         Write-Log "No se pudo actualizar caché: $($_.Exception.Message)" -Level "WARNING"
