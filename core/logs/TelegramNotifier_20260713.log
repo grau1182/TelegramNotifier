@@ -1,0 +1,28 @@
+﻿[2026-07-13 14:44:48] [INFO] ========================================
+[2026-07-13 14:44:48] [INFO] Procesando torrent: La Casa Del Dragon S03E04 2160p HMAX WEB-DL H.265 ESP-ENG DDP 5.1 SUBS.mkv
+[2026-07-13 14:44:48] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON\La Casa Del Dragon S03E04 2160p HMAX WEB-DL H.265 ESP-ENG DDP 5.1 SUBS.mkv
+[2026-07-13 14:44:48] [INFO] Tipo: EPISODIO (S03E04)
+[2026-07-13 14:44:48] [INFO] Título detectado: La Casa Del Dragon
+[2026-07-13 14:44:48] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon' (Tipo: EPISODIO)
+[2026-07-13 14:44:48] [INFO] Inicializando caché...
+[2026-07-13 14:44:48] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-13 14:44:48] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-13 14:44:48] [INFO] Búsqueda poster: título='La Casa Del Dragon', RatingKey='8103'
+[2026-07-13 14:44:49] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-13 14:44:49] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-13 14:44:51] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-13 14:44:51] [INFO] ========================================
+[2026-07-13 18:08:42] [INFO] ========================================
+[2026-07-13 18:08:42] [INFO] Procesando torrent: La Casa del Dragon (2022) S03E04 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-13 18:08:42] [INFO] Ruta: G:\SERIES\LA_CASA_DEL_DRAGON\La Casa del Dragon (2022) S03E04 [AMZN WEB-DL 2160p HEVC DV-HDR10 ES DD+ 5.1 Atmos Subs][HDO].mkv
+[2026-07-13 18:08:42] [INFO] Tipo: EPISODIO (S03E04)
+[2026-07-13 18:08:42] [INFO] Título detectado: La Casa Del Dragon (2022)
+[2026-07-13 18:08:42] [INFO] Iniciando busqueda de poster para 'La Casa Del Dragon (2022)' (Tipo: EPISODIO)
+[2026-07-13 18:08:42] [INFO] Inicializando caché...
+[2026-07-13 18:08:42] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-13 18:08:42] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-13 18:08:42] [INFO] Búsqueda poster: título='La Casa Del Dragon', RatingKey='8103'
+[2026-07-13 18:08:42] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-13 18:08:43] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8103/thumb/1782873897?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-13 18:08:44] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-13 18:08:44] [INFO] ========================================

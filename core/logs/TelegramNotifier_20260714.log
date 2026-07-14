@@ -1,0 +1,27 @@
+﻿[2026-07-14 21:52:51] [INFO] ========================================
+[2026-07-14 21:52:51] [INFO] Procesando torrent: Blade Runner 2049 (2017) [Audio Editado][Open Matte-Hybrid][Remaster HDR 2160p HEVC DV-HDR10+ ES TrueHD Atmos 7.1][GSA][HDO].mkv
+[2026-07-14 21:52:51] [INFO] Ruta: G:\PELIS\Blade Runner 2049 (2017) [Audio Editado][Open Matte-Hybrid][Remaster HDR 2160p HEVC DV-HDR10+ ES TrueHD Atmos 7.1][GSA][HDO].mkv
+[2026-07-14 21:52:51] [INFO] Tipo: PELICULA (2049)
+[2026-07-14 21:52:51] [INFO] Título detectado: Blade Runner
+[2026-07-14 21:52:51] [INFO] Iniciando busqueda de poster para 'Blade Runner' (Tipo: PELICULA)
+[2026-07-14 21:52:51] [INFO] Inicializando caché...
+[2026-07-14 21:52:51] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-14 21:52:51] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-14 21:52:51] [INFO] Búsqueda poster: título='Blade Runner', RatingKey='4424'
+[2026-07-14 21:52:51] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-14 21:52:51] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/4424/thumb/1778375354?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-14 21:52:53] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-14 21:52:53] [INFO] ========================================
+[2026-07-14 23:11:37] [INFO] ========================================
+[2026-07-14 23:11:37] [INFO] Procesando torrent: Blade Runner 2049 (2017) [Remastered 4K][Remastered 2160p HEVC SDR-RAW ES DTS-HD 7.1 EN TrueHD 7.1.4 Atmos Subs]HDO.mkv
+[2026-07-14 23:11:37] [INFO] Ruta: G:\PELIS\Blade Runner 2049 (2017) [Remastered 4K][Remastered 2160p HEVC SDR-RAW ES DTS-HD 7.1 EN TrueHD 7.1.4 Atmos Subs]HDO.mkv
+[2026-07-14 23:11:37] [INFO] Tipo: PELICULA (2049)
+[2026-07-14 23:11:37] [INFO] Título detectado: Blade Runner
+[2026-07-14 23:11:37] [INFO] Iniciando busqueda de poster para 'Blade Runner' (Tipo: PELICULA)
+[2026-07-14 23:11:37] [INFO] Inicializando caché...
+[2026-07-14 23:11:37] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-14 23:11:37] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-14 23:11:37] [INFO] Búsqueda poster: título='Blade Runner', RatingKey='4424'
+[2026-07-14 23:11:38] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/4424/thumb/1778375354?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-14 23:11:38] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-14 23:11:38] [INFO] ========================================

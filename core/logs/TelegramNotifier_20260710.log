@@ -1,0 +1,78 @@
+﻿[2026-07-10 08:25:52] [INFO] ========================================
+[2026-07-10 08:25:52] [INFO] Procesando torrent: Silo S03E02 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-10 08:25:52] [INFO] Ruta: G:\SERIES\SILO\Silo S03E02 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD+ Atmos 5.1][HDO].mkv
+[2026-07-10 08:25:52] [INFO] Tipo: EPISODIO (S03E02)
+[2026-07-10 08:25:52] [INFO] Título detectado: Silo
+[2026-07-10 08:25:52] [INFO] Iniciando busqueda de poster para 'Silo' (Tipo: EPISODIO)
+[2026-07-10 08:25:52] [INFO] Inicializando caché...
+[2026-07-10 08:25:52] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-10 08:25:52] [INFO] Caché cargado desde archivo: 112 títulos
+[2026-07-10 08:25:52] [INFO] Búsqueda poster: título='Silo', RatingKey='8139'
+[2026-07-10 08:25:52] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-10 08:25:52] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8139/thumb/1783067244?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-10 08:25:55] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-10 08:25:55] [INFO] ========================================
+[2026-07-10 08:45:17] [INFO] ========================================
+[2026-07-10 08:45:17] [INFO] Procesando torrent: Shelter - El Protector (2026) [Audio DCP][UHD Remux 2160p HEVC HDR10 ES True-HD Atmos 7.1 Subs][Grupo Custom HDO].mkv
+[2026-07-10 08:45:17] [INFO] Ruta: G:\PELIS\Shelter - El Protector (2026) [Audio DCP][UHD Remux 2160p HEVC HDR10 ES True-HD Atmos 7.1 Subs][Grupo Custom HDO].mkv
+[2026-07-10 08:45:17] [INFO] Tipo: PELICULA (2026)
+[2026-07-10 08:45:17] [INFO] Título detectado: Shelter El Protector
+[2026-07-10 08:45:17] [INFO] Iniciando busqueda de poster para 'Shelter El Protector' (Tipo: PELICULA)
+[2026-07-10 08:45:17] [INFO] Inicializando caché...
+[2026-07-10 08:45:17] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-10 08:45:17] [INFO] Caché cargado desde archivo: 112 títulos
+[2026-07-10 08:45:18] [INFO] Búsqueda poster: título='Shelter El Protector', RatingKey=''
+[2026-07-10 08:45:18] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-10 08:45:18] [INFO] Escaneo parcial activado: section=1 path=G:\PELIS\Shelter - El Protector (2026) [Audio DCP][UHD Remux 2160p HEVC HDR10 ES True-HD Atmos 7.1 Subs][Grupo Custom HDO].mkv
+[2026-07-10 08:45:18] [INFO] Item encontrado por ruta (intento 1, puntuación 165): Shelter: El Protector
+[2026-07-10 08:45:18] [INFO] Poster final seleccionado (Score: 165, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8174/thumb/1783664859?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-10 08:45:18] [INFO] Caché actualizado: Nuevo título 'Shelter: El Protector' agregado con RatingKey 8174, 113 títulos en total
+[2026-07-10 08:45:18] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8174/thumb/1783664859?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-10 08:45:21] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-10 08:45:21] [INFO] ========================================
+[2026-07-10 09:05:21] [INFO] ========================================
+[2026-07-10 09:05:21] [INFO] Procesando torrent: Greenland 2 (2026) [PROPER][Audio Editado][UHDRemux 2160p HEVC HDR10 ES TrueHD Atmos 7.1][HDO].mkv
+[2026-07-10 09:05:21] [INFO] Ruta: G:\PELIS\Greenland 2 (2026) [PROPER][Audio Editado][UHDRemux 2160p HEVC HDR10 ES TrueHD Atmos 7.1][HDO].mkv
+[2026-07-10 09:05:24] [INFO] Tipo: PELICULA (2026)
+[2026-07-10 09:05:24] [INFO] Título detectado: Greenland 2
+[2026-07-10 09:05:24] [INFO] Iniciando busqueda de poster para 'Greenland 2' (Tipo: PELICULA)
+[2026-07-10 09:05:24] [INFO] Inicializando caché...
+[2026-07-10 09:05:24] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-10 09:05:24] [INFO] Caché cargado desde archivo: 113 títulos
+[2026-07-10 09:05:24] [INFO] Búsqueda poster: título='Greenland 2', RatingKey=''
+[2026-07-10 09:05:25] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-10 09:05:25] [INFO] Escaneo parcial activado: section=1 path=G:\PELIS\Greenland 2 (2026) [PROPER][Audio Editado][UHDRemux 2160p HEVC HDR10 ES TrueHD Atmos 7.1][HDO].mkv
+[2026-07-10 09:05:25] [INFO] Item encontrado por ruta (intento 1, puntuación 190): Greenland 2
+[2026-07-10 09:05:25] [INFO] Poster final seleccionado (Score: 190, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8179/thumb/1783665998?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-10 09:05:25] [INFO] Caché actualizado: Nuevo título 'Greenland 2' agregado con RatingKey 8179, 114 títulos en total
+[2026-07-10 09:05:25] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8179/thumb/1783665998?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-10 09:05:26] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-10 09:05:26] [INFO] ========================================
+[2026-07-10 16:21:01] [INFO] ========================================
+[2026-07-10 16:21:01] [INFO] Procesando torrent: Greenland 2 (2026) [PROPER][AudioEditado][Remastered 4K HDR][Remastered 2160p HEVC DV-HDR10+ ES TrueHD Atmos 7.1][HDO].mkv
+[2026-07-10 16:21:01] [INFO] Ruta: G:\PELIS\Greenland 2 (2026) [PROPER][AudioEditado][Remastered 4K HDR][Remastered 2160p HEVC DV-HDR10+ ES TrueHD Atmos 7.1][HDO].mkv
+[2026-07-10 16:21:01] [INFO] Tipo: PELICULA (2026)
+[2026-07-10 16:21:01] [INFO] Título detectado: Greenland 2
+[2026-07-10 16:21:01] [INFO] Iniciando busqueda de poster para 'Greenland 2' (Tipo: PELICULA)
+[2026-07-10 16:21:01] [INFO] Inicializando caché...
+[2026-07-10 16:21:01] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-10 16:21:02] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-10 16:21:02] [INFO] Búsqueda poster: título='Greenland 2', RatingKey='8179'
+[2026-07-10 16:21:02] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-10 16:21:02] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8179/thumb/1783665998?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-10 16:21:03] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-10 16:21:03] [INFO] ========================================
+[2026-07-10 19:23:20] [INFO] ========================================
+[2026-07-10 19:23:20] [INFO] Procesando torrent: Ciudad de las Estrellas (2026) S01 [PACK][APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO]
+[2026-07-10 19:23:20] [INFO] Ruta: G:\SERIES\CIUDAD_DE_LAS_ESTRELLAS
+[2026-07-10 19:23:21] [INFO] Tipo: TEMPORADA (S1 con 9 episodios)
+[2026-07-10 19:23:21] [INFO] Título detectado: Ciudad De Las Estrellas (2026)
+[2026-07-10 19:23:21] [INFO] Iniciando busqueda de poster para 'Ciudad De Las Estrellas (2026)' (Tipo: TEMPORADA)
+[2026-07-10 19:23:21] [INFO] Inicializando caché...
+[2026-07-10 19:23:21] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-10 19:23:21] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-10 19:23:21] [INFO] Búsqueda poster: título='Ciudad De Las Estrellas', RatingKey='8030'
+[2026-07-10 19:23:21] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-10 19:23:21] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8030/thumb/1782873896?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-10 19:23:24] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-10 19:23:24] [INFO] ========================================

@@ -1,0 +1,14 @@
+﻿[2026-07-11 19:24:40] [INFO] ========================================
+[2026-07-11 19:24:40] [INFO] Procesando torrent: The Acolyte (2024) S01 [PROPER][PACK][DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO]
+[2026-07-11 19:24:40] [INFO] Ruta: G:\SERIES\STAR_WARS_THE_ACOLYTE
+[2026-07-11 19:24:40] [INFO] Tipo: TEMPORADA (S1 con 8 episodios)
+[2026-07-11 19:24:40] [INFO] Título detectado: The Acolyte (2024)
+[2026-07-11 19:24:40] [INFO] Iniciando busqueda de poster para 'The Acolyte (2024)' (Tipo: TEMPORADA)
+[2026-07-11 19:24:40] [INFO] Inicializando caché...
+[2026-07-11 19:24:40] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-11 19:24:40] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-11 19:24:40] [INFO] Búsqueda poster: título='The Acolyte', RatingKey='1318'
+[2026-07-11 19:24:40] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-11 19:24:40] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/1318/thumb/1782007413?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-11 19:24:41] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-11 19:24:41] [INFO] ========================================

@@ -1,4 +1,4 @@
-{
+﻿{
     "cache":  [
                   {
                       "tipo":  "PELICULA",
@@ -934,10 +934,26 @@
                       "titulo_normalizado":  "thekingsmanlaprimeramision",
                       "titulo_original":  "The King\u0027s Man: La primera misión",
                       "year":  2021
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8174",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8174/thumb/1783664859?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "shelterelprotector",
+                      "titulo_original":  "Shelter: El Protector",
+                      "year":  2026
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8179",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8179/thumb/1783665998?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "greenland2",
+                      "titulo_original":  "Greenland 2",
+                      "year":  2026
                   }
               ],
-    "totalItems":  112,
+    "totalItems":  114,
     "description":  "Caché persistente de Plex - Actualizado automáticamente",
-    "lastUpdated":  "2026-07-06T19:00:15Z",
+    "lastUpdated":  "2026-07-10T09:05:25Z",
     "version":  "1.0"
 }
