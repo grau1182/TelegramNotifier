@@ -161,25 +161,30 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 .\run_test_pipeline.ps1 -QuickTest
 ```
 
-### 6. Validación Kingsman (scoring sin Plex)
+### 6. Validación unitaria (suite completa)
 
-Comprueba variantes de título y umbrales de scoring para los 3 casos del log:
+Ejecuta parseo de películas, caché y scoring Kingsman en un solo comando:
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
-.\ValidateKingsmanSearch.ps1
+.\Run-UnitValidation.ps1
 ```
 
-### 7. Validación parseo películas + caché
+### 7. Validación por área (opcional)
 
-Comprueba `Get-MovieTitleAndYear`, variantes de título y que la caché no devuelva falsos positivos (Blade Runner 2049 vs Blade):
+**Parseo + caché** (Blade Runner 2049, fuzzy, etc.):
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 .\ValidateMovieTitleParse.ps1
 ```
 
-Resultado esperado: `6 passed, 0 failed` (3 parseo + 3 caché/fuzzy).
+**Variantes y scoring ES/EN** (casos Kingsman, sin Plex real):
+
+```powershell
+cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
+.\ValidateKingsmanSearch.ps1
+```
 
 ---
 
@@ -199,7 +204,8 @@ test/
 │   └── plex-functions.ps1          ← Scan, path lookup, búsqueda progresiva
 │
 ├── validation/
-│   ├── ValidateKingsmanSearch.ps1  ← Test unitario Kingsman
+│   ├── Run-UnitValidation.ps1      ← Suite unitaria (ejecuta todos)
+│   ├── ValidateKingsmanSearch.ps1  ← Test unitario scoring ES/EN
 │   ├── ValidateMovieTitleParse.ps1 ← Test parseo películas + caché
 │   ├── ValidatePlexImprovements.ps1
 │   ├── ValidateTest.ps1
@@ -323,11 +329,12 @@ cd test
 .\run_test_pipeline.ps1              # largo
 .\run_test_pipeline.ps1 -QuickTest   # rápido
 
-# ── VALIDACIÓN Kingsman ────────────────────────────────
-.\validation\ValidateKingsmanSearch.ps1
+# ── VALIDACIÓN unitaria (suite completa) ───────────────
+.\validation\Run-UnitValidation.ps1
 
-# ── VALIDACIÓN parseo películas + caché ──────────────
+# ── VALIDACIÓN por área (opcional) ─────────────────────
 .\validation\ValidateMovieTitleParse.ps1
+.\validation\ValidateKingsmanSearch.ps1
 ```
 
 ---

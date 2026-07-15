@@ -90,5 +90,10 @@
 # =============================================================================
 
 cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
-.\ValidateMovieTitleParse.ps1
-.\ValidateKingsmanSearch.ps1
+
+# Suite completa (parseo + caché + scoring Kingsman)
+.\Run-UnitValidation.ps1
+
+# Por área (opcional):
+# .\ValidateMovieTitleParse.ps1
+# .\ValidateKingsmanSearch.ps1

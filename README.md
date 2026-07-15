@@ -134,6 +134,7 @@ TelegramNotifier/
 │   │
 │   ├── 📂 lib/                           ← Espejo de core/lib/
 │   ├── 📂 validation/
+│   │   ├── 📄 Run-UnitValidation.ps1
 │   │   ├── 📄 ValidateKingsmanSearch.ps1
 │   │   ├── 📄 ValidateMovieTitleParse.ps1
 │   │   ├── 📄 AnalyzeResults.ps1
@@ -591,11 +592,12 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 .\run_test_pipeline.ps1              # largo
 .\run_test_pipeline.ps1 -QuickTest  # rápido
 
-# Validación scoring Kingsman
-.\validation\ValidateKingsmanSearch.ps1
+# Validación unitaria (suite completa)
+.\validation\Run-UnitValidation.ps1
 
-# Validación parseo películas + caché (Blade Runner 2049, etc.)
+# Por área (opcional)
 .\validation\ValidateMovieTitleParse.ps1
+.\validation\ValidateKingsmanSearch.ps1
 ```
 
 ---
