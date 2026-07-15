@@ -115,26 +115,35 @@ function Process-Torrent {
         Write-Log "Tipo: TEMPORADA (S$Season con $EpisodeCount episodios)" -Level "INFO"
     }
 
-    elseif ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
-        $Title = $Matches[1]
-        $Title = $Title -replace '\[.*\]', ''
-        $Title = $Title.Trim()
-        $Title = Convert-Title $Title
-        $Year  = $Matches[2]
-
-        $DetectedMetadata.Title = $Title
-        $DetectedMetadata.Year = $Year
-        $DetectedMetadata.Type = "PELICULA"
-
-        Write-Log "Tipo: PELICULA ($Year)" -Level "INFO"
-    }
-
     else {
-        $Title = Convert-Title $CleanName
-        $DetectedMetadata.Title = $Title
-        $DetectedMetadata.Type = "DESCONOCIDO"
+        $movieInfo = Get-MovieTitleAndYear -OriginalName $OriginalName
+        if ($movieInfo.Found) {
+            $DetectedMetadata.Title = $movieInfo.Title
+            $DetectedMetadata.Year = $movieInfo.Year
+            $DetectedMetadata.Type = "PELICULA"
 
-        Write-Log "Tipo: DESCONOCIDO" -Level "WARNING"
+            Write-Log "Tipo: PELICULA ($($movieInfo.Year))" -Level "INFO"
+        }
+        elseif ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
+            $Title = $Matches[1]
+            $Title = $Title -replace '\[.*\]', ''
+            $Title = $Title.Trim()
+            $Title = Convert-Title $Title
+            $Year  = $Matches[2]
+
+            $DetectedMetadata.Title = $Title
+            $DetectedMetadata.Year = $Year
+            $DetectedMetadata.Type = "PELICULA"
+
+            Write-Log "Tipo: PELICULA ($Year)" -Level "INFO"
+        }
+        else {
+            $Title = Convert-Title $CleanName
+            $DetectedMetadata.Title = $Title
+            $DetectedMetadata.Type = "DESCONOCIDO"
+
+            Write-Log "Tipo: DESCONOCIDO" -Level "WARNING"
+        }
     }
 
     Write-Log "Título detectado: $($DetectedMetadata.Title)" -Level "INFO"

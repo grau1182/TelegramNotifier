@@ -480,7 +480,7 @@ function Get-PlexPoster {
 
     Write-Log "Búsqueda poster: título='$searchTitle', RatingKey='$ratingKeyToSearch'"
 
-    $cacheResult = Get-PosterByCache -Title $searchTitle -RatingKey $ratingKeyToSearch
+    $cacheResult = Get-PosterByCache -Title $searchTitle -RatingKey $ratingKeyToSearch -DetectedMetadata $DetectedMetadata
     if ($cacheResult.found) {
         Write-Log "Poster encontrado en caché (método: $($cacheResult.method), score: $($cacheResult.score)%)"
         if ($cacheResult.title) {

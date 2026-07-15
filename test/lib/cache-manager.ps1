@@ -315,6 +315,28 @@ function Add-ToCache {
     }
 }
 
+function Test-CacheItemYearMatch {
+    param(
+        $CacheItem,
+        [hashtable]$DetectedMetadata
+    )
+
+    if (-not $DetectedMetadata -or $DetectedMetadata.Type -ne "PELICULA") {
+        return $true
+    }
+
+    if ([string]::IsNullOrWhiteSpace([string]$DetectedMetadata.Year)) {
+        return $true
+    }
+
+    $cacheYear = [string]$CacheItem.year
+    if ([string]::IsNullOrWhiteSpace($cacheYear) -or $cacheYear -eq "0") {
+        return $true
+    }
+
+    return $cacheYear -eq [string]$DetectedMetadata.Year
+}
+
 function Get-FuzzyMatchScore {
     param([string]$String1, [string]$String2)
 
@@ -323,7 +345,14 @@ function Get-FuzzyMatchScore {
 
     if ([string]::IsNullOrEmpty($String1) -or [string]::IsNullOrEmpty($String2)) { return 0 }
     if ($String1 -eq $String2) { return 100 }
-    if ($String1.Contains($String2) -or $String2.Contains($String1)) { return 90 }
+
+    if ($String1.Contains($String2) -or $String2.Contains($String1)) {
+        $minLen = [Math]::Min($String1.Length, $String2.Length)
+        $maxLen = [Math]::Max($String1.Length, $String2.Length)
+        if ($maxLen -gt 0 -and ($minLen / $maxLen) -ge 0.75) {
+            return 90
+        }
+    }
 
     $commonChars = 0
     $maxLen = [Math]::Max($String1.Length, $String2.Length)
@@ -372,27 +401,14 @@ function Resolve-RatingKey {
         return [string]$aliasMatch.ratingKey
     }
 
-    $bestMatch = $null
-    $bestScore = 0
-    foreach ($item in $script:PlexCache) {
-        $score = Get-FuzzyMatchScore $searchKey $item.titulo_normalizado
-        if ($score -gt $bestScore) {
-            $bestScore = $score
-            $bestMatch = $item
-        }
-    }
-
-    if ($bestScore -ge 85 -and $bestMatch) {
-        return [string]$bestMatch.ratingKey
-    }
-
     return ""
 }
 
 function Get-PosterByCache {
     param(
         [string]$Title,
-        [string]$RatingKey = ""
+        [string]$RatingKey = "",
+        [hashtable]$DetectedMetadata = $null
     )
 
     if ($script:PlexCache.Count -eq 0) {
@@ -402,13 +418,18 @@ function Get-PosterByCache {
     if (-not [string]::IsNullOrEmpty($RatingKey)) {
         $ratingKeyMatch = $script:PlexCache | Where-Object { [string]$_.ratingKey -eq [string]$RatingKey } | Select-Object -First 1
         if ($ratingKeyMatch -and $ratingKeyMatch.poster_url) {
-            return @{
-                found     = $true
-                method    = "cache_ratingkey_exact"
-                url       = $ratingKeyMatch.poster_url
-                title     = $ratingKeyMatch.titulo_original
-                score     = 100
-                ratingKey = $ratingKeyMatch.ratingKey
+            $searchKeyForRating = Normalize-CacheKey $Title
+            $titleMatches = ($ratingKeyMatch.titulo_normalizado -eq $searchKeyForRating) -or
+                (Test-CacheItemKeyMatch -Item $ratingKeyMatch -SearchKey $searchKeyForRating)
+            if ($titleMatches -and (Test-CacheItemYearMatch -CacheItem $ratingKeyMatch -DetectedMetadata $DetectedMetadata)) {
+                return @{
+                    found     = $true
+                    method    = "cache_ratingkey_exact"
+                    url       = $ratingKeyMatch.poster_url
+                    title     = $ratingKeyMatch.titulo_original
+                    score     = 100
+                    ratingKey = $ratingKeyMatch.ratingKey
+                }
             }
         }
     }
@@ -416,7 +437,7 @@ function Get-PosterByCache {
     $searchKey = Normalize-CacheKey $Title
 
     $aliasMatch = Find-CacheItemByKey -SearchKey $searchKey
-    if ($aliasMatch -and $aliasMatch.poster_url) {
+    if ($aliasMatch -and $aliasMatch.poster_url -and (Test-CacheItemYearMatch -CacheItem $aliasMatch -DetectedMetadata $DetectedMetadata)) {
         $method = if ($aliasMatch.titulo_normalizado -eq $searchKey) { "cache_exact" } else { "cache_alias" }
         return @{
             found     = $true
@@ -432,6 +453,10 @@ function Get-PosterByCache {
     $bestScore = 0
 
     foreach ($item in $script:PlexCache) {
+        if (-not (Test-CacheItemYearMatch -CacheItem $item -DetectedMetadata $DetectedMetadata)) {
+            continue
+        }
+
         $score = Get-FuzzyMatchScore $searchKey $item.titulo_normalizado
         if ($score -gt $bestScore) {
             $bestScore = $score

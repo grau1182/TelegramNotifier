@@ -135,6 +135,53 @@ function Get-CleanName {
     return $Name
 }
 
+function Get-MovieTitleAndYear {
+    param([string]$OriginalName)
+
+    $result = @{
+        Title = ""
+        Year  = $null
+        Found = $false
+    }
+
+    if ([string]::IsNullOrWhiteSpace($OriginalName)) {
+        return $result
+    }
+
+    $work = $OriginalName
+
+    if ($work -match '\((19\d{2}|20\d{2})\)') {
+        $result.Year = $Matches[1]
+        $work = $work -replace '\((19\d{2}|20\d{2})\)', ' '
+        $result.Found = $true
+    }
+
+    if ($work -match '^([^\[]+)') {
+        $work = $Matches[1]
+    }
+
+    $work = $work.Trim()
+    $work = $work -replace '\s+', ' '
+    $work = $work.Trim(' -')
+
+    if ($result.Found -and -not [string]::IsNullOrWhiteSpace($work)) {
+        $result.Title = Convert-Title ($work -replace '-', ' ')
+        return $result
+    }
+
+    $cleanName = Get-CleanName $OriginalName
+    if ($cleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
+        $titlePart = $Matches[1].Trim('-')
+        if (-not [string]::IsNullOrWhiteSpace($titlePart)) {
+            $result.Title = Convert-Title ($titlePart -replace '-', ' ')
+            $result.Year = $Matches[2]
+            $result.Found = $true
+        }
+    }
+
+    return $result
+}
+
 function Get-PatternDetected {
     param([string]$CleanName)
 
@@ -209,11 +256,12 @@ function Split-TitleVariants {
         Add-Variant $Matches[1].Trim()
     }
 
+    $hasNumberInTitle = $Title -match '\b(19\d{2}|20\d{2})\b'
     $stopWords = @('el', 'la', 'los', 'las', 'de', 'del', 'the', 'a', 'an')
     $words = $Title -split '\s+' | Where-Object {
         -not [string]::IsNullOrWhiteSpace($_) -and ($stopWords -notcontains $_.ToLower())
     }
-    if ($words.Count -gt 0) {
+    if ($words.Count -gt 0 -and -not $hasNumberInTitle) {
         Add-Variant $words[0]
     }
 

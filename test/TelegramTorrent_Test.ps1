@@ -198,41 +198,45 @@ elseif($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)'){
 }
 
 # ==================================================
-# PELICULA
-# ==================================================
-
-elseif(
-    $CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?'
-){
-
-    $Title = $Matches[1]
-
-    $Title = $Title -replace '\[.*\]',''
-    $Title = $Title.Trim()
-
-    $Title = Convert-Title $Title
-
-    $Year  = $Matches[2]
-
-    $DetectedMetadata.Title = $Title
-    $DetectedMetadata.Year = $Year
-    $DetectedMetadata.Type = "PELICULA"
-
-    Write-Log "Tipo detectado: PELICULA"
-}
-
-# ==================================================
-# DESCONOCIDO
+# PELICULA / DESCONOCIDO
 # ==================================================
 
 else {
 
-    $Title = Convert-Title $CleanName
+    $movieInfo = Get-MovieTitleAndYear -OriginalName $OriginalName
+    if ($movieInfo.Found) {
+        $Title = $movieInfo.Title
+        $Year = $movieInfo.Year
 
-    $DetectedMetadata.Title = $Title
-    $DetectedMetadata.Type = "DESCONOCIDO"
+        $DetectedMetadata.Title = $Title
+        $DetectedMetadata.Year = $Year
+        $DetectedMetadata.Type = "PELICULA"
 
-    Write-Log "Tipo detectado: DESCONOCIDO"
+        Write-Log "Tipo detectado: PELICULA"
+    }
+    elseif ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
+
+        $Title = $Matches[1]
+        $Title = $Title -replace '\[.*\]',''
+        $Title = $Title.Trim()
+        $Title = Convert-Title $Title
+        $Year  = $Matches[2]
+
+        $DetectedMetadata.Title = $Title
+        $DetectedMetadata.Year = $Year
+        $DetectedMetadata.Type = "PELICULA"
+
+        Write-Log "Tipo detectado: PELICULA"
+    }
+    else {
+
+        $Title = Convert-Title $CleanName
+
+        $DetectedMetadata.Title = $Title
+        $DetectedMetadata.Type = "DESCONOCIDO"
+
+        Write-Log "Tipo detectado: DESCONOCIDO"
+    }
 }
 
 $ParseConfidence = Get-ParseConfidence -DetectedType $DetectedMetadata.Type -CleanName $CleanName -Pattern $PatternDetected
