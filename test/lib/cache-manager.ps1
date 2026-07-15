@@ -79,13 +79,14 @@ function Initialize-PlexCache {
     if (-not [string]::IsNullOrEmpty($ProjectRoot)) {
         $script:ProjectRoot = $ProjectRoot
     }
-    elseif ([string]::IsNullOrEmpty($script:ProjectRoot) -and $BasePath -ne ".") {
+    elseif ([string]::IsNullOrEmpty($script:ProjectRoot) -and -not [string]::IsNullOrWhiteSpace($BasePath) -and $BasePath -ne ".") {
         $script:ProjectRoot = Split-Path $BasePath -Parent
     }
 
     Write-Log "Inicializando caché..."
 
-    $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $ProjectRoot
+    $cacheRoot = if (-not [string]::IsNullOrEmpty($ProjectRoot)) { $ProjectRoot } else { $script:ProjectRoot }
+    $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $cacheRoot
     $allItems = @()
 
     if (Test-Path $cacheFilePath) {

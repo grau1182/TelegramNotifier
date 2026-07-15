@@ -4,7 +4,7 @@
 # ==================================================
 
 $ErrorActionPreference = "Stop"
-$ProjectRoot = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
+$ProjectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $LibPath = Join-Path $ProjectRoot "core\lib"
 
 . (Join-Path $LibPath "logger.ps1")
@@ -66,9 +66,10 @@ foreach ($case in $parseCases) {
 }
 
 Write-Host ""
-Write-Host "Validacion caché Blade Runner 2049 vs Blade" -ForegroundColor Cyan
+Write-Host "Validacion cache Blade Runner 2049 vs Blade" -ForegroundColor Cyan
 
-Initialize-PlexCache -BasePath $ProjectRoot -ProjectRoot $ProjectRoot | Out-Null
+$script:ProjectRoot = $ProjectRoot
+Initialize-PlexCache -SkipDelay $true -ProjectRoot $ProjectRoot | Out-Null
 
 $meta = @{
     Title = "Blade Runner 2049"
@@ -76,7 +77,7 @@ $meta = @{
     Type  = "PELICULA"
 }
 
-$resolvedKey = Resolve-RatingKey -Title $meta.Title -DetectedMetadata $meta -BasePath $ProjectRoot -ProjectRoot $ProjectRoot
+$resolvedKey = Resolve-RatingKey -Title $meta.Title -DetectedMetadata $meta -ProjectRoot $ProjectRoot
 Write-Host "  Resolve-RatingKey: '$resolvedKey' (esperado vacio)"
 
 if (-not [string]::IsNullOrEmpty($resolvedKey)) {
