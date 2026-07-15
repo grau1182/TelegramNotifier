@@ -1,14 +1,2 @@
 
 
-cd C:\ruta\TelegramNotifier
-git pull
-
-# Validación unitaria
-cd test\validation
-.\ValidateMovieTitleParse.ps1
-
-# Prueba manual
-cd ..\..\core
-.\TelegramNotifier.ps1 -TorrentName "Blade Runner 2049 (2017) [2160p UHD BluRay REMUX HEVC TrueHD 7.1].mkv" -ContentPath "G:\PELIS\..." -SendTelegram:$false
-
-
