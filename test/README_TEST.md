@@ -22,12 +22,15 @@ Documentación del entorno `test/` y su relación con producción (`core/`). El 
 
 ---
 
-## Flujo de búsqueda de poster (v2 — julio 2026)
+## Flujo de búsqueda de poster (v2.2 — julio 2026)
 
 Ambos entornos comparten la misma lógica en `plex-functions.ps1`:
 
 ```
+0. Parseo película: Get-MovieTitleAndYear (prioriza (YYYY) entre paréntesis)
 1. Caché (recursos/plex_cache.json)
+   ├─ Resolve-RatingKey → solo exacto / alias (sin fuzzy)
+   └─ Get-PosterByCache → exacto, alias, fuzzy ≥85% (+ filtro año)
    └─ Hit → poster instantáneo
 
 2. Partial scan Plex (solo si SkipPlexScan=$false y hay ContentPath)
@@ -41,7 +44,7 @@ Ambos entornos comparten la misma lógica en `plex-functions.ps1`:
 4. Búsqueda progresiva por título
    ├─ Título completo: "Kingsman, El Servicio Secreto"
    ├─ Pre-coma: "Kingsman"
-   └─ Primera palabra significativa
+   └─ Primera palabra significativa (omitida si el título contiene un año, ej. 2049)
    └─ Scoring por año + raíz de título (ES vs EN sin mapeos manuales)
 
 5. Add-ToCache + Add-CacheAliases (alias automático)
@@ -167,6 +170,17 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 .\ValidateKingsmanSearch.ps1
 ```
 
+### 7. Validación parseo películas + caché
+
+Comprueba `Get-MovieTitleAndYear`, variantes de título y que la caché no devuelva falsos positivos (Blade Runner 2049 vs Blade):
+
+```powershell
+cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
+.\ValidateMovieTitleParse.ps1
+```
+
+Resultado esperado: `6 passed, 0 failed` (3 parseo + 3 caché/fuzzy).
+
 ---
 
 ## Estructura del entorno test
@@ -180,12 +194,13 @@ test/
 ├── PLEXPOSTER_IMPROVEMENTS.md      ← Historial de diseño (referencia)
 │
 ├── lib/                            ← Espejo de core/lib/ (sin logger.ps1)
-│   ├── utilities.ps1               ← Split-TitleVariants
-│   ├── cache-manager.ps1           ← Add-CacheAliases, Save-CacheToFile
+│   ├── utilities.ps1               ← Get-MovieTitleAndYear, Split-TitleVariants
+│   ├── cache-manager.ps1           ← Resolve-RatingKey, Test-CacheItemYearMatch
 │   └── plex-functions.ps1          ← Scan, path lookup, búsqueda progresiva
 │
 ├── validation/
 │   ├── ValidateKingsmanSearch.ps1  ← Test unitario Kingsman
+│   ├── ValidateMovieTitleParse.ps1 ← Test parseo películas + caché
 │   ├── ValidatePlexImprovements.ps1
 │   ├── ValidateTest.ps1
 │   ├── AnalyzeResults.ps1          ← Informe HTML
@@ -279,6 +294,7 @@ La segunda descarga del mismo contenido con nombre en español será **cache hit
 | Test muy lento | Modo largo con scan activo | Normal; usar `-QuickTest` para iterar |
 | `Escaneo parcial activado` no aparece | `SkipPlexScan` o `ContentPath` vacío | Verificar ruta y flag |
 | Plex devuelve 0 items | Título ES vs EN | Debería resolverse con query `Kingsman` + año |
+| Poster incorrecto (película distinta) | Parseo o fuzzy en caché | Ejecutar `ValidateMovieTitleParse.ps1`; revisar título/año en log |
 | Timeout 60s | Plex tarda en indexar | Aumentar `-PlexScanPollMaxAttempts` |
 
 ---
@@ -309,9 +325,12 @@ cd test
 
 # ── VALIDACIÓN Kingsman ────────────────────────────────
 .\validation\ValidateKingsmanSearch.ps1
+
+# ── VALIDACIÓN parseo películas + caché ──────────────
+.\validation\ValidateMovieTitleParse.ps1
 ```
 
 ---
 
-**Última actualización:** 2026-07-07  
-**Versión búsqueda poster:** 2.1 (partial scan + path lookup + búsqueda progresiva)
+**Última actualización:** 2026-07-15  
+**Versión búsqueda poster:** 2.2 (parseo películas + caché estricta)

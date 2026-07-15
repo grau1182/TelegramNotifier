@@ -23,7 +23,7 @@ Un sistema PowerShell completo que monitorea torrents completados en qBittorrent
 
 **Estadísticas:**
 - ✅ 210/237 torrents encontrados (88.61%)
-- 📦 112 títulos en caché persistente
+- 📦 115+ títulos en caché persistente (crece automáticamente)
 - ⚙️ 30+ funciones en 3300+ líneas (libs + scripts principales)
 - 🧪 Suite de tests con 237 casos
 
@@ -95,7 +95,7 @@ Un sistema PowerShell completo que monitorea torrents completados en qBittorrent
 | `core/lib/utilities.ps1` | Parsing de nombres, detección de tipo, normalización | Nombre torrent | Metadata detectada, confianza % | ⭐⭐⭐ |
 | `core/lib/cache-manager.ps1` | Gestión de caché persistente (JSON) y en memoria | Título a buscar o nuevo título a agregar | URL poster o {found: false} | ⭐⭐⭐ |
 | `core/lib/plex-functions.ps1` | Scan Plex, path lookup, búsqueda progresiva + scoring | Metadata torrent, ContentPath | URL poster o null | ⭐⭐⭐ |
-| `recursos/plex_cache.json` | Caché persistente compartida (112 títulos, aliases) | N/A | Cargado al iniciar | ⭐⭐⭐ |
+| `recursos/plex_cache.json` | Caché persistente compartida (115+ títulos, aliases) | N/A | Cargado al iniciar | ⭐⭐⭐ |
 | `core/logs/` | Logs diarios de producción | Operaciones del script | TelegramNotifier_YYYYMMDD.log | ⭐⭐ |
 | `test/README_TEST.md` | Guía detallada test vs producción, comandos y modos | N/A | Documentación | ⭐⭐ |
 | `test/TelegramTorrent_Test.ps1` | Suite de 237 torrents (paridad con producción) | CSV con torrents | Análisis de cobertura | ⭐⭐ |
@@ -118,8 +118,8 @@ TelegramNotifier/
 │   │
 │   ├── 📂 lib/                           ← Librerías (dot-sourced)
 │   │   ├── 📄 logger.ps1
-│   │   ├── 📄 utilities.ps1              ← Split-TitleVariants
-│   │   ├── 📄 cache-manager.ps1          ← Aliases automáticos
+│   │   ├── 📄 utilities.ps1              ← Get-MovieTitleAndYear, Split-TitleVariants
+│   │   ├── 📄 cache-manager.ps1          ← Aliases, fuzzy con filtro de año
 │   │   └── 📄 plex-functions.ps1         ← Scan, path lookup, búsqueda progresiva
 │   │
 │   └── 📂 logs/
@@ -135,6 +135,7 @@ TelegramNotifier/
 │   ├── 📂 lib/                           ← Espejo de core/lib/
 │   ├── 📂 validation/
 │   │   ├── 📄 ValidateKingsmanSearch.ps1
+│   │   ├── 📄 ValidateMovieTitleParse.ps1
 │   │   ├── 📄 AnalyzeResults.ps1
 │   │   ├── 📄 ConsolidateResults.ps1
 │   │   └── 📄 OrganizeResults.ps1
@@ -203,6 +204,7 @@ El proyecto funciona en **capas** independientes:
 │  CAPA 2: PARSING & NORMALIZACIÓN       │
 │  utilities.ps1                         │
 │  • Detecta: EPISODIO/PELICULA/TEMPORADA│
+│  • Películas: Get-MovieTitleAndYear    │
 │  • Extrae: Resolución, codec, audio    │
 └──────────────┬─────────────────────────┘
                │
@@ -217,7 +219,7 @@ El proyecto funciona en **capas** independientes:
 │  CAPA 4: BÚSQUEDA (PLEX API)           │
 │  plex-functions.ps1                    │
 │  • Scoring inteligente                 │
-│  • Fuzzy matching de títulos           │
+│  • Fuzzy matching (API, no caché RK)   │
 └──────────────┬─────────────────────────┘
                │
 ┌──────────────┴──────────────────────────┐
@@ -245,16 +247,19 @@ El proyecto funciona en **capas** independientes:
 
 #### Fase 2: PARSING DEL TORRENT (20-50ms)
 ```powershell
-# utilities.ps1
+# utilities.ps1 + TelegramNotifier.ps1
 [1] Normalize-Name($TorrentName)
-    └─ "28.Años.Después.2025.2160p.REMUX" → "28-anos-despues-2025-2160p-remux"
-[2] Get-CleanName($NormalizedName)
-    └─ "28-anos-despues-2025" (quita resolución y etiquetas)
-[3] Get-PatternDetected($CleanName)
-    ├─ EPISODIO: Si contiene S##E## (ej: S02E08)
-    ├─ TEMPORADA: Si contiene S## sin episodio (ej: S02)
-    ├─ PELICULA: Si contiene año (19XX o 20XX)
-    └─ DESCONOCIDO: Si no coincide nada
+    └─ "Blade Runner 2049 (2017)..." → "blade-runner-2049-(2017)..."
+[2] Get-CleanName($OriginalName)
+    └─ Quita resolución y etiquetas técnicas
+[3] Detección de tipo:
+    ├─ EPISODIO: S##E## en CleanName
+    ├─ TEMPORADA: S## sin episodio
+    └─ PELICULA: Get-MovieTitleAndYear($OriginalName)
+        ├─ Prioriza año entre paréntesis: (2017) → año de estreno
+        ├─ Título = texto antes de `[`, sin (año)
+        └─ Ej: "Blade Runner 2049 (2017)..." → Title "Blade Runner 2049", Year 2017
+        └─ Fallback: regex sobre CleanName si no hay (año)
 [4] Extract metadata: Resolución, codec, audio, etc.
 ```
 
@@ -264,8 +269,9 @@ El proyecto funciona en **capas** independientes:
 [1] Initialize-PlexCache()
     └─ Carga recursos/plex_cache.json (compartida producción + test)
 
-[2] Get-PosterByCache($Title) + Resolve-RatingKey
-    ├─ Exact match, alias, fuzzy ≥85%
+[2] Get-PosterByCache($Title, $DetectedMetadata) + Resolve-RatingKey
+    ├─ Resolve-RatingKey: solo exacto / alias (sin fuzzy)
+    ├─ Get-PosterByCache: exacto, alias, fuzzy ≥85% con filtro de año
     └─ Return poster URL o miss
 
 [3] Si miss y SkipPlexScan=$false:
@@ -274,7 +280,8 @@ El proyecto funciona en **capas** independientes:
     └─ Wait-ForPlexItem → polling Find-PlexItemByPath (5s × 12)
 
 [4] Si sigue sin poster → Search-PlexWithQueries
-    ├─ Variantes: título completo | pre-coma | primera palabra
+    ├─ Variantes: título completo | pre-coma | primera palabra*
+    ├─ *No genera primera palabra si el título contiene un año (ej. 2049)
     ├─ GET /search?query=...&type=1|2|8
     └─ Test-PlexItemAcceptable (score + año + raíz título)
 
@@ -346,13 +353,21 @@ El proyecto funciona en **capas** independientes:
    }
    ```
 
-2. **Búsqueda Fuzzy:**
-   - Input: "the mandalorian s02e08"
-   - Normalized: "themandalorians02e08"
-   - Matched: "themandalorian" (score 95%)
-   - Deduplicación: Verifica `titulo_normalizado + ratingKey`
+2. **Búsqueda en caché (Get-PosterByCache):**
+   - **Exacto / alias:** match por `titulo_normalizado` o `aliases`
+   - **Fuzzy ≥85%:** solo en poster cache; filtra por año en películas (`Test-CacheItemYearMatch`)
+   - **Resolve-RatingKey:** solo exacto/alias — no usa fuzzy (evita falsos positivos)
+   - **Contains bonus:** solo si `minLen/maxLen ≥ 0.75` (evita `blade` ⊂ `bladerunner2049`)
 
-3. **Auto-Agregación:**
+3. **Ejemplo corregido — Blade Runner 2049:**
+   ```
+   Torrent: "Blade Runner 2049 (2017) [2160p...].mkv"
+   Parseo:  Title "Blade Runner 2049", Year 2017 (no confunde 2049 con año)
+   Caché:   miss (no matchea Blade/4424 por fuzzy ni por año)
+   Plex:    path_lookup → ratingKey 8190 → se añade a caché
+   ```
+
+4. **Auto-Agregación:**
    - Si nuevo título encontrado en API
    - → Agregar a `$script:PlexCache` (memoria)
    - → Actualizar `recursos/plex_cache.json` (disco)
@@ -506,9 +521,11 @@ Headers: X-Plex-Token: {TOKEN}
 - Auto-actualización de caché con nuevos títulos
 
 ✅ **Fuzzy Matching Inteligente**
-- Normalización de caracteres especiales
-- Algoritmo de conteo de caracteres (85%+ = match)
-- Deduplicación automática
+- Normalización de caracteres especiales (`Normalize-CacheKey`, `Remove-Accents`)
+- Fuzzy en caché (poster) con umbral 85% y filtro de año en películas
+- Fuzzy en API Plex para scoring de resultados
+- Sin fuzzy en `Resolve-RatingKey` (solo exacto/alias)
+- Variantes de búsqueda sin acortar títulos con año en el nombre
 
 ✅ **Notificaciones en Telegram**
 - Foto con poster + detalles
@@ -517,7 +534,7 @@ Headers: X-Plex-Token: {TOKEN}
 
 ✅ **Cobertura Comprobada**
 - 88.61% en 237 torrents de test
-- 112 títulos en caché persistente
+- 115+ títulos en caché persistente
 - Análisis HTML de resultados
 
 ✅ **Logging Automático**
@@ -576,6 +593,9 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 
 # Validación scoring Kingsman
 .\validation\ValidateKingsmanSearch.ps1
+
+# Validación parseo películas + caché (Blade Runner 2049, etc.)
+.\validation\ValidateMovieTitleParse.ps1
 ```
 
 ---
@@ -590,7 +610,7 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 | Librerías principales | 4 |
 | Torrents en test suite | 237 |
 | Cobertura de test | 88.61% |
-| Títulos en caché | 112 |
+| Títulos en caché | 115+ |
 | Tiempo caché local | 0ms |
 | Tiempo API fallback | 500ms-2s |
 | Uptime (producción) | 24/7 |
@@ -636,6 +656,7 @@ cd core
 | Notificación no llega a Telegram | Verificar token bot y chat ID en TelegramNotifier.ps1 |
 | Poster no encontrado (texto-only) | Revisar log: `Escaneo parcial activado`, `Queries progresivas`. Ver [`test/README_TEST.md`](test/README_TEST.md) |
 | Log file muy grande | Automático: rotación a los 5MB con timestamp |
+| Poster incorrecto (película distinta) | Revisar log: año/título parseado. Validar con `ValidateMovieTitleParse.ps1` |
 | Caché desincronizado | Caché en `recursos/plex_cache.json`; se auto-actualiza con aliases |
 
 ---
@@ -691,7 +712,7 @@ Get-Content recursos/plex_cache.json | ConvertFrom-Json | Select -ExpandProperty
 
 ---
 
-**Versión:** v1.2 (2026-07-07)
-**Última actualización:** 2026-07-07
+**Versión:** v1.3 (2026-07-15)
+**Última actualización:** 2026-07-15
 **Autor:** Sistema TelegramNotifier
 **Repositorio:** https://github.com/grau1182/TelegramNotifier

@@ -3,7 +3,7 @@
 > **Documento histórico de diseño (2026-07-01).** La implementación real está en `core/lib/` y `test/lib/` con partial scan, path lookup, búsqueda progresiva y aliases automáticos.  
 > **Documentación operativa vigente:** [`README_TEST.md`](README_TEST.md) · [`../core/README.md`](../core/README.md)
 
-## Estado de implementación (2026-07-07)
+## Estado de implementación (2026-07-15)
 
 Las siguientes mejoras están **integradas en `core/lib/` y `test/lib/`** (no requieren script separado):
 
@@ -16,6 +16,9 @@ Las siguientes mejoras están **integradas en `core/lib/` y `test/lib/`** (no re
 | Aliases automáticos | ✅ Implementado | `Add-CacheAlias`, `Add-CacheAliases`, `Save-PlexPosterResult` |
 | Normalización acentos/ñ | ✅ Implementado | `Normalize-CacheKey` + `Remove-Accents` |
 | Persistencia JSON | ✅ Implementado | `Get-CacheFileData`, `Save-CacheToFile` |
+| Parseo películas | ✅ Implementado | `Get-MovieTitleAndYear` (prioriza `(YYYY)` entre paréntesis) |
+| Caché estricta | ✅ Implementado | `Resolve-RatingKey` sin fuzzy; `Test-CacheItemYearMatch`; `Get-FuzzyMatchScore` con umbral Contains |
+| Validación unitaria | ✅ Implementado | `test/validation/ValidateMovieTitleParse.ps1` |
 | title_overrides.json | ❌ No usado | Sustituido por búsqueda progresiva + aliases |
 
 Documentación operativa: [`README_TEST.md`](README_TEST.md)
