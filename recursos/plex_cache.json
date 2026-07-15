@@ -950,10 +950,18 @@
                       "titulo_normalizado":  "greenland2",
                       "titulo_original":  "Greenland 2",
                       "year":  2026
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8190",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8190/thumb/1784074249?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "bladerunner2049",
+                      "titulo_original":  "Blade Runner 2049",
+                      "year":  2017
                   }
               ],
     "totalItems":  115,
     "description":  "Caché persistente de Plex - Actualizado automáticamente",
-    "lastUpdated":  "2026-07-15T11:46:55Z",
+    "lastUpdated":  "2026-07-15T12:16:53Z",
     "version":  "1.0"
 }
