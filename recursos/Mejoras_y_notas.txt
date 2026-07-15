@@ -1,2 +1,94 @@
+# Pruebas manuales TelegramNotifier (producción)
+# cd C:\Users\grau_\Downloads\TelegramNotifier\core
+# Usar -SendTelegram:$false para probar sin enviar a Telegram
+# ContentPath: archivo .mkv completo (película/episodio) o carpeta (temporada PACK)
 
+# =============================================================================
+# PELÍCULA — año entre paréntesis (Get-MovieTitleAndYear)
+# =============================================================================
 
+# Ejemplo 1 — Minority Report (2002)
+.\TelegramNotifier.ps1 `
+  -TorrentName "Minority Report (2002) [Audio Editado][UHDRemux 2160p HEVC DV-HDR10 ES DTS-HD MA 5.1][HDO].mkv" `
+  -ContentPath "G:\PELIS\Minority Report (2002) [Audio Editado][UHDRemux 2160p HEVC DV-HDR10 ES DTS-HD MA 5.1][HDO].mkv" `
+  -SendTelegram:$false
+
+# Ejemplo 2 — Una ballena (2024)
+.\TelegramNotifier.ps1 `
+  -TorrentName "Una ballena (2024) [FILMN WEB-DL 1080p AVC ES DD 2.0][HDO].mkv" `
+  -ContentPath "G:\PELIS\Una ballena (2024) [FILMN WEB-DL 1080p AVC ES DD 2.0][HDO].mkv" `
+  -SendTelegram:$false
+
+# Ejemplo 3 — Título con número + año en paréntesis (validado en producción)
+.\TelegramNotifier.ps1 `
+  -TorrentName "Blade Runner 2049 (2017) [Remastered 4K][Remastered 2160p HEVC SDR-RAW ES DTS-HD 7.1 EN TrueHD 7.1.4 Atmos Subs]HDO.mkv" `
+  -ContentPath "G:\PELIS\Blade Runner 2049 (2017) [Remastered 4K][Remastered 2160p HEVC SDR-RAW ES DTS-HD 7.1 EN TrueHD 7.1.4 Atmos Subs]HDO.mkv" `
+  -SendTelegram:$false
+
+# =============================================================================
+# EPISODIO — patrón S##E##
+# =============================================================================
+
+# Ejemplo 1 — The Boys S05E01
+.\TelegramNotifier.ps1 `
+  -TorrentName "The Boys S05E01 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv" `
+  -ContentPath "G:\SERIES\THE_BOYS\The Boys S05E01 [AMZN WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO].mkv" `
+  -SendTelegram:$false
+
+# Ejemplo 2 — Good Omens S03E01
+.\TelegramNotifier.ps1 `
+  -TorrentName "Good Omens S03E01 [AMZN WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv" `
+  -ContentPath "G:\SERIES\GOOD_OMENS\Good Omens S03E01 [AMZN WEB-DL 1080p AVC ES DD+ 5.1][HDO].mkv" `
+  -SendTelegram:$false
+
+# Ejemplo 3 — Para toda la humanidad S05E10 (temporada en subcarpeta)
+.\TelegramNotifier.ps1 `
+  -TorrentName "Para toda la humanidad S05E10 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv" `
+  -ContentPath "G:\SERIES\PARA_TODA_HUMANIDAD\5\Para toda la humanidad S05E10 [APTV WEB-DL 2160p HEVC DV-HDR10+ ES DD 5.1][HDO].mkv" `
+  -SendTelegram:$false
+
+# =============================================================================
+# TEMPORADA — patrón S## [PACK] (carpeta con varios episodios)
+# =============================================================================
+
+# Ejemplo 1 — Falling Skies S01
+.\TelegramNotifier.ps1 `
+  -TorrentName "Falling Skies (2011) S01 [PACK][BDRip 1080p AVC ES DD 2.0][HDO]" `
+  -ContentPath "G:\SERIES\FALLING_SKIES\1" `
+  -SendTelegram:$false
+
+# Ejemplo 2 — The Mandalorian S01
+.\TelegramNotifier.ps1 `
+  -TorrentName "The Mandalorian (2019) S01 [UHDRemux 2160p HEVC HDR10 ES DD+ 5.1 - EN TrueHD Atmos 7.1 Subs][HDO]" `
+  -ContentPath "G:\SERIES\STAR_WARS_THE_MANDALORIAN\1" `
+  -SendTelegram:$false
+
+# Ejemplo 3 — Berlin S01 (nombre con puntos, sin [PACK] explícito)
+.\TelegramNotifier.ps1 `
+  -TorrentName "Berlin.S01.2160p.NF.WEB-DL.SDR.ESP.ENG.DDP5.1.Atmos.SUBS.x265-Whisky135" `
+  -ContentPath "G:\SERIES\BERLIN" `
+  -SendTelegram:$false
+
+# =============================================================================
+# DESCONOCIDO — sin patrón claro de película/episodio/temporada
+# =============================================================================
+
+# Ejemplo 1 — The Clon Wars (typo en nombre, sin S##E## ni año)
+.\TelegramNotifier.ps1 `
+  -TorrentName "The Clon Wars" `
+  -ContentPath "G:\SERIES\STAR_WARS_CLONE_WARS" `
+  -SendTelegram:$false
+
+# Ejemplo 2 — Bleach S14 (temporada sin formato S01E01 ni [PACK])
+.\TelegramNotifier.ps1 `
+  -TorrentName "Bleach S14 1080p BluRay JAP-ENG AAC 2.0 x264" `
+  -ContentPath "G:\SERIES\BLEACH\14" `
+  -SendTelegram:$false
+
+# =============================================================================
+# VALIDACIÓN UNITARIA (test, sin Telegram)
+# =============================================================================
+
+cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
+.\ValidateMovieTitleParse.ps1
+.\ValidateKingsmanSearch.ps1
