@@ -1,7 +1,9 @@
 Comprobar log y busqueda de blade y bladerunner
 
-la peli blade runner De esta pelicula en mi servidor de plex, quiero que me digas como se puede obtener el ratingkey http://127.0.0.1:32400/web/index.html#!/server/a1092239640a6543c82f40eb1c5465b5eb2d01cd/details?key=%2Flibrary%2Fmetadata%2F8190&context=home%3Ahub.home.movies.recent~2~0
+la peli blade runner De esta pelicula en mi servidor de plex, quiero que me digas como se puede obtener el ratingkey 
+http://127.0.0.1:32400/web/index.html#!/server/a1092239640a6543c82f40eb1c5465b5eb2d01cd/details?key=%2Flibrary%2Fmetadata%2F8190&context=home%3Ahub.home.movies.recent~2~0
 ratingkey 8190
+http://127.0.0.1:32400/library/metadata/8190/thumb/1784074249?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
 
 Blade ratingkey 4424
 
