@@ -1,0 +1,60 @@
+﻿[2026-07-15 11:46:55] [INFO] ========================================
+[2026-07-15 11:46:55] [INFO] Procesando torrent: Blade Runner 2049 (2017) [2160p UHD BluRay REMUX HEVC TrueHD 7.1].mkv
+[2026-07-15 11:46:55] [INFO] Ruta: G:\PELIS\...
+[2026-07-15 11:46:55] [INFO] Tipo: PELICULA (2017)
+[2026-07-15 11:46:55] [INFO] Título detectado: Blade Runner 2049
+[2026-07-15 11:46:55] [INFO] Iniciando busqueda de poster para 'Blade Runner 2049' (Tipo: PELICULA)
+[2026-07-15 11:46:55] [INFO] Inicializando caché...
+[2026-07-15 11:46:55] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-15 11:46:55] [INFO] Caché cargado desde archivo: 114 títulos
+[2026-07-15 11:46:55] [INFO] Búsqueda poster: título='Blade Runner 2049', RatingKey=''
+[2026-07-15 11:46:55] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-15 11:46:55] [INFO] Escaneo parcial activado: section=1 path=G:\PELIS\...
+[2026-07-15 11:46:55] [INFO] Item encontrado por ruta (intento 1, puntuación 90): Blade Runner 2049
+[2026-07-15 11:46:55] [INFO] Poster final seleccionado (Score: 90, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8190/thumb/1784074249?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-15 11:46:55] [INFO] Caché actualizado: Nuevo título 'Blade Runner 2049' agregado con RatingKey 8190, 115 títulos en total
+[2026-07-15 11:46:55] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8190/thumb/1784074249?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-15 11:46:58] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-15 11:46:58] [INFO] ========================================
+[2026-07-15 11:51:13] [INFO] ========================================
+[2026-07-15 11:51:13] [INFO] Procesando torrent: Blade Runner 2049 (2017) [2160p UHD BluRay REMUX HEVC TrueHD 7.1].mkv
+[2026-07-15 11:51:13] [INFO] Ruta: G:\PELIS\...
+[2026-07-15 11:51:13] [INFO] Tipo: PELICULA (2017)
+[2026-07-15 11:51:13] [INFO] Título detectado: Blade Runner 2049
+[2026-07-15 11:51:13] [INFO] Iniciando busqueda de poster para 'Blade Runner 2049' (Tipo: PELICULA)
+[2026-07-15 11:51:13] [INFO] Inicializando caché...
+[2026-07-15 11:51:13] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-15 11:51:13] [INFO] Caché cargado desde archivo: 115 títulos
+[2026-07-15 11:51:13] [INFO] Búsqueda poster: título='Blade Runner 2049', RatingKey='8190'
+[2026-07-15 11:51:13] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-15 11:51:13] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8190/thumb/1784074249?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-15 11:51:15] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-15 11:51:15] [INFO] ========================================
+[2026-07-15 12:01:21] [INFO] ========================================
+[2026-07-15 12:01:21] [INFO] Procesando torrent: Blade Runner 2049 (2017) [2160p UHD BluRay REMUX HEVC TrueHD 7.1].mkv
+[2026-07-15 12:01:21] [INFO] Ruta: G:\PELIS\Blade Runner 2049 (2017) [2160p UHD BluRay REMUX HEVC TrueHD 7.1].mkv
+[2026-07-15 12:01:21] [INFO] Tipo: PELICULA (2017)
+[2026-07-15 12:01:21] [INFO] Título detectado: Blade Runner 2049
+[2026-07-15 12:01:21] [INFO] Iniciando busqueda de poster para 'Blade Runner 2049' (Tipo: PELICULA)
+[2026-07-15 12:01:21] [INFO] Inicializando caché...
+[2026-07-15 12:01:21] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-15 12:01:21] [INFO] Caché cargado desde archivo: 115 títulos
+[2026-07-15 12:01:21] [INFO] Búsqueda poster: título='Blade Runner 2049', RatingKey='8190'
+[2026-07-15 12:01:21] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-15 12:01:21] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8190/thumb/1784074249?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-15 12:01:23] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-15 12:01:23] [INFO] ========================================
+[2026-07-15 12:04:06] [INFO] ========================================
+[2026-07-15 12:04:06] [INFO] Procesando torrent: Blade Runner 2049 (2017) [Remastered 4K][Remastered 2160p HEVC SDR-RAW ES DTS-HD 7.1 EN TrueHD 7.1.4 Atmos Subs]HDO.mkv
+[2026-07-15 12:04:06] [INFO] Ruta: G:\PELIS\Blade Runner 2049 (2017) [Remastered 4K][Remastered 2160p HEVC SDR-RAW ES DTS-HD 7.1 EN TrueHD 7.1.4 Atmos Subs]HDO.mkv
+[2026-07-15 12:04:06] [INFO] Tipo: PELICULA (2017)
+[2026-07-15 12:04:06] [INFO] Título detectado: Blade Runner 2049
+[2026-07-15 12:04:06] [INFO] Iniciando busqueda de poster para 'Blade Runner 2049' (Tipo: PELICULA)
+[2026-07-15 12:04:06] [INFO] Inicializando caché...
+[2026-07-15 12:04:06] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-15 12:04:06] [INFO] Caché cargado desde archivo: 115 títulos
+[2026-07-15 12:04:06] [INFO] Búsqueda poster: título='Blade Runner 2049', RatingKey='8190'
+[2026-07-15 12:04:06] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-15 12:04:06] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8190/thumb/1784074249?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-15 12:04:09] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-15 12:04:09] [INFO] ========================================
