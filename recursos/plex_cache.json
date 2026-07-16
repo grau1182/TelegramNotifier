@@ -958,10 +958,21 @@
                       "titulo_normalizado":  "bladerunner2049",
                       "titulo_original":  "Blade Runner 2049",
                       "year":  2017
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8209",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8209/thumb/1784219312?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "aliases":  [
+                                      "Percy Jackson Y Los Dioses Del Olimpo"
+                                  ],
+                      "titulo_normalizado":  "palomasdemoniacasatacan",
+                      "titulo_original":  "Palomas demoníacas atacan",
+                      "year":  2025
                   }
               ],
-    "totalItems":  115,
+    "totalItems":  116,
     "description":  "Caché persistente de Plex - Actualizado automáticamente",
-    "lastUpdated":  "2026-07-15T12:16:53Z",
+    "lastUpdated":  "2026-07-16T18:34:50Z",
     "version":  "1.0"
 }
