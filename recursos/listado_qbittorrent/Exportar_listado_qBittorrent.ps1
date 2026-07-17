@@ -42,6 +42,7 @@ function Get-TorrentFileList {
         [string]$HostUrl
     )
 
+    $Hash = [string](Get-QBSingleValue $Hash)
     $encodedHash = [System.Uri]::EscapeDataString($Hash)
     $url = "$HostUrl/api/v2/torrents/files?hash=$encodedHash"
 
@@ -167,6 +168,69 @@ function Write-JsonFile {
     [System.IO.File]::WriteAllText($Path, $json, $utf8Bom)
 }
 
+function Get-QBSingleValue {
+    param($Value)
+
+    if ($null -eq $Value) {
+        return $null
+    }
+
+    if ($Value -is [System.Array]) {
+        return ($Value | Select-Object -First 1)
+    }
+
+    return $Value
+}
+
+function Get-QBDoubleValue {
+    param(
+        $Value,
+        [double]$Default = 0
+    )
+
+    $single = Get-QBSingleValue $Value
+    if ($null -eq $single) {
+        return $Default
+    }
+
+    $parsed = 0.0
+    if ([double]::TryParse([string]$single, [ref]$parsed)) {
+        return $parsed
+    }
+
+    return $Default
+}
+
+function Get-QBLongValue {
+    param(
+        $Value,
+        [long]$Default = 0
+    )
+
+    $single = Get-QBSingleValue $Value
+    if ($null -eq $single) {
+        return $Default
+    }
+
+    $parsed = [long]0
+    if ([long]::TryParse([string]$single, [ref]$parsed)) {
+        return $parsed
+    }
+
+    return $Default
+}
+
+function Test-QBittorrentCompleted {
+    param($Torrent)
+
+    $state = [string](Get-QBSingleValue $Torrent.state)
+    if ($state -in @('uploading', 'stalledUP', 'pausedUP', 'forcedUP', 'queuedUP')) {
+        return $true
+    }
+
+    return (Get-QBDoubleValue $Torrent.progress) -ge 0.999
+}
+
 if ([string]::IsNullOrWhiteSpace($Password)) {
     $Password = Read-Host "Contraseña qBittorrent"
 }
@@ -194,7 +258,7 @@ $torrents = @(Invoke-RestMethod `
     -WebSession $session)
 
 if ($OnlyCompleted) {
-    $torrents = @($torrents | Where-Object { [string]$_.state -eq "uploading" -or [string]$_.state -eq "stalledUP" -or [double]$_.progress -ge 1.0 })
+    $torrents = @($torrents | Where-Object { Test-QBittorrentCompleted -Torrent $_ })
     Write-Host "Filtro OnlyCompleted: $($torrents.Count) torrents" -ForegroundColor Yellow
 }
 
@@ -209,7 +273,8 @@ foreach ($torrent in $torrents) {
         Write-Host "  $index / $($torrents.Count)..." -ForegroundColor DarkGray
     }
 
-    $files = Get-TorrentFileList -Hash $torrent.hash -WebSession $session -HostUrl $QBHost.TrimEnd('/')
+    $torrentHash = [string](Get-QBSingleValue $torrent.hash)
+    $files = Get-TorrentFileList -Hash $torrentHash -WebSession $session -HostUrl $QBHost.TrimEnd('/')
     $contentPath = Resolve-QBittorrentContentPath -Torrent $torrent -Files $files
     $contentExists = $false
 
@@ -217,15 +282,18 @@ foreach ($torrent in $torrents) {
         $contentExists = Test-ContentPathExists -ContentPath $contentPath
     }
 
+    $sizeBytes = Get-QBLongValue $torrent.size
+    $progressValue = Get-QBDoubleValue $torrent.progress
+
     $exported += [PSCustomObject]@{
-        torrent_name    = [string]$torrent.name
+        torrent_name    = [string](Get-QBSingleValue $torrent.name)
         content_path    = $contentPath
-        save_path       = Normalize-WindowsPath ([string]$torrent.save_path)
-        size_bytes      = [long]$torrent.size
-        size_gb         = [math]::Round([double]$torrent.size / 1GB, 2)
-        state           = [string]$torrent.state
-        progress        = [double]$torrent.progress
-        hash            = [string]$torrent.hash
+        save_path       = Normalize-WindowsPath ([string](Get-QBSingleValue $torrent.save_path))
+        size_bytes      = $sizeBytes
+        size_gb         = [math]::Round($sizeBytes / 1GB, 2)
+        state           = [string](Get-QBSingleValue $torrent.state)
+        progress        = $progressValue
+        hash            = $torrentHash
         file_count      = $files.Count
         content_exists  = $contentExists
         test_tier       = if ($contentExists) { "full" } else { "parse_only" }

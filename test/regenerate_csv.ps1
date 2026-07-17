@@ -51,13 +51,18 @@ if ($OnlyWithContent) {
 
 if ($OnlyCompleted) {
     $torrents = @($torrents | Where-Object {
+        $state = if ($_.state -is [System.Array]) { [string]$_.state[0] } else { [string]$_.state }
+        if ($state -in @('uploading', 'stalledUP', 'pausedUP', 'forcedUP', 'queuedUP')) {
+            return $true
+        }
         if ($_.PSObject.Properties.Name -contains 'progress') {
-            return [double]$_.progress -ge 1.0
+            $progressRaw = if ($_.progress -is [System.Array]) { $_.progress[0] } else { $_.progress }
+            $progressValue = 0.0
+            if ([double]::TryParse([string]$progressRaw, [ref]$progressValue)) {
+                return $progressValue -ge 0.999
+            }
         }
-        if ($_.PSObject.Properties.Name -contains 'state') {
-            return [string]$_.state -in @('uploading', 'stalledUP', 'pausedUP')
-        }
-        return $true
+        return $false
     })
     Write-Host "Filtro OnlyCompleted: $($torrents.Count) torrents" -ForegroundColor Yellow
 }
