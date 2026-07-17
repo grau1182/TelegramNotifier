@@ -5,9 +5,11 @@
 function Get-PipelineRunMode {
     param(
         [switch]$QuickTest,
-        [int]$MaxTorrents = 0
+        [int]$MaxTorrents = 0,
+        [switch]$ReplayCacheOnly
     )
 
+    if ($ReplayCacheOnly) { return "REPLAY_CACHE" }
     if ($QuickTest) { return "QUICK_TEST" }
     if ($MaxTorrents -gt 0) { return "PARTIAL_TEST" }
     return "FULL_TEST"
@@ -17,8 +19,24 @@ function Get-PipelineTorrentCount {
     param(
         [string]$ProjectRoot,
         [switch]$QuickTest,
-        [int]$MaxTorrents = 0
+        [int]$MaxTorrents = 0,
+        [switch]$ReplayCacheOnly
     )
+
+    if ($ReplayCacheOnly) {
+        $jsonFolder = Join-Path $ProjectRoot "test\results\json"
+        if (-not (Test-Path $jsonFolder)) { return 0 }
+        $latest = Get-ChildItem -Path $jsonFolder -Filter "TelegramNotifier_Test_*.json" -ErrorAction SilentlyContinue |
+            Sort-Object Name -Descending | Select-Object -First 1
+        if (-not $latest) { return 0 }
+        try {
+            $raw = Get-Content $latest.FullName -Raw -Encoding UTF8
+            if ($raw.Length -ge 3 -and [int][char]$raw[0] -eq 0xFEFF) { $raw = $raw.Substring(1) }
+            $data = $raw | ConvertFrom-Json
+            return [int]$data.resumen.total_torrents
+        }
+        catch { return 0 }
+    }
 
     $csvPath = Join-Path $ProjectRoot "recursos\torrents.csv"
     if (-not (Test-Path $csvPath)) {
@@ -60,14 +78,32 @@ function Get-PipelineDurationEstimate {
         [string]$Mode,
         [int]$TorrentCount,
         [string]$ResultsPath,
-        [string]$TimingFilePath
+        [string]$TimingFilePath,
+        [switch]$KeepTestCache,
+        [switch]$SkipPass2,
+        [switch]$ReplayCacheOnly
     )
+
+    if ($ReplayCacheOnly) {
+        $pass2Sec = [math]::Max(30, [math]::Round($TorrentCount * 0.4))
+        $analysisOverheadSec = 20
+        return @{
+            Mode                   = "REPLAY_CACHE"
+            TorrentCount           = $TorrentCount
+            WrapperEstimateSec     = $pass2Sec
+            TotalLowSec            = $pass2Sec + $analysisOverheadSec
+            TotalHighSec           = [math]::Round($pass2Sec * 1.5) + $analysisOverheadSec
+            Source                 = "replay pasada 2 (~0.4 s/torrent)"
+            AnalysisOverheadSec    = $analysisOverheadSec
+            Pass2ExtraSec          = 0
+        }
+    }
 
     $analysisOverheadSec = 20
     $wrapperEstimateSec = $null
     $source = "valores por defecto"
     $includesPass2InWrapper = $false
-    $needsTestCacheFactor = ($Mode -eq "FULL_TEST")
+    $needsTestCacheFactor = ($Mode -eq "FULL_TEST") -and (-not $KeepTestCache)
 
     if (Test-Path $TimingFilePath) {
         try {
@@ -77,8 +113,8 @@ function Get-PipelineDurationEstimate {
                 $source = "ultima ejecucion pipeline ($($last.timestamp))"
                 $includesPass2InWrapper = [bool]$last.test_cache_mode -and ($Mode -eq "FULL_TEST")
                 if ($needsTestCacheFactor -and -not [bool]$last.test_cache_mode) {
-                    $wrapperEstimateSec *= 1.4
-                    $source += ", factor caché test vacía x1.4"
+                    $wrapperEstimateSec *= 1.25
+                    $source += ", factor caché test vacía x1.25"
                 }
             }
         }
@@ -110,8 +146,8 @@ function Get-PipelineDurationEstimate {
                     $hasPass2 = $null -ne $data.resumen.pasada2_json
                     $includesPass2InWrapper = $hasPass2
                     if ($needsTestCacheFactor -and -not [bool]$data.resumen.test_cache_mode) {
-                        $wrapperEstimateSec *= 1.4
-                        $source += ", factor caché test vacía x1.4"
+                        $wrapperEstimateSec *= 1.25
+                        $source += ", factor caché test vacía x1.25"
                     }
                     break
                 }
@@ -123,20 +159,28 @@ function Get-PipelineDurationEstimate {
 
     if (-not $wrapperEstimateSec) {
         $secPerTorrent = switch ($Mode) {
-            "FULL_TEST" { 5.0 }
+            "FULL_TEST" { 3.5 }
             "QUICK_TEST" { 11.0 }
             default { 8.0 }
         }
         $wrapperEstimateSec = $secPerTorrent * $TorrentCount
         if ($Mode -eq "FULL_TEST") {
-            $wrapperEstimateSec *= 1.4
-            $source = "por defecto FULL (~5 s/torrent, factor caché test x1.4)"
+            if ($needsTestCacheFactor) {
+                $wrapperEstimateSec *= 1.25
+                $source = "por defecto FULL (~3.5 s/torrent, caché fría x1.25)"
+            }
+            elseif ($KeepTestCache) {
+                $source = "por defecto FULL (~3.5 s/torrent, caché caliente)"
+            }
+            else {
+                $source = "por defecto FULL (~3.5 s/torrent)"
+            }
         }
     }
 
     $pass2ExtraSec = 0
-    if ($Mode -eq "FULL_TEST" -and -not $includesPass2InWrapper) {
-        $pass2ExtraSec = 120
+    if ($Mode -eq "FULL_TEST" -and -not $includesPass2InWrapper -and -not $SkipPass2) {
+        $pass2ExtraSec = [math]::Max(60, [math]::Round($TorrentCount * 0.3))
     }
 
     $wrapperLow = $wrapperEstimateSec * 0.85
@@ -161,6 +205,7 @@ function Write-PipelineDurationEstimate {
 
     $modeLabel = switch ($Estimate.Mode) {
         "FULL_TEST" { "FULL (caché test + pasada 2)" }
+        "REPLAY_CACHE" { "Replay (solo pasada 2)" }
         "QUICK_TEST" { "QuickTest (10 torrents)" }
         "PARTIAL_TEST" { "Parcial" }
         default { $Estimate.Mode }

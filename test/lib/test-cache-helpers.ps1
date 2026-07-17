@@ -28,7 +28,8 @@ function Resolve-PosterFromCacheOnly {
         [string]$SearchTitle,
         [string]$SearchTitleClean,
         [hashtable]$DetectedMetadata,
-        [string]$RatingKey = ""
+        [string]$RatingKey = "",
+        [switch]$SkipRuntimePosterResolution
     )
 
     $cacheResult = Get-PosterByCache -Title $SearchTitleClean -RatingKey $RatingKey -DetectedMetadata $DetectedMetadata
@@ -43,7 +44,7 @@ function Resolve-PosterFromCacheOnly {
 
     $posterUrl = $cacheResult.url
 
-    if ($DetectedMetadata.Type -in @("EPISODIO", "TEMPORADA") -and $cacheResult.ratingKey) {
+    if (-not $SkipRuntimePosterResolution -and $DetectedMetadata.Type -in @("EPISODIO", "TEMPORADA") -and $cacheResult.ratingKey) {
         $runtimePoster = Resolve-PlexSeriesPoster -ShowRatingKey $cacheResult.ratingKey -DetectedMetadata $DetectedMetadata
         if ($runtimePoster) {
             $posterUrl = $runtimePoster
@@ -58,11 +59,59 @@ function Resolve-PosterFromCacheOnly {
     }
 }
 
+function Get-ReplayTestJson {
+    param(
+        [string]$ResultsPath,
+        [string]$ReplayJsonPath = ""
+    )
+
+    if (-not [string]::IsNullOrWhiteSpace($ReplayJsonPath)) {
+        if (-not (Test-Path -LiteralPath $ReplayJsonPath)) {
+            throw "JSON de replay no encontrado: $ReplayJsonPath"
+        }
+        $jsonFile = Get-Item -LiteralPath $ReplayJsonPath
+    }
+    else {
+        $jsonFolder = Join-Path $ResultsPath "json"
+        if (-not (Test-Path $jsonFolder)) {
+            throw "No hay carpeta results/json para replay"
+        }
+
+        $jsonFile = Get-ChildItem -Path $jsonFolder -Filter "TelegramNotifier_Test_*.json" -ErrorAction SilentlyContinue |
+            Sort-Object Name -Descending |
+            Where-Object {
+                try {
+                    $raw = Get-Content $_.FullName -Raw -Encoding UTF8
+                    if ($raw.Length -ge 3 -and [int][char]$raw[0] -eq 0xFEFF) { $raw = $raw.Substring(1) }
+                    $data = $raw | ConvertFrom-Json
+                    return ($data.resumen.modo -eq "FULL_TEST" -and $null -ne $data.torrents)
+                }
+                catch { return $false }
+            } |
+            Select-Object -First 1
+
+        if (-not $jsonFile) {
+            throw "No se encontró ningún TelegramNotifier_Test_*.json FULL previo para replay"
+        }
+    }
+
+    $raw = Get-Content $jsonFile.FullName -Raw -Encoding UTF8
+    if ($raw.Length -ge 3 -and [int][char]$raw[0] -eq 0xFEFF) { $raw = $raw.Substring(1) }
+    $data = $raw | ConvertFrom-Json
+
+    return @{
+        JsonFile = $jsonFile.FullName
+        Torrents = @($data.torrents)
+        Resumen  = $data.resumen
+    }
+}
+
 function Invoke-CacheValidationPass {
     param(
         [array]$TorrentResults,
         [string]$ProjectRoot,
-        [string]$ResultsPath
+        [string]$ResultsPath,
+        [switch]$CacheOnlyComparison
     )
 
     Write-Log "========================================"
@@ -88,14 +137,21 @@ function Invoke-CacheValidationPass {
             -SearchTitle $parsed.SearchTitle `
             -SearchTitleClean $parsed.SearchTitleClean `
             -DetectedMetadata $meta `
-            -RatingKey ([string]$row.rating_key)
+            -RatingKey ([string]$row.rating_key) `
+            -SkipRuntimePosterResolution:$CacheOnlyComparison.IsPresent
 
         $pass1PosterRk = Get-PosterRatingKeyFromUrl -PosterUrl ([string]$row.poster_url)
         $pass2PosterRk = Get-PosterRatingKeyFromUrl -PosterUrl ([string]$cacheRead.poster_url)
         $ratingKeyMatch = [string]$cacheRead.rating_key -eq [string]$row.rating_key
-        $posterMatch = (-not [string]::IsNullOrWhiteSpace([string]$cacheRead.poster_url)) -and (
-            [string]$cacheRead.poster_url -eq [string]$row.poster_url -or $pass1PosterRk -eq $pass2PosterRk
-        )
+
+        if ($CacheOnlyComparison) {
+            $posterMatch = -not [string]::IsNullOrWhiteSpace([string]$cacheRead.poster_url)
+        }
+        else {
+            $posterMatch = (-not [string]::IsNullOrWhiteSpace([string]$cacheRead.poster_url)) -and (
+                [string]$cacheRead.poster_url -eq [string]$row.poster_url -or $pass1PosterRk -eq $pass2PosterRk
+            )
+        }
         $success = $cacheRead.found -and $ratingKeyMatch -and $posterMatch
 
         if ($success) {
@@ -146,6 +202,7 @@ function Invoke-CacheValidationPass {
             porcentaje_ok        = $pct
             cache_file           = $cacheFilePath
             cache_entradas       = $script:PlexCache.Count
+            cache_only_compare   = $CacheOnlyComparison.IsPresent
             timestamp            = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss.fff")
         }
         validaciones = $validationRows

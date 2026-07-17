@@ -45,10 +45,10 @@ Ambos entornos comparten la misma lógica en `plex-functions.ps1`:
    └─ Get-PosterByCache → exacto, alias, fuzzy ≥85% (+ filtro año)
    └─ Hit → poster instantáneo
 
-2. Partial scan Plex (solo si SkipPlexScan=$false y hay ContentPath)
+2. Partial scan Plex (solo si SkipPlexScan=$false, hay ContentPath **y existe en disco**)
    ├─ Resolve-PlexSectionForPath → detecta sección (G:\PELIS, G:\SERIES...)
    ├─ Invoke-PlexPartialScan → fuerza indexación del archivo
-   └─ Wait-ForPlexItem → polling cada 5s, máx. 60s
+   └─ Wait-ForPlexItem → polling cada 3s, máx. ~12s (defaults test)
 
 3. Lookup por ruta (items recientes en Plex)
    └─ Match por ContentPath aunque el título en Plex sea distinto
@@ -71,8 +71,8 @@ Ambos entornos comparten la misma lógica en `plex-functions.ps1`:
 
 | Parámetro | Default producción | Default test | Descripción |
 |-----------|-------------------|--------------|-------------|
-| `PlexScanPollSeconds` | `5` | `5` | Segundos entre reintentos tras partial scan |
-| `PlexScanPollMaxAttempts` | `12` | `12` | Intentos máximos (≈60 s total) |
+| `PlexScanPollSeconds` | `5` | `3` | Segundos entre reintentos tras partial scan |
+| `PlexScanPollMaxAttempts` | `12` | `4` | Intentos máximos (~12 s total en test) |
 | `SkipPlexScan` | `$false` | `$false` | Si `$true`, salta FASE 1 (scan + path lookup) |
 | `PlexMoviePathPrefix` | `G:\PELIS` | `G:\PELIS` | Fallback para resolver sección películas |
 | `PlexSeriesPathPrefix` | `G:\SERIES` | `G:\SERIES` | Fallback para resolver sección series |
@@ -201,7 +201,34 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 | Caché generada | `test/recursos/plex_cache_test.json` |
 | Validación pasada 2 | `test/results/json/CacheValidation_YYYYMMDD_HHMMSS.json` |
 
-**Nota:** puede tardar mucho (hasta ~60 s por torrent sin hit de caché).
+**Nota:** con las optimizaciones de test (polling corto, skip si ruta no existe, pasada 2 sin API Plex), un FULL suele tardar **8–15 min** con caché caliente o **12–20 min** con caché fría (antes ~18–50 min).
+
+#### Optimizaciones de velocidad (julio 2026)
+
+| Flag | Comando | Efecto |
+|------|---------|--------|
+| Caché caliente | `.\run_test_pipeline.ps1 -KeepTestCache` | No vacía `plex_cache_test.json`; reutiliza entradas previas |
+| Sin pasada 2 | `.\run_test_pipeline.ps1 -SkipPass2` | Omite validación de lectura caché (~1–3 min menos) |
+| Replay | `.\run_test_pipeline.ps1 -ReplayCacheOnly` | Solo pasada 2 sobre el último JSON FULL + caché test existente (~1–2 min) |
+| Combinado dev | `.\run_test_pipeline.ps1 -KeepTestCache -SkipPass2` | Iteración rápida tras un FULL inicial |
+
+**Automáticas (sin flags):**
+- Si `ContentPath` no existe en disco → no partial scan ni polling (va directo a búsqueda API).
+- Polling test: 3 s × 4 intentos (vs 5 s × 12 en producción).
+- Pasada 2 lee solo caché (sin `Resolve-PlexSeriesPoster` vía HTTP).
+
+Ejemplos:
+
+```powershell
+# Desarrollo diario tras un FULL inicial
+.\run_test_pipeline.ps1 -KeepTestCache
+
+# Validar solo lectura de caché
+.\run_test_pipeline.ps1 -ReplayCacheOnly
+
+# Replay sobre JSON concreto
+.\test_v4_wrapper.ps1 -ReplayCacheOnly -ReplayJsonPath "results\json\TelegramNotifier_Test_YYYYMMDD_HHMMSS.json"
+```
 
 #### Pipeline FULL + informe HTML (recomendado)
 
@@ -516,4 +543,4 @@ cd test
 ---
 
 **Última actualización:** 2026-07-17  
-**Versión búsqueda poster:** 2.3 (caché test FULL, pasada 2, parseo ampliado, jerarquía poster series)
+**Versión búsqueda poster:** 2.4 (optimizaciones velocidad test, KeepTestCache, Replay, pasada 2 sin API)

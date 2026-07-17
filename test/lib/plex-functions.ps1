@@ -2,8 +2,8 @@
 # PLEX-FUNCTIONS.PS1 - Funciones de Búsqueda Plex
 # ==================================================
 
-$script:PlexScanPollSeconds = 5
-$script:PlexScanPollMaxAttempts = 12
+$script:PlexScanPollSeconds = 3
+$script:PlexScanPollMaxAttempts = 4
 $script:SkipPlexScan = $false
 $script:PlexMoviePathPrefix = "G:\PELIS"
 $script:PlexSeriesPathPrefix = "G:\SERIES"
@@ -928,7 +928,9 @@ function Get-PlexPoster {
 
     Write-Log "Poster NO encontrado en caché. Intentando API..."
 
-    if (-not $SkipPlexScan -and -not [string]::IsNullOrWhiteSpace($ContentPath)) {
+    $contentOnDisk = -not [string]::IsNullOrWhiteSpace($ContentPath) -and (Test-Path -LiteralPath $ContentPath)
+
+    if (-not $SkipPlexScan -and $contentOnDisk) {
         $section = Resolve-PlexSectionForPath -ContentPath $ContentPath -ContentType $DetectedMetadata.Type
         if ($section) {
             Invoke-PlexPartialScan -SectionId $section.key -ContentPath $ContentPath | Out-Null
@@ -971,6 +973,9 @@ function Get-PlexPoster {
         else {
             Write-Log "No se pudo resolver seccion Plex para ruta: $ContentPath" -Level "WARNING"
         }
+    }
+    elseif (-not $SkipPlexScan -and -not [string]::IsNullOrWhiteSpace($ContentPath) -and -not $contentOnDisk) {
+        Write-Log "ContentPath no existe en disco, omitiendo partial scan: $ContentPath"
     }
     elseif ($SkipPlexScan) {
         Write-Log "SkipPlexScan activo, omitiendo partial scan"

@@ -4,8 +4,8 @@
     [switch]$TestMode = $true,
     [string]$TorrentType = "Desconocido",
     [string]$ResultsFolder = "",
-    [int]$PlexScanPollSeconds = 5,
-    [int]$PlexScanPollMaxAttempts = 12,
+    [int]$PlexScanPollSeconds = 3,
+    [int]$PlexScanPollMaxAttempts = 4,
     [switch]$SkipPlexScan = $false,
     [string]$ExportResultPath = ""
 )

@@ -4,7 +4,11 @@
 
 param(
     [switch]$QuickTest = $false,
-    [int]$MaxTorrents = 0
+    [int]$MaxTorrents = 0,
+    [switch]$KeepTestCache = $false,
+    [switch]$SkipPass2 = $false,
+    [switch]$ReplayCacheOnly = $false,
+    [string]$ReplayJsonPath = ""
 )
 
 $ProjectRoot = Split-Path $PSScriptRoot -Parent
@@ -16,13 +20,16 @@ $TimingFilePath = Join-Path $ResultsPath "last_pipeline_timing.json"
 
 . (Join-Path $TestFolder "lib\pipeline-timing.ps1")
 
-$pipelineMode = Get-PipelineRunMode -QuickTest:$QuickTest -MaxTorrents $MaxTorrents
-$torrentCount = Get-PipelineTorrentCount -ProjectRoot $ProjectRoot -QuickTest:$QuickTest -MaxTorrents $MaxTorrents
+$pipelineMode = Get-PipelineRunMode -QuickTest:$QuickTest -MaxTorrents $MaxTorrents -ReplayCacheOnly:$ReplayCacheOnly
+$torrentCount = Get-PipelineTorrentCount -ProjectRoot $ProjectRoot -QuickTest:$QuickTest -MaxTorrents $MaxTorrents -ReplayCacheOnly:$ReplayCacheOnly
 $estimate = Get-PipelineDurationEstimate `
     -Mode $pipelineMode `
     -TorrentCount $torrentCount `
     -ResultsPath $ResultsPath `
-    -TimingFilePath $TimingFilePath
+    -TimingFilePath $TimingFilePath `
+    -KeepTestCache:$KeepTestCache `
+    -SkipPass2:$SkipPass2 `
+    -ReplayCacheOnly:$ReplayCacheOnly
 
 $pipelineStart = Get-Date
 
@@ -39,6 +46,10 @@ $wrapperStart = Get-Date
 $params = @{}
 if ($QuickTest) { $params.QuickTest = $true }
 if ($MaxTorrents -gt 0) { $params.MaxTorrents = $MaxTorrents }
+if ($KeepTestCache) { $params.KeepTestCache = $true }
+if ($SkipPass2) { $params.SkipPass2 = $true }
+if ($ReplayCacheOnly) { $params.ReplayCacheOnly = $true }
+if ($ReplayJsonPath) { $params.ReplayJsonPath = $ReplayJsonPath }
 
 & $WrapperScript @params
 
@@ -65,7 +76,7 @@ Save-PipelineTimingRecord `
     -WrapperSeconds $wrapperSeconds `
     -AnalysisSeconds $analysisSeconds `
     -TotalSeconds $totalSeconds `
-    -TestCacheMode ($pipelineMode -eq "FULL_TEST")
+    -TestCacheMode (($pipelineMode -eq "FULL_TEST") -or ($pipelineMode -eq "REPLAY_CACHE"))
 
 Write-Host "`n╔════════════════════════════════════╗" -ForegroundColor Cyan
 Write-Host "║   PIPELINE COMPLETADO OK          ║" -ForegroundColor Cyan
