@@ -96,6 +96,17 @@ Ambos entornos comparten la misma lógica en `plex-functions.ps1`:
 
 **Recomendado antes de promover cambios a `core/`:** unitarios → regresión series → **FULL + pipeline** → revisar HTML.
 
+### Duración aproximada (observada / estimada)
+
+| Modo | Torrents | Duración típica | Notas |
+|------|----------|-----------------|-------|
+| FULL (caché prod, histórico) | 247 | ~18 min | JSON `20260717_114438` |
+| FULL (caché test vacía) | 247 | ~25–50 min | Variable; más lento sin hits iniciales |
+| QuickTest | 10 | ~2 min | Sin scan Plex |
+| AnalyzeResults (HTML) | — | ~20–30 s | Fase 2 del pipeline |
+
+El pipeline muestra un **rango estimado al inicio** (`run_test_pipeline.ps1`) usando `last_pipeline_timing.json` o el último JSON del mismo modo. Tras cada ejecución actualiza el registro con tiempos reales.
+
 ---
 
 ## Modos de ejecución
@@ -194,12 +205,14 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 
 #### Pipeline FULL + informe HTML (recomendado)
 
-Ejecuta el wrapper FULL y, al terminar, `AnalyzeResults.ps1` sobre el JSON más reciente:
+Ejecuta el wrapper FULL y, al terminar, `AnalyzeResults.ps1` sobre el JSON más reciente. Al inicio muestra **duración estimada** (basada en la última ejecución o JSON histórico):
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test
 .\run_test_pipeline.ps1
 ```
+
+Al finalizar guarda tiempos reales en `test/results/last_pipeline_timing.json` para mejorar la estimación siguiente.
 
 Análisis manual sobre un JSON concreto:
 
@@ -302,7 +315,8 @@ test/
 │   ├── utilities.ps1               ← Get-TorrentSearchMetadata, Get-MovieTitleAndYear
 │   ├── cache-manager.ps1           ← UseTestCache, Resolve-RatingKey, Get-PosterByCache
 │   ├── plex-functions.ps1          ← Scan, path lookup, jerarquía poster
-│   └── test-cache-helpers.ps1      ← Pasada 2, Archive-TestSessionLog
+│   ├── test-cache-helpers.ps1      ← Pasada 2, Archive-TestSessionLog
+│   └── pipeline-timing.ps1         ← Estimación duración pipeline
 │
 ├── recursos/
 │   └── plex_cache_test.json        ← Caché aislada (solo FULL; se regenera cada ejecución)
@@ -325,6 +339,7 @@ test/
     ├── json/
     │   ├── TelegramNotifier_Test_*.json
     │   └── CacheValidation_*.json  ← Resultado pasada 2 (solo FULL)
+    ├── last_pipeline_timing.json   ← Tiempos reales del último pipeline
     └── analisis/
         └── TelegramNotifier_Analisis_*.html
 ```

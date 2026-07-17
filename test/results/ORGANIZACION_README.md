@@ -19,6 +19,7 @@
 | JSON resultados | `results/json/TelegramNotifier_Test_*.json` | Cada ejecución del wrapper |
 | Validación caché | `results/json/CacheValidation_*.json` | Solo FULL (pasada 2) |
 | Informe HTML | `results/analisis/TelegramNotifier_Analisis_*.html` | Tras `AnalyzeResults` o pipeline |
+| Tiempos pipeline | `results/last_pipeline_timing.json` | Tras cada `run_test_pipeline.ps1` |
 | Caché test | `../recursos/plex_cache_test.json` | Solo FULL (regenerada cada vez) |
 | Log activo | `../logs/TelegramNotifier_Test.log` | Durante cualquier test con log |
 | Log archivado | `../logs/TelegramNotifier_*.log` | Inicio de cada FULL |
