@@ -182,21 +182,240 @@ function Get-MovieTitleAndYear {
     return $result
 }
 
+function Get-SeasonFromContentPath {
+    param([string]$ContentPath)
+
+    if ([string]::IsNullOrWhiteSpace($ContentPath)) {
+        return $null
+    }
+
+    $normalized = $ContentPath.ToLower().Trim().Replace("/", "\")
+    $segments = @($normalized.Trim('\').Split('\') | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+
+    for ($i = $segments.Count - 1; $i -ge 0; $i--) {
+        $segment = $segments[$i]
+        if ($segment -match '^(\d{1,2})$') {
+            return [int]$Matches[1]
+        }
+        if ($segment -match '^_(\d{1,2})_') {
+            return [int]$Matches[1]
+        }
+    }
+
+    return $null
+}
+
+function Test-PosterTitleRefinement {
+    param(
+        [string]$ParsedTitle,
+        [string]$PosterTitle
+    )
+
+    if ([string]::IsNullOrWhiteSpace($PosterTitle)) {
+        return $false
+    }
+
+    if ($ParsedTitle -eq $PosterTitle) {
+        return $true
+    }
+
+    $parsedKey = Normalize-CacheKey $ParsedTitle
+    $posterKey = Normalize-CacheKey $PosterTitle
+
+    if ($parsedKey -eq $posterKey) {
+        return $true
+    }
+
+    if ($posterKey.StartsWith($parsedKey) -and $PosterTitle.Length -gt $ParsedTitle.Length) {
+        return $true
+    }
+
+    if ((Get-FuzzyMatchScore $parsedKey $posterKey) -ge 85) {
+        return $true
+    }
+
+    return $false
+}
+
+function Get-PlexTitleSearchAliases {
+    param([string]$Title)
+
+    $aliases = @()
+    $key = (Normalize-CacheKey $Title)
+
+    switch -Regex ($key) {
+        'starwarsrebels' {
+            $aliases += @('Star Wars Rebels', 'Star Wars Rebeldes', 'Rebels')
+        }
+    }
+
+    return @($aliases | Select-Object -Unique)
+}
+
+function Get-TorrentSearchMetadata {
+    param(
+        [string]$TorrentName,
+        [string]$ContentPath
+    )
+
+    $originalName = [System.IO.Path]::GetFileNameWithoutExtension($TorrentName.Trim())
+    $cleanName = Get-CleanName $originalName
+
+    $metadata = @{
+        Title   = ""
+        Year    = $null
+        Season  = $null
+        Episode = $null
+        Type    = "Desconocido"
+    }
+
+    $searchTitle = ""
+    $patternDetected = Get-PatternDetected -CleanName $cleanName -OriginalName $originalName
+    $episodeCount = 0
+
+    if ($cleanName -match '^(.*?)-s(\d{1,2})e(\d{1,2})(?:-|$)') {
+        $metadata.Type = "EPISODIO"
+        $metadata.Season = [int]$Matches[2]
+        $metadata.Episode = [int]$Matches[3]
+        $searchTitle = Convert-Title $Matches[1]
+    }
+    elseif ($originalName -match '(?i)\bS(\d{1,2})E(\d{1,2})\b') {
+        $metadata.Type = "EPISODIO"
+        $metadata.Season = [int]$Matches[1]
+        $metadata.Episode = [int]$Matches[2]
+        $titlePart = $originalName -replace '(?i)\bS\d{1,2}E\d{1,2}.*$', ''
+        $titlePart = $titlePart -replace '\[[^\]]*\]', ''
+        $titlePart = $titlePart -replace '\([^\)]*\)', ''
+        $searchTitle = Convert-Title (($titlePart.Trim(' -') -replace '-', ' '))
+    }
+    elseif ($cleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[2]
+        $searchTitle = Get-SearchTitle -Title (Convert-Title $Matches[1]) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    elseif ($originalName -match '(?i)(?:^|[\s\-])(\d{1,2})\s*ª\s*[Tt]emporada') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[1]
+        $titlePart = $originalName -replace '(?i)(?:^|[\s\-])\d{1,2}\s*ª\s*[Tt]emporada.*$', ''
+        $titlePart = $titlePart -replace '\([^\)]*\)', ''
+        $searchTitle = Get-SearchTitle -Title (Convert-Title ($titlePart.Trim(' -'))) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    elseif ($originalName -match '(?i)[Tt]emporada\s+(\d{1,2})') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[1]
+        $titlePart = $originalName -replace '(?i)[Tt]emporada\s+\d{1,2}.*$', ''
+        $titlePart = $titlePart -replace '\([^\)]*\)', ''
+        $searchTitle = Get-SearchTitle -Title (Convert-Title ($titlePart.Trim(' -'))) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    elseif ($cleanName -match '^(.*?)-season-(\d{1,2})(?:-|$)') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[2]
+        $searchTitle = Get-SearchTitle -Title (Convert-Title $Matches[1]) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    elseif ($originalName -match '(?i)-Season\s+(\d{1,2})') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[1]
+        $titlePart = ($originalName -replace '(?i)-Season\s+\d{1,2}.*$', '').Trim(' -')
+        $searchTitle = Get-SearchTitle -Title (Convert-Title $titlePart) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    elseif ($cleanName -match '^(.*?)-s(\d{1,2})\[') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[2]
+        $searchTitle = Get-SearchTitle -Title (Convert-Title $Matches[1]) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    elseif ($originalName -match '(?i)\bS(\d{1,2})\[') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[1]
+        $titlePart = ($originalName -replace '(?i)\bS\d{1,2}\[.*$', '').Trim(' -')
+        $titlePart = $titlePart -replace '\([^\)]*\)', ''
+        $searchTitle = Get-SearchTitle -Title (Convert-Title $titlePart) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    elseif ($originalName -match '(?i)\bS(\d{1,2})\s+\[PACK\]' -or $originalName -match '(?i)\bS(\d{1,2})\s+\[') {
+        $metadata.Type = "TEMPORADA"
+        $metadata.Season = [int]$Matches[1]
+        $titlePart = $originalName -replace '(?i)\bS\d{1,2}\s+\[.*$', ''
+        $titlePart = $titlePart -replace '\([^\)]*\)', ''
+        $searchTitle = Get-SearchTitle -Title (Convert-Title ($titlePart.Trim(' -'))) -Type "TEMPORADA"
+        $episodeCount = Count-Episodes $ContentPath
+    }
+    else {
+        $movieInfo = Get-MovieTitleAndYear -OriginalName $originalName
+        if ($movieInfo.Found) {
+            $metadata.Type = "PELICULA"
+            $metadata.Year = $movieInfo.Year
+            $searchTitle = $movieInfo.Title
+        }
+        else {
+            $inferredSeason = Get-SeasonFromContentPath -ContentPath $ContentPath
+            if ($inferredSeason -and $ContentPath -match '\\SERIES\\|\\MADRE\\|\\ANIME_DIBUS\\') {
+                $metadata.Type = "TEMPORADA"
+                $metadata.Season = $inferredSeason
+                $searchTitle = Get-SearchTitle -Title (Convert-Title ($cleanName -replace '-', ' ')) -Type "TEMPORADA"
+                $episodeCount = Count-Episodes $ContentPath
+            }
+            else {
+                $searchTitle = Convert-Title ($cleanName -replace '-', ' ')
+            }
+        }
+    }
+
+    $metadata.Title = $searchTitle
+    $searchTitleClean = Get-SearchTitle -Title $searchTitle -Type $metadata.Type
+
+    return @{
+        OriginalName       = $originalName
+        CleanName          = $cleanName
+        DetectedMetadata   = $metadata
+        SearchTitle        = $searchTitle
+        SearchTitleClean   = $searchTitleClean
+        PatternDetected    = $patternDetected
+        EpisodeCount       = $episodeCount
+        ContentExists      = if ([string]::IsNullOrEmpty($ContentPath)) { $false } else { Test-Path $ContentPath }
+    }
+}
+
 function Get-PatternDetected {
-    param([string]$CleanName)
+    param(
+        [string]$CleanName,
+        [string]$OriginalName = ""
+    )
 
     if ($CleanName -match '^(.*?)-s(\d{1,2})e(\d{1,2})') {
         return "EPISODIO_SIMPLE"
     }
-    elseif ($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
+    if ($OriginalName -match '(?i)\bS(\d{1,2})E(\d{1,2})\b') {
+        return "EPISODIO_SIMPLE"
+    }
+    if ($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
         return "TEMPORADA"
     }
-    elseif ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})') {
+    if ($OriginalName -match '(?i)(?:^|[\s\-])(\d{1,2})\s*ª\s*[Tt]emporada') {
+        return "TEMPORADA_ORDINAL"
+    }
+    if ($OriginalName -match '(?i)[Tt]emporada\s+\d{1,2}') {
+        return "TEMPORADA_NOMBRE"
+    }
+    if ($CleanName -match '-season-\d' -or $OriginalName -match '(?i)-Season\s+\d') {
+        return "TEMPORADA_SEASON"
+    }
+    if ($CleanName -match '-s(\d{1,2})\[' -or $OriginalName -match '(?i)\bS(\d{1,2})\[') {
+        return "TEMPORADA_S_BRACKET"
+    }
+    if ($OriginalName -match '(?i)\bS(\d{1,2})\s+\[PACK\]') {
+        return "TEMPORADA_PACK"
+    }
+    if ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})') {
         return "PELICULA_CON_AÑO"
     }
-    else {
-        return "SIN_PATRON"
-    }
+
+    return "SIN_PATRON"
 }
 
 function Get-TechnicalTags {
@@ -282,7 +501,7 @@ function Get-ParseConfidence {
         return 50
     }
     elseif ($DetectedType -eq "TEMPORADA") {
-        if ($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
+        if ($Pattern -in @("TEMPORADA", "TEMPORADA_PACK", "TEMPORADA_ORDINAL", "TEMPORADA_NOMBRE", "TEMPORADA_SEASON", "TEMPORADA_S_BRACKET")) {
             return 85
         }
         return 50

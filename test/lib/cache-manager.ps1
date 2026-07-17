@@ -5,6 +5,7 @@
 $script:PlexCacheLoaded = $false
 $script:PlexCache = @()
 $script:ProjectRoot = ""
+$script:UseTestCache = $false
 
 function Get-PlexCacheFilePath {
     param([string]$ProjectRoot = "")
@@ -13,11 +14,41 @@ function Get-PlexCacheFilePath {
         $ProjectRoot = $script:ProjectRoot
     }
 
+    if ($script:UseTestCache) {
+        $testBase = Split-Path $PSScriptRoot -Parent
+        return Join-Path $testBase "recursos\plex_cache_test.json"
+    }
+
     if ([string]::IsNullOrEmpty($ProjectRoot)) {
         $ProjectRoot = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
     }
 
     return Join-Path $ProjectRoot "recursos\plex_cache.json"
+}
+
+function Reset-PlexCache {
+    $script:PlexCache = @()
+    $script:PlexCacheLoaded = $false
+}
+
+function Initialize-EmptyTestCacheFile {
+    param([string]$ProjectRoot = "")
+
+    $cacheFilePath = Get-PlexCacheFilePath -ProjectRoot $ProjectRoot
+    $cacheDir = Split-Path $cacheFilePath -Parent
+
+    if (-not (Test-Path $cacheDir)) {
+        New-Item -ItemType Directory -Path $cacheDir -Force | Out-Null
+    }
+
+    $emptyCache = @{
+        totalItems  = 0
+        lastUpdated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
+        cache       = @()
+    }
+
+    $emptyCache | ConvertTo-Json -Depth 5 | Set-Content -Path $cacheFilePath -Encoding UTF8 -Force
+    Write-Log "Caché test vacía creada: $cacheFilePath"
 }
 
 function Normalize-CacheKey {
@@ -69,11 +100,17 @@ function Initialize-PlexCache {
     param(
         [bool]$SkipDelay = $false,
         [string]$BasePath = ".",
-        [string]$ProjectRoot = ""
+        [string]$ProjectRoot = "",
+        [switch]$ForceReload
     )
 
-    if ($script:PlexCacheLoaded) {
+    if ($script:PlexCacheLoaded -and -not $ForceReload) {
         return
+    }
+
+    if ($ForceReload) {
+        $script:PlexCache = @()
+        $script:PlexCacheLoaded = $false
     }
 
     if (-not [string]::IsNullOrEmpty($ProjectRoot)) {
@@ -115,6 +152,9 @@ function Initialize-PlexCache {
         catch {
             Write-Log "Advertencia: Error leyendo caché: $($_.Exception.Message)" -Level "WARNING"
         }
+    }
+    elseif ($script:UseTestCache) {
+        Write-Log "Caché test vacía en memoria (0 entradas)"
     }
     else {
         Write-Log "Advertencia: Caché no encontrado en $cacheFilePath" -Level "WARNING"
@@ -304,7 +344,13 @@ function Add-ToCache {
     try {
         $cacheFile = Get-CacheFileData -ProjectRoot $ProjectRoot
         if (-not $cacheFile) {
-            return
+            if ($script:UseTestCache) {
+                Initialize-EmptyTestCacheFile -ProjectRoot $ProjectRoot
+                $cacheFile = Get-CacheFileData -ProjectRoot $ProjectRoot
+            }
+            if (-not $cacheFile) {
+                return
+            }
         }
 
         $cacheFile.Data.cache += $newItem

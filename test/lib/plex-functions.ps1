@@ -131,6 +131,10 @@ function Get-PlexPosterFromItem {
         }
 
         if ($itemType -eq "show") {
+            if ($DetectedMetadata -and $DetectedMetadata.Type -in @("TEMPORADA", "EPISODIO")) {
+                return $null
+            }
+
             if ($Item.thumb) {
                 $url = Get-PlexPosterUrlFromPath ([string]$Item.thumb)
                 Write-Log "Poster serie: thumb show -> $url"
@@ -266,6 +270,33 @@ function Get-PlexMatchScore {
         $Score += 40
     }
 
+    if ($DetectedMetadata.Type -eq "PELICULA") {
+        $detectedNorm = Normalize-PlexTitle $scoreTitle
+        $plexNorm = Normalize-PlexTitle $plexMatchTitle
+
+        if ($plexNorm.StartsWith($detectedNorm) -and $plexNorm.Length -gt $detectedNorm.Length) {
+            $suffix = $plexMatchTitle.Substring($scoreTitle.Length).Trim()
+            if ($suffix -match '^\d') {
+                $Score += 45
+            }
+        }
+
+        $detectedNum = [regex]::Match($scoreTitle, '(\d+)\s*$').Groups[1].Value
+        $plexNum = [regex]::Match($plexMatchTitle, '(\d+)\s*$').Groups[1].Value
+        if ($detectedNum -and $plexNum -and $detectedNum -eq $plexNum) {
+            $Score += 35
+        }
+    }
+
+    if ($ContentPath -match 'STAR_WARS_REBELS') {
+        if ($plexMatchTitle -match '(?i)rebel') {
+            $Score += 45
+        }
+        elseif ($plexMatchTitle -match '(?i)clone|andor|mandalorian|resistance|skeleton|underworld|visions') {
+            $Score -= 40
+        }
+    }
+
     if ($DetectedMetadata.Type -eq "EPISODIO") {
         if ($itemType -eq "episode" -and $PlexItem.parentIndex -eq $DetectedMetadata.Season -and $PlexItem.index -eq $DetectedMetadata.Episode) {
             $Score += 60
@@ -297,8 +328,17 @@ function Test-PlexItemAcceptable {
     param(
         [int]$Score,
         $PlexItem,
-        [hashtable]$DetectedMetadata
+        [hashtable]$DetectedMetadata,
+        [string]$ContentPath = ""
     )
+
+    if ($ContentPath -and $PlexItem) {
+        $plexPath = Get-PlexItemFilePath $PlexItem
+        $normalizedContent = Normalize-FilePath $ContentPath
+        if ($plexPath -and $normalizedContent -eq $plexPath) {
+            return $true
+        }
+    }
 
     if ($Score -ge 100) { return $true }
     if ($Score -ge 90) { return $true }
@@ -318,7 +358,30 @@ function Test-PlexItemAcceptable {
 
 function Get-PlexSearchQueries {
     param([string]$Title)
-    return Split-TitleVariants -Title $Title
+
+    $queries = [System.Collections.Generic.List[string]]::new()
+    $seen = @{}
+
+    function Add-Query {
+        param([string]$Value)
+        $Value = $Value.Trim()
+        if ([string]::IsNullOrWhiteSpace($Value)) { return }
+        $key = $Value.ToLower()
+        if (-not $seen[$key]) {
+            $seen[$key] = $true
+            $queries.Add($Value) | Out-Null
+        }
+    }
+
+    foreach ($variant in (Split-TitleVariants -Title $Title)) {
+        Add-Query $variant
+    }
+
+    foreach ($alias in (Get-PlexTitleSearchAliases -Title $Title)) {
+        Add-Query $alias
+    }
+
+    return @($queries)
 }
 
 function Get-PlexLibrarySections {
@@ -613,7 +676,7 @@ function Find-PlexItemByPath {
             }
         }
 
-        if ($bestItem -and (Test-PlexItemAcceptable -Score $bestScore -PlexItem $bestItem -DetectedMetadata $DetectedMetadata)) {
+        if ($bestItem -and (Test-PlexItemAcceptable -Score $bestScore -PlexItem $bestItem -DetectedMetadata $DetectedMetadata -ContentPath $ContentPath)) {
             return @{
                 item  = $bestItem
                 score = $bestScore
@@ -708,7 +771,7 @@ function Search-PlexWithQueries {
                     $matchTitle = Get-PlexMatchTitle -PlexItem $item -DetectedMetadata $DetectedMetadata
                     $itemLabel = "[$(Get-PlexItemTypeName $item)] $matchTitle"
 
-                    if ((Test-PlexItemAcceptable -Score $currentScore -PlexItem $item -DetectedMetadata $DetectedMetadata) -and $currentScore -gt $bestScore) {
+                    if ((Test-PlexItemAcceptable -Score $currentScore -PlexItem $item -DetectedMetadata $DetectedMetadata -ContentPath $ContentPath) -and $currentScore -gt $bestScore) {
                         $poster = Get-PlexPosterFromItem -Item $item -DetectedMetadata $DetectedMetadata
                         if (-not $poster -and (Get-PlexItemTypeName $item) -eq "show") {
                             $cacheEntry = Get-PlexCacheEntryFromItem -Item $item -DetectedMetadata $DetectedMetadata
@@ -790,12 +853,18 @@ function Set-LastPosterDisplayTitle {
         [hashtable]$DetectedMetadata
     )
 
-    if ($DetectedMetadata.Type -in @("EPISODIO", "TEMPORADA", "SERIE")) {
+    elseif ($DetectedMetadata -and $DetectedMetadata.Type -in @("EPISODIO", "TEMPORADA", "SERIE")) {
+        return
+    }
+
+    if (-not $DetectedMetadata) {
         return
     }
 
     if ($Item -and $Item.title) {
-        $script:LastPosterDisplayTitle = [string]$Item.title
+        if (Test-PosterTitleRefinement -ParsedTitle $DetectedMetadata.Title -PosterTitle ([string]$Item.title)) {
+            $script:LastPosterDisplayTitle = [string]$Item.title
+        }
     }
 }
 
@@ -843,7 +912,7 @@ function Get-PlexPoster {
         }
 
         Write-Log "Poster encontrado en caché (método: $($cacheResult.method), score: $($cacheResult.score)%)"
-        if ($cacheResult.title -and $DetectedMetadata.Type -eq "PELICULA") {
+        if ($cacheResult.title -and $DetectedMetadata.Type -eq "PELICULA" -and (Test-PosterTitleRefinement -ParsedTitle $DetectedMetadata.Title -PosterTitle $cacheResult.title)) {
             $script:LastPosterDisplayTitle = $cacheResult.title
         }
         if (Get-Variable -Name PlexSearchLog -Scope Script -ErrorAction SilentlyContinue) {

@@ -138,10 +138,12 @@ foreach ($t in $torrents) {
 }
 
 Write-Host "Exportando $($csvRows.Count) items a CSV..." -ForegroundColor Green
-$csvRows | Export-Csv -Path $CsvFile -NoTypeInformation -Encoding UTF8
+$utf8Bom = New-Object System.Text.UTF8Encoding $true
+$csvLines = $csvRows | ConvertTo-Csv -NoTypeInformation
+[System.IO.File]::WriteAllLines($CsvFile, $csvLines, $utf8Bom)
 
 Write-Host "Verificando CSV..." -ForegroundColor Cyan
-$check = @(Import-Csv -Path $CsvFile)
+$check = @(Import-Csv -Path $CsvFile -Encoding UTF8)
 Write-Host "Items en CSV: $($check.Count)" -ForegroundColor Green
 
 if ($check.Count -gt 0) {

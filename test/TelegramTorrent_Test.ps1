@@ -146,99 +146,24 @@ Write-Log "Nombre limpio: $CleanName"
 Write-Log "Resolucion: $Resolution"
 Write-Log "Tamaño: $SizeGB GB"
 
-$PatternDetected = Get-PatternDetected $CleanName
 $TechnicalTags = Get-TechnicalTags $NormalizedName
-$ContentExists = Test-Path $ContentPath
+
+$parsed = Get-TorrentSearchMetadata -TorrentName $TorrentName -ContentPath $ContentPath
+$PatternDetected = $parsed.PatternDetected
+$DetectedMetadata = $parsed.DetectedMetadata
+$Title = $parsed.SearchTitle
+$EpisodeCount = $parsed.EpisodeCount
+$ContentExists = $parsed.ContentExists
+$searchTitleClean = $parsed.SearchTitleClean
 
 Write-Log "Patron detectado: $PatternDetected"
 Write-Log "Tags tecnicos: $($TechnicalTags -join ', ')"
-
-$DetectedMetadata = @{ Title = ""; Year = $null; Season = $null; Episode = $null; Type = "Desconocido" }
-$EpisodeCount = 0
-
-# ==================================================
-# EPISODIO
-# ==================================================
-
-if($CleanName -match '^(.*?)-s(\d{1,2})e(\d{1,2})(?:-|$)'){
-
-    $Title   = Convert-Title $Matches[1]
-    $Season  = [int]$Matches[2]
-    $Episode = [int]$Matches[3]
-
-    $DetectedMetadata.Title = $Title
-    $DetectedMetadata.Season = $Season
-    $DetectedMetadata.Episode = $Episode
-    $DetectedMetadata.Type = "EPISODIO"
-
-    Write-Log "Tipo detectado: EPISODIO"
-}
-
-# ==================================================
-# TEMPORADA
-# ==================================================
-
-elseif($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)'){
-
-    $Title  = Convert-Title $Matches[1]
-    $Title  = Get-SearchTitle -Title $Title -Type "TEMPORADA"
-    $Season = [int]$Matches[2]
-
-    $EpisodeCount = Count-Episodes $ContentPath
-
-    $DetectedMetadata.Title = $Title
-    $DetectedMetadata.Season = $Season
-    $DetectedMetadata.Type = "TEMPORADA"
-
-    Write-Log "Tipo detectado: TEMPORADA"
+Write-Log "Tipo detectado: $($DetectedMetadata.Type)"
+if ($DetectedMetadata.Type -eq "TEMPORADA") {
     Write-Log "Episodios detectados: $EpisodeCount"
 }
 
-# ==================================================
-# PELICULA / DESCONOCIDO
-# ==================================================
-
-else {
-
-    $movieInfo = Get-MovieTitleAndYear -OriginalName $OriginalName
-    if ($movieInfo.Found) {
-        $Title = $movieInfo.Title
-        $Year = $movieInfo.Year
-
-        $DetectedMetadata.Title = $Title
-        $DetectedMetadata.Year = $Year
-        $DetectedMetadata.Type = "PELICULA"
-
-        Write-Log "Tipo detectado: PELICULA"
-    }
-    elseif ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
-
-        $Title = $Matches[1]
-        $Title = $Title -replace '\[.*\]',''
-        $Title = $Title.Trim()
-        $Title = Convert-Title $Title
-        $Year  = $Matches[2]
-
-        $DetectedMetadata.Title = $Title
-        $DetectedMetadata.Year = $Year
-        $DetectedMetadata.Type = "PELICULA"
-
-        Write-Log "Tipo detectado: PELICULA"
-    }
-    else {
-
-        $Title = Convert-Title $CleanName
-
-        $DetectedMetadata.Title = $Title
-        $DetectedMetadata.Type = "DESCONOCIDO"
-
-        Write-Log "Tipo detectado: DESCONOCIDO"
-    }
-}
-
-$ParseConfidence = Get-ParseConfidence -DetectedType $DetectedMetadata.Type -CleanName $CleanName -Pattern $PatternDetected
-
-$searchTitleClean = Get-SearchTitle -Title $Title -Type $DetectedMetadata.Type
+$ParseConfidence = Get-ParseConfidence -DetectedType $DetectedMetadata.Type -CleanName $parsed.CleanName -Pattern $PatternDetected
 
 $script:LastPosterDisplayTitle = $null
 $PosterUrl =
@@ -251,7 +176,7 @@ $PosterUrl =
         -PlexScanPollMaxAttempts $script:PlexScanPollMaxAttempts `
         -SkipPlexScan:$script:SkipPlexScan
 
-if ($script:LastPosterDisplayTitle -and $DetectedMetadata.Type -eq "PELICULA") {
+if ($script:LastPosterDisplayTitle -and $DetectedMetadata.Type -eq "PELICULA" -and (Test-PosterTitleRefinement -ParsedTitle $Title -PosterTitle $script:LastPosterDisplayTitle)) {
     $Title = $script:LastPosterDisplayTitle
     $DetectedMetadata.Title = $Title
 }
