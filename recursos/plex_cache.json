@@ -966,14 +966,6 @@
                       "titulo_normalizado":  "gary",
                       "titulo_original":  "Gary",
                       "year":  0
-                  },
-                  {
-                      "tipo":  "SERIE",
-                      "ratingKey":  "8201",
-                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8201/thumb/1784218998?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
-                      "titulo_normalizado":  "percyjacksonylosdiosesdelolimpo",
-                      "titulo_original":  "Percy Jackson y los dioses del Olimpo",
-                      "year":  0
                   }
               ],
     "totalItems":  117,
