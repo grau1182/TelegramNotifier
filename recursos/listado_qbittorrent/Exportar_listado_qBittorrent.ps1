@@ -42,11 +42,16 @@ function Get-TorrentFileList {
         [string]$HostUrl
     )
 
-    $Hash = [string](Get-QBSingleValue $Hash)
+    $Hash = [string](Get-QBSingleValue $Hash).ToLower()
     $encodedHash = [System.Uri]::EscapeDataString($Hash)
     $url = "$HostUrl/api/v2/torrents/files?hash=$encodedHash"
 
-    return @(Invoke-RestMethod -Uri $url -Method Get -WebSession $WebSession)
+    try {
+        return @(Invoke-RestMethod -Uri $url -Method Get -WebSession $WebSession -ErrorAction Stop)
+    }
+    catch {
+        return @()
+    }
 }
 
 function Get-CommonPathPrefix {
@@ -143,18 +148,26 @@ function Resolve-QBittorrentContentPath {
 }
 
 function Test-ContentPathExists {
-    param([string]$ContentPath)
+    param(
+        [string]$ContentPath,
+        [string]$SavePath = ""
+    )
 
-    if ([string]::IsNullOrWhiteSpace($ContentPath)) {
-        return $false
+    foreach ($candidate in @($ContentPath, $SavePath)) {
+        if ([string]::IsNullOrWhiteSpace($candidate)) {
+            continue
+        }
+
+        try {
+            if (Test-Path -LiteralPath $candidate) {
+                return $true
+            }
+        }
+        catch {
+        }
     }
 
-    try {
-        return Test-Path -LiteralPath $ContentPath
-    }
-    catch {
-        return $false
-    }
+    return $false
 }
 
 function Write-JsonFile {
@@ -275,11 +288,12 @@ foreach ($torrent in $torrents) {
 
     $torrentHash = [string](Get-QBSingleValue $torrent.hash)
     $files = Get-TorrentFileList -Hash $torrentHash -WebSession $session -HostUrl $QBHost.TrimEnd('/')
+    $savePath = Normalize-WindowsPath ([string](Get-QBSingleValue $torrent.save_path))
     $contentPath = Resolve-QBittorrentContentPath -Torrent $torrent -Files $files
     $contentExists = $false
 
     if (-not $SkipContentCheck) {
-        $contentExists = Test-ContentPathExists -ContentPath $contentPath
+        $contentExists = Test-ContentPathExists -ContentPath $contentPath -SavePath $savePath
     }
 
     $sizeBytes = Get-QBLongValue $torrent.size
@@ -288,7 +302,7 @@ foreach ($torrent in $torrents) {
     $exported += [PSCustomObject]@{
         torrent_name    = [string](Get-QBSingleValue $torrent.name)
         content_path    = $contentPath
-        save_path       = Normalize-WindowsPath ([string](Get-QBSingleValue $torrent.save_path))
+        save_path       = $savePath
         size_bytes      = $sizeBytes
         size_gb         = [math]::Round($sizeBytes / 1GB, 2)
         state           = [string](Get-QBSingleValue $torrent.state)
