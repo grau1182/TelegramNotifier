@@ -88,7 +88,7 @@ foreach ($idx in 0..($torrents.Count - 1)) {
     elseif ($global:CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
         $global:DetectedMetadata.Type = "TEMPORADA"
         $global:DetectedMetadata.Season = [int]$Matches[2]
-        $searchTitle = Convert-Title $Matches[1]
+        $searchTitle = Get-SearchTitle -Title (Convert-Title $Matches[1]) -Type "TEMPORADA"
     }
     elseif ($global:CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
         $global:DetectedMetadata.Type = "PELICULA"
@@ -111,7 +111,7 @@ foreach ($idx in 0..($torrents.Count - 1)) {
                              -PlexScanPollMaxAttempts $script:PlexScanPollMaxAttempts `
                              -SkipPlexScan:$script:SkipPlexScan
 
-    if ($script:LastPosterDisplayTitle) {
+    if ($script:LastPosterDisplayTitle -and $global:DetectedMetadata.Type -eq "PELICULA") {
         $global:DetectedMetadata.Title = $script:LastPosterDisplayTitle
         $searchTitle = $script:LastPosterDisplayTitle
     }

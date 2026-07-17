@@ -14,6 +14,10 @@ $scripts = @(
     @{
         Name = "Variantes y scoring (Kingsman)"
         File = "ValidateKingsmanSearch.ps1"
+    },
+    @{
+        Name = "Series: poster jerarquico + scoring"
+        File = "ValidateSeriesPoster.ps1"
     }
 )
 

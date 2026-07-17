@@ -6,7 +6,8 @@
     [string]$ResultsFolder = "",
     [int]$PlexScanPollSeconds = 5,
     [int]$PlexScanPollMaxAttempts = 12,
-    [switch]$SkipPlexScan = $false
+    [switch]$SkipPlexScan = $false,
+    [string]$ExportResultPath = ""
 )
 
 # ==================================================
@@ -84,13 +85,8 @@ function Rotate-Log {
 function Write-Log {
 
     param([string]$Text, [string]$Level = "INFO")
-	
-	# En TestMode, solo registrar en memoria, no en archivo
-	if ($TestMode) {
-		return
-	}
-	
-	Rotate-Log
+
+    Rotate-Log
 
     try {
 
@@ -185,6 +181,7 @@ if($CleanName -match '^(.*?)-s(\d{1,2})e(\d{1,2})(?:-|$)'){
 elseif($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)'){
 
     $Title  = Convert-Title $Matches[1]
+    $Title  = Get-SearchTitle -Title $Title -Type "TEMPORADA"
     $Season = [int]$Matches[2]
 
     $EpisodeCount = Count-Episodes $ContentPath
@@ -254,7 +251,7 @@ $PosterUrl =
         -PlexScanPollMaxAttempts $script:PlexScanPollMaxAttempts `
         -SkipPlexScan:$script:SkipPlexScan
 
-if ($script:LastPosterDisplayTitle) {
+if ($script:LastPosterDisplayTitle -and $DetectedMetadata.Type -eq "PELICULA") {
     $Title = $script:LastPosterDisplayTitle
     $DetectedMetadata.Title = $Title
 }
@@ -332,6 +329,10 @@ if ($TestMode) {
     }
     
     $script:TestResults.torrents += $testRecord
+
+    if (-not [string]::IsNullOrWhiteSpace($ExportResultPath)) {
+        $testRecord | ConvertTo-Json -Depth 6 | Set-Content -Path $ExportResultPath -Encoding UTF8 -Force
+    }
 }
 
 # ==================================================

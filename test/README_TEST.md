@@ -16,9 +16,20 @@ Documentación del entorno `test/` y su relación con producción (`core/`). El 
 | Partial scan Plex | Activado (`SkipPlexScan=$false`) | **Igual por defecto** |
 | Modo rápido | No disponible | `-SkipPlexScan` o `-QuickTest` |
 | Captura JSON resultados | No | Sí (`test/results/`) |
-| Logs en disco | `core/logs/TelegramNotifier_YYYYMMDD.log` | Solo si `-TestMode:$false` → `test/logs/TelegramNotifier_Test.log` |
+| Logs en disco | `core/logs/TelegramNotifier_YYYYMMDD.log` | `test/logs/TelegramNotifier_Test.log` (siempre en test) |
 
-> **Nota:** Con `-TestMode $true` (default), `Write-Log` no escribe a fichero; la salida va a consola y a `test/results/`.
+> **Nota:** Los logs de test se escriben siempre en `test/logs/TelegramNotifier_Test.log`. Los resultados JSON van a `test/results/`.
+
+---
+
+## Series (julio 2026): poster temporada → serie
+
+Para EPISODIO y TEMPORADA PACK:
+
+- **Poster:** `parentThumb` (temporada) → `grandparentThumb` (serie). Nunca snapshot del capítulo.
+- **Caché:** `grandparentRatingKey` (show), reutilizable entre temporadas/episodios.
+- **Título Telegram:** parseado del torrent (sin `(año)` en TEMPORADA; sin título de capítulo Plex).
+- **Scoring:** match vs `grandparentTitle`; show/temporada priorizados sobre episodio en PACK.
 
 ---
 
@@ -163,12 +174,28 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 
 ### 6. Validación unitaria (suite completa)
 
-Ejecuta parseo de películas, caché y scoring Kingsman en un solo comando:
+Ejecuta parseo de películas, caché, scoring Kingsman y series (poster jerárquico):
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 .\Run-UnitValidation.ps1
 ```
+
+### 6b. Regresión series con Plex real (Windows)
+
+Requiere Plex en `127.0.0.1:32400` y rutas `G:\SERIES` / `G:\PELIS`. Escribe log detallado en `test\logs\TelegramNotifier_Test.log`:
+
+```powershell
+cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
+
+# Con partial scan + polling (como producción, ~60s por caso)
+.\Run-SeriesRegression.ps1
+
+# Rápido: solo caché + búsqueda por título
+.\Run-SeriesRegression.ps1 -SkipPlexScan
+```
+
+Casos: Percy Jackson S02 PACK, The Boys S05E01, Blade Runner 2049.
 
 ### 7. Validación por área (opcional)
 
@@ -177,6 +204,13 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 .\ValidateMovieTitleParse.ps1
+```
+
+**Series — poster jerárquico** (sin Plex, mocks):
+
+```powershell
+cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
+.\ValidateSeriesPoster.ps1
 ```
 
 **Variantes y scoring ES/EN** (casos Kingsman, sin Plex real):
