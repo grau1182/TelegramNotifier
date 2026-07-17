@@ -178,19 +178,23 @@ cd ..\test
 # Test — un torrent (rápido, sin scan Plex)
 .\TelegramTorrent_Test.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -TestMode -SkipPlexScan
 
-# Suite completa (lento, como producción)
+# FULL: caché test aislada + pasada 2 (no modifica prod)
 .\test_v4_wrapper.ps1
 
-# Suite rápida (10 torrents, sin scan)
+# FULL + informe HTML (recomendado)
+.\run_test_pipeline.ps1
+
+# Suite rápida (10 torrents, sin scan, caché prod)
 .\test_v4_wrapper.ps1 -QuickTest
+.\run_test_pipeline.ps1 -QuickTest
 
-# Pipeline + informe HTML
-.\run_test_pipeline.ps1              # largo
-.\run_test_pipeline.ps1 -QuickTest   # rápido
-
-# Validación scoring Kingsman
+# Validación
+.\validation\Run-UnitValidation.ps1
+.\validation\Run-SeriesRegression.ps1
 .\validation\ValidateKingsmanSearch.ps1
 ```
+
+Ver [`test/README_TEST.md`](../test/README_TEST.md) para modos, artefactos y promoción a `core/`.
 
 ### BACKUP
 

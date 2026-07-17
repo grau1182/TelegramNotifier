@@ -291,17 +291,21 @@ test/
 ```powershell
 cd test
 
-# Suite completa (paridad producción)
+# FULL (caché test + pasada 2)
 .\test_v4_wrapper.ps1
 
-# Suite rápida (10 torrents, sin scan)
+# FULL + informe HTML (recomendado)
+.\run_test_pipeline.ps1
+
+# QuickTest (10 torrents, caché prod)
 .\test_v4_wrapper.ps1 -QuickTest
 
-# Validación scoring Kingsman
+# Validación
+.\validation\Run-UnitValidation.ps1
 .\validation\ValidateKingsmanSearch.ps1
 ```
 
-Ver [`README_TEST.md`](README_TEST.md) para todos los modos.
+Ver [`README_TEST.md`](README_TEST.md) para todos los modos, artefactos y promoción a `core/`.
 
 ---
 

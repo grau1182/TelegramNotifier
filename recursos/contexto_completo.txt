@@ -549,6 +549,43 @@ Caché               recursos/plex_cache.json (compartida)
 
 
 ================================================================================
+ACTUALIZACIÓN 2026-07-17 — Test FULL, caché aislada y pipeline
+(Documentación canónica: test/README_TEST.md)
+================================================================================
+
+MODOS TEST (resumen):
+
+  FULL (recomendado pre-promoción a core/):
+    cd test
+    .\run_test_pipeline.ps1
+    → test_v4_wrapper.ps1 + AnalyzeResults.ps1 (HTML)
+    → Caché: test/recursos/plex_cache_test.json (vacía al inicio, NO toca prod)
+    → Pasada 1: Plex + generar caché test
+    → Pasada 2: verificar lecturas (CacheValidation_*.json)
+
+  FULL sin HTML:
+    .\test_v4_wrapper.ps1
+
+  QuickTest (10 torrents, sin scan, caché prod):
+    .\test_v4_wrapper.ps1 -QuickTest
+
+  Unitarios / regresión:
+    .\validation\Run-UnitValidation.ps1
+    .\validation\Run-SeriesRegression.ps1
+
+SALIDAS FULL:
+  test/results/json/TelegramNotifier_Test_*.json
+  test/results/json/CacheValidation_*.json
+  test/results/analisis/TelegramNotifier_Analisis_*.html
+  test/recursos/plex_cache_test.json
+  test/logs/TelegramNotifier_Test.log (+ archivado al inicio)
+
+PROMOCIÓN test → core:
+  1. Validar en test/lib/
+  2. FULL + pipeline + revisar HTML
+  3. Copiar a core/lib/ y equivalentes en TelegramNotifier.ps1
+
+================================================================================
 FIN DEL CONTEXTO COMPLETO
-Generado: 2026-07-06
+Generado: 2026-07-06 | Actualizado: 2026-07-17
 ================================================================================

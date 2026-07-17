@@ -128,23 +128,30 @@ TelegramNotifier/
 ├── 📂 test/                              ← 🧪 SUITE DE TESTS
 │   ├── 📄 README_TEST.md                 ← Guía test vs producción ⭐
 │   ├── 📄 TelegramTorrent_Test.ps1
-│   ├── 📄 test_v4_wrapper.ps1
-│   ├── 📄 run_test_pipeline.ps1
+│   ├── 📄 test_v4_wrapper.ps1            ← FULL / QuickTest (CSV masivo)
+│   ├── 📄 run_test_pipeline.ps1          ← Wrapper + informe HTML
+│   ├── 📄 regenerate_csv.ps1
 │   ├── 📄 PLEXPOSTER_IMPROVEMENTS.md
 │   │
-│   ├── 📂 lib/                           ← Espejo de core/lib/
+│   ├── 📂 lib/                           ← Espejo de core/lib/ (validar aquí primero)
+│   │   └── 📄 test-cache-helpers.ps1     ← Pasada 2 FULL (solo test)
+│   ├── 📂 recursos/
+│   │   └── 📄 plex_cache_test.json         ← Caché aislada (solo FULL)
 │   ├── 📂 validation/
 │   │   ├── 📄 Run-UnitValidation.ps1
+│   │   ├── 📄 Run-SeriesRegression.ps1
 │   │   ├── 📄 ValidateKingsmanSearch.ps1
 │   │   ├── 📄 ValidateMovieTitleParse.ps1
-│   │   ├── 📄 AnalyzeResults.ps1
+│   │   ├── 📄 AnalyzeResults.ps1         ← Informe HTML ampliado
 │   │   ├── 📄 ConsolidateResults.ps1
 │   │   └── 📄 OrganizeResults.ps1
 │   │
 │   └── 📂 results/
+│       ├── 📂 json/                      ← TelegramNotifier_Test_*, CacheValidation_*
+│       └── 📂 analisis/                  ← Informes HTML
 │
 ├── 📂 recursos/
-│   ├── 📄 plex_cache.json                ← Caché compartida producción + test
+│   ├── 📄 plex_cache.json                ← Caché producción (+ QuickTest lectura/escritura)
 │   ├── 📄 README_CACHE.md
 │   └── 📄 torrents.csv
 │
@@ -582,22 +589,22 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
 # Un torrent (modo rápido — sin scan Plex)
 .\TelegramTorrent_Test.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -TestMode -SkipPlexScan
 
-# Suite completa (lento, como producción)
+# FULL: todos los torrents + caché test aislada + pasada 2
 .\test_v4_wrapper.ps1
 
-# Suite rápida (10 torrents, sin scan)
+# FULL + informe HTML (recomendado antes de promover a core/)
+.\run_test_pipeline.ps1
+
+# Suite rápida (10 torrents, caché producción, sin scan)
 .\test_v4_wrapper.ps1 -QuickTest
+.\run_test_pipeline.ps1 -QuickTest
 
-# Pipeline completo + informe HTML
-.\run_test_pipeline.ps1              # largo
-.\run_test_pipeline.ps1 -QuickTest  # rápido
-
-# Validación unitaria (suite completa)
+# Validación unitaria y regresión series
 .\validation\Run-UnitValidation.ps1
+.\validation\Run-SeriesRegression.ps1
 
-# Por área (opcional)
-.\validation\ValidateMovieTitleParse.ps1
-.\validation\ValidateKingsmanSearch.ps1
+# Análisis HTML manual
+.\validation\AnalyzeResults.ps1 -JsonPath "results\json\TelegramNotifier_Test_....json"
 ```
 
 ---

@@ -154,12 +154,21 @@ Comprueba parseo de películas y que la caché no devuelva falsos positivos (Bla
 ```powershell
 cd test
 
-# Suite completa (paridad producción, con scan Plex)
+# FULL: todos los torrents, caché test aislada, pasada 2 (no modifica prod)
 .\test_v4_wrapper.ps1
 
-# Suite rápida (10 torrents, sin scan)
+# FULL + informe HTML
+.\run_test_pipeline.ps1
+
+# Suite rápida (10 torrents, usa recursos/plex_cache.json)
 .\test_v4_wrapper.ps1 -QuickTest
 ```
+
+### Caché en test FULL
+
+El modo FULL escribe en `test/recursos/plex_cache_test.json`, **no** en `recursos/plex_cache.json`. Sirve para validar que las entradas generadas (título normalizado, `ratingKey`, poster) se leen correctamente en una segunda pasada antes de promover cambios a `core/`.
+
+Ver [`test/README_TEST.md`](../test/README_TEST.md) para el flujo completo.
 
 ## Ventajas
 
@@ -172,7 +181,8 @@ cd test
 
 ## Referencia en código
 
-- Ruta: `Get-PlexCacheFilePath` en `cache-manager.ps1` → `recursos/plex_cache.json`
+- Ruta producción: `Get-PlexCacheFilePath` en `cache-manager.ps1` → `recursos/plex_cache.json`
+- Ruta test FULL: mismo helper con `$script:UseTestCache = $true` → `test/recursos/plex_cache_test.json`
 - Escritura: `Add-ToCache`, `Add-CacheAliases`, `Save-CacheToFile`
 - Lectura: `Initialize-PlexCache`, `Get-PosterByCache`, `Resolve-RatingKey`
 
@@ -181,4 +191,4 @@ cd test
 - [`test/README_TEST.md`](../test/README_TEST.md) — modos test vs producción
 - [`core/README.md`](../core/README.md) — flujo producción y parseo de películas
 
-**Última actualización:** 2026-07-15
+**Última actualización:** 2026-07-17

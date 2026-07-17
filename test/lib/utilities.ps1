@@ -52,7 +52,11 @@ function Get-Resolution {
 
 function Get-SizeGB {
     param([string]$Path)
-    
+
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        return 0
+    }
+
     $Path = $Path.Trim('"')
 
     try {

@@ -6,19 +6,20 @@ Documentación del entorno `test/` y su relación con producción (`core/`). El 
 
 ## Resumen: producción vs test
 
-| Aspecto | Producción (`core/`) | Test (`test/`) |
-|---------|----------------------|----------------|
-| Script principal | `core/TelegramNotifier.ps1` | `test/TelegramTorrent_Test.ps1` |
-| Punto de entrada qBittorrent | Sí | No (manual o wrapper) |
-| Envío Telegram | Activado por defecto | Omitido en `TestMode` |
-| Librerías | `core/lib/*.ps1` | `test/lib/*.ps1` (copia espejo) |
-| Caché Plex | `recursos/plex_cache.json` | Mismo archivo compartido |
-| Partial scan Plex | Activado (`SkipPlexScan=$false`) | **Igual por defecto** |
-| Modo rápido | No disponible | `-SkipPlexScan` o `-QuickTest` |
-| Captura JSON resultados | No | Sí (`test/results/`) |
-| Logs en disco | `core/logs/TelegramNotifier_YYYYMMDD.log` | `test/logs/TelegramNotifier_Test.log` (siempre en test) |
+| Aspecto | Producción (`core/`) | Test FULL (`test_v4_wrapper.ps1`) | Test QuickTest / parcial |
+|---------|----------------------|-----------------------------------|--------------------------|
+| Script principal | `core/TelegramNotifier.ps1` | `test/TelegramTorrent_Test.ps1` (vía wrapper) | Igual |
+| Punto de entrada qBittorrent | Sí | No (CSV o manual) | No |
+| Envío Telegram | Activado por defecto | Omitido en `TestMode` | Omitido |
+| Librerías | `core/lib/*.ps1` | `test/lib/*.ps1` (espejo; validar aquí primero) | Igual |
+| Caché Plex | `recursos/plex_cache.json` | `test/recursos/plex_cache_test.json` (aislada, se regenera) | `recursos/plex_cache.json` (producción) |
+| Partial scan Plex | Activado | Activado | **Desactivado** (`-SkipPlexScan`) |
+| Pasada 2 (validación caché) | No | **Sí** (solo FULL) | No |
+| Informe HTML | No | Vía `run_test_pipeline.ps1` o `AnalyzeResults.ps1` | Opcional (pipeline) |
+| Captura JSON | No | `test/results/json/` | Igual |
+| Logs | `core/logs/TelegramNotifier_YYYYMMDD.log` | `test/logs/TelegramNotifier_Test.log` | Igual |
 
-> **Nota:** Los logs de test se escriben siempre en `test/logs/TelegramNotifier_Test.log`. Los resultados JSON van a `test/results/`.
+> **Nota:** En FULL, la caché de producción **no se modifica**. El test escribe solo en `test/recursos/plex_cache_test.json`.
 
 ---
 
@@ -75,6 +76,25 @@ Ambos entornos comparten la misma lógica en `plex-functions.ps1`:
 | `SkipPlexScan` | `$false` | `$false` | Si `$true`, salta FASE 1 (scan + path lookup) |
 | `PlexMoviePathPrefix` | `G:\PELIS` | `G:\PELIS` | Fallback para resolver sección películas |
 | `PlexSeriesPathPrefix` | `G:\SERIES` | `G:\SERIES` | Fallback para resolver sección series |
+
+---
+
+---
+
+## Tabla de modos de ejecución (test)
+
+| Modo | Comando | Torrents | Caché | Scan Plex | Pasada 2 | HTML |
+|------|---------|----------|-------|-----------|----------|------|
+| **FULL** | `.\test_v4_wrapper.ps1` | Todos (`torrents.csv`) | `plex_cache_test.json` | Sí | Sí | No (manual o pipeline) |
+| **FULL + análisis** | `.\run_test_pipeline.ps1` | Todos | `plex_cache_test.json` | Sí | Sí | **Sí** (auto) |
+| **QuickTest** | `.\test_v4_wrapper.ps1 -QuickTest` | 10 | `plex_cache.json` (prod) | No | No | No |
+| **QuickTest + HTML** | `.\run_test_pipeline.ps1 -QuickTest` | 10 | prod | No | No | Sí |
+| **Parcial** | `.\test_v4_wrapper.ps1 -MaxTorrents 50` | N primeros | prod | Sí | No | No |
+| **Un torrent** | `.\TelegramTorrent_Test.ps1 -TorrentName ... -TestMode` | 1 | prod (lectura) | Sí (default) | No | No |
+| **Unitarios** | `.\validation\Run-UnitValidation.ps1` | Casos fijos | prod (lectura) | No | No | No |
+| **Regresión series** | `.\validation\Run-SeriesRegression.ps1` | 3 casos Plex | prod | Sí (default) | No | No |
+
+**Recomendado antes de promover cambios a `core/`:** unitarios → regresión series → **FULL + pipeline** → revisar HTML.
 
 ---
 
@@ -142,34 +162,79 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test
   -SkipPlexScan
 ```
 
-### 4. Test — suite completa (modo largo, paridad producción)
+### 4. Test — suite FULL (modo largo, paridad producción)
 
-Procesa todos los torrents de `recursos/torrents.csv` con scan Plex activo:
+Procesa todos los torrents de `recursos/torrents.csv` con scan Plex activo, **caché test aislada** y **pasada 2** de validación:
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test
 .\test_v4_wrapper.ps1
 ```
 
-Pipeline completo con análisis HTML:
+#### Flujo FULL (un solo log de sesión)
+
+```
+1. Archivar log anterior → test/logs/TelegramNotifier_YYYYMMDD_HHMMSS.log
+2. Vaciar test/recursos/plex_cache_test.json
+3. PASADA 1: procesar torrents → Plex + escribir caché test
+4. PASADA 2: recargar caché test → verificar lecturas vs pasada 1
+5. Exportar JSON de resultados
+```
+
+**Salidas FULL:**
+
+| Artefacto | Ruta |
+|-----------|------|
+| Log sesión | `test/logs/TelegramNotifier_Test.log` |
+| JSON resultados | `test/results/json/TelegramNotifier_Test_YYYYMMDD_HHMMSS.json` |
+| Caché generada | `test/recursos/plex_cache_test.json` |
+| Validación pasada 2 | `test/results/json/CacheValidation_YYYYMMDD_HHMMSS.json` |
+
+**Nota:** puede tardar mucho (hasta ~60 s por torrent sin hit de caché).
+
+#### Pipeline FULL + informe HTML (recomendado)
+
+Ejecuta el wrapper FULL y, al terminar, `AnalyzeResults.ps1` sobre el JSON más reciente:
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test
 .\run_test_pipeline.ps1
 ```
 
-**Nota:** puede tardar mucho (hasta ~60 s por torrent sin hit de caché).
+Análisis manual sobre un JSON concreto:
+
+```powershell
+cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
+.\AnalyzeResults.ps1 -JsonPath "..\results\json\TelegramNotifier_Test_YYYYMMDD_HHMMSS.json"
+# Sin abrir navegador:
+.\AnalyzeResults.ps1 -JsonPath "..." -NoOpen
+```
+
+El informe HTML incluye: métricas de cobertura, fallos explicados por categoría, jerarquía de posters (show vs temporada), regresión Blade Runner / The Boys / Percy, y listado completo con URLs de poster.
+
+HTML generado en: `test/results/analisis/TelegramNotifier_Analisis_YYYYMMDD_HHMMSS.html`
 
 ### 5. Test — suite rápida (`QuickTest`, 10 torrents)
 
-Equivalente a modo largo pero con `-SkipPlexScan` y solo 10 entradas del CSV:
+Equivalente al modo largo pero con `-SkipPlexScan`, solo 10 entradas del CSV y **caché de producción** (no genera `plex_cache_test.json` ni pasada 2):
 
 ```powershell
 cd C:\Users\grau_\Downloads\TelegramNotifier\test
 .\test_v4_wrapper.ps1 -QuickTest
 
-# O vía pipeline
+# Con informe HTML al final
 .\run_test_pipeline.ps1 -QuickTest
+```
+
+### 5b. Preparar CSV de torrents
+
+```powershell
+# Desde qBittorrent (Windows)
+cd C:\Users\grau_\Downloads\TelegramNotifier\recursos\listado_qbittorrent
+.\Exportar_listado_qBittorrent.ps1 -OnlyCompleted
+
+cd ..\..\test
+.\regenerate_csv.ps1 -OnlyWithContent   # genera recursos/torrents.csv (UTF-8 BOM)
 ```
 
 ### 6. Validación unitaria (suite completa)
@@ -227,31 +292,41 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 ```
 test/
 ├── README_TEST.md                  ← Este archivo
-├── TelegramTorrent_Test.ps1        ← Script principal de test
-├── test_v4_wrapper.ps1             ← Procesa recursos/torrents.csv
-├── run_test_pipeline.ps1           ← Wrapper + AnalyzeResults.ps1
+├── TelegramTorrent_Test.ps1        ← Script principal de test (1 torrent)
+├── test_v4_wrapper.ps1             ← Procesa recursos/torrents.csv (FULL / QuickTest)
+├── run_test_pipeline.ps1           ← Wrapper + AnalyzeResults.ps1 (HTML)
+├── regenerate_csv.ps1              ← torrents.csv desde qBittorrent JSON
 ├── PLEXPOSTER_IMPROVEMENTS.md      ← Historial de diseño (referencia)
 │
-├── lib/                            ← Espejo de core/lib/ (sin logger.ps1)
-│   ├── utilities.ps1               ← Get-MovieTitleAndYear, Split-TitleVariants
-│   ├── cache-manager.ps1           ← Resolve-RatingKey, Test-CacheItemYearMatch
-│   └── plex-functions.ps1          ← Scan, path lookup, búsqueda progresiva
+├── lib/                            ← Espejo de core/lib/ (validar aquí, luego promover)
+│   ├── utilities.ps1               ← Get-TorrentSearchMetadata, Get-MovieTitleAndYear
+│   ├── cache-manager.ps1           ← UseTestCache, Resolve-RatingKey, Get-PosterByCache
+│   ├── plex-functions.ps1          ← Scan, path lookup, jerarquía poster
+│   └── test-cache-helpers.ps1      ← Pasada 2, Archive-TestSessionLog
+│
+├── recursos/
+│   └── plex_cache_test.json        ← Caché aislada (solo FULL; se regenera cada ejecución)
 │
 ├── validation/
 │   ├── Run-UnitValidation.ps1      ← Suite unitaria (ejecuta todos)
-│   ├── ValidateKingsmanSearch.ps1  ← Test unitario scoring ES/EN
-│   ├── ValidateMovieTitleParse.ps1 ← Test parseo películas + caché
-│   ├── ValidatePlexImprovements.ps1
-│   ├── ValidateTest.ps1
-│   ├── AnalyzeResults.ps1          ← Informe HTML
+│   ├── Run-SeriesRegression.ps1    ← Regresión Plex real (Percy, Boys, Blade Runner)
+│   ├── ValidateKingsmanSearch.ps1
+│   ├── ValidateMovieTitleParse.ps1
+│   ├── ValidateSeriesPoster.ps1
+│   ├── AnalyzeResults.ps1          ← Informe HTML ampliado
 │   ├── ConsolidateResults.ps1
 │   └── OrganizeResults.ps1
 │
-├── logs/                           ← Solo si TestMode=$false
-│   └── TelegramNotifier_Test.log
+├── logs/
+│   ├── TelegramNotifier_Test.log   ← Log sesión activa
+│   └── TelegramNotifier_*.log      ← Logs archivados (inicio de cada FULL)
 │
-└── results/                        ← JSON generados en TestMode
-    └── torrents.json
+└── results/
+    ├── json/
+    │   ├── TelegramNotifier_Test_*.json
+    │   └── CacheValidation_*.json  ← Resultado pasada 2 (solo FULL)
+    └── analisis/
+        └── TelegramNotifier_Analisis_*.html
 ```
 
 ---
@@ -275,11 +350,17 @@ O, si falla path lookup:
 [INFO] Caché actualizado: Nuevo título 'Kingsman: Servicio secreto' agregado
 ```
 
-### Test con SkipPlexScan
+### Test FULL (pasada 1 / pasada 2)
 
 ```
-[INFO] SkipPlexScan activo, omitiendo partial scan
-[INFO] Queries progresivas: ...
+[INFO] === TEST FULL - inicio ===
+[INFO] === PASADA 1: Plex + generación plex_cache_test.json ===
+[INFO] Caché actualizado: Nuevo título '...' agregado con RatingKey ...
+[INFO] === PASADA 1 fin: 224 posters / 247 torrents, 180 entradas en caché test ===
+[INFO] === PASADA 2: verificacion caché test ===
+[INFO] PASADA 2 OK #1: ... rk=7223 metodo=cache_exact
+[INFO] === PASADA 2 fin: 220/224 lecturas OK (98.21%) ===
+[INFO] === TEST FULL - fin ===
 ```
 
 ---
@@ -302,9 +383,31 @@ Invoke-RestMethod "http://127.0.0.1:32400/search?query=Kingsman&X-Plex-Token=$Pl
 
 ---
 
-## Caché compartida y aliases
+### Test con SkipPlexScan (QuickTest)
 
-Ubicación única: `recursos/plex_cache.json`
+```
+[INFO] SkipPlexScan activo, omitiendo partial scan
+[INFO] Queries progresivas: ...
+```
+
+---
+
+## Caché: producción vs test
+
+### Producción y QuickTest
+
+Ubicación: `recursos/plex_cache.json`
+
+Usada en producción (`core/`) y en tests QuickTest/parciales/un torrent (solo lectura salvo que Plex encuentre entradas nuevas en esos modos).
+
+### FULL test (aislada)
+
+Ubicación: `test/recursos/plex_cache_test.json`
+
+- Se **vacía al inicio** de cada FULL.
+- **Pasada 1:** cada poster encontrado se escribe aquí (no toca `recursos/plex_cache.json`).
+- **Pasada 2:** recarga el JSON y verifica que cada torrent con poster en pasada 1 se lee correctamente desde caché.
+- Sirve para validar criterios de título normalizado, `ratingKey` de show y poster antes de promover lógica a producción.
 
 Tras encontrar un poster con título distinto al del torrent, se guarda automáticamente un alias:
 
@@ -330,12 +433,32 @@ La segunda descarga del mismo contenido con nombre en español será **cache hit
 
 | Síntoma | Causa probable | Acción |
 |---------|----------------|--------|
-| Poster en prod, no en test | `-SkipPlexScan` activo | Ejecutar sin `-SkipPlexScan` ni `-QuickTest` |
+| FULL modifica prod cache | Pasada 1 escribía en prod (antiguo) | Confirmar `plex_cache_test.json`; prod intacto |
+| Pasada 2 muchos FAIL | Claves/alias/poster distintos pasada 1 vs 2 | Revisar `CacheValidation_*.json` y log PASADA 2 |
+| `elseif` / `Test-Path` vacío al dot-source | Sesión PowerShell con variables `$TorrentName`/`$ContentPath` | Cerrar sesión o usar wrapper actualizado |
+| Poster en prod, no en test | `-SkipPlexScan` activo | Ejecutar FULL sin `-QuickTest` |
 | Test muy lento | Modo largo con scan activo | Normal; usar `-QuickTest` para iterar |
 | `Escaneo parcial activado` no aparece | `SkipPlexScan` o `ContentPath` vacío | Verificar ruta y flag |
 | Plex devuelve 0 items | Título ES vs EN | Debería resolverse con query `Kingsman` + año |
 | Poster incorrecto (película distinta) | Parseo o fuzzy en caché | Ejecutar `ValidateMovieTitleParse.ps1`; revisar título/año en log |
 | Timeout 60s | Plex tarda en indexar | Aumentar `-PlexScanPollMaxAttempts` |
+
+---
+
+---
+
+## Promover cambios de test → producción
+
+Flujo acordado:
+
+1. Implementar y probar en `test/lib/` (no en `core/` directamente).
+2. `.\validation\Run-UnitValidation.ps1` — parseo, caché, scoring, poster jerárquico (sin Plex o mínimo).
+3. `.\validation\Run-SeriesRegression.ps1` — casos Percy / Boys / Blade Runner con Plex real.
+4. `.\run_test_pipeline.ps1` — FULL + informe HTML; revisar cobertura, fallos explicados y jerarquía.
+5. Copiar archivos validados de `test/lib/` a `core/lib/` y `test/TelegramTorrent_Test.ps1` → `core/TelegramNotifier.ps1` (parseo equivalente).
+6. Prueba manual en prod con `-SendTelegram:$false` (ver ejemplos en `core/README.md`).
+
+**No promover:** `test/lib/test-cache-helpers.ps1`, `test/recursos/plex_cache_test.json`, scripts de `test/validation/` (permanecen solo en test).
 
 ---
 
@@ -353,25 +476,29 @@ cd test
 # ── TEST: un torrent (rápido, sin scan) ────────────────
 .\TelegramTorrent_Test.ps1 -TorrentName "..." -ContentPath "G:\PELIS\..." -TestMode -SkipPlexScan
 
-# ── TEST: suite completa (lento, como producción) ─────
+# ── TEST: FULL (caché test + pasada 2) ───────────────
 .\test_v4_wrapper.ps1
 
-# ── TEST: suite rápida (10 torrents, sin scan) ─────────
+# ── TEST: FULL + informe HTML (recomendado) ───────────
+.\run_test_pipeline.ps1
+
+# ── TEST: suite rápida (10 torrents, sin scan) ─────
 .\test_v4_wrapper.ps1 -QuickTest
 
-# ── TEST: pipeline completo + HTML ─────────────────────
-.\run_test_pipeline.ps1              # largo
-.\run_test_pipeline.ps1 -QuickTest   # rápido
+# ── TEST: QuickTest + HTML ───────────────────────────
+.\run_test_pipeline.ps1 -QuickTest
 
-# ── VALIDACIÓN unitaria (suite completa) ───────────────
+# ── Análisis manual de un JSON ───────────────────────
+.\validation\AnalyzeResults.ps1 -JsonPath "results\json\TelegramNotifier_Test_....json"
+
+# ── VALIDACIÓN unitaria ──────────────────────────────
 .\validation\Run-UnitValidation.ps1
 
-# ── VALIDACIÓN por área (opcional) ─────────────────────
-.\validation\ValidateMovieTitleParse.ps1
-.\validation\ValidateKingsmanSearch.ps1
+# ── VALIDACIÓN regresión series (Plex real) ────────
+.\validation\Run-SeriesRegression.ps1
 ```
 
 ---
 
-**Última actualización:** 2026-07-15  
-**Versión búsqueda poster:** 2.2 (parseo películas + caché estricta)
+**Última actualización:** 2026-07-17  
+**Versión búsqueda poster:** 2.3 (caché test FULL, pasada 2, parseo ampliado, jerarquía poster series)

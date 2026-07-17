@@ -50,7 +50,7 @@ $notfound = 0
 $allTorrentResults = @()
 
 # Dot-source: Carga TODAS las funciones del script en memoria (comparte scope)
-. $ScriptPath -TestMode $true -ResultsFolder $ResultsPath -SkipPlexScan:$QuickTest
+. $ScriptPath -TestMode $true -TorrentName '' -ContentPath '' -ResultsFolder $ResultsPath -SkipPlexScan:$QuickTest
 
 . (Join-Path $TestBasePath "lib\test-cache-helpers.ps1")
 

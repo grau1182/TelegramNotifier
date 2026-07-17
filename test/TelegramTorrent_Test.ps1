@@ -139,7 +139,7 @@ $Resolution = Get-Resolution $NormalizedName
 
 $SizeGB = Get-SizeGB $ContentPath
 
-$SizeError = if ($SizeGB -eq 0 -and (Test-Path $ContentPath)) { "No se pudo calcular" } else { $null }
+$SizeError = if ($SizeGB -eq 0 -and -not [string]::IsNullOrWhiteSpace($ContentPath) -and (Test-Path $ContentPath)) { "No se pudo calcular" } else { $null }
 
 Write-Log "Nombre normalizado: $NormalizedName"
 Write-Log "Nombre limpio: $CleanName"

@@ -853,11 +853,11 @@ function Set-LastPosterDisplayTitle {
         [hashtable]$DetectedMetadata
     )
 
-    elseif ($DetectedMetadata -and $DetectedMetadata.Type -in @("EPISODIO", "TEMPORADA", "SERIE")) {
+    if (-not $DetectedMetadata) {
         return
     }
 
-    if (-not $DetectedMetadata) {
+    if ($DetectedMetadata.Type -in @("EPISODIO", "TEMPORADA", "SERIE")) {
         return
     }
 

@@ -100,9 +100,4 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 
 
 cd test
-.\test_v4_wrapper.ps1              # FULL: caché test + pasada 2
-.\test_v4_wrapper.ps1 -QuickTest   # 10 torrents, caché producción
-
-cd validation
-.\Run-UnitValidation.ps1
-.\AnalyzeResults.ps1
+.\run_test_pipeline.ps1
