@@ -526,3 +526,5 @@ Write-Host "[OK] HTML generado [$tipoLabel]: $htmlFile"
 if (-not $NoOpen -and $env:OS -match 'Windows') {
     Start-Process $htmlFile
 }
+
+exit 0

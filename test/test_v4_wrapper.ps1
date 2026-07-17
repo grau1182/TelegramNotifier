@@ -445,3 +445,5 @@ if ($isFullTest) {
 if ($ReplayCacheOnly) {
     Write-Log "=== REPLAY - fin ==="
 }
+
+exit 0

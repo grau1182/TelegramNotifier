@@ -99,5 +99,10 @@ cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
 # .\ValidateKingsmanSearch.ps1
 
 
+# Caso A: run nuevo completo (tests + HTML)
 cd test
 .\run_test_pipeline.ps1
+
+# Caso B: ya tienes JSON de un FULL anterior y solo quieres el HTML
+cd C:\Users\grau_\Downloads\TelegramNotifier\test\validation
+.\AnalyzeResults.ps1 -JsonPath "..\results\json\TelegramNotifier_Test_20260717_152623.json"

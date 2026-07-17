@@ -51,9 +51,12 @@ if ($SkipPass2) { $params.SkipPass2 = $true }
 if ($ReplayCacheOnly) { $params.ReplayCacheOnly = $true }
 if ($ReplayJsonPath) { $params.ReplayJsonPath = $ReplayJsonPath }
 
+$LASTEXITCODE = 0
 & $WrapperScript @params
+$wrapperExit = $LASTEXITCODE
+if ($null -eq $wrapperExit) { $wrapperExit = 0 }
 
-if ($LASTEXITCODE -ne 0) {
+if (-not $? -or $wrapperExit -ne 0) {
     Write-Host "`n❌ ERROR en fase de tests" -ForegroundColor Red
     exit 1
 }
@@ -64,7 +67,15 @@ $wrapperSeconds = ((Get-Date) - $wrapperStart).TotalSeconds
 Write-Host "`n[FASE 2/2] Generando análisis..." -ForegroundColor Yellow
 $analysisStart = Get-Date
 
+$LASTEXITCODE = 0
 & $AnalysisScript
+$analysisExit = $LASTEXITCODE
+if ($null -eq $analysisExit) { $analysisExit = 0 }
+
+if (-not $? -or $analysisExit -ne 0) {
+    Write-Host "`n❌ ERROR en fase de analisis" -ForegroundColor Red
+    exit 1
+}
 
 $analysisSeconds = ((Get-Date) - $analysisStart).TotalSeconds
 $totalSeconds = ((Get-Date) - $pipelineStart).TotalSeconds
@@ -85,3 +96,5 @@ Write-Host "  Wrapper:  $(Format-DurationHuman $wrapperSeconds)" -ForegroundColo
 Write-Host "  Analisis: $(Format-DurationHuman $analysisSeconds)" -ForegroundColor Green
 Write-Host "  Total:    $(Format-DurationHuman $totalSeconds)" -ForegroundColor Green
 Write-Host "  Registro: $TimingFilePath`n" -ForegroundColor DarkGray
+
+exit 0
