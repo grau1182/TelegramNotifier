@@ -20,6 +20,8 @@ Documentación del entorno `test/` y su relación con producción (`core/`). El 
 | Logs | `core/logs/TelegramNotifier_YYYYMMDD.log` | `test/logs/TelegramNotifier_Test.log` | Igual |
 
 > **Nota:** En FULL, la caché de producción **no se modifica**. El test escribe solo en `test/recursos/plex_cache_test.json`.
+>
+> **Paridad prod (2026-07-17):** la lógica de parseo/poster v2.4 está promovida a `core/lib/` (polling prod sigue 5×12).
 
 ---
 

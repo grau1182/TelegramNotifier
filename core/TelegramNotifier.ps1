@@ -70,90 +70,34 @@ function Process-Torrent {
     Write-Log "Procesando torrent: $TorrentName" -Level "INFO"
     Write-Log "Ruta: $ContentPath" -Level "INFO"
 
-    # Parseado del nombre
-    $OriginalName = [System.IO.Path]::GetFileNameWithoutExtension($TorrentName)
+    $parsed = Get-TorrentSearchMetadata -TorrentName $TorrentName -ContentPath $ContentPath
+
+    $OriginalName = $parsed.OriginalName
     $NormalizedName = Normalize-Name $OriginalName
-    $CleanName = Get-CleanName $OriginalName
-    
-    # Extracción de metadata
+    $CleanName = $parsed.CleanName
+    $DetectedMetadata = $parsed.DetectedMetadata
+    $PatternDetected = $parsed.PatternDetected
+    $EpisodeCount = $parsed.EpisodeCount
+    $SearchTitle = $parsed.SearchTitle
+
     $Resolution = Get-Resolution $NormalizedName
     $SizeGB = Get-SizeGB $ContentPath
-    $PatternDetected = Get-PatternDetected $CleanName
     $TechnicalTags = Get-TechnicalTags $NormalizedName
-    $ContentExists = if ([string]::IsNullOrEmpty($ContentPath)) { $false } else { Test-Path $ContentPath }
+    $ContentExists = $parsed.ContentExists
 
-    # Metadata detectada
-    $DetectedMetadata = @{ Title = ""; Year = $null; Season = $null; Episode = $null; Type = "Desconocido" }
-    $EpisodeCount = 0
-
-    # ==================================================
-    # DETECCION DE TIPO
-    # ==================================================
-
-    if ($CleanName -match '^(.*?)-s(\d{1,2})e(\d{1,2})(?:-|$)') {
-        $Title   = Convert-Title $Matches[1]
-        $Season  = [int]$Matches[2]
-        $Episode = [int]$Matches[3]
-
-        $DetectedMetadata.Title = $Title
-        $DetectedMetadata.Season = $Season
-        $DetectedMetadata.Episode = $Episode
-        $DetectedMetadata.Type = "EPISODIO"
-
-        Write-Log "Tipo: EPISODIO (S$($Season.ToString('D2'))E$($Episode.ToString('D2')))" -Level "INFO"
+    Write-Log "Patron detectado: $PatternDetected" -Level "INFO"
+    Write-Log "Tipo: $($DetectedMetadata.Type)" -Level "INFO"
+    if ($DetectedMetadata.Type -eq "TEMPORADA") {
+        Write-Log "Episodios detectados: $EpisodeCount" -Level "INFO"
     }
-
-    elseif ($CleanName -match '^(.*?)-s(\d{1,2})(?:-|$)') {
-        $Title  = Convert-Title $Matches[1]
-        $Season = [int]$Matches[2]
-        $EpisodeCount = Count-Episodes $ContentPath
-
-        $DetectedMetadata.Title = $Title
-        $DetectedMetadata.Season = $Season
-        $DetectedMetadata.Type = "TEMPORADA"
-
-        Write-Log "Tipo: TEMPORADA (S$Season con $EpisodeCount episodios)" -Level "INFO"
-    }
-
-    else {
-        $movieInfo = Get-MovieTitleAndYear -OriginalName $OriginalName
-        if ($movieInfo.Found) {
-            $DetectedMetadata.Title = $movieInfo.Title
-            $DetectedMetadata.Year = $movieInfo.Year
-            $DetectedMetadata.Type = "PELICULA"
-
-            Write-Log "Tipo: PELICULA ($($movieInfo.Year))" -Level "INFO"
-        }
-        elseif ($CleanName -match '^(.*?)[-\s\(](19\d{2}|20\d{2})[\)\-]?') {
-            $Title = $Matches[1]
-            $Title = $Title -replace '\[.*\]', ''
-            $Title = $Title.Trim()
-            $Title = Convert-Title $Title
-            $Year  = $Matches[2]
-
-            $DetectedMetadata.Title = $Title
-            $DetectedMetadata.Year = $Year
-            $DetectedMetadata.Type = "PELICULA"
-
-            Write-Log "Tipo: PELICULA ($Year)" -Level "INFO"
-        }
-        else {
-            $Title = Convert-Title $CleanName
-            $DetectedMetadata.Title = $Title
-            $DetectedMetadata.Type = "DESCONOCIDO"
-
-            Write-Log "Tipo: DESCONOCIDO" -Level "WARNING"
-        }
-    }
-
-    Write-Log "Título detectado: $($DetectedMetadata.Title)" -Level "INFO"
+    Write-Log "Título detectado: $SearchTitle" -Level "INFO"
 
     # ==================================================
     # BUSCAR POSTER
     # ==================================================
 
     $script:LastPosterDisplayTitle = $null
-    $PosterUrl = Get-PlexPoster -Title $DetectedMetadata.Title `
+    $PosterUrl = Get-PlexPoster -Title $SearchTitle `
                                  -ContentPath $ContentPath `
                                  -DetectedMetadata $DetectedMetadata `
                                  -BasePath $BasePath `
@@ -161,7 +105,12 @@ function Process-Torrent {
                                  -PlexScanPollMaxAttempts $script:PlexScanPollMaxAttempts `
                                  -SkipPlexScan:$script:SkipPlexScan
 
-    $DisplayTitle = if ($script:LastPosterDisplayTitle) { $script:LastPosterDisplayTitle } else { $DetectedMetadata.Title }
+    if ($script:LastPosterDisplayTitle -and $DetectedMetadata.Type -eq "PELICULA" -and (Test-PosterTitleRefinement -ParsedTitle $SearchTitle -PosterTitle $script:LastPosterDisplayTitle)) {
+        $SearchTitle = $script:LastPosterDisplayTitle
+        $DetectedMetadata.Title = $script:LastPosterDisplayTitle
+    }
+
+    $DisplayTitle = $DetectedMetadata.Title
 
     $Message = Format-TelegramMessage `
         -Type $DetectedMetadata.Type `

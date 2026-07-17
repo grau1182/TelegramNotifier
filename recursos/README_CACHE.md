@@ -12,27 +12,35 @@ Compartida entre **producción** (`core/`) y **test** (`test/`).
 
 Base de datos persistente con títulos Plex, `ratingKey`, URLs de poster y **aliases automáticos**. Permite búsquedas instantáneas sin consultar la API en cada ejecución.
 
-## Flujo completo (v2.2)
+## Flujo completo (v2.4)
 
 ```
 Torrent completado
     ↓
-Get-MovieTitleAndYear() → título/año correctos (prioriza (YYYY) entre paréntesis)
+Get-TorrentSearchMetadata() → tipo, título, temporada, año
     ↓
 Initialize-PlexCache() → lee recursos/plex_cache.json
     ↓
 Resolve-RatingKey() → solo exacto / alias (sin fuzzy)
     ↓
 Get-PosterByCache() → exact / alias / fuzzy ≥85% (+ filtro año en películas)
+    ↓ (series: Resolve-PlexSeriesPoster)
     ↓ (miss)
 Partial scan Plex + Wait-ForPlexItem (path lookup)
     ↓ (miss)
-Search-PlexWithQueries (búsqueda progresiva)
+Search-PlexWithQueries (búsqueda progresiva + aliases)
     ↓ (found)
+Get-PlexCacheEntryFromItem → ratingKey del show para series
+    ↓
 Add-ToCache + Add-CacheAliases (alias del título torrent si difiere)
     ↓
 Save-CacheToFile() → persiste en recursos/plex_cache.json
 ```
+
+### Series (EPISODIO / TEMPORADA)
+
+- **Caché:** se guarda con `ratingKey` del **show** (`grandparentRatingKey`), reutilizable entre temporadas.
+- **Poster:** resuelve temporada → show; no usa snapshot del capítulo.
 
 ## Normalización de claves
 

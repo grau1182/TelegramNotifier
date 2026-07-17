@@ -12,7 +12,7 @@ core/
 ├── TelegramNotifier.ps1             # Script principal (importa librerías)
 ├── lib/
 │   ├── logger.ps1                   # Sistema de logging con rotación
-│   ├── utilities.ps1                # Parseo, Get-MovieTitleAndYear, Split-TitleVariants
+│   ├── utilities.ps1                # Parseo centralizado, Get-TorrentSearchMetadata
 │   ├── cache-manager.ps1            # Caché Plex + aliases + fuzzy con filtro de año
 │   └── plex-functions.ps1           # Scan Plex, path lookup, búsqueda progresiva
 ├── logs/                            # Logs de ejecución
@@ -24,7 +24,11 @@ recursos/plex_cache.json             # Caché compartida (producción + test)
 ## Características
 
 - **Caché persistente** en `recursos/plex_cache.json` (115+ títulos, aliases automáticos)
+- **Parseo centralizado** con `Get-TorrentSearchMetadata` (episodio, temporada, película, patrones ampliados)
 - **Parseo de películas** con `Get-MovieTitleAndYear`: prioriza `(año)` entre paréntesis sobre números en el título
+- **Posters series:** jerarquía temporada → show (`Resolve-PlexSeriesPoster`); caché por `grandparentRatingKey`
+- **Scoring ampliado:** path exacto (A1), secuelas numéricas (A2), boost Star Wars Rebels (A3)
+- **Título Telegram:** parseado del torrent (series); refinamiento Plex solo en películas (`Test-PosterTitleRefinement`)
 - **Normalización de claves** con transliteración (`Remove-Accents`: `28 años después` → `28anosdespues`)
 - **Partial scan Plex** al completar descarga (indexa el archivo antes de buscar)
 - **Lookup por ruta** (`ContentPath`) en items recientes de Plex
@@ -102,31 +106,36 @@ $script:PlexSeriesPathPrefix = "G:\SERIES"
 
 ```
 Process-Torrent()
-  ├─ Get-MovieTitleAndYear (películas: año entre paréntesis)
+  ├─ Get-TorrentSearchMetadata() → tipo, título, temporada, año
   └─ Get-PlexPoster()
        │
        ├─ FASE 0: Caché (recursos/plex_cache.json)
        │    ├─ Resolve-RatingKey → solo exacto / alias
        │    └─ Get-PosterByCache → exacto, alias, fuzzy ≥85% (+ filtro año)
-       │    └─ Hit → return poster URL
+       │    └─ Hit → Resolve-PlexSeriesPoster (series) → return poster URL
        │
-       ├─ FASE 1: Partial scan + path lookup (si SkipPlexScan=$false)
+       ├─ FASE 1: Partial scan + path lookup (si SkipPlexScan=$false y ruta existe)
        │    ├─ Resolve-PlexSectionForPath(ContentPath)
        │    ├─ Invoke-PlexPartialScan → GET /library/sections/{id}/refresh?path=...
        │    └─ Wait-ForPlexItem → polling Find-PlexItemByPath
+       │    └─ Resolve-PlexSeriesPoster → poster temporada/show
        │
-       ├─ FASE 2: Búsqueda progresiva (Search-PlexWithQueries)
-       │    ├─ Queries: título completo | pre-coma | primera palabra*
-       │    └─ Scoring: ruta, título, raíz, año, fuzzy
+       ├─ FASE 2: Búsqueda progresiva (Search-PlexWithQueries + aliases)
+       │    ├─ Queries: variantes + aliases (ej. Star Wars Rebels)
+       │    └─ Scoring: ruta, título, raíz, año, fuzzy, secuelas numéricas
        │
-       └─ Save-PlexPosterResult → Add-ToCache + Add-CacheAliases
+       └─ Save-PlexPosterResult → Add-ToCache (show key en series) + aliases
 ```
 
 ### Funciones clave (utilities.ps1)
 
 | Función | Responsabilidad |
 |---------|-----------------|
+| `Get-TorrentSearchMetadata` | Parseo unificado: episodio, temporada (patrones ampliados), película |
 | `Get-MovieTitleAndYear` | Parsea título y año de película; prioriza `(YYYY)` sobre `20XX` en el nombre |
+| `Get-SeasonFromContentPath` | Infiere temporada desde segmentos de ruta (`\Show\3\`) |
+| `Test-PosterTitleRefinement` | Decide si usar título Plex refinado en Telegram (solo películas) |
+| `Get-PlexTitleSearchAliases` | Aliases de búsqueda (ej. Star Wars Rebels) |
 | `Get-CleanName` | Elimina resolución y etiquetas técnicas del nombre normalizado |
 | `Split-TitleVariants` | Genera variantes de búsqueda; omite primera palabra si hay año en título |
 | `Normalize-CacheKey` / `Remove-Accents` | Claves de caché sin acentos ni caracteres especiales |
@@ -141,10 +150,13 @@ Process-Torrent()
 | `Invoke-PlexPartialScan` | Fuerza scan parcial del archivo |
 | `Find-PlexItemByPath` | Busca en items recientes por ruta |
 | `Wait-ForPlexItem` | Polling post-scan |
-| `Get-PlexSearchQueries` / `Split-TitleVariants` | Variantes de búsqueda |
+| `Get-PlexSearchQueries` / `Split-TitleVariants` | Variantes + aliases de búsqueda |
+| `Resolve-PlexSeriesPoster` | Poster temporada → show (EPISODIO/TEMPORADA) |
+| `Get-PlexCacheEntryFromItem` | RatingKey show para caché (`grandparentRatingKey`) |
 | `Search-PlexWithQueries` | Búsqueda API progresiva |
-| `Test-PlexItemAcceptable` | Umbrales de score |
-| `Save-PlexPosterResult` | Persiste en caché con aliases |
+| `Test-PlexItemAcceptable` | Umbrales de score + aceptación por path exacto |
+| `Set-LastPosterDisplayTitle` | Refinamiento título display (películas) |
+| `Save-PlexPosterResult` | Persiste en caché con aliases y show key |
 
 ### Funciones clave (cache-manager.ps1)
 
@@ -238,5 +250,5 @@ Invoke-RestMethod "http://127.0.0.1:32400/library/sections/SECTION_ID/refresh?pa
 
 ---
 
-**Última actualización:** 2026-07-15  
-**Versión búsqueda poster:** 2.2 (parseo películas + caché estricta)
+**Última actualización:** 2026-07-17  
+**Versión búsqueda poster:** 2.4 (parseo ampliado, jerarquía poster series, scoring A1–A3)
