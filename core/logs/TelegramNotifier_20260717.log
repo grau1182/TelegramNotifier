@@ -52,3 +52,46 @@
 [2026-07-17 15:55:03] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8209/thumb/1784246735?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
 [2026-07-17 15:55:07] [SUCCESS] Notificación Telegram enviada (con poster)
 [2026-07-17 15:55:07] [INFO] ========================================
+[2026-07-17 16:01:09] [INFO] ========================================
+[2026-07-17 16:01:10] [INFO] Procesando torrent: Percy Jackson y los dioses del Olimpo (2023) S02 [PROPER][PACK][DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO]
+[2026-07-17 16:01:10] [INFO] Ruta: G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 16:01:10] [INFO] Patron detectado: TEMPORADA
+[2026-07-17 16:01:10] [INFO] Tipo: TEMPORADA
+[2026-07-17 16:01:10] [INFO] Episodios detectados: 8
+[2026-07-17 16:01:10] [INFO] Título detectado: Percy Jackson Y Los Dioses Del Olimpo
+[2026-07-17 16:01:10] [INFO] Iniciando busqueda de poster para 'Percy Jackson Y Los Dioses Del Olimpo' (Tipo: TEMPORADA)
+[2026-07-17 16:01:10] [INFO] Inicializando caché...
+[2026-07-17 16:01:10] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-17 16:01:10] [INFO] Caché cargado desde archivo: 117 títulos
+[2026-07-17 16:01:10] [INFO] Búsqueda poster: título='Percy Jackson Y Los Dioses Del Olimpo', RatingKey=''
+[2026-07-17 16:01:10] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-17 16:01:10] [INFO] Escaneo parcial activado: section=2 path=G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 16:01:10] [INFO] Item found by path (attempt 1, score 90): Percy Jackson y los dioses del Olimpo
+[2026-07-17 16:01:10] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 16:01:10] [INFO] Poster resuelto desde temporada S02 del show 8201
+[2026-07-17 16:01:10] [INFO] Poster final seleccionado (Score: 90, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 16:01:10] [INFO] Caché actualizado: Nuevo título 'Percy Jackson y los dioses del Olimpo' agregado con RatingKey 8201, 118 títulos en total
+[2026-07-17 16:01:10] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 16:01:15] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-17 16:01:15] [INFO] ========================================
+[2026-07-17 16:02:44] [INFO] ========================================
+[2026-07-17 16:02:44] [INFO] Procesando torrent: Percy Jackson y los dioses del Olimpo (2023) S02 [PROPER][PACK][DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO]
+[2026-07-17 16:02:44] [INFO] Ruta: G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 16:02:44] [INFO] Patron detectado: TEMPORADA
+[2026-07-17 16:02:44] [INFO] Tipo: TEMPORADA
+[2026-07-17 16:02:44] [INFO] Episodios detectados: 8
+[2026-07-17 16:02:44] [INFO] Título detectado: Percy Jackson Y Los Dioses Del Olimpo
+[2026-07-17 16:02:44] [INFO] Iniciando busqueda de poster para 'Percy Jackson Y Los Dioses Del Olimpo' (Tipo: TEMPORADA)
+[2026-07-17 16:02:44] [INFO] Inicializando caché...
+[2026-07-17 16:02:44] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-17 16:02:44] [INFO] Búsqueda poster: título='Percy Jackson Y Los Dioses Del Olimpo', RatingKey=''
+[2026-07-17 16:02:45] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-17 16:02:45] [INFO] Escaneo parcial activado: section=2 path=G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 16:02:45] [INFO] Item found by path (attempt 1, score 90): Percy Jackson y los dioses del Olimpo
+[2026-07-17 16:02:45] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 16:02:45] [INFO] Poster resuelto desde temporada S02 del show 8201
+[2026-07-17 16:02:45] [INFO] Poster final seleccionado (Score: 90, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 16:02:45] [INFO] Caché actualizado: Nuevo título 'Percy Jackson y los dioses del Olimpo' agregado con RatingKey 8201, 118 títulos en total
+[2026-07-17 16:02:45] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 16:02:50] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-17 16:02:50] [INFO] ========================================
