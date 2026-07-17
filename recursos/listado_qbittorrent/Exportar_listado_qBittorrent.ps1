@@ -100,17 +100,19 @@ function Resolve-QBittorrentContentPath {
         [array]$Files
     )
 
-    if ($Torrent.PSObject.Properties.Name -contains 'content_path' -and -not [string]::IsNullOrWhiteSpace([string]$Torrent.content_path)) {
-        return Normalize-WindowsPath ([string]$Torrent.content_path)
+    $savePath = Normalize-WindowsPath ([string](Get-QBSingleValue $Torrent.save_path))
+
+    $apiPath = Get-ApiContentPath -Torrent $Torrent
+    if ($apiPath) {
+        return $apiPath
     }
 
-    $savePath = Normalize-WindowsPath ([string]$Torrent.save_path)
     if ($Files.Count -eq 0) {
         return $savePath
     }
 
     $relativePaths = @($Files | ForEach-Object {
-        [string]$_.name
+        [string](Get-QBSingleValue $_.name)
     } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
 
     if ($relativePaths.Count -eq 0) {
@@ -118,7 +120,11 @@ function Resolve-QBittorrentContentPath {
     }
 
     if ($relativePaths.Count -eq 1) {
-        return Normalize-WindowsPath (Join-WindowsPath $savePath $relativePaths[0])
+        $singlePath = Normalize-WindowsPath (Join-WindowsPath $savePath $relativePaths[0])
+        if (Test-ValidWindowsContentPath $singlePath) {
+            return $singlePath
+        }
+        return $savePath
     }
 
     $absolutePaths = @($relativePaths | ForEach-Object {
@@ -126,7 +132,7 @@ function Resolve-QBittorrentContentPath {
     })
 
     $commonPrefix = Get-CommonPathPrefix -Paths $absolutePaths
-    if (-not [string]::IsNullOrWhiteSpace($commonPrefix)) {
+    if (Test-ValidWindowsContentPath $commonPrefix) {
         return Normalize-WindowsPath $commonPrefix
     }
 
@@ -139,7 +145,7 @@ function Resolve-QBittorrentContentPath {
         return Normalize-WindowsPath (Join-WindowsPath $savePath $topLevelFolders[0])
     }
 
-    $torrentFolder = Join-WindowsPath $savePath ([string]$Torrent.name)
+    $torrentFolder = Join-WindowsPath $savePath ([string](Get-QBSingleValue $Torrent.name))
     if (Test-Path -LiteralPath $torrentFolder) {
         return Normalize-WindowsPath $torrentFolder
     }
@@ -195,6 +201,79 @@ function Get-QBSingleValue {
     return $Value
 }
 
+function Expand-QBittorrentTorrentRows {
+    param($Torrents)
+
+    if ($null -eq $Torrents) {
+        return @()
+    }
+
+    if ($Torrents -isnot [System.Array]) {
+        $Torrents = @($Torrents)
+    }
+
+    if ($Torrents.Count -eq 0) {
+        return @()
+    }
+
+    if ($Torrents.Count -gt 1) {
+        return @($Torrents)
+    }
+
+    $first = $Torrents[0]
+    if ($null -eq $first -or $null -eq $first.name -or $first.name -isnot [System.Array]) {
+        return @($first)
+    }
+
+    $count = @($first.name).Count
+    $rows = @()
+
+    for ($i = 0; $i -lt $count; $i++) {
+        $row = [ordered]@{}
+        foreach ($prop in $first.PSObject.Properties) {
+            $val = $prop.Value
+            if ($val -is [System.Array] -and @($val).Count -eq $count) {
+                $row[$prop.Name] = $val[$i]
+            }
+            else {
+                $row[$prop.Name] = $val
+            }
+        }
+        $rows += [PSCustomObject]$row
+    }
+
+    return $rows
+}
+
+function Test-ValidWindowsContentPath {
+    param([string]$Path)
+
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        return $false
+    }
+
+    if ($Path -match '\s[A-Za-z]:\\') {
+        return $false
+    }
+
+    return $Path -match '^[A-Za-z]:\\'
+}
+
+function Get-ApiContentPath {
+    param($Torrent)
+
+    if ($Torrent.PSObject.Properties.Name -notcontains 'content_path') {
+        return $null
+    }
+
+    $apiPath = Normalize-WindowsPath ([string](Get-QBSingleValue $Torrent.content_path))
+    if (Test-ValidWindowsContentPath $apiPath) {
+        return $apiPath
+    }
+
+    return $null
+}
+
 function Get-QBDoubleValue {
     param(
         $Value,
@@ -237,7 +316,7 @@ function Test-QBittorrentCompleted {
     param($Torrent)
 
     $state = [string](Get-QBSingleValue $Torrent.state)
-    if ($state -in @('uploading', 'stalledUP', 'pausedUP', 'forcedUP', 'queuedUP')) {
+    if ($state -in @('uploading', 'stalledUP', 'pausedUP', 'forcedUP', 'queuedUP', 'stoppedUP')) {
         return $true
     }
 
@@ -266,9 +345,11 @@ if ($response -ne "Ok.") {
     exit 1
 }
 
-$torrents = @(Invoke-RestMethod `
+$torrents = Expand-QBittorrentTorrentRows (Invoke-RestMethod `
     -Uri "$QBHost/api/v2/torrents/info" `
     -WebSession $session)
+
+Write-Host "Torrents recibidos de qBittorrent: $($torrents.Count)" -ForegroundColor DarkGray
 
 if ($OnlyCompleted) {
     $torrents = @($torrents | Where-Object { Test-QBittorrentCompleted -Torrent $_ })
@@ -287,7 +368,7 @@ foreach ($torrent in $torrents) {
     }
 
     $torrentHash = [string](Get-QBSingleValue $torrent.hash)
-    $files = Get-TorrentFileList -Hash $torrentHash -WebSession $session -HostUrl $QBHost.TrimEnd('/')
+    $files = @(Get-TorrentFileList -Hash $torrentHash -WebSession $session -HostUrl $QBHost.TrimEnd('/'))
     $savePath = Normalize-WindowsPath ([string](Get-QBSingleValue $torrent.save_path))
     $contentPath = Resolve-QBittorrentContentPath -Torrent $torrent -Files $files
     $contentExists = $false

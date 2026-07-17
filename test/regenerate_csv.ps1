@@ -10,6 +10,20 @@ $ProjectRoot = Split-Path $PSScriptRoot -Parent
 $JsonFile = Join-Path $ProjectRoot "recursos\listado_qbittorrent\qBittorrent_listado.json"
 $CsvFile = Join-Path $ProjectRoot "recursos\torrents.csv"
 
+function Test-ValidTorrentPathField {
+    param([string]$Path)
+
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        return $false
+    }
+
+    if ($Path -match '\s[A-Za-z]:\\') {
+        return $false
+    }
+
+    return $true
+}
+
 function Test-TorrentContentOnDisk {
     param($Torrent)
 
@@ -24,7 +38,7 @@ function Test-TorrentContentOnDisk {
         $paths += [string]$Torrent.Ruta
     }
 
-    foreach ($path in ($paths | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Select-Object -Unique)) {
+    foreach ($path in ($paths | Where-Object { Test-ValidTorrentPathField $_ } | Select-Object -Unique)) {
         try {
             if (Test-Path -LiteralPath $path) {
                 return $true
@@ -109,6 +123,11 @@ foreach ($t in $torrents) {
     $path = if ($t.content_path) { [string]$t.content_path } elseif ($t.Ruta) { [string]$t.Ruta } else { "" }
 
     if ([string]::IsNullOrWhiteSpace($name)) {
+        continue
+    }
+
+    if (-not (Test-ValidTorrentPathField $path)) {
+        Write-Host "  AVISO: ruta invalida omitida para '$($name.Substring(0, [Math]::Min(50, $name.Length)))...'" -ForegroundColor Yellow
         continue
     }
 
