@@ -1,0 +1,54 @@
+﻿[2026-07-17 15:53:21] [INFO] ========================================
+[2026-07-17 15:53:21] [INFO] Procesando torrent: Percy Jackson y los dioses del Olimpo (2023) S02 [PROPER][PACK][DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO]
+[2026-07-17 15:53:21] [INFO] Ruta: G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 15:53:21] [INFO] Tipo: TEMPORADA (S2 con 8 episodios)
+[2026-07-17 15:53:21] [INFO] Título detectado: Percy Jackson Y Los Dioses Del Olimpo (2023)
+[2026-07-17 15:53:21] [INFO] Iniciando busqueda de poster para 'Percy Jackson Y Los Dioses Del Olimpo (2023)' (Tipo: TEMPORADA)
+[2026-07-17 15:53:21] [INFO] Inicializando caché...
+[2026-07-17 15:53:21] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-17 15:53:21] [INFO] Caché cargado desde archivo: 117 títulos
+[2026-07-17 15:53:21] [INFO] Búsqueda poster: título='Percy Jackson Y Los Dioses Del Olimpo', RatingKey='8201'
+[2026-07-17 15:53:21] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-17 15:53:21] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 15:53:25] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-17 15:53:25] [INFO] ========================================
+[2026-07-17 15:54:07] [INFO] ========================================
+[2026-07-17 15:54:07] [INFO] Procesando torrent: Percy Jackson y los dioses del Olimpo (2023) S02 [PROPER][PACK][DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO]
+[2026-07-17 15:54:07] [INFO] Ruta: G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 15:54:07] [INFO] Tipo: TEMPORADA (S2 con 8 episodios)
+[2026-07-17 15:54:07] [INFO] Título detectado: Percy Jackson Y Los Dioses Del Olimpo (2023)
+[2026-07-17 15:54:07] [INFO] Iniciando busqueda de poster para 'Percy Jackson Y Los Dioses Del Olimpo (2023)' (Tipo: TEMPORADA)
+[2026-07-17 15:54:07] [INFO] Inicializando caché...
+[2026-07-17 15:54:07] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-17 15:54:07] [INFO] Caché cargado desde archivo: 116 títulos
+[2026-07-17 15:54:07] [INFO] Búsqueda poster: título='Percy Jackson Y Los Dioses Del Olimpo', RatingKey=''
+[2026-07-17 15:54:07] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-17 15:54:07] [INFO] Escaneo parcial activado: section=2 path=G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 15:54:07] [INFO] Intento de búsqueda por ruta 1/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:12] [INFO] Intento de búsqueda por ruta 2/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:17] [INFO] Intento de búsqueda por ruta 3/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:22] [INFO] Intento de búsqueda por ruta 4/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:27] [INFO] Intento de búsqueda por ruta 5/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:32] [INFO] Intento de búsqueda por ruta 6/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:38] [INFO] Intento de búsqueda por ruta 7/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:43] [INFO] Intento de búsqueda por ruta 8/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:48] [INFO] Intento de búsqueda por ruta 9/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:53] [INFO] Intento de búsqueda por ruta 10/12 sin resultado, esperando 5s...
+[2026-07-17 15:54:58] [INFO] Intento de búsqueda por ruta 11/12 sin resultado, esperando 5s...
+[2026-07-17 15:55:03] [INFO] Queries progresivas: Percy Jackson Y Los Dioses Del Olimpo | Percy
+[2026-07-17 15:55:03] [INFO] Intentando busqueda Plex (serie, query='Percy Jackson Y Los Dioses Del Olimpo'): http://127.0.0.1:32400/search?query=Percy%20Jackson%20Y%20Los%20Dioses%20Del%20Olimpo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-17 15:55:03] [INFO] Plex devolvio 1 items para query 'Percy Jackson Y Los Dioses Del Olimpo' (serie)
+[2026-07-17 15:55:03] [INFO] Intentando busqueda Plex (generica, query='Percy Jackson Y Los Dioses Del Olimpo'): http://127.0.0.1:32400/search?query=Percy%20Jackson%20Y%20Los%20Dioses%20Del%20Olimpo&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 15:55:03] [INFO] Plex devolvio 1 items para query 'Percy Jackson Y Los Dioses Del Olimpo' (generica)
+[2026-07-17 15:55:03] [INFO] Intentando busqueda Plex (serie, query='Percy'): http://127.0.0.1:32400/search?query=Percy&X-Plex-Token=Yt-aqViZD-ydpysRvGyP&type=2
+[2026-07-17 15:55:03] [INFO] Plex devolvio 1 items para query 'Percy' (serie)
+[2026-07-17 15:55:03] [INFO] Intentando busqueda Plex (generica, query='Percy'): http://127.0.0.1:32400/search?query=Percy&X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 15:55:03] [INFO] Plex devolvio 9 items para query 'Percy' (generica)
+[2026-07-17 15:55:03] [INFO]   Match aceptable (score 70): Abordamos el Princesa Andrómeda
+[2026-07-17 15:55:03] [INFO]   Match aceptable (score 85): Juego al balón prisionero con caníbales
+[2026-07-17 15:55:03] [INFO]   Match aceptable (score 120): Palomas demoníacas atacan
+[2026-07-17 15:55:03] [INFO] Poster final seleccionado (Score: 120, Metodo: generica:Percy): http://127.0.0.1:32400/library/metadata/8209/thumb/1784246735?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 15:55:03] [INFO] Caché actualizado: Nuevo título 'Palomas demoníacas atacan' agregado con RatingKey 8209, 117 títulos en total
+[2026-07-17 15:55:03] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8209/thumb/1784246735?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 15:55:07] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-17 15:55:07] [INFO] ========================================
