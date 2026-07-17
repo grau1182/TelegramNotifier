@@ -1,6 +1,6 @@
 ﻿{
     "version":  2,
-    "exportedAt":  "2026-07-17T10:45:49+02:00",
+    "exportedAt":  "2026-07-17T10:50:42+02:00",
     "qbHost":  "http://localhost:8080",
     "filters":  {
                     "onlyCompleted":  true,
@@ -8,8 +8,8 @@
                 },
     "summary":  {
                     "total":  1,
-                    "content_exists":  0,
-                    "parse_only":  1
+                    "content_exists":  1,
+                    "parse_only":  0
                 },
     "torrents":  [
                      {
@@ -22,8 +22,8 @@
                          "progress":  1,
                          "hash":  "9b53118d5a3fa7d1edd6ee3841e10c4f191d3e02",
                          "file_count":  1,
-                         "content_exists":  false,
-                         "test_tier":  "parse_only"
+                         "content_exists":  true,
+                         "test_tier":  "full"
                      }
                  ]
 }
