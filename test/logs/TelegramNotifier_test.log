@@ -3932,3 +3932,36 @@
 [2026-07-17 15:26:23] [INFO] === PASADA 2 fin: 202/205 lecturas OK (98.54%) ===
 [2026-07-17 15:26:23] [INFO] JSON validacion cachÃ©: C:\Users\grau_\Downloads\TelegramNotifier\test\results\json\CacheValidation_20260717_152623.json
 [2026-07-17 15:26:23] [INFO] === TEST FULL - fin ===
+[2026-07-17 15:51:47] [INFO] =======================================
+[2026-07-17 15:51:47] [INFO] Torrent recibido: Percy Jackson y los dioses del Olimpo (2023) S02 [PROPER][PACK][DSNP WEB-DL 2160p HEVC DV-HDR10+ ES DD+ 5.1][HDO]
+[2026-07-17 15:51:47] [INFO] Ruta recibida: G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 15:51:47] [INFO] Nombre normalizado: percy-jackson-y-los-dioses-del-olimpo-(2023)-s02-[proper][pack][dsnp-web-dl-2160p-hevc-dv-hdr10+-es-dd+-5
+[2026-07-17 15:51:47] [INFO] Nombre limpio: percy-jackson-y-los-dioses-del-olimpo-(2023)-s02-[proper][pack][dsnp-web-dl
+[2026-07-17 15:51:47] [INFO] Resolucion: 2160p
+[2026-07-17 15:51:47] [INFO] Tamaño: 28.1 GB
+[2026-07-17 15:51:47] [INFO] Patron detectado: TEMPORADA
+[2026-07-17 15:51:47] [INFO] Tags tecnicos: RESOLUCION, CODEC
+[2026-07-17 15:51:47] [INFO] Tipo detectado: TEMPORADA
+[2026-07-17 15:51:48] [INFO] Episodios detectados: 8
+[2026-07-17 15:51:48] [INFO] Iniciando busqueda de poster para 'Percy Jackson Y Los Dioses Del Olimpo' (Tipo: TEMPORADA)
+[2026-07-17 15:51:48] [INFO] Inicializando caché...
+[2026-07-17 15:51:48] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-17 15:51:48] [INFO] Caché cargado desde archivo: 116 títulos
+[2026-07-17 15:51:48] [INFO] Búsqueda poster: título='Percy Jackson Y Los Dioses Del Olimpo', RatingKey=''
+[2026-07-17 15:51:48] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-17 15:51:48] [INFO] Escaneo parcial activado: section=2 path=G:\SERIES\PERCY_JACKSON_Y_LOS_DIOSES_DEL_OLIMPO
+[2026-07-17 15:51:48] [INFO] Item found by path (attempt 1, score 90): Percy Jackson y los dioses del Olimpo
+[2026-07-17 15:51:48] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 15:51:48] [INFO] Poster resuelto desde temporada S02 del show 8201
+[2026-07-17 15:51:48] [INFO] Poster final seleccionado (Score: 90, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-17 15:51:48] [INFO] Caché actualizado: Nuevo título 'Percy Jackson y los dioses del Olimpo' agregado con RatingKey 8201, 117 títulos en total
+[2026-07-17 15:51:48] [INFO] Mensaje generado:
+[2026-07-17 15:51:48] [INFO] ?? TEMPORADA DESCARGADA
+
+Percy Jackson Y Los Dioses Del Olimpo
+Temporada 2
+
+?? 8 episodios
+??? 2160p
+?? 28.1 GB
+[2026-07-17 15:51:48] [INFO] Poster URL: http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP

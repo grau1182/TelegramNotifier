@@ -981,6 +981,14 @@
                       "aliases":  [
                                       "The Punisher One Last Kill"
                                   ]
+                  },
+                  {
+                    "tipo":  "SERIE",
+                      "ratingKey":  "8201",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8202/thumb/1784218999?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "percyjacksonylosdiosesdelolimpo",
+                      "titulo_original":  "Percy Jackson y los dioses del Olimpo",
+                      "year":  0
                   }
               ],
     "totalItems":  118,
