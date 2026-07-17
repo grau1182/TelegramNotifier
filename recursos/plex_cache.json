@@ -958,10 +958,26 @@
                       "titulo_normalizado":  "bladerunner2049",
                       "titulo_original":  "Blade Runner 2049",
                       "year":  2017
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8165",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8165/thumb/1783346842?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "gary",
+                      "titulo_original":  "Gary",
+                      "year":  0
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8201",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8201/thumb/1784218998?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "percyjacksonylosdiosesdelolimpo",
+                      "titulo_original":  "Percy Jackson y los dioses del Olimpo",
+                      "year":  0
                   }
               ],
-    "totalItems":  116,
+    "totalItems":  117,
     "description":  "Caché persistente de Plex - Actualizado automáticamente",
-    "lastUpdated":  "2026-07-16T18:34:50Z",
+    "lastUpdated":  "2026-07-17T11:44:37Z",
     "version":  "1.0"
 }

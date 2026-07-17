@@ -133,3 +133,20 @@ cd ..
 
 # Casos clave: Percy S02 PACK → poster /8202/, caché 8201 | Boys S05E01 → /7224/, 7223 | Blade Runner → /8190/
 
+
+
+Al ejecutar .\test_v4_wrapper.ps1 -QuickTest y .\test_v4_wrapper.ps1  aparecia en consola lo siguiente
+
+Test-Path : No se puede enlazar el argumento con el parámetro 'Path' porque es una cadena vacía.
+En C:\Users\grau_\Downloads\TelegramNotifier\test\TelegramTorrent_Test.ps1: 142 Carácter: 48
++ $SizeError = if ($SizeGB -eq 0 -and (Test-Path $ContentPath)) { "No s ...
++                                                ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Test-Path], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorEmptyStringNotAllowed,Microsoft.PowerShell.Commands.TestPathCommand
+ 
+Test-Path : No se puede enlazar el argumento con el parámetro 'Path' porque es una cadena vacía.
+En C:\Users\grau_\Downloads\TelegramNotifier\test\TelegramTorrent_Test.ps1: 151 Carácter: 28
++ $ContentExists = Test-Path $ContentPath
++                            ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Test-Path], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorEmptyStringNotAllowed,Microsoft.PowerShell.Commands.TestPathCommand
