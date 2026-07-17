@@ -531,7 +531,11 @@
                       "poster_url":  "http://127.0.0.1:32400/library/metadata/5490/thumb/1782007428?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
                       "titulo_normalizado":  "lazaro",
                       "titulo_original":  "Lazaro",
-                      "year":  "2025"
+                      "year":  "2025",
+                      "aliases":  [
+                                      "Lazarus",
+                                      "Lazarus (2025)"
+                                  ]
                   },
                   {
                       "tipo":  "SERIE",
@@ -966,10 +970,21 @@
                       "titulo_normalizado":  "gary",
                       "titulo_original":  "Gary",
                       "year":  0
+                  },
+                  {
+                      "tipo":  "PELICULA",
+                      "ratingKey":  "8214",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8214/thumb/1784287731?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "thepunisheronelastkill",
+                      "titulo_original":  "The Punisher: One Last Kill",
+                      "year":  2026,
+                      "aliases":  [
+                                      "The Punisher One Last Kill"
+                                  ]
                   }
               ],
-    "totalItems":  117,
+    "totalItems":  118,
     "description":  "Caché persistente de Plex - Actualizado automáticamente",
-    "lastUpdated":  "2026-07-17T11:44:37Z",
+    "lastUpdated":  "2026-07-17T15:48:00Z",
     "version":  "1.0"
 }
