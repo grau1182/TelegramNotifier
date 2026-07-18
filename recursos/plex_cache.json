@@ -989,10 +989,34 @@
                       "titulo_normalizado":  "percyjacksonylosdiosesdelolimpo",
                       "titulo_original":  "Percy Jackson y los dioses del Olimpo",
                       "year":  0
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8217",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8218/thumb/1784371972?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lostestamentos",
+                      "titulo_original":  "Los testamentos",
+                      "year":  0
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8230",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8231/thumb/1784372690?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "lesrevenants",
+                      "titulo_original":  "Les Revenants",
+                      "year":  0
+                  },
+                  {
+                      "tipo":  "SERIE",
+                      "ratingKey":  "8251",
+                      "poster_url":  "http://127.0.0.1:32400/library/metadata/8252/thumb/1784377612?X-Plex-Token=Yt-aqViZD-ydpysRvGyP",
+                      "titulo_normalizado":  "glitch",
+                      "titulo_original":  "Glitch",
+                      "year":  0
                   }
               ],
-    "totalItems":  118,
+    "totalItems":  121,
     "description":  "Caché persistente de Plex - Actualizado automáticamente",
-    "lastUpdated":  "2026-07-17T16:02:45Z",
+    "lastUpdated":  "2026-07-18T14:37:27Z",
     "version":  "1.0"
 }

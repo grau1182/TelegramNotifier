@@ -1,0 +1,123 @@
+﻿[2026-07-18 13:03:00] [INFO] ========================================
+[2026-07-18 13:03:01] [INFO] Procesando torrent: Los testamentos S01 1080p DSNP WEB-DL ESP-ENG DDP 5.1 AVC
+[2026-07-18 13:03:01] [INFO] Ruta: G:\MADRE\LOS_TESTAMENTOS
+[2026-07-18 13:03:01] [INFO] Patron detectado: TEMPORADA
+[2026-07-18 13:03:01] [INFO] Tipo: TEMPORADA
+[2026-07-18 13:03:01] [INFO] Episodios detectados: 10
+[2026-07-18 13:03:01] [INFO] Título detectado: Los Testamentos
+[2026-07-18 13:03:01] [INFO] Iniciando busqueda de poster para 'Los Testamentos' (Tipo: TEMPORADA)
+[2026-07-18 13:03:01] [INFO] Inicializando caché...
+[2026-07-18 13:03:01] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-18 13:03:01] [INFO] Caché cargado desde archivo: 118 títulos
+[2026-07-18 13:03:01] [INFO] Búsqueda poster: título='Los Testamentos', RatingKey=''
+[2026-07-18 13:03:01] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-18 13:03:02] [INFO] Escaneo parcial activado: section=2 path=G:\MADRE\LOS_TESTAMENTOS
+[2026-07-18 13:03:02] [INFO] Item found by path (attempt 1, score 90): Los testamentos
+[2026-07-18 13:03:02] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8218/thumb/1784371972?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 13:03:02] [INFO] Poster resuelto desde temporada S01 del show 8217
+[2026-07-18 13:03:02] [INFO] Poster final seleccionado (Score: 90, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8218/thumb/1784371972?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 13:03:02] [INFO] Caché actualizado: Nuevo título 'Los testamentos' agregado con RatingKey 8217, 119 títulos en total
+[2026-07-18 13:03:02] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8218/thumb/1784371972?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 13:03:03] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-18 13:03:03] [INFO] ========================================
+[2026-07-18 13:44:42] [INFO] ========================================
+[2026-07-18 13:44:42] [INFO] Procesando torrent: Les Revenants (2012) S01 [PACK][BDRemux 1080p AVC ES DTS-HD MA 5.1][HDO]
+[2026-07-18 13:44:42] [INFO] Ruta: G:\MADRE\LES_REVENANTS\1
+[2026-07-18 13:44:42] [INFO] Patron detectado: TEMPORADA
+[2026-07-18 13:44:42] [INFO] Tipo: TEMPORADA
+[2026-07-18 13:44:42] [INFO] Episodios detectados: 8
+[2026-07-18 13:44:42] [INFO] Título detectado: Les Revenants
+[2026-07-18 13:44:42] [INFO] Iniciando busqueda de poster para 'Les Revenants' (Tipo: TEMPORADA)
+[2026-07-18 13:44:42] [INFO] Inicializando caché...
+[2026-07-18 13:44:42] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-18 13:44:42] [INFO] Caché cargado desde archivo: 119 títulos
+[2026-07-18 13:44:42] [INFO] Búsqueda poster: título='Les Revenants', RatingKey=''
+[2026-07-18 13:44:42] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-18 13:44:42] [INFO] Escaneo parcial activado: section=2 path=G:\MADRE\LES_REVENANTS\1
+[2026-07-18 13:44:43] [INFO] Item found by path (attempt 1, score 90): Les Revenants
+[2026-07-18 13:44:43] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8231/thumb/1784372690?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 13:44:43] [INFO] Poster resuelto desde temporada S01 del show 8230
+[2026-07-18 13:44:43] [INFO] Poster final seleccionado (Score: 90, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8231/thumb/1784372690?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 13:44:43] [INFO] Caché actualizado: Nuevo título 'Les Revenants' agregado con RatingKey 8230, 120 títulos en total
+[2026-07-18 13:44:43] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8231/thumb/1784372690?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 13:44:44] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-18 13:44:44] [INFO] ========================================
+[2026-07-18 14:24:53] [INFO] ========================================
+[2026-07-18 14:24:53] [INFO] Procesando torrent: Les Revenants (2012) S02 [PACK][BDRemux 1080p AVC ES DTS-HD MA 5.1][HDO]
+[2026-07-18 14:24:53] [INFO] Ruta: G:\MADRE\LES_REVENANTS\2
+[2026-07-18 14:24:53] [INFO] Patron detectado: TEMPORADA
+[2026-07-18 14:24:53] [INFO] Tipo: TEMPORADA
+[2026-07-18 14:24:53] [INFO] Episodios detectados: 8
+[2026-07-18 14:24:53] [INFO] Título detectado: Les Revenants
+[2026-07-18 14:24:53] [INFO] Iniciando busqueda de poster para 'Les Revenants' (Tipo: TEMPORADA)
+[2026-07-18 14:24:53] [INFO] Inicializando caché...
+[2026-07-18 14:24:53] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-18 14:24:54] [INFO] Caché cargado desde archivo: 120 títulos
+[2026-07-18 14:24:54] [INFO] Búsqueda poster: título='Les Revenants', RatingKey='8230'
+[2026-07-18 14:24:54] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8242/thumb/1784375170?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 14:24:54] [INFO] Poster resuelto desde temporada S02 del show 8230
+[2026-07-18 14:24:54] [INFO] Poster de caché re-resuelto en runtime (serie 8230)
+[2026-07-18 14:24:54] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-18 14:24:54] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8242/thumb/1784375170?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 14:24:54] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-18 14:24:54] [INFO] ========================================
+[2026-07-18 14:37:26] [INFO] ========================================
+[2026-07-18 14:37:26] [INFO] Procesando torrent: Glitch (2015) temporada 1
+[2026-07-18 14:37:26] [INFO] Ruta: G:\MADRE\GLITCH\1
+[2026-07-18 14:37:26] [INFO] Patron detectado: TEMPORADA_NOMBRE
+[2026-07-18 14:37:26] [INFO] Tipo: TEMPORADA
+[2026-07-18 14:37:26] [INFO] Episodios detectados: 6
+[2026-07-18 14:37:26] [INFO] Título detectado: Glitch
+[2026-07-18 14:37:26] [INFO] Iniciando busqueda de poster para 'Glitch' (Tipo: TEMPORADA)
+[2026-07-18 14:37:26] [INFO] Inicializando caché...
+[2026-07-18 14:37:26] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-18 14:37:26] [INFO] Caché cargado desde archivo: 120 títulos
+[2026-07-18 14:37:26] [INFO] Búsqueda poster: título='Glitch', RatingKey=''
+[2026-07-18 14:37:26] [INFO] Poster NO encontrado en caché. Intentando API...
+[2026-07-18 14:37:27] [INFO] Escaneo parcial activado: section=2 path=G:\MADRE\GLITCH\1
+[2026-07-18 14:37:27] [INFO] Item found by path (attempt 1, score 90): Glitch
+[2026-07-18 14:37:27] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8252/thumb/1784377612?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 14:37:27] [INFO] Poster resuelto desde temporada S01 del show 8251
+[2026-07-18 14:37:27] [INFO] Poster final seleccionado (Score: 90, Metodo: path_lookup): http://127.0.0.1:32400/library/metadata/8252/thumb/1784377612?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 14:37:27] [INFO] Caché actualizado: Nuevo título 'Glitch' agregado con RatingKey 8251, 121 títulos en total
+[2026-07-18 14:37:27] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8252/thumb/1784377612?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 14:37:30] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-18 14:37:30] [INFO] ========================================
+[2026-07-18 14:53:30] [INFO] ========================================
+[2026-07-18 14:53:31] [INFO] Procesando torrent: Glitch (2015) temporada 2
+[2026-07-18 14:53:31] [INFO] Ruta: G:\MADRE\GLITCH\2
+[2026-07-18 14:53:31] [INFO] Patron detectado: TEMPORADA_NOMBRE
+[2026-07-18 14:53:31] [INFO] Tipo: TEMPORADA
+[2026-07-18 14:53:31] [INFO] Episodios detectados: 6
+[2026-07-18 14:53:31] [INFO] Título detectado: Glitch
+[2026-07-18 14:53:31] [INFO] Iniciando busqueda de poster para 'Glitch' (Tipo: TEMPORADA)
+[2026-07-18 14:53:31] [INFO] Inicializando caché...
+[2026-07-18 14:53:31] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-18 14:53:31] [INFO] Caché cargado desde archivo: 121 títulos
+[2026-07-18 14:53:31] [INFO] Búsqueda poster: título='Glitch', RatingKey='8251'
+[2026-07-18 14:53:31] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8260/thumb/1784378334?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 14:53:31] [INFO] Poster resuelto desde temporada S02 del show 8251
+[2026-07-18 14:53:31] [INFO] Poster de caché re-resuelto en runtime (serie 8251)
+[2026-07-18 14:53:31] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-18 14:53:31] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8260/thumb/1784378334?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 14:53:34] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-18 14:53:34] [INFO] ========================================
+[2026-07-18 15:08:24] [INFO] ========================================
+[2026-07-18 15:08:24] [INFO] Procesando torrent: Glitch (2015) temporada 3
+[2026-07-18 15:08:24] [INFO] Ruta: G:\MADRE\GLITCH\3
+[2026-07-18 15:08:24] [INFO] Patron detectado: TEMPORADA_NOMBRE
+[2026-07-18 15:08:24] [INFO] Tipo: TEMPORADA
+[2026-07-18 15:08:24] [INFO] Episodios detectados: 6
+[2026-07-18 15:08:24] [INFO] Título detectado: Glitch
+[2026-07-18 15:08:24] [INFO] Iniciando busqueda de poster para 'Glitch' (Tipo: TEMPORADA)
+[2026-07-18 15:08:24] [INFO] Inicializando caché...
+[2026-07-18 15:08:24] [INFO] Leyendo caché persistente desde: C:\Users\grau_\Downloads\TelegramNotifier\recursos\plex_cache.json
+[2026-07-18 15:08:24] [INFO] Caché cargado desde archivo: 121 títulos
+[2026-07-18 15:08:24] [INFO] Búsqueda poster: título='Glitch', RatingKey='8251'
+[2026-07-18 15:08:24] [INFO] Poster serie: thumb temporada -> http://127.0.0.1:32400/library/metadata/8267/thumb/1784379287?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 15:08:24] [INFO] Poster resuelto desde temporada S03 del show 8251
+[2026-07-18 15:08:24] [INFO] Poster de caché re-resuelto en runtime (serie 8251)
+[2026-07-18 15:08:24] [INFO] Poster encontrado en caché (método: cache_ratingkey_exact, score: 100%)
+[2026-07-18 15:08:24] [SUCCESS] Poster encontrado: http://127.0.0.1:32400/library/metadata/8267/thumb/1784379287?X-Plex-Token=Yt-aqViZD-ydpysRvGyP
+[2026-07-18 15:08:27] [SUCCESS] Notificación Telegram enviada (con poster)
+[2026-07-18 15:08:27] [INFO] ========================================
